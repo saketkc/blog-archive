@@ -66,6 +66,46 @@ at top left, least at bottom right.<span class="math">\(\sum_{ii} = \lambda_i\)<
 <p>Def: Gram matrix : <span class="math">\(X_cX_c^T\)</span></p>
 <p>Def: Covariance Matrix: <span class="math">\(X_c^TX_c\)</span></p>
 <p>Let’s say you are given the original uncente</p>
+<p>The most ‘common’ definition of PCA says : For a given set of <span class="math">\(n\)</span> dimensional vectors
+<span class="math">\(x_1, x_2, x__3,x_4, \ldots x_m\)</span> the <span class="math">\(p&lt;n\)</span> principal components are those orthogonal
+axes onto which the variance retained is maximized</p>
+<p>and hence </p>
+<p>Plotting/Running PCA
+- Calculate <span class="math">\(X_cX_c^T\)</span> and calculate <span class="math">\(U\)</span> as the eigen vectors of this matrix. Retain the vectors corresponding
+to top <span class="math">\(p=2\)</span> eigenvalues
+-  Calculate project <span class="math">\(Y=U^TX\)</span></p>
+<p>Given gram matrix of original data <span class="math">\(K\)</span>, to obtain gram matrix of mean centered data, cholesky decomposition is not required:</p>
+<p><span class="math">\(K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}\)</span></p>
+<p>Also realize:</p>
+<p><span class="math">\(X_c = U \sum V^T\)</span></p>
+<p>and <span class="math">\(UU^T=I\)</span> ; <span class="math">\(VV^T=I\)</span></p>
+<p>Thus, <span class="math">\(K_c=X_cX_c^T = U\sum^2U^T\)</span></p>
+<p>PCA is equivalent of doing a SVD: of <span class="math">\(X_c = U\sumV^T\)</span> and then using <span class="math">\(U\sum\)</span> as the principle components</p>
+<h2>MDS</h2>
+<p>Given distance matrix <span class="math">\(D_{ij}\)</span> of pairwise distances, what would PCA result into?
+Assuming the distances were euclidean:</p>
+<div class="math">$$
+D_{ij}^2 = ||x_i-x_j||^2 = ||x_i - \overline{x} + \overline{x} -x_j||^2 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 -2\langle x_i-\overline{x}, x_j-\overline{x}\rangle
+= ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 + 2[K_c]_{ij}
+$$</div>
+<p>
+which can be cleverly rewritten as:
+</p>
+<div class="math">$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$</div>
+<p><span class="math">\(K_c\)</span> can now undergo SVD to obtain principal components. which is what happens in <a href="MDS.md">MDS</a> too.</p>
+<h2>References</h2>
+<p>[1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731
+[2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf
+[3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition
+[4] Multidimensional Scaling, Patrick J.F. Groenen∗ Michel van de Velden
+[5] SVD and PCA: http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca
+[6] Intuitive Explaination of PCA: http://arxiv.org/pdf/1404.1100.pdf
+[7] PCA: http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf
+[8] PCA: http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf
+[9] SVD: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf
+[10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional
+[11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/
+[12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
