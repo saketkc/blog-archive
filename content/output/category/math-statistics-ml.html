@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>A Pelican Blog - math, statistics, ml</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/math-statistics-ml.html">math, statistics, ml</a></li>
+                    <li><a href="/category/statistics.html">statistics</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/svd-vs-mds-vs-pca.html">SVD v/s MDS v/s PCA</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-04-15T00:00:00+00:00">
+                Published: Wed 15 April 2015
+        </abbr>
+
+<p>In <a href="/category/math-statistics-ml.html">math, statistics, ml</a>. </p>
+
+</footer><!-- /.post-info --><p>Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.</p>
+<h2>SVD</h2>
+<p>Let $X__{mxn}$ data matrix. For an easy to relate example, from bioinformatics,
+let each row represent a gene, and each column represent single patient.</p>
+<p>The rows thus give expression profile of gene across patients while the columns
+represent the expression levels of different genes in each person.</p>
+<p>Without loss of generality we assume $m&gt;n$ and $rank(X)=r &lt;n$</p>
+<p>The singular value decomposition of $X_{mxn}$ is then given by:</p>
+<p>$$
+X_{mxn} = U__{mxr}\sum_{rxr}V_{nxr}^T
+$$</p>
+<p>$U_{nxr}$ consists of orthornormal eigen vectors of $X^TX$(nxn)</p>
+<p>$V_{mxr}$ consists of orthornormal eigen vectors of $XX^T$(mxm)</p>
+<p>$\sum_{rxr}$ denotes a diagonal matrix composed of eigen vectors of $X^TX$ arranged with the largest being located
+at top left, least at bottom right.$\sum_{ii} = \lambda_i$ and $\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r$</p>
+<p>Facts:</p>
+<ul>
+<li>$\lambda_i \geq 0$ because $X^TX$ is a positive definite matrix: $yX^TXy = (Xy)(Xy)^T &gt; 0$ always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
+</ul>
+<h2>PCA</h2>
+<p>Let $X_c$ denote the mean centered $X$, i.e. $X_c = I’<em mxn="mxn">{mxm}X</em>$
+ where $I’ = I-\frac{1}{m}$ thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.</p>
+<p>Def: Gram matrix : $X_cX_c^T$</p>
+<p>Def: Covariance Matrix: $X_c^TX_c$</p>
+<p>Let’s say you are given the original uncente</p>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Multidimensional Scaling</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/math-statistics-ml.html">math, statistics, ml</a></li>
+                    <li class="active"><a href="/category/statistics.html">statistics</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/multidimensional-scaling.html" rel="bookmark"
+           title="Permalink to Multidimensional Scaling">Multidimensional Scaling</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-14T00:00:00+00:00">
+                Published: Tue 14 April 2015
+        </abbr>
+
+<p>In <a href="/category/statistics.html">statistics</a>. </p>
+
+</footer><!-- /.post-info -->      <p>MDS is a statistical technique to visualize dissimilarity
+between points. The distances between two pointsin n-dimensions 
+are visualized in 2 dimensions such that it represents
+the distance in n-dimensions as far as possible.</p>
+<p>It is important to note that, for MDS, we start of with a ‘distance’ matrix
+and not the coordinate of points. Dissimilarity is ‘similar’ to distances in most cases(ignoring the scale).
+Let $\delta_{i,j}$ represent the distance between $i\ and\ j$</p>
+<p>Given $n$ points, the idea is to come up with a set of $n * p$ matrix $X$
+such that the distance between two vectors $x_i$ and $x_j$ is given by:</p>
+<p>$$
+d_{i,j}^2(X) = \sum_{k=1}^{p}(x_{ik}-x_{jk})^2
+$$</p>
+<p>So if we choose $p=1$, we wish to visualize everything in single dimension.
+Let’s restrict to the case $p=2$</p>
+<h2>How do you obtain X?</h2>
+<p>The idea again goes back to the definition of keeping the ‘new’ distance $d_{i,j}(X)$
+as the original dissimilarity $\delta_{i,j}$ , this leads to the least square fit kind of regression
+where the goal is to minimize the ‘residual’ error. Note, $d_{i,j}$ is an approximation to $\delta_{i,j}$
+ The distance matrix could have come from $n$ points having high-dimensions(say $p’&gt;p$), and even though
+ these points cannot be visualized (since we cannot draw $p’$ dimensional map) we draw a $p=2$ dimensional map.
+The coordinates of original $n$ points in $p’$ need not be known. We can still obtain an ‘equaivalent’
+set of $n$ points in $p=2$ dimensions such that the $2D$ distance between two points $i,j$ is 
+as close as it can be to the original distance.</p>
+<p>$\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2$</p>
+<p>This is just one way to define ‘closeness’ of $\delta_{ij}$ with $\d_{ij}$.
+$X$ is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).</p>
+<h2>Checking if MDS makes sense</h2>
+<p>A quick checkt to see if MDS is good enough
+is to go back to its definition. The final set of vectors $X_{n*p}$
+should be able to communiate the original distance matrix
+and hence a plot of the $\frac{n{n+1}}{2}$ points if $d_{ij}$ is
+plotted against $X$ acis and $\delta_{ij}$ is plotted along $Y$ axis
+then you should get a straight line representing $Y=X$.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

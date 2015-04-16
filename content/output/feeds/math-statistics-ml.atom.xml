@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/math-statistics-ml.atom.xml" rel="self"></link><id>/</id><updated>2015-04-15T00:00:00+00:00</updated><entry><title>SVD v/s MDS v/s PCA</title><link href="/svd-vs-mds-vs-pca.html" rel="alternate"></link><updated>2015-04-15T00:00:00+00:00</updated><author><name></name></author><id>tag:,2015-04-15:svd-vs-mds-vs-pca.html</id><summary type="html">&lt;p&gt;Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.&lt;/p&gt;
+&lt;h2&gt;SVD&lt;/h2&gt;
+&lt;p&gt;Let $X__{mxn}$ data matrix. For an easy to relate example, from bioinformatics,
+let each row represent a gene, and each column represent single patient.&lt;/p&gt;
+&lt;p&gt;The rows thus give expression profile of gene across patients while the columns
+represent the expression levels of different genes in each person.&lt;/p&gt;
+&lt;p&gt;Without loss of generality we assume $m&amp;gt;n$ and $rank(X)=r &amp;lt;n$&lt;/p&gt;
+&lt;p&gt;The singular value decomposition of $X_{mxn}$ is then given by:&lt;/p&gt;
+&lt;p&gt;$$
+X_{mxn} = U__{mxr}\sum_{rxr}V_{nxr}^T
+$$&lt;/p&gt;
+&lt;p&gt;$U_{nxr}$ consists of orthornormal eigen vectors of $X^TX$(nxn)&lt;/p&gt;
+&lt;p&gt;$V_{mxr}$ consists of orthornormal eigen vectors of $XX^T$(mxm)&lt;/p&gt;
+&lt;p&gt;$\sum_{rxr}$ denotes a diagonal matrix composed of eigen vectors of $X^TX$ arranged with the largest being located
+at top left, least at bottom right.$\sum_{ii} = \lambda_i$ and $\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r$&lt;/p&gt;
+&lt;p&gt;Facts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\lambda_i \geq 0$ because $X^TX$ is a positive definite matrix: $yX^TXy = (Xy)(Xy)^T &amp;gt; 0$ always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;PCA&lt;/h2&gt;
+&lt;p&gt;Let $X_c$ denote the mean centered $X$, i.e. $X_c = I’&lt;em mxn="mxn"&gt;{mxm}X&lt;/em&gt;$
+ where $I’ = I-\frac{1}{m}$ thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.&lt;/p&gt;
+&lt;p&gt;Def: Gram matrix : $X_cX_c^T$&lt;/p&gt;
+&lt;p&gt;Def: Covariance Matrix: $X_c^TX_c$&lt;/p&gt;
+&lt;p&gt;Let’s say you are given the original uncente&lt;/p&gt;</summary></entry></feed>

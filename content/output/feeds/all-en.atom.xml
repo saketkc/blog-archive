@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2015-04-15T00:00:00+00:00</updated><entry><title>SVD v/s MDS v/s PCA</title><link href="/svd-vs-mds-vs-pca.html" rel="alternate"></link><updated>2015-04-15T00:00:00+00:00</updated><author><name></name></author><id>tag:,2015-04-15:svd-vs-mds-vs-pca.html</id><summary type="html">&lt;p&gt;Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.&lt;/p&gt;
+&lt;h2&gt;SVD&lt;/h2&gt;
+&lt;p&gt;Let $X__{mxn}$ data matrix. For an easy to relate example, from bioinformatics,
+let each row represent a gene, and each column represent single patient.&lt;/p&gt;
+&lt;p&gt;The rows thus give expression profile of gene across patients while the columns
+represent the expression levels of different genes in each person.&lt;/p&gt;
+&lt;p&gt;Without loss of generality we assume $m&amp;gt;n$ and $rank(X)=r &amp;lt;n$&lt;/p&gt;
+&lt;p&gt;The singular value decomposition of $X_{mxn}$ is then given by:&lt;/p&gt;
+&lt;p&gt;$$
+X_{mxn} = U__{mxr}\sum_{rxr}V_{nxr}^T
+$$&lt;/p&gt;
+&lt;p&gt;$U_{nxr}$ consists of orthornormal eigen vectors of $X^TX$(nxn)&lt;/p&gt;
+&lt;p&gt;$V_{mxr}$ consists of orthornormal eigen vectors of $XX^T$(mxm)&lt;/p&gt;
+&lt;p&gt;$\sum_{rxr}$ denotes a diagonal matrix composed of eigen vectors of $X^TX$ arranged with the largest being located
+at top left, least at bottom right.$\sum_{ii} = \lambda_i$ and $\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r$&lt;/p&gt;
+&lt;p&gt;Facts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\lambda_i \geq 0$ because $X^TX$ is a positive definite matrix: $yX^TXy = (Xy)(Xy)^T &amp;gt; 0$ always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;PCA&lt;/h2&gt;
+&lt;p&gt;Let $X_c$ denote the mean centered $X$, i.e. $X_c = I’&lt;em mxn="mxn"&gt;{mxm}X&lt;/em&gt;$
+ where $I’ = I-\frac{1}{m}$ thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.&lt;/p&gt;
+&lt;p&gt;Def: Gram matrix : $X_cX_c^T$&lt;/p&gt;
+&lt;p&gt;Def: Covariance Matrix: $X_c^TX_c$&lt;/p&gt;
+&lt;p&gt;Let’s say you are given the original uncente&lt;/p&gt;</summary></entry><entry><title>Multidimensional Scaling</title><link href="/multidimensional-scaling.html" rel="alternate"></link><updated>2015-04-14T00:00:00+00:00</updated><author><name></name></author><id>tag:,2015-04-14:multidimensional-scaling.html</id><summary type="html">&lt;p&gt;MDS is a statistical technique to visualize dissimilarity
+between points. The distances between two pointsin n-dimensions 
+are visualized in 2 dimensions such that it represents
+the distance in n-dimensions as far as possible.&lt;/p&gt;
+&lt;p&gt;It is important to note that, for MDS, we start of with a ‘distance’ matrix
+and not the coordinate of points. Dissimilarity is ‘similar’ to distances in most cases(ignoring the scale).
+Let $\delta_{i,j}$ represent the distance between $i\ and\ j$&lt;/p&gt;
+&lt;p&gt;Given $n$ points, the idea is to come up with a set of $n * p$ matrix $X$
+such that the distance between two vectors $x_i$ and $x_j$ is given by:&lt;/p&gt;
+&lt;p&gt;$$
+d_{i,j}^2(X) = \sum_{k=1}^{p}(x_{ik}-x_{jk})^2
+$$&lt;/p&gt;
+&lt;p&gt;So if we choose $p=1$, we wish to visualize everything in single dimension.
+Let’s restrict to the case $p=2$&lt;/p&gt;
+&lt;h2&gt;How do you obtain X?&lt;/h2&gt;
+&lt;p&gt;The idea again goes back to the definition of keeping the ‘new’ distance $d_{i,j}(X)$
+as the original dissimilarity $\delta_{i,j}$ , this leads to the least square fit kind of regression
+where the goal is to minimize the ‘residual’ error. Note, $d_{i,j}$ is an approximation to $\delta_{i,j}$
+ The distance matrix could have come from $n$ points having high-dimensions(say $p’&amp;gt;p$), and even though
+ these points cannot be visualized (since we cannot draw $p’$ dimensional map) we draw a $p=2$ dimensional map.
+The coordinates of original $n$ points in $p’$ need not be known. We can still obtain an ‘equaivalent’
+set of $n$ points in $p=2$ dimensions such that the $2D$ distance between two points $i,j$ is 
+as close as it can be to the original distance.&lt;/p&gt;
+&lt;p&gt;$\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2$&lt;/p&gt;
+&lt;p&gt;This is just one way to define ‘closeness’ of $\delta_{ij}$ with $\d_{ij}$.
+$X$ is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).&lt;/p&gt;
+&lt;h2&gt;Checking if MDS makes sense&lt;/h2&gt;
+&lt;p&gt;A quick checkt to see if MDS is good enough
+is to go back to its definition. The final set of vectors $X_{n*p}$
+should be able to communiate the original distance matrix
+and hence a plot of the $\frac{n{n+1}}{2}$ points if $d_{ij}$ is
+plotted against $X$ acis and $\delta_{ij}$ is plotted along $Y$ axis
+then you should get a straight line representing $Y=X$.&lt;/p&gt;</summary></entry></feed>
