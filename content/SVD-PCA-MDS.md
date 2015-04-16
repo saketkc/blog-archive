@@ -50,3 +50,58 @@ Let $X_c$ denote the mean centered $X$, i.e. $X_c = I’_{mxm}X_{mxn}$
 
  Let’s say you are given the original uncente
 
+
+
+The most ‘common’ definition of PCA says : For a given set of $n$ dimensional vectors
+$x_1, x_2, x__3,x_4, \ldots x_m$ the $p<n$ principal components are those orthogonal
+axes onto which the variance retained is maximized
+
+and hence 
+
+Plotting/Running PCA
+- Calculate $X_cX_c^T$ and calculate $U$ as the eigen vectors of this matrix. Retain the vectors corresponding
+to top $p=2$ eigenvalues
+-  Calculate project $Y=U^TX$
+
+Given gram matrix of original data $K$, to obtain gram matrix of mean centered data, cholesky decomposition is not required:
+
+
+$K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}$
+
+Also realize:
+
+$X_c = U \sum V^T$
+
+and $UU^T=I$ ; $VV^T=I$
+
+Thus, $K_c=X_cX_c^T = U\sum^2U^T$
+
+PCA is equivalent of doing a SVD: of $X_c = U\sumV^T$ and then using $U\sum$ as the principle components
+
+
+## MDS
+Given distance matrix $D_{ij}$ of pairwise distances, what would PCA result into?
+Assuming the distances were euclidean:
+
+$$
+D_{ij}^2 = ||x_i-x_j||^2 = ||x_i - \overline{x} + \overline{x} -x_j||^2 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 -2\langle x_i-\overline{x}, x_j-\overline{x}\rangle
+= ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 + 2[K_c]_{ij}
+$$
+which can be cleverly rewritten as:
+$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$
+
+$K_c$ can now undergo SVD to obtain principal components. which is what happens in [MDS](MDS.md) too.
+## References
+
+[1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731
+[2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf
+[3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition
+[4] Multidimensional Scaling, Patrick J.F. Groenen∗ Michel van de Velden
+[5] SVD and PCA: http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca
+[6] Intuitive Explaination of PCA: http://arxiv.org/pdf/1404.1100.pdf
+[7] PCA: http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf
+[8] PCA: http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf
+[9] SVD: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf
+[10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional
+[11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/
+[12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html
