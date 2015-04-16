@@ -14,6 +14,7 @@
         <header id="banner" class="body">
                 <h1><a href="./">Piddling Pertinent </a></h1>
                 <nav><ul>
+                    <li><a href="./category/math-statistics-ml.html">math, statistics, ml</a></li>
                     <li><a href="./category/misc.html">misc</a></li>
                     <li><a href="./category/statistics.html">statistics</a></li>
                 </ul></nav>
@@ -21,50 +22,45 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="./multidimensional-scaling.html">Multidimensional Scaling</a></h1>
+                    <h1 class="entry-title"><a href="./svd-vs-mds-vs-pca.html">SVD v/s MDS v/s PCA</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-04-14T00:00:00+02:00">
-                Published: Tue 14 April 2015
+        <abbr class="published" title="2015-04-15T00:00:00+02:00">
+                Published: Wed 15 April 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
-<p>In <a href="./category/statistics.html">statistics</a>. </p>
+<p>In <a href="./category/math-statistics-ml.html">math, statistics, ml</a>. </p>
 
-</footer><!-- /.post-info --><p>MDS is a statistical technique to visualize dissimilarity
-between points. The distances between two pointsin n-dimensions 
-are visualized in 2 dimensions such that it represents
-the distance in n-dimensions as far as possible.</p>
-<p>It is important to note that, for MDS, we start of with a ‘distance’ matrix
-and not the coordinate of points. Dissimilarity is ‘similar’ to distances in most cases(ignoring the scale).
-Let <span class="math">\(\delta_{i,j}\)</span> represent the distance between <span class="math">\(i\ and\ j\)</span></p>
-<p>Given <span class="math">\(n\)</span> points, the idea is to come up with a set of <span class="math">\(n * p\)</span> matrix <span class="math">\(X\)</span>
-such that the distance between two vectors <span class="math">\(x_i\)</span> and <span class="math">\(x_j\)</span> is given by:</p>
+</footer><!-- /.post-info --><p>Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.</p>
+<h2>SVD</h2>
+<p>Let <span class="math">\(X__{mxn}\)</span> data matrix. For an easy to relate example, from bioinformatics,
+let each row represent a gene, and each column represent single patient.</p>
+<p>The rows thus give expression profile of gene across patients while the columns
+represent the expression levels of different genes in each person.</p>
+<p>Without loss of generality we assume <span class="math">\(m&gt;n\)</span> and <span class="math">\(rank(X)=r &lt;n\)</span></p>
+<p>The singular value decomposition of <span class="math">\(X_{mxn}\)</span> is then given by:</p>
 <div class="math">$$
-d_{i,j}^2(X) = \sum_{k=1}^{p}(x_{ik}-x_{jk})^2
+X_{mxn} = U__{mxr}\sum_{rxr}V_{nxr}^T
 $$</div>
-<p>So if we choose <span class="math">\(p=1\)</span>, we wish to visualize everything in single dimension.
-Let’s restrict to the case <span class="math">\(p=2\)</span></p>
-<h2>How do you obtain X?</h2>
-<p>The idea again goes back to the definition of keeping the ‘new’ distance <span class="math">\(d_{i,j}(X)\)</span>
-as the original dissimilarity <span class="math">\(\delta_{i,j}\)</span> , this leads to the least square fit kind of regression
-where the goal is to minimize the ‘residual’ error. Note, <span class="math">\(d_{i,j}\)</span> is an approximation to <span class="math">\(\delta_{i,j}\)</span>
- The distance matrix could have come from <span class="math">\(n\)</span> points having high-dimensions(say <span class="math">\(p’&gt;p\)</span>), and even though
- these points cannot be visualized (since we cannot draw <span class="math">\(p’\)</span> dimensional map) we draw a <span class="math">\(p=2\)</span> dimensional map.
-The coordinates of original <span class="math">\(n\)</span> points in <span class="math">\(p’\)</span> need not be known. We can still obtain an ‘equaivalent’
-set of <span class="math">\(n\)</span> points in <span class="math">\(p=2\)</span> dimensions such that the <span class="math">\(2D\)</span> distance between two points <span class="math">\(i,j\)</span> is 
-as close as it can be to the original distance.</p>
-<p><span class="math">\(\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2\)</span></p>
-<p>This is just one way to define ‘closeness’ of <span class="math">\(\delta_{ij}\)</span> with <span class="math">\(\d_{ij}\)</span>.
-<span class="math">\(X\)</span> is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).</p>
-<h2>Checking if MDS makes sense</h2>
-<p>A quick checkt to see if MDS is good enough
-is to go back to its definition. The final set of vectors <span class="math">\(X_{n*p}\)</span>
-should be able to communiate the original distance matrix
-and hence a plot of the <span class="math">\(\frac{n{n+1}}{2}\)</span> points if <span class="math">\(d_{ij}\)</span> is
-plotted against <span class="math">\(X\)</span> acis and <span class="math">\(\delta_{ij}\)</span> is plotted along <span class="math">\(Y\)</span> axis
-then you should get a straight line representing <span class="math">\(Y=X\)</span>.</p>
+<p><span class="math">\(U_{nxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(X^TX\)</span>(nxn)</p>
+<p><span class="math">\(V_{mxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(XX^T\)</span>(mxm)</p>
+<p><span class="math">\(\sum_{rxr}\)</span> denotes a diagonal matrix composed of eigen vectors of <span class="math">\(X^TX\)</span> arranged with the largest being located
+at top left, least at bottom right.<span class="math">\(\sum_{ii} = \lambda_i\)</span> and <span class="math">\(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r\)</span></p>
+<p>Facts:</p>
+<ul>
+<li><span class="math">\(\lambda_i \geq 0\)</span> because <span class="math">\(X^TX\)</span> is a positive definite matrix: <span class="math">\(yX^TXy = (Xy)(Xy)^T &gt; 0\)</span> always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
+</ul>
+<h2>PCA</h2>
+<p>Let <span class="math">\(X_c\)</span> denote the mean centered <span class="math">\(X\)</span>, i.e. <span class="math">\(X_c = I’_{mxm}X_{mxn}\)</span>
+ where <span class="math">\(I’ = I-\frac{1}{m}\)</span> thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.</p>
+<p>Def: Gram matrix : <span class="math">\(X_cX_c^T\)</span></p>
+<p>Def: Covariance Matrix: <span class="math">\(X_c^TX_c\)</span></p>
+<p>Let’s say you are given the original uncente</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -108,6 +104,33 @@ then you should get a straight line representing <span class="math">\(Y=X\)</spa
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="./multidimensional-scaling.html" rel="bookmark"
+                           title="Permalink to Multidimensional Scaling">Multidimensional Scaling</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-14T00:00:00+02:00">
+                Published: Tue 14 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/statistics.html">statistics</a>. </p>
+
+</footer><!-- /.post-info -->                <p>MDS is a statistical technique to visualize dissimilarity
+between points. The distances between two pointsin n-dimensions 
+are visualized in 2 dimensions such that it represents
+the distance in n-dimensions as far as possible.</p>
+<p>It is important to note that, for MDS, we start of with a ‘distance’ matrix
+and not ...</p>
+                <a class="readmore" href="./multidimensional-scaling.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
