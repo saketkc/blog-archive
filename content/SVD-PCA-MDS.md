@@ -11,7 +11,7 @@ trying to figure out what goes in where.
 
 ## SVD
 
-Let $X__{mxn}$ data matrix. For an easy to relate example, from bioinformatics,
+Let $X_{mxn}$ data matrix. For an easy to relate example, from bioinformatics,
 let each row represent a gene, and each column represent single patient.
 
 The rows thus give expression profile of gene across patients while the columns
@@ -22,7 +22,7 @@ Without loss of generality we assume $m>n$ and $rank(X)=r <n$
 The singular value decomposition of $X_{mxn}$ is then given by:
 
 $$
-X_{mxn} = U__{mxr}\sum_{rxr}V_{nxr}^T
+X_{mxn} = U_{mxr}\sum_{rxr}V_{nxr}^T
 $$
 
 
@@ -53,7 +53,7 @@ Let $X_c$ denote the mean centered $X$, i.e. $X_c = I’_{mxm}X_{mxn}$
 
 
 The most ‘common’ definition of PCA says : For a given set of $n$ dimensional vectors
-$x_1, x_2, x__3,x_4, \ldots x_m$ the $p<n$ principal components are those orthogonal
+$x_1, x_2, x_3,x_4, \ldots x_m$ the $p<n$ principal components are those orthogonal
 axes onto which the variance retained is maximized
 
 and hence 
@@ -94,14 +94,25 @@ $K_c$ can now undergo SVD to obtain principal components. which is what happens 
 ## References
 
 [1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731
+
 [2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf
+
 [3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition
+
 [4] Multidimensional Scaling, Patrick J.F. Groenen∗ Michel van de Velden
+
 [5] SVD and PCA: http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca
+
 [6] Intuitive Explaination of PCA: http://arxiv.org/pdf/1404.1100.pdf
+
 [7] PCA: http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf
+
 [8] PCA: http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf
+
 [9] SVD: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf
+
 [10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional
+
 [11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/
+
 [12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html
