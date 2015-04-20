@@ -22,24 +22,34 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../a-mod-b-is-olog-n.html">a mod b is O(log n)</a></h1>
+                    <h1 class="entry-title"><a href="../gumbel-distribution-expectation.html">Gumbel distribution expectation</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-03-08T00:00:00+01:00">
-                Published: Sun 08 March 2015
+        <abbr class="published" title="2015-03-03T00:00:00+01:00">
+                Published: Tue 03 March 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/number-theory.html">number theory</a> <a href="../tag/time-complexity.html">time complexity</a> </p>
-</footer><!-- /.post-info --><p>Test inline math <span class="math">\(\frac{1}{3}\)</span>
-Block math 
+
+</footer><!-- /.post-info --><h2>What</h2>
+<p>If <span class="math">\(X_1,..,X_n\)</span> is a random sample with density <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> (<span class="math">\(x \in\mathbb{R}\)</span>) and <span class="math">\(-\infty&lt;\theta&lt;\infty\)</span>,
+<span class="math">\(\quad\)</span>i) Find the estimator of <span class="math">\(\theta\)</span></p>
+<h2>Solution</h2>
+<p>First let’s confirm if  <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> represents a PDF.</p>
+<p>Transforming <span class="math">\(t=e^{-({x-\theta})}\)</span>:</p>
+<div class="math">$$\int_{-\infty}^{\infty} e^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx  = \int_{0}^{\infty} e^{-t} dt = 1$$</div>
+<p>This is indeed a <a href="http://en.wikipedia.org/wiki/Gumbel_distribution">known distribution</a></p>
+<p>Now, using similar transformation(<span class="math">\(t=e^{-(x-\theta)}\)</span>) for </p>
+<div class="math">$$E[X]=\int_{-\infty}^\infty xe^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx$$</div>
+<p>we get</p>
+<div class="math">$$E[X]=\int_{0}^\infty (\theta-ln (t))e^{-t}dt$$</div>
+<div class="math">$$E[X]=\theta - \int_{0}^\infty  ln (t)\ e^{-t}dt$$</div>
+<p>Thus, 
 </p>
-<div class="math">$$
-\frac{1}{444}
-X \Leftarrow Y
-$$</div>
+<div class="math">$$ E[X] = \theta + \gamma$$</div>
+<p>where the second term is <a href="http://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant">Euler Mascheroni constant</a> <span class="math">\(\gamma\)</span> </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -117,6 +127,88 @@ Now consider B=BI </p>
 <div class="math">$$\implies$$</div>
 <p> B-(BA ...</p>
                 <a class="readmore" href="../ba-ab-i.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
+                           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-28T00:00:00+01:00">
+                Published: Sat 28 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
+</footer><!-- /.post-info -->                <p>L2 norm and spectral radius for </p>
+<div class="math">$$A=A^T$$</div>
+<p>L2 inducded norm:</p>
+<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
+<p>Induced norm: </p>
+<div class="math">$$$|| . ||$$</div>
+<p> defined as ||A|| = </p>
+<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
+<p> 
+Note how ||Ax|| is a vector norm ...</p>
+                <a class="readmore" href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../positive-definite-second-derivative.html" rel="bookmark"
+                           title="Permalink to Positive definite second derivative">Positive definite second derivative</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-28T00:00:00+01:00">
+                Published: Sat 28 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
+</footer><!-- /.post-info -->                <blockquote>
+<p>Let <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> be a twice-differentiable function,
+and let <span class="math">\(f\)</span>’s second derivative be continuous. Let <span class="math">\(f\)</span> be convex with
+the following definition of convexity: for any <span class="math">\(a&lt;b \in \mathbb{R}\)</span>:
+<div class="math">$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 ...</div></p></blockquote>
+                <a class="readmore" href="../positive-definite-second-derivative.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../proof-for-triangle-inequality-for-case-xy0.html" rel="bookmark"
+                           title="Permalink to Proof for triangle inequality for case $x+y<0$">Proof for triangle inequality for case $x+y<0$</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-02T00:00:00+01:00">
+                Published: Mon 02 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->                <p><span class="math">\(-|x| \leq x \leq |x|\)</span>
+and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\implies\)</span> <span class="math">\(-|x|-|y| \leq x+y \leq |x|+|y|\)</span> <span class="math">\(\implies\)</span> <span class="math">\(|x+y| \leq |x| +|y|\)</span> for any real <span class="math">\(x,y\)</span></p>
+<p>The last implication comes from the fact:
+<span class="math">\(|x| \leq a \leftrightarrow -a \leq x \leq a\)</span> for some <span class="math">\(a ...</span></p>
+                <a class="readmore" href="../proof-for-triangle-inequality-for-case-xy0.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->

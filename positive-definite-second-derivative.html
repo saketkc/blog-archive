@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Positive definite second derivative</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">Piddling Pertinent </a></h1>
+                <nav><ul>
+                    <li><a href="./category/math-statistics-ml.html">math, statistics, ml</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
+                    <li><a href="./category/statistics.html">statistics</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./positive-definite-second-derivative.html" rel="bookmark"
+           title="Permalink to Positive definite second derivative">Positive definite second derivative</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-28T00:00:00+01:00">
+                Published: Sat 28 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
+</footer><!-- /.post-info -->      <blockquote>
+<p>Let <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> be a twice-differentiable function,
+and let <span class="math">\(f\)</span>’s second derivative be continuous. Let <span class="math">\(f\)</span> be convex with
+the following definition of convexity: for any <span class="math">\(a&lt;b \in \mathbb{R}\)</span>:
+<div class="math">$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2}$$</div> Prove that
+<span class="math">\(f’’ \geq 0\)</span> everywhere.</p>
+</blockquote>
+<h2>Solution</h2>
+<p>http://math.stackexchange.com/a/1224986/171836</p>
+<p>Given <span class="math">\(f\)</span> is a continuous and using the results from <a href="http://math.stackexchange.com/a/83398/171836">this answer</a>, <span class="math">\(f\)</span> can be proven to satisfy:
+<span class="math">\(f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) +  (1-\lambda)f(x_2)\ \forall \  \lambda \in [0,1]\)</span> </p>
+<p>Now, by using Taylor’s expansion, <span class="math">\(f’’(x)\)</span> can be written as: 
+</p>
+<div class="math">$$
+f’’(x) = \lim_{h \rightarrow 0} \frac{f(x+h)+f(x-h)-2f(x)}{h^2}
+$$</div>
+<p><span class="math">\(f(\frac{1}{2}(x+h) + \frac{1}{2}(x-h)) \leq \frac{1}{2}f(x+h) + \frac{1}{2}f(x-h) \implies 2f(x) \leq f(x+h)+f(x-h)\)</span> 
+or <span class="math">\(f(x+h)+f(x-h)-2f(x) \geq 0\)</span>. </p>
+<p>Since <span class="math">\(h^2 \geq 0\)</span> and <span class="math">\(f\)</span> being twice differentiable,  <span class="math">\(f’’(x) \geq 0\)</span> follows.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
