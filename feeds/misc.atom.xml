@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saketkc.github.io/" rel="alternate"></link><link href="http://saketkc.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://saketkc.github.io/</id><updated>2015-03-08T00:00:00+01:00</updated><entry><title>a mod b is O(log n)</title><link href="http://saketkc.github.io/a-mod-b-is-olog-n.html" rel="alternate"></link><updated>2015-03-08T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-03-08:a-mod-b-is-olog-n.html</id><summary type="html">&lt;p&gt;Test inline math &lt;span class="math"&gt;\(\frac{1}{3}\)&lt;/span&gt;
-Block math 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\frac{1}{444}
-X \Leftarrow Y
-$$&lt;/div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saketkc.github.io/" rel="alternate"></link><link href="http://saketkc.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://saketkc.github.io/</id><updated>2015-04-21T00:00:00+02:00</updated><entry><title>Runs in flips of a coin</title><link href="http://saketkc.github.io/runs-in-flips-of-a-coin.html" rel="alternate"></link><updated>2015-04-21T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-04-21:runs-in-flips-of-a-coin.html</id><summary type="html">&lt;p&gt;This problem happened to be in one of the screening examinations
+and is my favorite because it demonstrates an application of indicator variables&lt;/p&gt;
+&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;p&gt;A run is defined as &lt;em&gt;maximal&lt;/em&gt; subsequence of consecutive tosses all having the same outcome.
+So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let &lt;span class="math"&gt;\(R_n\)&lt;/span&gt; represent the number of runs 
+when a coin is flipped &lt;span class="math"&gt;\(n\)&lt;/span&gt; times. Find:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(ER_n\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(Var(R_n)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Distribution of &lt;span class="math"&gt;\(R_n-1\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Assume &lt;span class="math"&gt;\(p,q\)&lt;/span&gt; probability of showing H,T respectively.&lt;/p&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Let &lt;span class="math"&gt;\(I_i\)&lt;/span&gt; be an indicator variable such that &lt;span class="math"&gt;\(I_i=1\)&lt;/span&gt; iff &lt;span class="math"&gt;\(i^{th}\)&lt;/span&gt; and &lt;span class="math"&gt;\((i+1)^{th}\)&lt;/span&gt; tosses are different(One of {&lt;span class="math"&gt;\(HT,TH\)&lt;/span&gt;} ) 
+f runs in &lt;span class="math"&gt;\(n\)&lt;/span&gt; flips is given by: &lt;span class="math"&gt;\(R_n = \sum_{i=1}^{n-1}I_i\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Well, not really. The point to realise is that the first toss is always a run!
+Corrected &lt;span class="math"&gt;\(R_n = \sum_{i=1}^{n-1}I_i + 1\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now &lt;span class="math"&gt;\(E[R_n] = 1+\sum_{i=1}^{n-1}P[I_i=1]\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We already know &lt;span class="math"&gt;\(P[I-i=1] = pq + qp\)&lt;/span&gt;(Remeber the two possiblites of HT,TH)&lt;/p&gt;
+&lt;p&gt;and hence
+1. &lt;span class="math"&gt;\(ER_n = 1+ (n-1)2pq\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Check Check!&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(ER_1 = 1\)&lt;/span&gt; (Straightforward correct)
+&lt;span class="math"&gt;\(ER_2 = 1+2pq\)&lt;/span&gt; 
+&lt;span class="math"&gt;\(P(R_2=2) = pq + qp\)&lt;/span&gt; and &lt;span class="math"&gt;\(P(R_2=1) = p^2 + q^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Thus &lt;span class="math"&gt;\(ER_2 = 2(pq+qp) + 1(p^2+q^2) = 1 +2pq\)&lt;/span&gt; (Using &lt;span class="math"&gt;\(p+q=1\)&lt;/span&gt;)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(Var(R_n) = ER_n^2 - (ER_n)^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(ER_n^2 = E(1+\sum I_i)^2 = E\sum_{i=1}^{n-1}I_i^2 +1+2\sum_{i=1}^{n-1}I_i = \sum_{i=1}^{n-1}EI_i^2 + 2\sum_{i &amp;lt; j} EI_iI_j + 2E\sum_{i=1}EI_1 = 3\sum E_i + 2\sum_{i &amp;lt; j}EI_iI_j +1\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now realise that &lt;span class="math"&gt;\(EI_iI_j=P(I_iI_j)\)&lt;/span&gt; is an independent event for &lt;span class="math"&gt;\(|i-j|&amp;gt;1\)&lt;/span&gt; and is equal to &lt;span class="math"&gt;\(P(I_1)^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For &lt;span class="math"&gt;\(|i-j|=1\)&lt;/span&gt; we have &lt;span class="math"&gt;\(P(I_iI_j)=pqp+qpq = p^2q+qp^2\)&lt;/span&gt; and I chose in my summation for &lt;span class="math"&gt;\(j\)&lt;/span&gt; to be less than &lt;span class="math"&gt;\(i\)&lt;/span&gt; so the mod sign is redundant&lt;/p&gt;
+&lt;p&gt;Alright, skipping too many things here. but:
+&lt;span class="math"&gt;\(Var(R_n) = 4pqn -6pq+2pq(n-2)(n-3) - 4p^2q^2(n-1)^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Check for &lt;span class="math"&gt;\(Var(R_2) = 2pq(1-2pq)\)&lt;/span&gt; and &lt;span class="math"&gt;\(Var(R_1)=0\)&lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;That should be a straightforward &lt;span class="math"&gt;\(R_n-1 \approx Binomial(n,2pq)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -43,4 +74,362 @@ $$&lt;/div&gt;
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="number theory"></category><category term="time complexity"></category></entry></feed>
+&lt;/script&gt;</summary><category term="probability"></category><category term="expectation"></category></entry><entry><title>SVD v/s MDS v/s PCA</title><link href="http://saketkc.github.io/svd-vs-mds-vs-pca.html" rel="alternate"></link><updated>2015-04-15T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-04-15:svd-vs-mds-vs-pca.html</id><summary type="html">&lt;p&gt;Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.&lt;/p&gt;
+&lt;h2&gt;SVD&lt;/h2&gt;
+&lt;p&gt;Let &lt;span class="math"&gt;\(X_{mxn}\)&lt;/span&gt; data matrix. For an easy to relate example, from bioinformatics,
+let each row represent a gene, and each column represent single patient.&lt;/p&gt;
+&lt;p&gt;The rows thus give expression profile of gene across patients while the columns
+represent the expression levels of different genes in each person.&lt;/p&gt;
+&lt;p&gt;Without loss of generality we assume &lt;span class="math"&gt;\(m&amp;gt;n\)&lt;/span&gt; and &lt;span class="math"&gt;\(rank(X)=r &amp;lt;n\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The singular value decomposition of &lt;span class="math"&gt;\(X_{mxn}\)&lt;/span&gt; is then given by:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+X_{mxn} = U_{mxr}\sum_{rxr}V_{nxr}^T
+$$&lt;/div&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(U_{nxr}\)&lt;/span&gt; consists of orthornormal eigen vectors of &lt;span class="math"&gt;\(X^TX\)&lt;/span&gt;(nxn)&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(V_{mxr}\)&lt;/span&gt; consists of orthornormal eigen vectors of &lt;span class="math"&gt;\(XX^T\)&lt;/span&gt;(mxm)&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\sum_{rxr}\)&lt;/span&gt; denotes a diagonal matrix composed of eigen vectors of &lt;span class="math"&gt;\(X^TX\)&lt;/span&gt; arranged with the largest being located
+at top left, least at bottom right.&lt;span class="math"&gt;\(\sum_{ii} = \lambda_i\)&lt;/span&gt; and &lt;span class="math"&gt;\(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Facts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\lambda_i \geq 0\)&lt;/span&gt; because &lt;span class="math"&gt;\(X^TX\)&lt;/span&gt; is a positive definite matrix: &lt;span class="math"&gt;\(yX^TXy = (Xy)(Xy)^T &amp;gt; 0\)&lt;/span&gt; always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;PCA&lt;/h2&gt;
+&lt;p&gt;Let &lt;span class="math"&gt;\(X_c\)&lt;/span&gt; denote the mean centered &lt;span class="math"&gt;\(X\)&lt;/span&gt;, i.e. &lt;span class="math"&gt;\(X_c = I’_{mxm}X_{mxn}\)&lt;/span&gt;
+ where &lt;span class="math"&gt;\(I’ = I-\frac{1}{m}\)&lt;/span&gt; thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.&lt;/p&gt;
+&lt;p&gt;Def: Gram matrix : &lt;span class="math"&gt;\(X_cX_c^T\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Def: Covariance Matrix: &lt;span class="math"&gt;\(X_c^TX_c\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Let’s say you are given the original uncente&lt;/p&gt;
+&lt;p&gt;The most ‘common’ definition of PCA says : For a given set of &lt;span class="math"&gt;\(n\)&lt;/span&gt; dimensional vectors
+&lt;span class="math"&gt;\(x_1, x_2, x_3,x_4, \ldots x_m\)&lt;/span&gt; the &lt;span class="math"&gt;\(p&amp;lt;n\)&lt;/span&gt; principal components are those orthogonal
+axes onto which the variance retained is maximized&lt;/p&gt;
+&lt;p&gt;and hence &lt;/p&gt;
+&lt;p&gt;Plotting/Running PCA
+- Calculate &lt;span class="math"&gt;\(X_cX_c^T\)&lt;/span&gt; and calculate &lt;span class="math"&gt;\(U\)&lt;/span&gt; as the eigen vectors of this matrix. Retain the vectors corresponding
+to top &lt;span class="math"&gt;\(p=2\)&lt;/span&gt; eigenvalues
+-  Calculate project &lt;span class="math"&gt;\(Y=U^TX\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Given gram matrix of original data &lt;span class="math"&gt;\(K\)&lt;/span&gt;, to obtain gram matrix of mean centered data, cholesky decomposition is not required:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Also realize:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(X_c = U \sum V^T\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and &lt;span class="math"&gt;\(UU^T=I\)&lt;/span&gt; ; &lt;span class="math"&gt;\(VV^T=I\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Thus, &lt;span class="math"&gt;\(K_c=X_cX_c^T = U\sum^2U^T\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;PCA is equivalent of doing a SVD: of &lt;span class="math"&gt;\(X_c = U\sumV^T\)&lt;/span&gt; and then using &lt;span class="math"&gt;\(U\sum\)&lt;/span&gt; as the principle components&lt;/p&gt;
+&lt;h2&gt;MDS&lt;/h2&gt;
+&lt;p&gt;Given distance matrix &lt;span class="math"&gt;\(D_{ij}\)&lt;/span&gt; of pairwise distances, what would PCA result into?
+Assuming the distances were euclidean:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+D_{ij}^2 = ||x_i-x_j||^2 = ||x_i - \overline{x} + \overline{x} -x_j||^2 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 -2\langle x_i-\overline{x}, x_j-\overline{x}\rangle
+= ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 + 2[K_c]_{ij}
+$$&lt;/div&gt;
+&lt;p&gt;
+which can be cleverly rewritten as:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$&lt;/div&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(K_c\)&lt;/span&gt; can now undergo SVD to obtain principal components. which is what happens in &lt;a href="MDS.md"&gt;MDS&lt;/a&gt; too.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;[1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731&lt;/p&gt;
+&lt;p&gt;[2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf&lt;/p&gt;
+&lt;p&gt;[3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition&lt;/p&gt;
+&lt;p&gt;[4] Multidimensional Scaling, Patrick J.F. Groenen∗ Michel van de Velden&lt;/p&gt;
+&lt;p&gt;[5] SVD and PCA: http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca&lt;/p&gt;
+&lt;p&gt;[6] Intuitive Explaination of PCA: http://arxiv.org/pdf/1404.1100.pdf&lt;/p&gt;
+&lt;p&gt;[7] PCA: http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf&lt;/p&gt;
+&lt;p&gt;[8] PCA: http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf&lt;/p&gt;
+&lt;p&gt;[9] SVD: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf&lt;/p&gt;
+&lt;p&gt;[10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional&lt;/p&gt;
+&lt;p&gt;[11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/&lt;/p&gt;
+&lt;p&gt;[12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="math"></category><category term="statistics"></category><category term="ml"></category></entry><entry><title>Gumbel distribution expectation</title><link href="http://saketkc.github.io/gumbel-distribution-expectation.html" rel="alternate"></link><updated>2015-03-03T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-03-03:gumbel-distribution-expectation.html</id><summary type="html">&lt;h2&gt;What&lt;/h2&gt;
+&lt;p&gt;If &lt;span class="math"&gt;\(X_1,..,X_n\)&lt;/span&gt; is a random sample with density &lt;span class="math"&gt;\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)&lt;/span&gt; (&lt;span class="math"&gt;\(x \in\mathbb{R}\)&lt;/span&gt;) and &lt;span class="math"&gt;\(-\infty&amp;lt;\theta&amp;lt;\infty\)&lt;/span&gt;,
+&lt;span class="math"&gt;\(\quad\)&lt;/span&gt;i) Find the estimator of &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;First let’s confirm if  &lt;span class="math"&gt;\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)&lt;/span&gt; represents a PDF.&lt;/p&gt;
+&lt;p&gt;Transforming &lt;span class="math"&gt;\(t=e^{-({x-\theta})}\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$\int_{-\infty}^{\infty} e^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx  = \int_{0}^{\infty} e^{-t} dt = 1$$&lt;/div&gt;
+&lt;p&gt;This is indeed a &lt;a href="http://en.wikipedia.org/wiki/Gumbel_distribution"&gt;known distribution&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now, using similar transformation(&lt;span class="math"&gt;\(t=e^{-(x-\theta)}\)&lt;/span&gt;) for &lt;/p&gt;
+&lt;div class="math"&gt;$$E[X]=\int_{-\infty}^\infty xe^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx$$&lt;/div&gt;
+&lt;p&gt;we get&lt;/p&gt;
+&lt;div class="math"&gt;$$E[X]=\int_{0}^\infty (\theta-ln (t))e^{-t}dt$$&lt;/div&gt;
+&lt;div class="math"&gt;$$E[X]=\theta - \int_{0}^\infty  ln (t)\ e^{-t}dt$$&lt;/div&gt;
+&lt;p&gt;Thus, 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$ E[X] = \theta + \gamma$$&lt;/div&gt;
+&lt;p&gt;where the second term is &lt;a href="http://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant"&gt;Euler Mascheroni constant&lt;/a&gt; &lt;span class="math"&gt;\(\gamma\)&lt;/span&gt; &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary></entry><entry><title>BA = AB = I</title><link href="http://saketkc.github.io/ba-ab-i.html" rel="alternate"></link><updated>2015-02-28T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-02-28:ba-ab-i.html</id><summary type="html">&lt;p&gt;To Prove: If &lt;/p&gt;
+&lt;div class="math"&gt;$$A_{nxn}$$&lt;/div&gt;
+&lt;p&gt; and &lt;/p&gt;
+&lt;div class="math"&gt;$$B_{nxn}$$&lt;/div&gt;
+&lt;p&gt; such that AB=I, then BA=I&lt;/p&gt;
+&lt;div class="math"&gt;$$AB=I \implies Rank(A), Rank(B)=n$$&lt;/div&gt;
+&lt;p&gt;Reason: Rank(AB) &lt;/p&gt;
+&lt;div class="math"&gt;$$\leq$$&lt;/div&gt;
+&lt;p&gt; min(Rank A, Rank B)&lt;/p&gt;
+&lt;p&gt;so B is a full rank matrix.
+Now consider B=BI &lt;/p&gt;
+&lt;div class="math"&gt;$$\implies$$&lt;/div&gt;
+&lt;p&gt; B-B(AB)=0 &lt;/p&gt;
+&lt;div class="math"&gt;$$\implies$$&lt;/div&gt;
+&lt;p&gt; B-(BA)B=0 &lt;/p&gt;
+&lt;div class="math"&gt;$$\implies$$&lt;/div&gt;
+&lt;p&gt; (I-BA)B=0&lt;/p&gt;
+&lt;p&gt;Since B is full rank so I-BA=0. Q.E.D&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>L2 norm and spectral radius of symmetric matrix</title><link href="http://saketkc.github.io/l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="alternate"></link><updated>2015-02-28T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-02-28:l2-norm-and-spectral-radius-of-symmetric-matrix.html</id><summary type="html">&lt;p&gt;L2 norm and spectral radius for &lt;/p&gt;
+&lt;div class="math"&gt;$$A=A^T$$&lt;/div&gt;
+&lt;p&gt;L2 inducded norm:&lt;/p&gt;
+&lt;h3&gt;NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.&lt;/h3&gt;
+&lt;p&gt;Induced norm: &lt;/p&gt;
+&lt;div class="math"&gt;$$$|| . ||$$&lt;/div&gt;
+&lt;p&gt; defined as ||A|| = &lt;/p&gt;
+&lt;div class="math"&gt;$$sup_{||x=1||} ||Ax||$$&lt;/div&gt;
+&lt;p&gt; 
+Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>Positive definite second derivative</title><link href="http://saketkc.github.io/positive-definite-second-derivative.html" rel="alternate"></link><updated>2015-02-28T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-02-28:positive-definite-second-derivative.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Let &lt;span class="math"&gt;\(f:\mathbb{R}\to\mathbb{R}\)&lt;/span&gt; be a twice-differentiable function,
+and let &lt;span class="math"&gt;\(f\)&lt;/span&gt;’s second derivative be continuous. Let &lt;span class="math"&gt;\(f\)&lt;/span&gt; be convex with
+the following definition of convexity: for any &lt;span class="math"&gt;\(a&amp;lt;b \in \mathbb{R}\)&lt;/span&gt;:
+&lt;div class="math"&gt;$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2}$$&lt;/div&gt; Prove that
+&lt;span class="math"&gt;\(f’’ \geq 0\)&lt;/span&gt; everywhere.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;http://math.stackexchange.com/a/1224986/171836&lt;/p&gt;
+&lt;p&gt;Given &lt;span class="math"&gt;\(f\)&lt;/span&gt; is a continuous and using the results from &lt;a href="http://math.stackexchange.com/a/83398/171836"&gt;this answer&lt;/a&gt;, &lt;span class="math"&gt;\(f\)&lt;/span&gt; can be proven to satisfy:
+&lt;span class="math"&gt;\(f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) +  (1-\lambda)f(x_2)\ \forall \  \lambda \in [0,1]\)&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;Now, by using Taylor’s expansion, &lt;span class="math"&gt;\(f’’(x)\)&lt;/span&gt; can be written as: 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+f’’(x) = \lim_{h \rightarrow 0} \frac{f(x+h)+f(x-h)-2f(x)}{h^2}
+$$&lt;/div&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(f(\frac{1}{2}(x+h) + \frac{1}{2}(x-h)) \leq \frac{1}{2}f(x+h) + \frac{1}{2}f(x-h) \implies 2f(x) \leq f(x+h)+f(x-h)\)&lt;/span&gt; 
+or &lt;span class="math"&gt;\(f(x+h)+f(x-h)-2f(x) \geq 0\)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(h^2 \geq 0\)&lt;/span&gt; and &lt;span class="math"&gt;\(f\)&lt;/span&gt; being twice differentiable,  &lt;span class="math"&gt;\(f’’(x) \geq 0\)&lt;/span&gt; follows.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>Proof for triangle inequality for case $x+y&lt;0$</title><link href="http://saketkc.github.io/proof-for-triangle-inequality-for-case-xy0.html" rel="alternate"></link><updated>2015-02-02T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-02-02:proof-for-triangle-inequality-for-case-xy0.html</id><summary type="html">&lt;p&gt;&lt;span class="math"&gt;\(-|x| \leq x \leq |x|\)&lt;/span&gt;
+and &lt;span class="math"&gt;\(-|y| \leq y \leq |y|\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(-|x|-|y| \leq x+y \leq |x|+|y|\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(|x+y| \leq |x| +|y|\)&lt;/span&gt; for any real &lt;span class="math"&gt;\(x,y\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The last implication comes from the fact:
+&lt;span class="math"&gt;\(|x| \leq a \leftrightarrow -a \leq x \leq a\)&lt;/span&gt; for some &lt;span class="math"&gt;\(a \geq 0\)&lt;/span&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary></entry></feed>
