@@ -65,7 +65,7 @@ Corrected <span class="math">\(R_n = \sum_{i=1}^{n-1}I_i + 1\)</span></p>
 </ol>
 <p><span class="math">\(ER_n^2 = E(1+\sumI_i)^2 = E\sum_{i=1}^{n-1}I_i^2 +1+2\sum_{i=1}^{n-1}I_i = \sum_{i=1}^{n-1}EI_i^2 + 2\sum_{i &lt; j} EI_iI_j + 2E\sum_{i=1}EI_1 = 3\sum E_i + 2\sum_{i &lt; j}EI_iI_j +1\)</span></p>
 <p>Now realise that <span class="math">\(EI_iI_j=P(I_iI_j)\)</span> is an independent event for <span class="math">\(|i-j|&gt;1\)</span> and is equal to <span class="math">\(P(I_1)^2\)</span></p>
-<p>For <span class="math">\(|i-j|=1\)</span> we have <span class="math">\(P(I__iI_j)=pqp+qpq = p^2q+qp^2\)</span> and I chose in my summation for <span class="math">\(j\)</span> to be less than <span class="math">\(i\)</span> so the mod sign is redundant</p>
+<p>For <span class="math">\(|i-j|=1\)</span> we have <span class="math">\(P(I_iI_j)=pqp+qpq = p^2q+qp^2\)</span> and I chose in my summation for <span class="math">\(j\)</span> to be less than <span class="math">\(i\)</span> so the mod sign is redundant</p>
 <p>Alright, skipping too many things here. but:
 <span class="math">\(Var(R_n) = 4pqn -6pq+2pq(n-2)(n-3) - 4p^2q^2(n-1)^\)</span></p>
 <p>Check for <span class="math">\(Var(R_2) = 2pq(1-2pq)\)</span> and <span class="math">\(Var(R_1)=0\)</span></p>
