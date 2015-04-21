@@ -16,91 +16,62 @@
                 <nav><ul>
                     <li><a href="../category/math-statistics-ml.html">math, statistics, ml</a></li>
                     <li><a href="../category/misc.html">misc</a></li>
+                    <li><a href="../category/probability-expectation.html">probability, expectation</a></li>
                     <li><a href="../category/statistics.html">statistics</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../svd-vs-mds-vs-pca.html">SVD v/s MDS v/s PCA</a></h1>
+                    <h1 class="entry-title"><a href="../runs-in-flips-of-a-coin.html">Runs in flips of a coin</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-04-15T00:00:00+02:00">
-                Published: Wed 15 April 2015
+        <abbr class="published" title="2015-04-21T00:00:00+02:00">
+                Published: Tue 21 April 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
-<p>In <a href="../category/math-statistics-ml.html">math, statistics, ml</a>. </p>
+<p>In <a href="../category/probability-expectation.html">probability, expectation</a>. </p>
 
-</footer><!-- /.post-info --><p>Principle Component Analysis(PCA) is a relatively more famous
-than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
-When I was introduced to the latter two, I was utterly confused
-trying to figure out what goes in where.</p>
-<h2>SVD</h2>
-<p>Let <span class="math">\(X_{mxn}\)</span> data matrix. For an easy to relate example, from bioinformatics,
-let each row represent a gene, and each column represent single patient.</p>
-<p>The rows thus give expression profile of gene across patients while the columns
-represent the expression levels of different genes in each person.</p>
-<p>Without loss of generality we assume <span class="math">\(m&gt;n\)</span> and <span class="math">\(rank(X)=r &lt;n\)</span></p>
-<p>The singular value decomposition of <span class="math">\(X_{mxn}\)</span> is then given by:</p>
-<div class="math">$$
-X_{mxn} = U_{mxr}\sum_{rxr}V_{nxr}^T
-$$</div>
-<p><span class="math">\(U_{nxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(X^TX\)</span>(nxn)</p>
-<p><span class="math">\(V_{mxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(XX^T\)</span>(mxm)</p>
-<p><span class="math">\(\sum_{rxr}\)</span> denotes a diagonal matrix composed of eigen vectors of <span class="math">\(X^TX\)</span> arranged with the largest being located
-at top left, least at bottom right.<span class="math">\(\sum_{ii} = \lambda_i\)</span> and <span class="math">\(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r\)</span></p>
-<p>Facts:</p>
-<ul>
-<li><span class="math">\(\lambda_i \geq 0\)</span> because <span class="math">\(X^TX\)</span> is a positive definite matrix: <span class="math">\(yX^TXy = (Xy)(Xy)^T &gt; 0\)</span> always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
-</ul>
-<h2>PCA</h2>
-<p>Let <span class="math">\(X_c\)</span> denote the mean centered <span class="math">\(X\)</span>, i.e. <span class="math">\(X_c = I’_{mxm}X_{mxn}\)</span>
- where <span class="math">\(I’ = I-\frac{1}{m}\)</span> thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.</p>
-<p>Def: Gram matrix : <span class="math">\(X_cX_c^T\)</span></p>
-<p>Def: Covariance Matrix: <span class="math">\(X_c^TX_c\)</span></p>
-<p>Let’s say you are given the original uncente</p>
-<p>The most ‘common’ definition of PCA says : For a given set of <span class="math">\(n\)</span> dimensional vectors
-<span class="math">\(x_1, x_2, x_3,x_4, \ldots x_m\)</span> the <span class="math">\(p&lt;n\)</span> principal components are those orthogonal
-axes onto which the variance retained is maximized</p>
-<p>and hence </p>
-<p>Plotting/Running PCA
-- Calculate <span class="math">\(X_cX_c^T\)</span> and calculate <span class="math">\(U\)</span> as the eigen vectors of this matrix. Retain the vectors corresponding
-to top <span class="math">\(p=2\)</span> eigenvalues
--  Calculate project <span class="math">\(Y=U^TX\)</span></p>
-<p>Given gram matrix of original data <span class="math">\(K\)</span>, to obtain gram matrix of mean centered data, cholesky decomposition is not required:</p>
-<p><span class="math">\(K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}\)</span></p>
-<p>Also realize:</p>
-<p><span class="math">\(X_c = U \sum V^T\)</span></p>
-<p>and <span class="math">\(UU^T=I\)</span> ; <span class="math">\(VV^T=I\)</span></p>
-<p>Thus, <span class="math">\(K_c=X_cX_c^T = U\sum^2U^T\)</span></p>
-<p>PCA is equivalent of doing a SVD: of <span class="math">\(X_c = U\sumV^T\)</span> and then using <span class="math">\(U\sum\)</span> as the principle components</p>
-<h2>MDS</h2>
-<p>Given distance matrix <span class="math">\(D_{ij}\)</span> of pairwise distances, what would PCA result into?
-Assuming the distances were euclidean:</p>
-<div class="math">$$
-D_{ij}^2 = ||x_i-x_j||^2 = ||x_i - \overline{x} + \overline{x} -x_j||^2 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 -2\langle x_i-\overline{x}, x_j-\overline{x}\rangle
-= ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 + 2[K_c]_{ij}
-$$</div>
-<p>
-which can be cleverly rewritten as:
-</p>
-<div class="math">$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$</div>
-<p><span class="math">\(K_c\)</span> can now undergo SVD to obtain principal components. which is what happens in <a href="MDS.md">MDS</a> too.</p>
-<h2>References</h2>
-<p>[1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731</p>
-<p>[2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf</p>
-<p>[3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition</p>
-<p>[4] Multidimensional Scaling, Patrick J.F. Groenen∗ Michel van de Velden</p>
-<p>[5] SVD and PCA: http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca</p>
-<p>[6] Intuitive Explaination of PCA: http://arxiv.org/pdf/1404.1100.pdf</p>
-<p>[7] PCA: http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf</p>
-<p>[8] PCA: http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf</p>
-<p>[9] SVD: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf</p>
-<p>[10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional</p>
-<p>[11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/</p>
-<p>[12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html</p>
+</footer><!-- /.post-info --><p>This problem happened to be in one of the screening examinations
+and is my favorite because it demonstrates an application of indicator variables</p>
+<h2>Problem</h2>
+<p>A run is defined as <em>maximal</em> subsequence of consecutive tosses all having the same outcome.
+So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let <span class="math">\(R_n\)</span> represent the number of runs 
+when a coin is flipped <span class="math">\(n\)</span> times. Find:</p>
+<ol>
+<li><span class="math">\(ER_n\)</span></li>
+<li><span class="math">\(Var(R_n)\)</span></li>
+<li>Distribution of <span class="math">\(R_n-1\)</span></li>
+</ol>
+<p>Assume <span class="math">\(p,q\)</span> probability of showing H,T respectively.</p>
+<h2>Solution</h2>
+<p>Let <span class="math">\(I_i\)</span> be an indicator variable such that <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> and <span class="math">\((i+1)^{th}\)</span> tosses are different(One of {<span class="math">\(HT,TH\)</span>} ) 
+f runs in <span class="math">\(n\)</span> flips is given by: <span class="math">\(R_n = \sum_{i=1}^{n-1}I_i\)</span></p>
+<p>Well, not really. The point to realise is that the first toss is always a run!
+Corrected <span class="math">\(R_n = \sum_{i=1}^{n-1}I_i + 1\)</span></p>
+<p>Now <span class="math">\(E[R_n] = 1+\sum_{i=1}^{n-1}P[I_i=1]\)</span></p>
+<p>We already know <span class="math">\(P[I-i=1] = pq + qp\)</span>(Remeber the two possiblites of HT,TH)</p>
+<p>and hence
+1. <span class="math">\(ER_n = 1+ (n-1)2pq\)</span></p>
+<p>Check Check!</p>
+<p><span class="math">\(ER_1 = 1\)</span> (Straightforward correct)
+<span class="math">\(ER_2 = 1+2pq\)</span> 
+<span class="math">\(P(R_2=2) = pq + qp\)</span> and <span class="math">\(P(R_2=1) = p^2 + q^2\)</span></p>
+<p>Thus <span class="math">\(ER_2 = 2(pq+qp) + 1(p^2+q^2) = 1 +2pq\)</span> (Using <span class="math">\(p+q=1\)</span>)</p>
+<ol>
+<li><span class="math">\(Var(R_n) = ER_n^2 - (ER_n)^2\)</span></li>
+</ol>
+<p><span class="math">\(ER_n^2 = E(1+\sumI_i)^2 = E\sum_{i=1}^{n-1}I_i^2 +1+2\sum_{i=1}^{n-1}I_i = \sum_{i=1}^{n-1}EI_i^2 + 2\sum_{i &lt; j} EI_iI_j + 2E\sum_{i=1}EI_1 = 3\sum E_i + 2\sum_{i &lt; j}EI_iI_j +1\)</span></p>
+<p>Now realise that <span class="math">\(EI_iI_j=P(I_iI_j)\)</span> is an independent event for <span class="math">\(|i-j|&gt;1\)</span> and is equal to <span class="math">\(P(I_1)^2\)</span></p>
+<p>For <span class="math">\(|i-j|=1\)</span> we have <span class="math">\(P(I__iI_j)=pqp+qpq = p^2q+qp^2\)</span> and I chose in my summation for <span class="math">\(j\)</span> to be less than <span class="math">\(i\)</span> so the mod sign is redundant</p>
+<p>Alright, skipping too many things here. but:
+<span class="math">\(Var(R_n) = 4pqn -6pq+2pq(n-2)(n-3) - 4p^2q^2(n-1)^\)</span></p>
+<p>Check for <span class="math">\(Var(R_2) = 2pq(1-2pq)\)</span> and <span class="math">\(Var(R_1)=0\)</span></p>
+<ol>
+<li>That should be a straightforward <span class="math">\(R_n-1 \approx Binomial(n,2pq)\)</span></li>
+</ol>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -144,6 +115,33 @@ which can be cleverly rewritten as:
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../svd-vs-mds-vs-pca.html" rel="bookmark"
+                           title="Permalink to SVD v/s MDS v/s PCA">SVD v/s MDS v/s PCA</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-15T00:00:00+02:00">
+                Published: Wed 15 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/math-statistics-ml.html">math, statistics, ml</a>. </p>
+
+</footer><!-- /.post-info -->                <p>Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.</p>
+<h2>SVD</h2>
+<p>Let <span class="math">\(X_{mxn}\)</span> data matrix. For an easy to relate example ...</p>
+                <a class="readmore" href="../svd-vs-mds-vs-pca.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
