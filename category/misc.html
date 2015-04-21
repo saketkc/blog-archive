@@ -14,43 +14,62 @@
         <header id="banner" class="body">
                 <h1><a href="../">Piddling Pertinent </a></h1>
                 <nav><ul>
-                    <li><a href="../category/math-statistics-ml.html">math, statistics, ml</a></li>
                     <li class="active"><a href="../category/misc.html">misc</a></li>
-                    <li><a href="../category/probability-expectation.html">probability, expectation</a></li>
                     <li><a href="../category/statistics.html">statistics</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../gumbel-distribution-expectation.html">Gumbel distribution expectation</a></h1>
+                    <h1 class="entry-title"><a href="../runs-in-flips-of-a-coin.html">Runs in flips of a coin</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-03-03T00:00:00+01:00">
-                Published: Tue 03 March 2015
+        <abbr class="published" title="2015-04-21T00:00:00+02:00">
+                Published: Tue 21 April 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-
-</footer><!-- /.post-info --><h2>What</h2>
-<p>If <span class="math">\(X_1,..,X_n\)</span> is a random sample with density <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> (<span class="math">\(x \in\mathbb{R}\)</span>) and <span class="math">\(-\infty&lt;\theta&lt;\infty\)</span>,
-<span class="math">\(\quad\)</span>i) Find the estimator of <span class="math">\(\theta\)</span></p>
+<p>tags: <a href="../tag/probability.html">probability</a> <a href="../tag/expectation.html">expectation</a> </p>
+</footer><!-- /.post-info --><p>This problem happened to be in one of the screening examinations
+and is my favorite because it demonstrates an application of indicator variables</p>
+<h2>Problem</h2>
+<p>A run is defined as <em>maximal</em> subsequence of consecutive tosses all having the same outcome.
+So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let <span class="math">\(R_n\)</span> represent the number of runs 
+when a coin is flipped <span class="math">\(n\)</span> times. Find:</p>
+<ol>
+<li><span class="math">\(ER_n\)</span></li>
+<li><span class="math">\(Var(R_n)\)</span></li>
+<li>Distribution of <span class="math">\(R_n-1\)</span></li>
+</ol>
+<p>Assume <span class="math">\(p,q\)</span> probability of showing H,T respectively.</p>
 <h2>Solution</h2>
-<p>First let’s confirm if  <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> represents a PDF.</p>
-<p>Transforming <span class="math">\(t=e^{-({x-\theta})}\)</span>:</p>
-<div class="math">$$\int_{-\infty}^{\infty} e^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx  = \int_{0}^{\infty} e^{-t} dt = 1$$</div>
-<p>This is indeed a <a href="http://en.wikipedia.org/wiki/Gumbel_distribution">known distribution</a></p>
-<p>Now, using similar transformation(<span class="math">\(t=e^{-(x-\theta)}\)</span>) for </p>
-<div class="math">$$E[X]=\int_{-\infty}^\infty xe^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx$$</div>
-<p>we get</p>
-<div class="math">$$E[X]=\int_{0}^\infty (\theta-ln (t))e^{-t}dt$$</div>
-<div class="math">$$E[X]=\theta - \int_{0}^\infty  ln (t)\ e^{-t}dt$$</div>
-<p>Thus, 
-</p>
-<div class="math">$$ E[X] = \theta + \gamma$$</div>
-<p>where the second term is <a href="http://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant">Euler Mascheroni constant</a> <span class="math">\(\gamma\)</span> </p>
+<p>Let <span class="math">\(I_i\)</span> be an indicator variable such that <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> and <span class="math">\((i+1)^{th}\)</span> tosses are different(One of {<span class="math">\(HT,TH\)</span>} ) 
+f runs in <span class="math">\(n\)</span> flips is given by: <span class="math">\(R_n = \sum_{i=1}^{n-1}I_i\)</span></p>
+<p>Well, not really. The point to realise is that the first toss is always a run!
+Corrected <span class="math">\(R_n = \sum_{i=1}^{n-1}I_i + 1\)</span></p>
+<p>Now <span class="math">\(E[R_n] = 1+\sum_{i=1}^{n-1}P[I_i=1]\)</span></p>
+<p>We already know <span class="math">\(P[I-i=1] = pq + qp\)</span>(Remeber the two possiblites of HT,TH)</p>
+<p>and hence
+1. <span class="math">\(ER_n = 1+ (n-1)2pq\)</span></p>
+<p>Check Check!</p>
+<p><span class="math">\(ER_1 = 1\)</span> (Straightforward correct)
+<span class="math">\(ER_2 = 1+2pq\)</span> 
+<span class="math">\(P(R_2=2) = pq + qp\)</span> and <span class="math">\(P(R_2=1) = p^2 + q^2\)</span></p>
+<p>Thus <span class="math">\(ER_2 = 2(pq+qp) + 1(p^2+q^2) = 1 +2pq\)</span> (Using <span class="math">\(p+q=1\)</span>)</p>
+<ol>
+<li><span class="math">\(Var(R_n) = ER_n^2 - (ER_n)^2\)</span></li>
+</ol>
+<p><span class="math">\(ER_n^2 = E(1+\sum I_i)^2 = E\sum_{i=1}^{n-1}I_i^2 +1+2\sum_{i=1}^{n-1}I_i = \sum_{i=1}^{n-1}EI_i^2 + 2\sum_{i &lt; j} EI_iI_j + 2E\sum_{i=1}EI_1 = 3\sum E_i + 2\sum_{i &lt; j}EI_iI_j +1\)</span></p>
+<p>Now realise that <span class="math">\(EI_iI_j=P(I_iI_j)\)</span> is an independent event for <span class="math">\(|i-j|&gt;1\)</span> and is equal to <span class="math">\(P(I_1)^2\)</span></p>
+<p>For <span class="math">\(|i-j|=1\)</span> we have <span class="math">\(P(I_iI_j)=pqp+qpq = p^2q+qp^2\)</span> and I chose in my summation for <span class="math">\(j\)</span> to be less than <span class="math">\(i\)</span> so the mod sign is redundant</p>
+<p>Alright, skipping too many things here. but:
+<span class="math">\(Var(R_n) = 4pqn -6pq+2pq(n-2)(n-3) - 4p^2q^2(n-1)^2\)</span></p>
+<p>Check for <span class="math">\(Var(R_2) = 2pq(1-2pq)\)</span> and <span class="math">\(Var(R_1)=0\)</span></p>
+<ol>
+<li>That should be a straightforward <span class="math">\(R_n-1 \approx Binomial(n,2pq)\)</span></li>
+</ol>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -94,6 +113,59 @@
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../svd-vs-mds-vs-pca.html" rel="bookmark"
+                           title="Permalink to SVD v/s MDS v/s PCA">SVD v/s MDS v/s PCA</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-15T00:00:00+02:00">
+                Published: Wed 15 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/math.html">math</a> <a href="../tag/statistics.html">statistics</a> <a href="../tag/ml.html">ml</a> </p>
+</footer><!-- /.post-info -->                <p>Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
+When I was introduced to the latter two, I was utterly confused
+trying to figure out what goes in where.</p>
+<h2>SVD</h2>
+<p>Let <span class="math">\(X_{mxn}\)</span> data matrix. For an easy to relate example ...</p>
+                <a class="readmore" href="../svd-vs-mds-vs-pca.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../gumbel-distribution-expectation.html" rel="bookmark"
+                           title="Permalink to Gumbel distribution expectation">Gumbel distribution expectation</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-03T00:00:00+01:00">
+                Published: Tue 03 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->                <h2>What</h2>
+<p>If <span class="math">\(X_1,..,X_n\)</span> is a random sample with density <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> (<span class="math">\(x \in\mathbb{R}\)</span>) and <span class="math">\(-\infty&lt;\theta&lt;\infty\)</span>,
+<span class="math">\(\quad\)</span>i) Find the estimator of <span class="math">\(\theta\)</span></p>
+<h2>Solution</h2>
+<p>First let’s confirm if  <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- ...</span></p>
+                <a class="readmore" href="../gumbel-distribution-expectation.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
