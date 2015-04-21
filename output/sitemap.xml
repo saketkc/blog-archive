@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-04-15T18:15:58-00:00</lastmod>
+<lastmod>2015-04-21T13:31:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-04-15T18:15:58-00:00</lastmod>
+<lastmod>2015-04-21T13:31:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-04-15T18:15:58-00:00</lastmod>
+<lastmod>2015-04-21T13:31:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-04-15T18:15:58-00:00</lastmod>
+<lastmod>2015-04-21T13:31:19-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/runs-in-flips-of-a-coin.html</loc>
+<lastmod>2015-04-21T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -46,8 +53,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/a-mod-b-is-olog-n.html</loc>
-<lastmod>2015-03-08T00:00:00+01:00</lastmod>
+<loc>/gumbel-distribution-expectation.html</loc>
+<lastmod>2015-03-03T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/ba-ab-i.html</loc>
+<lastmod>2015-02-28T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/l2-norm-and-spectral-radius-of-symmetric-matrix.html</loc>
+<lastmod>2015-02-28T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/positive-definite-second-derivative.html</loc>
+<lastmod>2015-02-28T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/proof-for-triangle-inequality-for-case-xy0.html</loc>
+<lastmod>2015-02-02T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -61,7 +96,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/misc.html</loc>
-<lastmod>2015-03-08T00:00:00+00:09</lastmod>
+<lastmod>2015-03-03T00:00:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/category/probability-expectation.html</loc>
+<lastmod>2015-04-21T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -74,22 +116,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/number-theory.html</loc>
-<lastmod>2015-03-08T00:00:00+00:09</lastmod>
+<loc>/tag/linear-algebra.html</loc>
+<lastmod>2015-02-28T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/time-complexity.html</loc>
-<lastmod>2015-03-08T00:00:00+00:09</lastmod>
+<loc>/tag/matrix.html</loc>
+<lastmod>2015-02-28T00:00:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/norm.html</loc>
+<lastmod>2015-02-28T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/saket-choudhary.html</loc>
-<lastmod>2015-04-15T00:00:00+00:09</lastmod>
+<lastmod>2015-04-21T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
