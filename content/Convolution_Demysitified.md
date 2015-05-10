@@ -11,7 +11,7 @@ for $x_1,x_2$ which are i.i.d.
 
 
 $$ 
-f*g(t) = \int_{-\inf}^{\inf} f(w)g(t-w)dw
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
 $$
 
 Thus, blindly,
@@ -43,7 +43,7 @@ $s-2 \leq x \leq s$ and $0 \leq x \leq 2$
 
 In order to respect the above bounds,
 
-$f*g(s) = \int_{-\inf}^{\inf}f(x)f(s-x)dx$
+$f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx$
 
 But, $f(x) \neq 0$ for $0 \leq x \leq 2$
 

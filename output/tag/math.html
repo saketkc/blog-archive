@@ -36,7 +36,7 @@
 for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
 <h2>Wrong solution</h2>
 <div class="math">$$ 
-f*g(t) = \int_{-\inf}^{\inf} f(w)g(t-w)dw
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
 $$</div>
 <p>Thus, blindly,</p>
 <p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}\)</span> and <span class="math">\(0 \leq s \leq 4\)</span></p>
@@ -56,7 +56,7 @@ $$</div>
 <p>Which gives us, these bounds:</p>
 <p><span class="math">\(s-2 \leq x \leq s\)</span> and <span class="math">\(0 \leq x \leq 2\)</span></p>
 <p>In order to respect the above bounds,</p>
-<p><span class="math">\(f*g(s) = \int_{-\inf}^{\inf}f(x)f(s-x)dx\)</span></p>
+<p><span class="math">\(f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx\)</span></p>
 <p>But, <span class="math">\(f(x) \neq 0\)</span> for <span class="math">\(0 \leq x \leq 2\)</span></p>
 <p>and <span class="math">\(f(x-w)\neq 0 $ for $s-2 \leq x \leq s\)</span></p>
 <p>thus, <span class="math">\(f(x)f(x-w) \neq 0 $ for $max(0,s-2) \leq x \leq min(s,2)\)</span></p>
