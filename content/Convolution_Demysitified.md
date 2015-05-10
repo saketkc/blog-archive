@@ -68,6 +68,6 @@ Now,
 $$
 f_S(s) = \begin{cases}
 \int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  & 0 \leq s \leq 2\\
-\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  & 0 \leq s \leq 2\\
+\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  & 2 \leq s \leq 4\\
 \end{cases}
 $$
