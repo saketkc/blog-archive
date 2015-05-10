@@ -26,7 +26,7 @@ $\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1$
 
 ## Respecting the bounds.
 
-$f_S(s) = \int_{0}^s \frac{x}{2}{s-x}{2}dx $ for :
+$f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx$ for :
 
 $$
 0 \leq x \leq 2
@@ -47,11 +47,10 @@ $f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx$
 
 But, $f(x) \neq 0$ for $0 \leq x \leq 2$
 
-and $f(x-w)\neq 0 $ for $s-2 \leq x \leq s$
+and $f(s-x) \neq 0$ for $s-2 \leq x \leq s$
 
-thus, $f(x)f(x-w) \neq 0 $ for $max(0,s-2) \leq x \leq min(s,2)$
+thus, $f(x)f(s-x) \neq 0$ for $max(0,s-2) \leq x \leq min(s,2)$
 
-And thus,i
 
 
 Range of s: $[0,4]$
