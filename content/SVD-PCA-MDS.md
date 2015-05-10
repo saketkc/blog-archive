@@ -1,6 +1,6 @@
 Title: SVD v/s MDS v/s PCA
 Date: 2015-04-15
-Category: math, statistics, ml
+tags: math, statistics, ml
 
 
 Principle Component Analysis(PCA) is a relatively more famous

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Piddling Pertinent - number theory</title>
-        <link rel="stylesheet" href="../theme/css/main.css" />
+        <title>BA = AB = I</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,34 +12,48 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="../">Piddling Pertinent </a></h1>
+                <h1><a href="./">Piddling Pertinent </a></h1>
                 <nav><ul>
-                    <li><a href="../category/math-statistics-ml.html">math, statistics, ml</a></li>
-                    <li><a href="../category/misc.html">misc</a></li>
-                    <li><a href="../category/statistics.html">statistics</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./ba-ab-i.html" rel="bookmark"
+           title="Permalink to BA = AB = I">BA = AB = I</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="../a-mod-b-is-olog-n.html">a mod b is O(log n)</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-03-08T00:00:00+01:00">
-                Published: Sun 08 March 2015
+        <abbr class="published" title="2015-02-28T00:00:00+01:00">
+                Published: Sat 28 February 2015
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
-<p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/number-theory.html">number theory</a> <a href="../tag/time-complexity.html">time complexity</a> </p>
-</footer><!-- /.post-info --><p>Test inline math <span class="math">\(\frac{1}{3}\)</span>
-Block math 
-</p>
-<div class="math">$$
-\frac{1}{444}
-X \Leftarrow Y
-$$</div>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
+</footer><!-- /.post-info -->      <p>To Prove: If </p>
+<div class="math">$$A_{nxn}$$</div>
+<p> and </p>
+<div class="math">$$B_{nxn}$$</div>
+<p> such that AB=I, then BA=I</p>
+<div class="math">$$AB=I \implies Rank(A), Rank(B)=n$$</div>
+<p>Reason: Rank(AB) </p>
+<div class="math">$$\leq$$</div>
+<p> min(Rank A, Rank B)</p>
+<p>so B is a full rank matrix.
+Now consider B=BI </p>
+<div class="math">$$\implies$$</div>
+<p> B-B(AB)=0 </p>
+<div class="math">$$\implies$$</div>
+<p> B-(BA)B=0 </p>
+<div class="math">$$\implies$$</div>
+<p> (I-BA)B=0</p>
+<p>Since B is full rank so I-BA=0. Q.E.D</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -77,11 +91,11 @@ $$</div>
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
+</script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
         </section><!-- /#extras -->
 

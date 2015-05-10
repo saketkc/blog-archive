@@ -1,6 +1,5 @@
 Title: Multidimensional Scaling
 Date: 2015-04-14
-Category: statistics
 
 MDS is a statistical technique to visualize dissimilarity
 between points. The distances between two pointsin n-dimensions 

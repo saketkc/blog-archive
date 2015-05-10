@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>a mod b is O(log n)</title>
+        <title>Positive definite second derivative</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,37 +14,47 @@
         <header id="banner" class="body">
                 <h1><a href="./">Piddling Pertinent </a></h1>
                 <nav><ul>
-                    <li><a href="./category/math-statistics-ml.html">math, statistics, ml</a></li>
                     <li class="active"><a href="./category/misc.html">misc</a></li>
-                    <li><a href="./category/statistics.html">statistics</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="./a-mod-b-is-olog-n.html" rel="bookmark"
-           title="Permalink to a mod b is O(log n)">a mod b is O(log n)</a></h1>
+        <a href="./positive-definite-second-derivative.html" rel="bookmark"
+           title="Permalink to Positive definite second derivative">Positive definite second derivative</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-03-08T00:00:00+01:00">
-                Published: Sun 08 March 2015
+        <abbr class="published" title="2015-02-28T00:00:00+01:00">
+                Published: Sat 28 February 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/number-theory.html">number theory</a> <a href="./tag/time-complexity.html">time complexity</a> </p>
-</footer><!-- /.post-info -->      <p>Test inline math <span class="math">\(\frac{1}{3}\)</span>
-Block math 
+<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
+</footer><!-- /.post-info -->      <blockquote>
+<p>Let <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> be a twice-differentiable function,
+and let <span class="math">\(f\)</span>’s second derivative be continuous. Let <span class="math">\(f\)</span> be convex with
+the following definition of convexity: for any <span class="math">\(a&lt;b \in \mathbb{R}\)</span>:
+<div class="math">$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2}$$</div> Prove that
+<span class="math">\(f’’ \geq 0\)</span> everywhere.</p>
+</blockquote>
+<h2>Solution</h2>
+<p>http://math.stackexchange.com/a/1224986/171836</p>
+<p>Given <span class="math">\(f\)</span> is a continuous and using the results from <a href="http://math.stackexchange.com/a/83398/171836">this answer</a>, <span class="math">\(f\)</span> can be proven to satisfy:
+<span class="math">\(f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) +  (1-\lambda)f(x_2)\ \forall \  \lambda \in [0,1]\)</span> </p>
+<p>Now, by using Taylor’s expansion, <span class="math">\(f’’(x)\)</span> can be written as: 
 </p>
 <div class="math">$$
-\frac{1}{444}
-X \Leftarrow Y
+f’’(x) = \lim_{h \rightarrow 0} \frac{f(x+h)+f(x-h)-2f(x)}{h^2}
 $$</div>
+<p><span class="math">\(f(\frac{1}{2}(x+h) + \frac{1}{2}(x-h)) \leq \frac{1}{2}f(x+h) + \frac{1}{2}f(x-h) \implies 2f(x) \leq f(x+h)+f(x-h)\)</span> 
+or <span class="math">\(f(x+h)+f(x-h)-2f(x) \geq 0\)</span>. </p>
+<p>Since <span class="math">\(h^2 \geq 0\)</span> and <span class="math">\(f\)</span> being twice differentiable,  <span class="math">\(f’’(x) \geq 0\)</span> follows.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

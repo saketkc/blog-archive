@@ -1,6 +1,6 @@
 Title: Runs in flips of a coin
 Date: 2015-04-21
-Category: probability, expectation
+tags: probability, expectation
 
 
 This problem happened to be in one of the screening examinations
@@ -42,7 +42,7 @@ Thus $ER_2 = 2(pq+qp) + 1(p^2+q^2) = 1 +2pq$ (Using $p+q=1$)
 
 2. $Var(R_n) = ER_n^2 - (ER_n)^2$
 
-$ER_n^2 = E(1+\sumI_i)^2 = E\sum_{i=1}^{n-1}I_i^2 +1+2\sum_{i=1}^{n-1}I_i = \sum_{i=1}^{n-1}EI_i^2 + 2\sum_{i < j} EI_iI_j + 2E\sum_{i=1}EI_1 = 3\sum E_i + 2\sum_{i < j}EI_iI_j +1$
+$ER_n^2 = E(1+\sum I_i)^2 = E\sum_{i=1}^{n-1}I_i^2 +1+2\sum_{i=1}^{n-1}I_i = \sum_{i=1}^{n-1}EI_i^2 + 2\sum_{i < j} EI_iI_j + 2E\sum_{i=1}EI_1 = 3\sum E_i + 2\sum_{i < j}EI_iI_j +1$
 
 Now realise that $EI_iI_j=P(I_iI_j)$ is an independent event for $|i-j|>1$ and is equal to $P(I_1)^2$
 
@@ -50,7 +50,7 @@ For $|i-j|=1$ we have $P(I_iI_j)=pqp+qpq = p^2q+qp^2$ and I chose in my summatio
 
 
 Alright, skipping too many things here. but:
-$Var(R_n) = 4pqn -6pq+2pq(n-2)(n-3) - 4p^2q^2(n-1)^$
+$Var(R_n) = 4pqn -6pq+2pq(n-2)(n-3) - 4p^2q^2(n-1)^2$
 
 Check for $Var(R_2) = 2pq(1-2pq)$ and $Var(R_1)=0$
 
