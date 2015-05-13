@@ -20,57 +20,39 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../convolution-demysitifed.html">Convolution Demysitifed</a></h1>
+                    <h1 class="entry-title"><a href="../restriction-fragments-size-distribution.html">Restriction Fragments Size Distribution</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-09T00:00:00+02:00">
-                Published: Sat 09 May 2015
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
-</footer><!-- /.post-info --><h2>Problem</h2>
-<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
-for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
-<h2>Wrong solution</h2>
-<div class="math">$$ 
-f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
-$$</div>
-<p>Thus, blindly,</p>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}\)</span> and <span class="math">\(0 \leq s \leq 4\)</span></p>
-<p>But is <span class="math">\(f_S(s)\)</span> a PDF? </p>
-<p>No.</p>
-<p><span class="math">\(\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1\)</span></p>
-<h2>Respecting the bounds.</h2>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx\)</span> for :</p>
+<p>tags: <a href="../tag/poisson.html">poisson</a> <a href="../tag/computational-biology.html">computational biology</a> <a href="../tag/exponential.html">exponential</a> </p>
+</footer><!-- /.post-info --><h2>Given</h2>
+<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
+</p>
 <div class="math">$$
-0 \leq x \leq 2
+P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
 $$</div>
-<p>
-and</p>
+<p>Find the distribution of length of restriction fragments</p>
+<h2>Solution</h2>
+<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to be
+atleast <span class="math">\(x\)</span> base pairs long, i.e. I have a fragment starting at <span class="math">\(z\)</span> and going atleast 
+till <span class="math">\(z+x\)</span>, I need to ensure I do not encounter any other restriction site in between,
+which is also equivalent to <span class="math">\(P(N_x=0) = e^{-\lambda x}\)</span></p>
+<p>Thus, the probability that the restriction site is atleast <span class="math">\(x\)</span> bp is given by:
+</p>
 <div class="math">$$
-0 \leq s-x \leq 2
+P(X &gt; x) = e^{-\lambda x}
 $$</div>
-<p>Which gives us, these bounds:</p>
-<p><span class="math">\(s-2 \leq x \leq s\)</span> and <span class="math">\(0 \leq x \leq 2\)</span></p>
-<p>In order to respect the above bounds,</p>
-<p><span class="math">\(f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx\)</span></p>
-<p>But, <span class="math">\(f(x) \neq 0\)</span> for <span class="math">\(0 \leq x \leq 2\)</span></p>
-<p>and <span class="math">\(f(s-x) \neq 0\)</span> for <span class="math">\(s-2 \leq x \leq s\)</span></p>
-<p>thus, <span class="math">\(f(x)f(s-x) \neq 0\)</span> for <span class="math">\(max(0,s-2) \leq x \leq min(s,2)\)</span></p>
-<p>Range of s: <span class="math">\([0,4]\)</span></p>
-<p><span class="math">\(f*g(s) = \int_{max(0,s-2)}^{min(s,2)}f(x)f(s-x)dx\)</span></p>
-<p>For <span class="math">\(0 \leq s \leq 2\)</span> :  <span class="math">\(min(s,2)=s\)</span> and <span class="math">\(max(0,s-2)=0\)</span></p>
-<p>For <span class="math">\(2 \leq s \leq 4\)</span> : <span class="math">\(min(s,2)=2\)</span> and <span class="math">\(max(0,s-2)=s-2\)</span></p>
-<p>Now,</p>
+<p>and hence,</p>
 <div class="math">$$
-f_S(s) = \begin{cases}
-\int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  &amp; 0 \leq s \leq 2\\
-\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  &amp; 2 \leq s \leq 4\\
-\end{cases}
+P(X &lt; x) = 1-e^{-\lambda x} \implies P(X=x) = \lambda e*^{-\lambda x}
 $$</div>
+<p>Thus, the size of restriction fragments follows an exponential distribution.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -114,6 +96,36 @@ $$</div>
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../convolution-demysitifed.html" rel="bookmark"
+                           title="Permalink to Convolution Demysitifed">Convolution Demysitifed</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-09T00:00:00+02:00">
+                Published: Sat 09 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
+</footer><!-- /.post-info -->                <h2>Problem</h2>
+<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
+for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
+<h2>Wrong solution</h2>
+<div class="math">$$ 
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
+$$</div>
+<p>Thus, blindly,</p>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x ...</span></p>
+                <a class="readmore" href="../convolution-demysitifed.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

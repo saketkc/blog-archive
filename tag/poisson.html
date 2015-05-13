@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Piddling Pertinent - poisson</title>
+        <link rel="stylesheet" href="../theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="../">Piddling Pertinent </a></h1>
+                <nav><ul>
+                    <li><a href="../category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="../restriction-fragments-size-distribution.html">Restriction Fragments Size Distribution</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/poisson.html">poisson</a> <a href="../tag/computational-biology.html">computational biology</a> <a href="../tag/exponential.html">exponential</a> </p>
+</footer><!-- /.post-info --><h2>Given</h2>
+<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
+</p>
+<div class="math">$$
+P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
+$$</div>
+<p>Find the distribution of length of restriction fragments</p>
+<h2>Solution</h2>
+<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to be
+atleast <span class="math">\(x\)</span> base pairs long, i.e. I have a fragment starting at <span class="math">\(z\)</span> and going atleast 
+till <span class="math">\(z+x\)</span>, I need to ensure I do not encounter any other restriction site in between,
+which is also equivalent to <span class="math">\(P(N_x=0) = e^{-\lambda x}\)</span></p>
+<p>Thus, the probability that the restriction site is atleast <span class="math">\(x\)</span> bp is given by:
+</p>
+<div class="math">$$
+P(X &gt; x) = e^{-\lambda x}
+$$</div>
+<p>and hence,</p>
+<div class="math">$$
+P(X &lt; x) = 1-e^{-\lambda x} \implies P(X=x) = \lambda e*^{-\lambda x}
+$$</div>
+<p>Thus, the size of restriction fragments follows an exponential distribution.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
