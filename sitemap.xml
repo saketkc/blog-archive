@@ -5,34 +5,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-05-13T18:10:40-00:00</lastmod>
+<lastmod>2015-05-13T18:12:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-05-13T18:10:40-00:00</lastmod>
+<lastmod>2015-05-13T18:12:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-05-13T18:10:40-00:00</lastmod>
+<lastmod>2015-05-13T18:12:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-05-13T18:10:40-00:00</lastmod>
+<lastmod>2015-05-13T18:12:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/restriction-fragments-and-mixed-random-variables.html</loc>
+<loc>/restriction-fragments-mle-and-mixed-random-variables.html</loc>
 <lastmod>2015-05-13T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -151,6 +151,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/mle.html</loc>
+<lastmod>2015-05-13T00:00:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/ml.html</loc>
 <lastmod>2015-04-15T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
@@ -202,6 +209,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/tag/linear-algebra.html</loc>
 <lastmod>2015-02-28T00:00:00+00:09</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/likelihood.html</loc>
+<lastmod>2015-05-13T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
