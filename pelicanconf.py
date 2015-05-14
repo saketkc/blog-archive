@@ -38,7 +38,10 @@ STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [ 'assets', 'sitemap', 'gravatar', 'render_math']
-
+GOOGLE_ANALYTICS = 'UA-55540107-1'
+MENUITEMS = [('Home', 'http://saket-choudhary.me'), ('Github', 'https://github.com/saketkc/pertinent-blog/tree/master/content')]
+GITHUB_URL = 'https://github.com/saketkc'
+TWITTER_USERNAME = 'saketkc'
 
 SITEMAP = {
     'format': 'xml',

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Piddling Pertinent - matrix</title>
+        <title>Piddling Pertinent - computational biology</title>
         <link rel="stylesheet" href="../theme/css/main.css" />
 
         <!--[if IE]>
@@ -25,35 +25,32 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../ba-ab-i.html">BA = AB = I</a></h1>
+                    <h1 class="entry-title"><a href="../restriction-fragments-mle-and-mixed-random-variables.html">Restriction Fragments, MLE,  and Mixed Random Variables</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info --><p>To Prove: If </p>
-<div class="math">$$A_{nxn}$$</div>
-<p> and </p>
-<div class="math">$$B_{nxn}$$</div>
-<p> such that AB=I, then BA=I</p>
-<div class="math">$$AB=I \implies Rank(A), Rank(B)=n$$</div>
-<p>Reason: Rank(AB) </p>
-<div class="math">$$\leq$$</div>
-<p> min(Rank A, Rank B)</p>
-<p>so B is a full rank matrix.
-Now consider B=BI </p>
-<div class="math">$$\implies$$</div>
-<p> B-B(AB)=0 </p>
-<div class="math">$$\implies$$</div>
-<p> B-(BA)B=0 </p>
-<div class="math">$$\implies$$</div>
-<p> (I-BA)B=0</p>
-<p>Since B is full rank so I-BA=0. Q.E.D</p>
+<p>tags: <a href="../tag/indicator-variable.html">indicator variable</a> <a href="../tag/computational-biology.html">computational biology</a> <a href="../tag/exponential.html">exponential</a> <a href="../tag/mle.html">mle</a> <a href="../tag/likelihood.html">likelihood</a> </p>
+</footer><!-- /.post-info --><p>Let <span class="math">\(X_1, X_2, \dots , X_n\)</span> be the lengths of <span class="math">\(n\)</span> restriction fragments. Suppose that a
+biotechnique can measure fragment lengths accurately up to a given length c.
+That is, if <span class="math">\(X_i &lt; c\)</span>, then the technique gives correct value <span class="math">\(X_i\)</span>
+Show that MLE of <span class="math">\(\lambda = \frac{n-T_n}{S_n+cT_n}\)</span> where <span class="math">\(S_n= \sum_{j=1}^n X_jI(X_j &lt; c)\)</span> and <span class="math">\(T_n = \sum_{j=1}^n I(X_j \geq c)\)</span></p>
+<h2>Solution</h2>
+<p>This is another of my favorite problems that requires clever use of exponential variables.
+I also answered a similar  question on <a href="http://math.stackexchange.com/a/1281204/171836">Mathematics stackexchange</a></p>
+<p>Few observations:</p>
+<p><span class="math">\(P(X_i &lt; x)  = 1 - \lambda e^{-x}\)</span> if <span class="math">\( 0 \leq x &lt; c\)</span></p>
+<p><span class="math">\(P(X_i = c) = P(X_i \geq c) = e^{-\lambda c}\)</span> (This one looks counter intuitive at first look, but that is what the <span class="math">\(X_i=c\)</span> if <span class="math">\(X_i \geq c\)</span> returns)</p>
+<p>Now,</p>
+<p><span class="math">\(<div class="math">\begin{align}L( \lambda| x_i) &amp;= \prod_{i=1}^{n}  (\lambda e^{-\lambda x_i}) I(0 \leq x_i &lt; c) \times (e^{-\lambda c})I( x_i \geq c) \\&amp;= \lambda^{\sum_{i=1}^n I(0 \leq x_i &lt; c)}e^{-\lambda(\sum_{i=1}^n x_iI(0 \leq x_i &lt; c)} \times e^{-\lambda c \sum_{i=1}^n I(x_i \geq c)} \\&amp;= \lambda^{n-T_n}e^{-\lambda S_n} \times e^{-\lambda c T_n}\end{align}</div>\)</span> </p>
+<p><span class="math">\(\log L= (n-T_n) \log \lambda -\lambda(S_n+cT_n)\)</span></p>
+<p><span class="math">\(\frac{\partial \log L}{\partial \lambda} = \frac{n-T_n}{\lambda}-(S_n+cT_n)\)</span></p>
+<p>which gives <span class="math">\(\hat \lambda = \frac{n-T_n}{S_n+cT_n}\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -100,58 +97,31 @@ Now consider B=BI </p>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
-                           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
+                    <h1><a href="../restriction-fragments-size-distribution.html" rel="bookmark"
+                           title="Permalink to Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></h1>
                 </header>
 
                 <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->                <p>L2 norm and spectral radius for </p>
-<div class="math">$$A=A^T$$</div>
-<p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: </p>
-<div class="math">$$$|| . ||$$</div>
-<p> defined as ||A|| = </p>
-<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
-<p> 
-Note how ||Ax|| is a vector norm ...</p>
-                <a class="readmore" href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../positive-definite-second-derivative.html" rel="bookmark"
-                           title="Permalink to Positive definite second derivative">Positive definite second derivative</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->                <blockquote>
-<p>Let <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> be a twice-differentiable function,
-and let <span class="math">\(f\)</span>’s second derivative be continuous. Let <span class="math">\(f\)</span> be convex with
-the following definition of convexity: for any <span class="math">\(a&lt;b \in \mathbb{R}\)</span>:
-<div class="math">$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 ...</div></p></blockquote>
-                <a class="readmore" href="../positive-definite-second-derivative.html">read more</a>
+<p>tags: <a href="../tag/poisson.html">poisson</a> <a href="../tag/computational-biology.html">computational biology</a> <a href="../tag/exponential.html">exponential</a> </p>
+</footer><!-- /.post-info -->                <h2>Given</h2>
+<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
+</p>
+<div class="math">$$
+P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
+$$</div>
+<p>Find the distribution of length of restriction fragments</p>
+<h2>Solution</h2>
+<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to ...</p>
+                <a class="readmore" href="../restriction-fragments-size-distribution.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->

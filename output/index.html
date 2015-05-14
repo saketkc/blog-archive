@@ -11,66 +11,46 @@
 </head>
 
 <body id="index" class="home">
+<a href="https://github.com/saketkc">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
         <header id="banner" class="body">
                 <h1><a href="./">Piddling Pertinent </a></h1>
                 <nav><ul>
+                    <li><a href="http://saket-choudhary.me">Home</a></li>
+                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
                     <li><a href="./category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="./convolution-demysitifed.html">Convolution Demysitifed</a></h1>
+                    <h1 class="entry-title"><a href="./restriction-fragments-mle-and-mixed-random-variables.html">Restriction Fragments, MLE,  and Mixed Random Variables</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-09T00:00:00+02:00">
-                Published: Sat 09 May 2015
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/stats.html">stats</a> <a href="./tag/pdf.html">pdf</a> <a href="./tag/math.html">math</a> </p>
-</footer><!-- /.post-info --><h2>Problem</h2>
-<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
-for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
-<h2>Wrong solution</h2>
-<div class="math">$$ 
-f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
-$$</div>
-<p>Thus, blindly,</p>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}\)</span> and <span class="math">\(0 \leq s \leq 4\)</span></p>
-<p>But is <span class="math">\(f_S(s)\)</span> a PDF? </p>
-<p>No.</p>
-<p><span class="math">\(\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1\)</span></p>
-<h2>Respecting the bounds.</h2>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx\)</span> for :</p>
-<div class="math">$$
-0 \leq x \leq 2
-$$</div>
-<p>
-and</p>
-<div class="math">$$
-0 \leq s-x \leq 2
-$$</div>
-<p>Which gives us, these bounds:</p>
-<p><span class="math">\(s-2 \leq x \leq s\)</span> and <span class="math">\(0 \leq x \leq 2\)</span></p>
-<p>In order to respect the above bounds,</p>
-<p><span class="math">\(f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx\)</span></p>
-<p>But, <span class="math">\(f(x) \neq 0\)</span> for <span class="math">\(0 \leq x \leq 2\)</span></p>
-<p>and <span class="math">\(f(s-x) \neq 0\)</span> for <span class="math">\(s-2 \leq x \leq s\)</span></p>
-<p>thus, <span class="math">\(f(x)f(s-x) \neq 0\)</span> for <span class="math">\(max(0,s-2) \leq x \leq min(s,2)\)</span></p>
-<p>Range of s: <span class="math">\([0,4]\)</span></p>
-<p><span class="math">\(f*g(s) = \int_{max(0,s-2)}^{min(s,2)}f(x)f(s-x)dx\)</span></p>
-<p>For <span class="math">\(0 \leq s \leq 2\)</span> :  <span class="math">\(min(s,2)=s\)</span> and <span class="math">\(max(0,s-2)=0\)</span></p>
-<p>For <span class="math">\(2 \leq s \leq 4\)</span> : <span class="math">\(min(s,2)=2\)</span> and <span class="math">\(max(0,s-2)=s-2\)</span></p>
+<p>tags: <a href="./tag/indicator-variable.html">indicator variable</a> <a href="./tag/computational-biology.html">computational biology</a> <a href="./tag/exponential.html">exponential</a> <a href="./tag/mle.html">mle</a> <a href="./tag/likelihood.html">likelihood</a> </p>
+</footer><!-- /.post-info --><p>Let <span class="math">\(X_1, X_2, \dots , X_n\)</span> be the lengths of <span class="math">\(n\)</span> restriction fragments. Suppose that a
+biotechnique can measure fragment lengths accurately up to a given length c.
+That is, if <span class="math">\(X_i &lt; c\)</span>, then the technique gives correct value <span class="math">\(X_i\)</span>
+Show that MLE of <span class="math">\(\lambda = \frac{n-T_n}{S_n+cT_n}\)</span> where <span class="math">\(S_n= \sum_{j=1}^n X_jI(X_j &lt; c)\)</span> and <span class="math">\(T_n = \sum_{j=1}^n I(X_j \geq c)\)</span></p>
+<h2>Solution</h2>
+<p>This is another of my favorite problems that requires clever use of exponential variables.
+I also answered a similar  question on <a href="http://math.stackexchange.com/a/1281204/171836">Mathematics stackexchange</a></p>
+<p>Few observations:</p>
+<p><span class="math">\(P(X_i &lt; x)  = 1 - \lambda e^{-x}\)</span> if <span class="math">\( 0 \leq x &lt; c\)</span></p>
+<p><span class="math">\(P(X_i = c) = P(X_i \geq c) = e^{-\lambda c}\)</span> (This one looks counter intuitive at first look, but that is what the <span class="math">\(X_i=c\)</span> if <span class="math">\(X_i \geq c\)</span> returns)</p>
 <p>Now,</p>
-<div class="math">$$
-f_S(s) = \begin{cases}
-\int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  &amp; 0 \leq s \leq 2\\
-\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  &amp; 2 \leq s \leq 4\\
-\end{cases}
-$$</div>
+<p><span class="math">\(<div class="math">\begin{align}L( \lambda| x_i) &amp;= \prod_{i=1}^{n}  (\lambda e^{-\lambda x_i}) I(0 \leq x_i &lt; c) \times (e^{-\lambda c})I( x_i \geq c) \\&amp;= \lambda^{\sum_{i=1}^n I(0 \leq x_i &lt; c)}e^{-\lambda(\sum_{i=1}^n x_iI(0 \leq x_i &lt; c)} \times e^{-\lambda c \sum_{i=1}^n I(x_i \geq c)} \\&amp;= \lambda^{n-T_n}e^{-\lambda S_n} \times e^{-\lambda c T_n}\end{align}</div>\)</span> </p>
+<p><span class="math">\(\log L= (n-T_n) \log \lambda -\lambda(S_n+cT_n)\)</span></p>
+<p><span class="math">\(\frac{\partial \log L}{\partial \lambda} = \frac{n-T_n}{\lambda}-(S_n+cT_n)\)</span></p>
+<p>which gives <span class="math">\(\hat \lambda = \frac{n-T_n}{S_n+cT_n}\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -114,6 +94,66 @@ $$</div>
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="./restriction-fragments-size-distribution.html" rel="bookmark"
+                           title="Permalink to Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/poisson.html">poisson</a> <a href="./tag/computational-biology.html">computational biology</a> <a href="./tag/exponential.html">exponential</a> </p>
+</footer><!-- /.post-info -->                <h2>Given</h2>
+<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
+</p>
+<div class="math">$$
+P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
+$$</div>
+<p>Find the distribution of length of restriction fragments</p>
+<h2>Solution</h2>
+<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to ...</p>
+                <a class="readmore" href="./restriction-fragments-size-distribution.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="./convolution-demysitifed.html" rel="bookmark"
+                           title="Permalink to Convolution Demysitifed">Convolution Demysitifed</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-09T00:00:00+02:00">
+                Published: Sat 09 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/stats.html">stats</a> <a href="./tag/pdf.html">pdf</a> <a href="./tag/math.html">math</a> </p>
+</footer><!-- /.post-info -->                <h2>Problem</h2>
+<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
+for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
+<h2>Wrong solution</h2>
+<div class="math">$$ 
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
+$$</div>
+<p>Thus, blindly,</p>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x ...</span></p>
+                <a class="readmore" href="./convolution-demysitifed.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -354,5 +394,15 @@ and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\imp
                 <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55540107-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
 </body>
 </html>
