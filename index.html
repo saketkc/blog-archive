@@ -25,32 +25,32 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="./restriction-fragments-mle-and-mixed-random-variables.html">Restriction Fragments, MLE,  and Mixed Random Variables</a></h1>
+                    <h1 class="entry-title"><a href="./prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-13T00:00:00+02:00">
-                Published: Wed 13 May 2015
+        <abbr class="published" title="2015-05-16T00:00:00+02:00">
+                Published: Sat 16 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/indicator-variable.html">indicator variable</a> <a href="./tag/computational-biology.html">computational biology</a> <a href="./tag/exponential.html">exponential</a> <a href="./tag/mle.html">mle</a> <a href="./tag/likelihood.html">likelihood</a> </p>
-</footer><!-- /.post-info --><p>Let <span class="math">\(X_1, X_2, \dots , X_n\)</span> be the lengths of <span class="math">\(n\)</span> restriction fragments. Suppose that a
-biotechnique can measure fragment lengths accurately up to a given length c.
-That is, if <span class="math">\(X_i &lt; c\)</span>, then the technique gives correct value <span class="math">\(X_i\)</span>
-Show that MLE of <span class="math">\(\lambda = \frac{n-T_n}{S_n+cT_n}\)</span> where <span class="math">\(S_n= \sum_{j=1}^n X_jI(X_j &lt; c)\)</span> and <span class="math">\(T_n = \sum_{j=1}^n I(X_j \geq c)\)</span></p>
+<p>tags: <a href="./tag/umvue.html">umvue</a> <a href="./tag/poisson.html">poisson</a> <a href="./tag/estimator.html">estimator</a> </p>
+</footer><!-- /.post-info --><h2>Problem</h2>
+<p>Prove: No UMVUE exists for <span class="math">\(\frac{1}{\theta}\)</span> for Poisson Distribution.</p>
 <h2>Solution</h2>
-<p>This is another of my favorite problems that requires clever use of exponential variables.
-I also answered a similar  question on <a href="http://math.stackexchange.com/a/1281204/171836">Mathematics stackexchange</a></p>
-<p>Few observations:</p>
-<p><span class="math">\(P(X_i &lt; x)  = 1 - \lambda e^{-x}\)</span> if <span class="math">\( 0 \leq x &lt; c\)</span></p>
-<p><span class="math">\(P(X_i = c) = P(X_i \geq c) = e^{-\lambda c}\)</span> (This one looks counter intuitive at first look, but that is what the <span class="math">\(X_i=c\)</span> if <span class="math">\(X_i \geq c\)</span> returns)</p>
-<p>Now,</p>
-<p><span class="math">\(<div class="math">\begin{align}L( \lambda| x_i) &amp;= \prod_{i=1}^{n}  (\lambda e^{-\lambda x_i}) I(0 \leq x_i &lt; c) \times (e^{-\lambda c})I( x_i \geq c) \\&amp;= \lambda^{\sum_{i=1}^n I(0 \leq x_i &lt; c)}e^{-\lambda(\sum_{i=1}^n x_iI(0 \leq x_i &lt; c)} \times e^{-\lambda c \sum_{i=1}^n I(x_i \geq c)} \\&amp;= \lambda^{n-T_n}e^{-\lambda S_n} \times e^{-\lambda c T_n}\end{align}</div>\)</span> </p>
-<p><span class="math">\(\log L= (n-T_n) \log \lambda -\lambda(S_n+cT_n)\)</span></p>
-<p><span class="math">\(\frac{\partial \log L}{\partial \lambda} = \frac{n-T_n}{\lambda}-(S_n+cT_n)\)</span></p>
-<p>which gives <span class="math">\(\hat \lambda = \frac{n-T_n}{S_n+cT_n}\)</span></p>
+<p>http://stats.stackexchange.com/a/152660/11668</p>
+<p>bservation 1: <span class="math">\(\sum X_i\)</span> is complete and sufficient statistic for <span class="math">\(\theta\)</span></p>
+<p>Observation 2: <span class="math">\(\sum X_i \sim Poisson(n\theta)\)</span> </p>
+<p>We need to look for an unbiased estimator of <span class="math">\(\frac{1}{\theta}\)</span> in order to utilise <a href="http://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem">Rao-Blackwell theorem</a></p>
+<p>Let <span class="math">\(\delta(x)\)</span> be such an estimator:</p>
+<p><span class="math">\(E[\delta(x)] = \frac{1}{\theta}\)</span> </p>
+<p>Then, <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)e^{-\theta}\theta^k}{k!} = \frac{1}{\theta}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!} = \frac{e^\theta}{\theta}\)</span></p>
+<p>By Taylor expansion:
+<span class="math">\(e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}\)</span></p>
+<p>Thus,
+<span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies\)</span> $\delta(k) = \frac{1}{\theta} $ which is a useless estimator</p>
+<p>Since, there is no unbiased estimator, there exists no UMVUE as well.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -94,6 +94,31 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="./restriction-fragments-mle-and-mixed-random-variables.html" rel="bookmark"
+                           title="Permalink to Restriction Fragments, MLE, and Mixed Random Variables">Restriction Fragments, MLE,  and Mixed Random Variables</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/indicator-variable.html">indicator variable</a> <a href="./tag/computational-biology.html">computational biology</a> <a href="./tag/exponential.html">exponential</a> <a href="./tag/mle.html">mle</a> <a href="./tag/likelihood.html">likelihood</a> </p>
+</footer><!-- /.post-info -->                <p>Let <span class="math">\(X_1, X_2, \dots , X_n\)</span> be the lengths of <span class="math">\(n\)</span> restriction fragments. Suppose that a
+biotechnique can measure fragment lengths accurately up to a given length c.
+That is, if <span class="math">\(X_i &lt; c\)</span>, then the technique gives correct value <span class="math">\(X_i\)</span>
+Show that MLE of <span class="math">\(\lambda = \frac{n-T_n}{S_n+cT_n}\)</span> where <span class="math">\(S_n ...</span></p>
+                <a class="readmore" href="./restriction-fragments-mle-and-mixed-random-variables.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
