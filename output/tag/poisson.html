@@ -25,39 +25,32 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../restriction-fragments-size-distribution.html">Restriction Fragments Size Distribution</a></h1>
+                    <h1 class="entry-title"><a href="../prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-13T00:00:00+02:00">
-                Published: Wed 13 May 2015
+        <abbr class="published" title="2015-05-16T00:00:00+02:00">
+                Published: Sat 16 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/poisson.html">poisson</a> <a href="../tag/computational-biology.html">computational biology</a> <a href="../tag/exponential.html">exponential</a> </p>
-</footer><!-- /.post-info --><h2>Given</h2>
-<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
-</p>
-<div class="math">$$
-P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
-$$</div>
-<p>Find the distribution of length of restriction fragments</p>
+<p>tags: <a href="../tag/umvue.html">umvue</a> <a href="../tag/poisson.html">poisson</a> <a href="../tag/estimator.html">estimator</a> </p>
+</footer><!-- /.post-info --><h2>Problem</h2>
+<p>Prove: No UMVUE exists for <span class="math">\(\frac{1}{\theta}\)</span> for Poisson Distribution.</p>
 <h2>Solution</h2>
-<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to be
-atleast <span class="math">\(x\)</span> base pairs long, i.e. I have a fragment starting at <span class="math">\(z\)</span> and going atleast 
-till <span class="math">\(z+x\)</span>, I need to ensure I do not encounter any other restriction site in between,
-which is also equivalent to <span class="math">\(P(N_x=0) = e^{-\lambda x}\)</span></p>
-<p>Thus, the probability that the restriction site is atleast <span class="math">\(x\)</span> bp is given by:
-</p>
-<div class="math">$$
-P(X &gt; x) = e^{-\lambda x}
-$$</div>
-<p>and hence,</p>
-<div class="math">$$
-P(X &lt; x) = 1-e^{-\lambda x} \implies P(X=x) = \lambda e^{-\lambda x}
-$$</div>
-<p>Thus, the size of restriction fragments follows an exponential distribution.</p>
+<p>http://stats.stackexchange.com/a/152660/11668</p>
+<p>bservation 1: <span class="math">\(\sum X_i\)</span> is complete and sufficient statistic for <span class="math">\(\theta\)</span></p>
+<p>Observation 2: <span class="math">\(\sum X_i \sim Poisson(n\theta)\)</span> </p>
+<p>We need to look for an unbiased estimator of <span class="math">\(\frac{1}{\theta}\)</span> in order to utilise <a href="http://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem">Rao-Blackwell theorem</a></p>
+<p>Let <span class="math">\(\delta(x)\)</span> be such an estimator:</p>
+<p><span class="math">\(E[\delta(x)] = \frac{1}{\theta}\)</span> </p>
+<p>Then, <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)e^{-\theta}\theta^k}{k!} = \frac{1}{\theta}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!} = \frac{e^\theta}{\theta}\)</span></p>
+<p>By Taylor expansion:
+<span class="math">\(e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}\)</span></p>
+<p>Thus,
+<span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies\)</span> $\delta(k) = \frac{1}{\theta} $ which is a useless estimator</p>
+<p>Since, there is no unbiased estimator, there exists no UMVUE as well.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -96,10 +89,46 @@ $$</div>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../restriction-fragments-size-distribution.html" rel="bookmark"
+                           title="Permalink to Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-13T00:00:00+02:00">
+                Published: Wed 13 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/poisson.html">poisson</a> <a href="../tag/computational-biology.html">computational biology</a> <a href="../tag/exponential.html">exponential</a> </p>
+</footer><!-- /.post-info -->                <h2>Given</h2>
+<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
+</p>
+<div class="math">$$
+P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
+$$</div>
+<p>Find the distribution of length of restriction fragments</p>
+<h2>Solution</h2>
+<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to ...</p>
+                <a class="readmore" href="../restriction-fragments-size-distribution.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 1
 </p>
-            </aside><!-- /#featured -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
         </section><!-- /#extras -->
 
