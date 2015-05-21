@@ -25,23 +25,33 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="./distribution-of-one-random-variable-less-than-other.html">Distribution of one random variable less than other</a></h1>
+                    <h1 class="entry-title"><a href="./bernoulli-random-varlable-and-umvue.html">Bernoulli random varlable and UMVUE</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-18T00:00:00+02:00">
-                Published: Mon 18 May 2015
+        <abbr class="published" title="2015-05-21T00:00:00+02:00">
+                Published: Thu 21 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-
+<p>tags: <a href="./tag/bernoulli.html">bernoulli</a> <a href="./tag/umvue.html">umvue</a> </p>
 </footer><!-- /.post-info --><h2>Problem</h2>
-<p><span class="math">\(P(Y&lt;X)\)</span> for any two independent random variables <span class="math">\(X,Y\)</span></p>
+<p>Let <span class="math">\(X_1,...,X_n\)</span> random sample <span class="math">\(X\)</span>~<span class="math">\(Bernoulli(p)\)</span>.
+For <span class="math">\(n\geq 4\)</span> show that the product <span class="math">\(X_1X_2X_3X_4\)</span> is a unbiased estimator for <span class="math">\(p^4\)</span>, 
+and use this fact for find the best unbiased estimator of <span class="math">\(p^4\)</span></p>
 <h2>Solution</h2>
-<p>We just follow the definition:</p>
-<p><span class="math">\(P(Y&lt;X) = \int_{-\infty}^{\infty}f_X(x)dx \int_{-\infty}^{x}f_Y(y)dy\)</span></p>
-<p><span class="math">\(P(Y &lt;X) = \int F_X(y)f_X(x)dx\)</span></p>
+<p>As posted on <a href="http://stats.stackexchange.com/a/153315/11668">stackexchange</a></p>
+<p>[ToDo: Add variance, prove <span class="math">\(E[\phi(T)]=0\)</span>]</p>
+<p>T is a complete sufficient statistic for <span class="math">\(p\)</span>. </p>
+<p>Now, consider indicator <span class="math">\(I_{X_1=1,X_2=1,X_3=1,X_4=1}\)</span> which is an unbiased estimator of <span class="math">\(p^4\)</span></p>
+<p>Rao-Blackwellising:</p>
+<p><span class="math">\(<div class="math">\begin{align}\phi(T) &amp;= E[I_{X_1=1,X_2=1,X_3=1,X_4=1}|T]  \\&amp;=P(X_1=1,X_2=1,X_3=1,X_4=1|T=t) \\&amp;=\frac{P(X_1=1,X_2=1,X_3=1,X_4=1,X_1+X_2+X_3+X_4+\dots X_n=t)}{P(X_1+X_2+\dots +X_n=t)}  \\&amp;= \frac{P(X_1=1,X_2=1,X_3=1,X_4=1)\times P(X_5+X_6+\dots X_n=t-4)}{P(X_1+X_2+\dots +X_n=t)} 
+\\&amp;= \frac{p^4\times \binom{n-4}{t-4}p^{t-4}(1-p)^{n-t}}{\binom{n}{t}p^{t}(1-p)^{n-t}}
+\\&amp;= \frac{\binom{n-4}{t-4}}{\binom{n}{t}} 
+\\&amp;=\frac{t(t-1)(t-2)(t-3)}{n(n-1)(n-2)(n-3)} \end{align}</div>\)</span></p>
+<p>Check:</p>
+<p>$E[\phi(T)] = 0 $ using moments from <a href="http://mathworld.wolfram.com/BinomialDistribution.html">here</a></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -85,6 +95,36 @@
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="./distribution-of-one-random-variable-less-than-other.html" rel="bookmark"
+                           title="Permalink to Distribution of one random variable less than other">Distribution of one random variable less than other</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-18T00:00:00+02:00">
+                Published: Mon 18 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->                <h2>Problem</h2>
+<p><span class="math">\(P(Y&lt;X)\)</span> for any two independent random variables <span class="math">\(X,Y\)</span></p>
+<h2>Solution</h2>
+<p>We just follow the definition:</p>
+<p><span class="math">\(P(Y&lt;X) = \int_{-\infty}^{\infty}f_X(x)dx \int_{-\infty}^{x}f_Y(y)dy\)</span></p>
+<p><span class="math">\(P(Y &lt;X) = \int F_X(y)f_X(x)dx\)</span></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent ...</script>
+                <a class="readmore" href="./distribution-of-one-random-variable-less-than-other.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
