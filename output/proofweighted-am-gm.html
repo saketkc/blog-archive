@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>L2 norm and spectral radius of symmetric matrix</title>
+        <title>[Proof]Weighted AM-GM</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
@@ -29,32 +29,32 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="./l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
-           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
+        <a href="./proofweighted-am-gm.html" rel="bookmark"
+           title="Permalink to [Proof]Weighted AM-GM">[Proof]Weighted AM-GM</a></h1>
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
+        <abbr class="published" title="2015-05-18T00:00:00+02:00">
+                Published: Mon 18 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->      <p>L2 norm and spectral radius for </p>
-<div class="math">$$A=A^T$$</div>
-<p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: </p>
-<div class="math">$$$|| . ||$$</div>
-<p> defined as ||A|| = </p>
-<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
-<p> 
-Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm</p>
+<p>tags: <a href="./tag/inequalities.html">inequalities</a> </p>
+</footer><!-- /.post-info -->      <p>We make use of <a href="http://en.wikipedia.org/wiki/Jensen%27s_inequality">Jensen’s Inequality</a>
+and the fact that <span class="math">\(log(x)\)</span> is a concave function:</p>
+<p>For concave f:
+<span class="math">\(f(\frac{\sum a_ix_i}{\sum a_i}) \geq \frac{\sum a_i f(x_i)}{\sum a_i}\)</span></p>
+<p><span class="math">\(f=log(X)\)</span></p>
+<p><span class="math">\(log(\frac{\sum a_ix_i}{\sum a_i}) \geq \frac{\sum a_i log(x_i)}{\sum a_i}\)</span>
+<span class="math">\(\implies\)</span> 
+<span class="math">\(log(\frac{\sum a_ix_i}{\sum a_i}) \geq log(\prod (x_i)^{\frac{1}{a_i}})\)</span></p>
+<p>Thus,
+ <span class="math">\(\frac{\sum_i a_i x_i}{\sum_i a_i}  \geq (\Pi x_i^{a_i})^{\frac{1}{\sum_i a_i}}\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>L2 norm and spectral radius of symmetric matrix</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
+        <title>Piddling Pertinent - random variables</title>
+        <link rel="stylesheet" href="../theme/css/main.css" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
 
@@ -17,44 +17,51 @@
 <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
 </a>
         <header id="banner" class="body">
-                <h1><a href="./">Piddling Pertinent </a></h1>
+                <h1><a href="../">Piddling Pertinent </a></h1>
                 <nav><ul>
                     <li><a href="http://saket-choudhary.me">Home</a></li>
                     <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
                     <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li class="active"><a href="./category/misc.html">misc</a></li>
+                    <li><a href="../category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
-           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
-<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    </header>
 
-    <div class="entry-content">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="../functions-of-independent-random-variables-are-independent.html">Functions of independent random variables are independent</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
-<p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->      <p>L2 norm and spectral radius for </p>
-<div class="math">$$A=A^T$$</div>
-<p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: </p>
-<div class="math">$$$|| . ||$$</div>
-<p> defined as ||A|| = </p>
-<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
-<p> 
-Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm</p>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/independence.html">independence</a> <a href="../tag/random-variables.html">random variables</a> </p>
+</footer><!-- /.post-info --><h2>A textbook problem</h2>
+<p>Given <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are two independent random variables,
+show that functions <span class="math">\(g(X)\)</span> and <span class="math">\(h(Y)\)</span> are independent too</p>
+<h2>Short Proof</h2>
+<p>Never took a course on measure theory, so avoiding that route:</p>
+<p>Let.</p>
+<p><span class="math">\(R = g(X)\)</span></p>
+<p><span class="math">\(S = h(Y)\)</span></p>
+<p>Also define,</p>
+<p><span class="math">\(A_r = \{x: g(X)\leq r\}\)</span> and <span class="math">\(B_s = \{y:h(Y) \leq s\}\)</span></p>
+<div class="math">$$
+F_{RS}(r,s) = P(R\leq r, S \leq s) = P(X \in A_r, Y \in B_s)
+$$</div>
+<p>Now, since <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are independent:</p>
+<div class="math">$$
+P(X \in A_r, Y \in B_s) = P(X \in A_r)P(Y \in B_s) = F_R(r)F_S(s)
+$$</div>
+<p>Which implies</p>
+<div class="math">$$
+F_{RS}(r,s) = F_R(r)F_S(s)
+$$</div>
+<p>and hence</p>
+<p><span class="math">\(g(X), h(Y)\)</span> are independent.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -92,11 +99,8 @@ Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm</p>
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>
-    </div><!-- /.entry-content -->
-
-  </article>
-</section>
+</script>                </article>
+            </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

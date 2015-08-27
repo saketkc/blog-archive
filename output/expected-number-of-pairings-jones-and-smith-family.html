@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>L2 norm and spectral radius of symmetric matrix</title>
+        <title>Expected number of pairings | Jones and Smith Family</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
@@ -29,32 +29,36 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="./l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
-           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
+        <a href="./expected-number-of-pairings-jones-and-smith-family.html" rel="bookmark"
+           title="Permalink to Expected number of pairings | Jones and Smith Family">Expected number of pairings | Jones and Smith Family</a></h1>
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
+        <abbr class="published" title="2015-05-17T00:00:00+02:00">
+                Published: Sun 17 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->      <p>L2 norm and spectral radius for </p>
-<div class="math">$$A=A^T$$</div>
-<p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: </p>
-<div class="math">$$$|| . ||$$</div>
-<p> defined as ||A|| = </p>
-<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
-<p> 
-Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm</p>
+<p>tags: <a href="./tag/expectation.html">expectation</a> <a href="./tag/probability.html">probability</a> <a href="./tag/indicator-variables.html">indicator variables</a> </p>
+</footer><!-- /.post-info -->      <h2>Problem</h2>
+<p>4 members of Smith family and 4 of Jones family are pooled
+to form all possible pairs, all equally likely. Find <span class="math">\(N\)</span>, the 
+number of smiths which have a smith partner.</p>
+<h2>Solution</h2>
+<p><span class="math">\(X= \sum_{i=1}^4 I_i\)</span></p>
+<p>Where <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> meber of smith family has some smith member as it’s partner</p>
+<p>Number of ways <span class="math">\(i^{th}\)</span> smith member can have a smith partner (Choose 1 from remaining 3 Smiths, form group of the remaining 6 )  $ = \binom{3}{1} \times \frac{6!}{(2!)^3} $</p>
+<p>Hence, <span class="math">\(P(I_i=1)= \frac{\binom{3}{1}\frac{6!}{(2!)^3}}{\frac{8!}{(2!)^4}} = \frac{3}{14}\)</span> </p>
+<p>The trickery happens because at the next step I am going to over count,
+since the wording in the question is a bit ambiguous and we are concerned with
+the number of smiths have a partner. I should have multiplied <span class="math">\(P(I_i=1)\)</span> by <span class="math">\(4\)</span> and then divided by 2, 
+but I am going to overcount with ambiguity.</p>
+<p><span class="math">\(N = 4 \times \frac{3}{14} = \frac{6}[7]\)</span> which ofcourse is not an integer, but did we expect it to?</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

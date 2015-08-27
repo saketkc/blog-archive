@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>L2 norm and spectral radius of symmetric matrix</title>
+        <title>Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
@@ -29,32 +29,37 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="./l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
-           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
+        <a href="./prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" rel="bookmark"
+           title="Permalink to Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a></h1>
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00+01:00">
-                Published: Sat 28 February 2015
+        <abbr class="published" title="2015-05-16T00:00:00+02:00">
+                Published: Sat 16 May 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>. </p>
-<p>tags: <a href="./tag/linear-algebra.html">linear algebra</a> <a href="./tag/matrix.html">matrix</a> <a href="./tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->      <p>L2 norm and spectral radius for </p>
-<div class="math">$$A=A^T$$</div>
-<p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: </p>
-<div class="math">$$$|| . ||$$</div>
-<p> defined as ||A|| = </p>
-<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
-<p> 
-Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm</p>
+<p>tags: <a href="./tag/umvue.html">umvue</a> <a href="./tag/poisson.html">poisson</a> <a href="./tag/estimator.html">estimator</a> </p>
+</footer><!-- /.post-info -->      <h2>Problem</h2>
+<p>Prove: No UMVUE exists for <span class="math">\(\frac{1}{\theta}\)</span> for Poisson Distribution.</p>
+<h2>Solution</h2>
+<p>http://stats.stackexchange.com/a/152660/11668</p>
+<p>bservation 1: <span class="math">\(\sum X_i\)</span> is complete and sufficient statistic for <span class="math">\(\theta\)</span></p>
+<p>Observation 2: <span class="math">\(\sum X_i \sim Poisson(n\theta)\)</span> </p>
+<p>We need to look for an unbiased estimator of <span class="math">\(\frac{1}{\theta}\)</span> in order to utilise <a href="http://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem">Rao-Blackwell theorem</a></p>
+<p>Let <span class="math">\(\delta(x)\)</span> be such an estimator:</p>
+<p><span class="math">\(E[\delta(x)] = \frac{1}{\theta}\)</span> </p>
+<p>Then, <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)e^{-\theta}\theta^k}{k!} = \frac{1}{\theta}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!} = \frac{e^\theta}{\theta}\)</span></p>
+<p>By Taylor expansion:
+<span class="math">\(e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}\)</span></p>
+<p>Thus,
+<span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies\)</span> $\delta(k) = \frac{1}{\theta} $ which is a useless estimator</p>
+<p>Since, there is no unbiased estimator, there exists no UMVUE as well.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

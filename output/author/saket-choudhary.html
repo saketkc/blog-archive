@@ -4,6 +4,8 @@
         <meta charset="utf-8" />
         <title>Piddling Pertinent - Saket Choudhary</title>
         <link rel="stylesheet" href="../theme/css/main.css" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,39 +21,47 @@
                 <nav><ul>
                     <li><a href="http://saket-choudhary.me">Home</a></li>
                     <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
                     <li><a href="../category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../bernoulli-random-varlable-and-umvue.html">Bernoulli random varlable and UMVUE</a></h1>
+                    <h1 class="entry-title"><a href="../functions-of-independent-random-variables-are-independent.html">Functions of independent random variables are independent</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-21T00:00:00+02:00">
-                Published: Thu 21 May 2015
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/bernoulli.html">bernoulli</a> <a href="../tag/umvue.html">umvue</a> </p>
-</footer><!-- /.post-info --><h2>Problem</h2>
-<p>Let <span class="math">\(X_1,...,X_n\)</span> random sample <span class="math">\(X\)</span>~<span class="math">\(Bernoulli(p)\)</span>.
-For <span class="math">\(n\geq 4\)</span> show that the product <span class="math">\(X_1X_2X_3X_4\)</span> is a unbiased estimator for <span class="math">\(p^4\)</span>, 
-and use this fact for find the best unbiased estimator of <span class="math">\(p^4\)</span></p>
-<h2>Solution</h2>
-<p>As posted on <a href="http://stats.stackexchange.com/a/153315/11668">stackexchange</a></p>
-<p>[ToDo: Add variance, prove <span class="math">\(E[\phi(T)]=0\)</span>]</p>
-<p>T is a complete sufficient statistic for <span class="math">\(p\)</span>. </p>
-<p>Now, consider indicator <span class="math">\(I_{X_1=1,X_2=1,X_3=1,X_4=1}\)</span> which is an unbiased estimator of <span class="math">\(p^4\)</span></p>
-<p>Rao-Blackwellising:</p>
-<p><span class="math">\(<div class="math">\begin{align}\phi(T) &amp;= E[I_{X_1=1,X_2=1,X_3=1,X_4=1}|T]  \\&amp;=P(X_1=1,X_2=1,X_3=1,X_4=1|T=t) \\&amp;=\frac{P(X_1=1,X_2=1,X_3=1,X_4=1,X_1+X_2+X_3+X_4+\dots X_n=t)}{P(X_1+X_2+\dots +X_n=t)}  \\&amp;= \frac{P(X_1=1,X_2=1,X_3=1,X_4=1)\times P(X_5+X_6+\dots X_n=t-4)}{P(X_1+X_2+\dots +X_n=t)} 
-\\&amp;= \frac{p^4\times \binom{n-4}{t-4}p^{t-4}(1-p)^{n-t}}{\binom{n}{t}p^{t}(1-p)^{n-t}}
-\\&amp;= \frac{\binom{n-4}{t-4}}{\binom{n}{t}} 
-\\&amp;=\frac{t(t-1)(t-2)(t-3)}{n(n-1)(n-2)(n-3)} \end{align}</div>\)</span></p>
-<p>Check:</p>
-<p>$E[\phi(T)] = 0 $ using moments from <a href="http://mathworld.wolfram.com/BinomialDistribution.html">here</a></p>
+<p>tags: <a href="../tag/independence.html">independence</a> <a href="../tag/random-variables.html">random variables</a> </p>
+</footer><!-- /.post-info --><h2>A textbook problem</h2>
+<p>Given <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are two independent random variables,
+show that functions <span class="math">\(g(X)\)</span> and <span class="math">\(h(Y)\)</span> are independent too</p>
+<h2>Short Proof</h2>
+<p>Never took a course on measure theory, so avoiding that route:</p>
+<p>Let.</p>
+<p><span class="math">\(R = g(X)\)</span></p>
+<p><span class="math">\(S = h(Y)\)</span></p>
+<p>Also define,</p>
+<p><span class="math">\(A_r = \{x: g(X)\leq r\}\)</span> and <span class="math">\(B_s = \{y:h(Y) \leq s\}\)</span></p>
+<div class="math">$$
+F_{RS}(r,s) = P(R\leq r, S \leq s) = P(X \in A_r, Y \in B_s)
+$$</div>
+<p>Now, since <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are independent:</p>
+<div class="math">$$
+P(X \in A_r, Y \in B_s) = P(X \in A_r)P(Y \in B_s) = F_R(r)F_S(s)
+$$</div>
+<p>Which implies</p>
+<div class="math">$$
+F_{RS}(r,s) = F_R(r)F_S(s)
+$$</div>
+<p>and hence</p>
+<p><span class="math">\(g(X), h(Y)\)</span> are independent.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -95,6 +105,34 @@ and use this fact for find the best unbiased estimator of <span class="math">\(p
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../bernoulli-random-varlable-and-umvue.html" rel="bookmark"
+                           title="Permalink to Bernoulli random varlable and UMVUE">Bernoulli random varlable and UMVUE</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-21T00:00:00+02:00">
+                Published: Thu 21 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/bernoulli.html">bernoulli</a> <a href="../tag/umvue.html">umvue</a> </p>
+</footer><!-- /.post-info -->                <h2>Problem</h2>
+<p>Let <span class="math">\(X_1,...,X_n\)</span> random sample <span class="math">\(X\)</span>~<span class="math">\(Bernoulli(p)\)</span>.
+For <span class="math">\(n\geq 4\)</span> show that the product <span class="math">\(X_1X_2X_3X_4\)</span> is a unbiased estimator for <span class="math">\(p^4\)</span>, 
+and use this fact for find the best unbiased estimator of <span class="math">\(p^4\)</span></p>
+<h2>Solution</h2>
+<p>As posted on <a href="http://stats.stackexchange.com/a/153315/11668">stackexchange</a></p>
+<p>[ToDo: Add variance, prove <span class="math">\(E[\phi(T ...</span></p>
+                <a class="readmore" href="../bernoulli-random-varlable-and-umvue.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -324,6 +362,38 @@ $$</div>
 
             <li><article class="hentry">
                 <header>
+                    <h1><a href="../math-501-project.html" rel="bookmark"
+                           title="Permalink to MATH 501 Project">MATH 501 Project</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-05T00:00:00+02:00">
+                Published: Tue 05 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/numerical-analysis.html">numerical analysis</a> </p>
+</footer><!-- /.post-info -->                <h1>Introduction</h1>
+<p>Model of a two state reparable system:
+</p>
+<div class="math">$$
+\begin{equation}
+\frac{dp_0}{dt} = -\lambda_0 p_0(t) + \int_0^1 \mu_1(x)p_1(x,t)dx + \int_0^1u^{*}(x,t)dx
+\end{equation}
+$$</div>
+<div class="math">$$
+\begin{equation}
+\frac{\partial p_1(x,t)}{\partial t} + \frac{\partial p_1(x,t)}{\partial x} = -\mu_1(x)p_1 ...</div>
+                <a class="readmore" href="../math-501-project.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="../runs-in-flips-of-a-coin.html" rel="bookmark"
                            title="Permalink to Runs in flips of a coin">Runs in flips of a coin</a></h1>
                 </header>
@@ -546,11 +616,18 @@ and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\imp
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
+                            <li><a href="https://github.com/saketkc">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
