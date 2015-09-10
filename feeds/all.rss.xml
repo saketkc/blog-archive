@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Piddling Pertinent</title><link>http://saket-choudhary.me/pertinent-blog/</link><description></description><atom:link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0200</lastBuildDate><item><title>Functions of independent random variables are independent</title><link>http://saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html</link><description>&lt;h2&gt;A textbook problem&lt;/h2&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Piddling Pertinent</title><link>http://saket-choudhary.me/pertinent-blog/</link><description></description><atom:link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 09 Sep 2015 00:00:00 +0200</lastBuildDate><item><title>A frequent inequality</title><link>http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html</link><description>&lt;div class="math"&gt;$$
+\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&amp;gt;0
+$$&lt;/div&gt;
+&lt;p&gt;Consider &lt;span class="math"&gt;\(f(x)=\ln(x)-\frac{x-1}{x}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(f'(x) = \frac{1}{x} - \frac{1}{x^2} = \frac{x-1}{x^2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now consider the following two cases:&lt;/p&gt;
+&lt;p&gt;Case A: &lt;span class="math"&gt;\(0 &amp;lt; x \leq 1\)&lt;/span&gt; and Case B: &lt;span class="math"&gt;\(1 &amp;lt; x &amp;lt; \infty\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Then for Case A: &lt;span class="math"&gt;\(x-1 \leq 0\)&lt;/span&gt; and hence &lt;span class="math"&gt;\(f'(x)\leq 0\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(f(x)\)&lt;/span&gt; is a non-increasing function in &lt;span class="math"&gt;\((0,1]\)&lt;/span&gt; and hence &lt;span class="math"&gt;\(f(x)\geq f(1) \forall x \in (0,1]\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So for &lt;span class="math"&gt;\(x \in (0,1]\)&lt;/span&gt;, &lt;span class="math"&gt;\(f(x) \geq f(1)\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(\ln(x)-\frac{x-1}{x} \geq 0\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(\frac{x-1}{x} \leq \ln(x)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now for Case B:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(1 &amp;lt; x &amp;lt; \infty\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(x-1&amp;gt;0\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Thus, in this region &lt;span class="math"&gt;\(f'(x)&amp;gt;0\)&lt;/span&gt; and hence &lt;span class="math"&gt;\(f(x)\)&lt;/span&gt; is a strictly increasing function in &lt;span class="math"&gt;\((1,\infty)\)&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;Thus, for &lt;span class="math"&gt;\(1 &amp;lt; x &amp;lt; \infty\)&lt;/span&gt;, &lt;span class="math"&gt;\(f(x)&amp;gt;f(1)\)&lt;/span&gt; and hence  &lt;span class="math"&gt;\(\ln(x)-\frac{x-1}{x} &amp;gt; 0\)&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;Combine results with that in case A for &lt;span class="math"&gt;\(f(x)\)&lt;/span&gt; to conclude: &lt;span class="math"&gt;\(\frac{x-1}{x} \leq \ln(x)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now define &lt;span class="math"&gt;\(f(x)= \ln(x)-x+1\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(f'(x) = \frac{1}{x}-1 =\frac{1-x}{x}\)&lt;/span&gt;
+Whole story of Case A and Case B again. But it should be simple to see that 
+for &lt;span class="math"&gt;\(0 &amp;lt; x \leq 1\)&lt;/span&gt;, &lt;span class="math"&gt;\(g'(x)\geq 0\)&lt;/span&gt; and hence &lt;span class="math"&gt;\(g(x) \leq g(1)\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(\ln(x)-x+1 \leq 0\)&lt;/span&gt; 
+And for &lt;span class="math"&gt;\(1 &amp;lt; x &amp;lt; \infty\)&lt;/span&gt;, &lt;span class="math"&gt;\(g'(x)&amp;lt;0\)&lt;/span&gt; and hence &lt;span class="math"&gt;\(g(x)&amp;lt;g(1)\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(\ln(x)-x+1 &amp;lt; 0\)&lt;/span&gt; &lt;/p&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;KL-divergence &lt;/li&gt;
+&lt;li&gt;Entropy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Wed, 09 Sep 2015 00:00:00 +0200</pubDate><guid>tag:saket-choudhary.me,2015-09-09:pertinent-blog/a-frequent-inequality.html</guid><category>stats</category><category>pdf</category><category>math</category></item><item><title>Functions of independent random variables are independent</title><link>http://saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html</link><description>&lt;h2&gt;A textbook problem&lt;/h2&gt;
 &lt;p&gt;Given &lt;span class="math"&gt;\(X\)&lt;/span&gt;, &lt;span class="math"&gt;\(Y\)&lt;/span&gt; are two independent random variables,
 show that functions &lt;span class="math"&gt;\(g(X)\)&lt;/span&gt; and &lt;span class="math"&gt;\(h(Y)\)&lt;/span&gt; are independent too&lt;/p&gt;
 &lt;h2&gt;Short Proof&lt;/h2&gt;

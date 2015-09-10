@@ -28,10 +28,10 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../convolution-demysitifed.html">Convolution Demysitifed</a></h1>
+                    <h1 class="entry-title"><a href="../a-frequent-inequality.html">A frequent inequality</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-05-09T00:00:00+02:00">
-                Published: Sat 09 May 2015
+        <abbr class="published" title="2015-09-09T00:00:00+02:00">
+                Published: Wed 09 September 2015
         </abbr>
 
         <address class="vcard author">
@@ -39,46 +39,29 @@
         </address>
 <p>In <a href="../category/misc.html">misc</a>. </p>
 <p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
-</footer><!-- /.post-info --><h2>Problem</h2>
-<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
-for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
-<h2>Wrong solution</h2>
-<div class="math">$$ 
-f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
+</footer><!-- /.post-info --><div class="math">$$
+\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&gt;0
 $$</div>
-<p>Thus, blindly,</p>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}\)</span> and <span class="math">\(0 \leq s \leq 4\)</span></p>
-<p>But is <span class="math">\(f_S(s)\)</span> a PDF? </p>
-<p>No.</p>
-<p><span class="math">\(\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1\)</span></p>
-<h2>Respecting the bounds.</h2>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx\)</span> for :</p>
-<div class="math">$$
-0 \leq x \leq 2
-$$</div>
-<p>
-and</p>
-<div class="math">$$
-0 \leq s-x \leq 2
-$$</div>
-<p>Which gives us, these bounds:</p>
-<p><span class="math">\(s-2 \leq x \leq s\)</span> and <span class="math">\(0 \leq x \leq 2\)</span></p>
-<p>In order to respect the above bounds,</p>
-<p><span class="math">\(f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx\)</span></p>
-<p>But, <span class="math">\(f(x) \neq 0\)</span> for <span class="math">\(0 \leq x \leq 2\)</span></p>
-<p>and <span class="math">\(f(s-x) \neq 0\)</span> for <span class="math">\(s-2 \leq x \leq s\)</span></p>
-<p>thus, <span class="math">\(f(x)f(s-x) \neq 0\)</span> for <span class="math">\(max(0,s-2) \leq x \leq min(s,2)\)</span></p>
-<p>Range of s: <span class="math">\([0,4]\)</span></p>
-<p><span class="math">\(f*g(s) = \int_{max(0,s-2)}^{min(s,2)}f(x)f(s-x)dx\)</span></p>
-<p>For <span class="math">\(0 \leq s \leq 2\)</span> :  <span class="math">\(min(s,2)=s\)</span> and <span class="math">\(max(0,s-2)=0\)</span></p>
-<p>For <span class="math">\(2 \leq s \leq 4\)</span> : <span class="math">\(min(s,2)=2\)</span> and <span class="math">\(max(0,s-2)=s-2\)</span></p>
-<p>Now,</p>
-<div class="math">$$
-f_S(s) = \begin{cases}
-\int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  &amp; 0 \leq s \leq 2\\
-\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  &amp; 2 \leq s \leq 4\\
-\end{cases}
-$$</div>
+<p>Consider <span class="math">\(f(x)=\ln(x)-\frac{x-1}{x}\)</span></p>
+<p><span class="math">\(f'(x) = \frac{1}{x} - \frac{1}{x^2} = \frac{x-1}{x^2}\)</span></p>
+<p>Now consider the following two cases:</p>
+<p>Case A: <span class="math">\(0 &lt; x \leq 1\)</span> and Case B: <span class="math">\(1 &lt; x &lt; \infty\)</span></p>
+<p>Then for Case A: <span class="math">\(x-1 \leq 0\)</span> and hence <span class="math">\(f'(x)\leq 0\)</span> <span class="math">\(\implies\)</span> <span class="math">\(f(x)\)</span> is a non-increasing function in <span class="math">\((0,1]\)</span> and hence <span class="math">\(f(x)\geq f(1) \forall x \in (0,1]\)</span></p>
+<p>So for <span class="math">\(x \in (0,1]\)</span>, <span class="math">\(f(x) \geq f(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-\frac{x-1}{x} \geq 0\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{x-1}{x} \leq \ln(x)\)</span></p>
+<p>Now for Case B:</p>
+<p><span class="math">\(1 &lt; x &lt; \infty\)</span> <span class="math">\(\implies\)</span> <span class="math">\(x-1&gt;0\)</span></p>
+<p>Thus, in this region <span class="math">\(f'(x)&gt;0\)</span> and hence <span class="math">\(f(x)\)</span> is a strictly increasing function in <span class="math">\((1,\infty)\)</span> </p>
+<p>Thus, for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\(f(x)&gt;f(1)\)</span> and hence  <span class="math">\(\ln(x)-\frac{x-1}{x} &gt; 0\)</span> </p>
+<p>Combine results with that in case A for <span class="math">\(f(x)\)</span> to conclude: <span class="math">\(\frac{x-1}{x} \leq \ln(x)\)</span></p>
+<p>Now define <span class="math">\(f(x)= \ln(x)-x+1\)</span> <span class="math">\(\implies\)</span> <span class="math">\(f'(x) = \frac{1}{x}-1 =\frac{1-x}{x}\)</span>
+Whole story of Case A and Case B again. But it should be simple to see that 
+for <span class="math">\(0 &lt; x \leq 1\)</span>, <span class="math">\(g'(x)\geq 0\)</span> and hence <span class="math">\(g(x) \leq g(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-x+1 \leq 0\)</span> 
+And for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\(g'(x)&lt;0\)</span> and hence <span class="math">\(g(x)&lt;g(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-x+1 &lt; 0\)</span> </p>
+<h2>TODO</h2>
+<ul>
+<li>KL-divergence </li>
+<li>Entropy</li>
+</ul>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -118,6 +101,42 @@ $$</div>
 }
 </script>                </article>
             </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../convolution-demysitifed.html" rel="bookmark"
+                           title="Permalink to Convolution Demysitifed">Convolution Demysitifed</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-09T00:00:00+02:00">
+                Published: Sat 09 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
+</footer><!-- /.post-info -->                <h2>Problem</h2>
+<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
+for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
+<h2>Wrong solution</h2>
+<div class="math">$$ 
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
+$$</div>
+<p>Thus, blindly,</p>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x ...</span></p>
+                <a class="readmore" href="../convolution-demysitifed.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
