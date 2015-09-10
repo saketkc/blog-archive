@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Piddling Pertinent - math</title>
-        <link rel="stylesheet" href="../theme/css/main.css" />
+        <title>A frequent inequality</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
 
@@ -17,29 +17,35 @@
 <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
 </a>
         <header id="banner" class="body">
-                <h1><a href="../">Piddling Pertinent </a></h1>
+                <h1><a href="./">Piddling Pertinent </a></h1>
                 <nav><ul>
                     <li><a href="http://saket-choudhary.me">Home</a></li>
                     <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
                     <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li><a href="../category/misc.html">misc</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./a-frequent-inequality.html" rel="bookmark"
+           title="Permalink to A frequent inequality">A frequent inequality</a></h1>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="../a-frequent-inequality.html">A frequent inequality</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-09-09T00:00:00+02:00">
                 Published: Wed 09 September 2015
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
-<p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
-</footer><!-- /.post-info --><div class="math">$$
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/stats.html">stats</a> <a href="./tag/pdf.html">pdf</a> <a href="./tag/math.html">math</a> </p>
+</footer><!-- /.post-info -->      <div class="math">$$
 \frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&gt;0
 $$</div>
 <p>Consider <span class="math">\(f(x)=\ln(x)-\frac{x-1}{x}\)</span></p>
@@ -99,71 +105,11 @@ And for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</script>
+    </div><!-- /.entry-content -->
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../convolution-demysitifed.html" rel="bookmark"
-                           title="Permalink to Convolution Demysitifed">Convolution Demysitifed</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-05-09T00:00:00+02:00">
-                Published: Sat 09 May 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
-</footer><!-- /.post-info -->                <h2>Problem</h2>
-<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
-for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
-<h2>Wrong solution</h2>
-<div class="math">$$ 
-f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
-$$</div>
-<p>Thus, blindly,</p>
-<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x ...</span></p>
-                <a class="readmore" href="../convolution-demysitifed.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../svd-vs-mds-vs-pca.html" rel="bookmark"
-                           title="Permalink to SVD v/s MDS v/s PCA">SVD v/s MDS v/s PCA</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-04-15T00:00:00+02:00">
-                Published: Wed 15 April 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>. </p>
-<p>tags: <a href="../tag/math.html">math</a> <a href="../tag/statistics.html">statistics</a> <a href="../tag/ml.html">ml</a> </p>
-</footer><!-- /.post-info -->                <p>Principle Component Analysis(PCA) is a relatively more famous
-than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
-When I was introduced to the latter two, I was utterly confused
-trying to figure out what goes in where.</p>
-<h2>SVD</h2>
-<p>Let <span class="math">\(X_{mxn}\)</span> data matrix. For an easy to relate example ...</p>
-                <a class="readmore" href="../svd-vs-mds-vs-pca.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
