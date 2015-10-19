@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saket-choudhary.me/pertinent-blog/" rel="alternate"></link><link href="http://saket-choudhary.me/pertinent-blog//feeds/misc.atom.xml" rel="self"></link><id>http://saket-choudhary.me/pertinent-blog/</id><updated>2015-09-09T00:00:00+02:00</updated><entry><title>A frequent inequality</title><link href="http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html" rel="alternate"></link><updated>2015-09-09T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-09-09:pertinent-blog/a-frequent-inequality.html</id><summary type="html">&lt;div class="math"&gt;$$
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saket-choudhary.me/pertinent-blog/" rel="alternate"></link><link href="http://saket-choudhary.me/pertinent-blog//feeds/misc.atom.xml" rel="self"></link><id>http://saket-choudhary.me/pertinent-blog/</id><updated>2015-10-18T00:00:00+02:00</updated><entry><title>Entropy and Unoform Distribution</title><link href="http://saket-choudhary.me/pertinent-blog/entropy-and-unoform-distribution.html" rel="alternate"></link><updated>2015-10-18T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-10-18:pertinent-blog/entropy-and-unoform-distribution.html</id><summary type="html">&lt;p&gt;To show &lt;span class="math"&gt;\(\sum p_i\log(p_i) = p\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Consider &lt;span class="math"&gt;\(H = -\sum p_i log(p_i) = log(n)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Consider weighted AM-GM for &lt;span class="math"&gt;\(p_i\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+(\prod \frac{1}{p_i}^p_i)^\frac{1}{\sum p_i} \leq \sum \frac{1}{p_i} \times p_i = n
+$$&lt;/div&gt;
+&lt;p&gt;Take log both sides:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\sum p_i \log(\frac{1}{p_i}) \leq \log(n)
+$$&lt;/div&gt;
+&lt;p&gt;And hence euqality holds only if &lt;span class="math"&gt;\(p_i=p_j=1/n\)&lt;/span&gt; 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+p_i = 1/n
+$$&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="textbook problem"></category><category term="entropy"></category><category term="uniform"></category></entry><entry><title>A frequent inequality</title><link href="http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html" rel="alternate"></link><updated>2015-09-09T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-09-09:pertinent-blog/a-frequent-inequality.html</id><summary type="html">&lt;div class="math"&gt;$$
 \frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&amp;gt;0
 $$&lt;/div&gt;
 &lt;p&gt;Consider &lt;span class="math"&gt;\(f(x)=\ln(x)-\frac{x-1}{x}\)&lt;/span&gt;&lt;/p&gt;
