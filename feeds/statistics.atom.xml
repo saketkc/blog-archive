@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saketkc.github.io/" rel="alternate"></link><link href="http://saketkc.github.io/feeds/statistics.atom.xml" rel="self"></link><id>http://saketkc.github.io/</id><updated>2015-04-14T00:00:00+02:00</updated><entry><title>Multidimensional Scaling</title><link href="http://saketkc.github.io/multidimensional-scaling.html" rel="alternate"></link><updated>2015-04-14T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saketkc.github.io,2015-04-14:multidimensional-scaling.html</id><summary type="html">&lt;p&gt;MDS is a statistical technique to visualize dissimilarity
+between points. The distances between two pointsin n-dimensions 
+are visualized in 2 dimensions such that it represents
+the distance in n-dimensions as far as possible.&lt;/p&gt;
+&lt;p&gt;It is important to note that, for MDS, we start of with a ‘distance’ matrix
+and not the coordinate of points. Dissimilarity is ‘similar’ to distances in most cases(ignoring the scale).
+Let &lt;span class="math"&gt;\(\delta_{i,j}\)&lt;/span&gt; represent the distance between &lt;span class="math"&gt;\(i\ and\ j\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Given &lt;span class="math"&gt;\(n\)&lt;/span&gt; points, the idea is to come up with a set of &lt;span class="math"&gt;\(n * p\)&lt;/span&gt; matrix &lt;span class="math"&gt;\(X\)&lt;/span&gt;
+such that the distance between two vectors &lt;span class="math"&gt;\(x_i\)&lt;/span&gt; and &lt;span class="math"&gt;\(x_j\)&lt;/span&gt; is given by:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+d_{i,j}^2(X) = \sum_{k=1}^{p}(x_{ik}-x_{jk})^2
+$$&lt;/div&gt;
+&lt;p&gt;So if we choose &lt;span class="math"&gt;\(p=1\)&lt;/span&gt;, we wish to visualize everything in single dimension.
+Let’s restrict to the case &lt;span class="math"&gt;\(p=2\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;How do you obtain X?&lt;/h2&gt;
+&lt;p&gt;The idea again goes back to the definition of keeping the ‘new’ distance &lt;span class="math"&gt;\(d_{i,j}(X)\)&lt;/span&gt;
+as the original dissimilarity &lt;span class="math"&gt;\(\delta_{i,j}\)&lt;/span&gt; , this leads to the least square fit kind of regression
+where the goal is to minimize the ‘residual’ error. Note, &lt;span class="math"&gt;\(d_{i,j}\)&lt;/span&gt; is an approximation to &lt;span class="math"&gt;\(\delta_{i,j}\)&lt;/span&gt;
+ The distance matrix could have come from &lt;span class="math"&gt;\(n\)&lt;/span&gt; points having high-dimensions(say &lt;span class="math"&gt;\(p’&amp;gt;p\)&lt;/span&gt;), and even though
+ these points cannot be visualized (since we cannot draw &lt;span class="math"&gt;\(p’\)&lt;/span&gt; dimensional map) we draw a &lt;span class="math"&gt;\(p=2\)&lt;/span&gt; dimensional map.
+The coordinates of original &lt;span class="math"&gt;\(n\)&lt;/span&gt; points in &lt;span class="math"&gt;\(p’\)&lt;/span&gt; need not be known. We can still obtain an ‘equaivalent’
+set of &lt;span class="math"&gt;\(n\)&lt;/span&gt; points in &lt;span class="math"&gt;\(p=2\)&lt;/span&gt; dimensions such that the &lt;span class="math"&gt;\(2D\)&lt;/span&gt; distance between two points &lt;span class="math"&gt;\(i,j\)&lt;/span&gt; is 
+as close as it can be to the original distance.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This is just one way to define ‘closeness’ of &lt;span class="math"&gt;\(\delta_{ij}\)&lt;/span&gt; with &lt;span class="math"&gt;\(\d_{ij}\)&lt;/span&gt;.
+&lt;span class="math"&gt;\(X\)&lt;/span&gt; is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).&lt;/p&gt;
+&lt;h2&gt;Checking if MDS makes sense&lt;/h2&gt;
+&lt;p&gt;A quick checkt to see if MDS is good enough
+is to go back to its definition. The final set of vectors &lt;span class="math"&gt;\(X_{n*p}\)&lt;/span&gt;
+should be able to communiate the original distance matrix
+and hence a plot of the &lt;span class="math"&gt;\(\frac{n{n+1}}{2}\)&lt;/span&gt; points if &lt;span class="math"&gt;\(d_{ij}\)&lt;/span&gt; is
+plotted against &lt;span class="math"&gt;\(X\)&lt;/span&gt; acis and &lt;span class="math"&gt;\(\delta_{ij}\)&lt;/span&gt; is plotted along &lt;span class="math"&gt;\(Y\)&lt;/span&gt; axis
+then you should get a straight line representing &lt;span class="math"&gt;\(Y=X\)&lt;/span&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary></entry></feed>

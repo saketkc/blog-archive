@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/saketkc">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="./">Piddling Pertinent </a></h1>
+                <nav><ul>
+                    <li><a href="http://saket-choudhary.me">Home</a></li>
+                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" rel="bookmark"
+           title="Permalink to Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a></h1>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-16T00:00:00+02:00">
+                Published: Sat 16 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/umvue.html">umvue</a> <a href="./tag/poisson.html">poisson</a> <a href="./tag/estimator.html">estimator</a> </p>
+</footer><!-- /.post-info -->      <h2>Problem</h2>
+<p>Prove: No UMVUE exists for <span class="math">\(\frac{1}{\theta}\)</span> for Poisson Distribution.</p>
+<h2>Solution</h2>
+<p>http://stats.stackexchange.com/a/152660/11668</p>
+<p>bservation 1: <span class="math">\(\sum X_i\)</span> is complete and sufficient statistic for <span class="math">\(\theta\)</span></p>
+<p>Observation 2: <span class="math">\(\sum X_i \sim Poisson(n\theta)\)</span> </p>
+<p>We need to look for an unbiased estimator of <span class="math">\(\frac{1}{\theta}\)</span> in order to utilise <a href="http://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem">Rao-Blackwell theorem</a></p>
+<p>Let <span class="math">\(\delta(x)\)</span> be such an estimator:</p>
+<p><span class="math">\(E[\delta(x)] = \frac{1}{\theta}\)</span> </p>
+<p>Then, <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)e^{-\theta}\theta^k}{k!} = \frac{1}{\theta}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!} = \frac{e^\theta}{\theta}\)</span></p>
+<p>By Taylor expansion:
+<span class="math">\(e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}\)</span></p>
+<p>Thus,
+<span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies\)</span> $\delta(k) = \frac{1}{\theta} $ which is a useless estimator</p>
+<p>Since, there is no unbiased estimator, there exists no UMVUE as well.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
+                            <li><a href="https://github.com/saketkc">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55540107-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Piddling Pertinent - pdf</title>
+        <link rel="stylesheet" href="../theme/css/main.css" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/saketkc">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="../">Piddling Pertinent </a></h1>
+                <nav><ul>
+                    <li><a href="http://saket-choudhary.me">Home</a></li>
+                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
+                    <li><a href="../category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="../a-frequent-inequality.html">A frequent inequality</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-09-09T00:00:00+02:00">
+                Published: Wed 09 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
+</footer><!-- /.post-info --><div class="math">$$
+\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&gt;0
+$$</div>
+<p>Consider <span class="math">\(f(x)=\ln(x)-\frac{x-1}{x}\)</span></p>
+<p><span class="math">\(f'(x) = \frac{1}{x} - \frac{1}{x^2} = \frac{x-1}{x^2}\)</span></p>
+<p>Now consider the following two cases:</p>
+<p>Case A: <span class="math">\(0 &lt; x \leq 1\)</span> and Case B: <span class="math">\(1 &lt; x &lt; \infty\)</span></p>
+<p>Then for Case A: <span class="math">\(x-1 \leq 0\)</span> and hence <span class="math">\(f'(x)\leq 0\)</span> <span class="math">\(\implies\)</span> <span class="math">\(f(x)\)</span> is a non-increasing function in <span class="math">\((0,1]\)</span> and hence <span class="math">\(f(x)\geq f(1) \forall x \in (0,1]\)</span></p>
+<p>So for <span class="math">\(x \in (0,1]\)</span>, <span class="math">\(f(x) \geq f(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-\frac{x-1}{x} \geq 0\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{x-1}{x} \leq \ln(x)\)</span></p>
+<p>Now for Case B:</p>
+<p><span class="math">\(1 &lt; x &lt; \infty\)</span> <span class="math">\(\implies\)</span> <span class="math">\(x-1&gt;0\)</span></p>
+<p>Thus, in this region <span class="math">\(f'(x)&gt;0\)</span> and hence <span class="math">\(f(x)\)</span> is a strictly increasing function in <span class="math">\((1,\infty)\)</span> </p>
+<p>Thus, for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\(f(x)&gt;f(1)\)</span> and hence  <span class="math">\(\ln(x)-\frac{x-1}{x} &gt; 0\)</span> </p>
+<p>Combine results with that in case A for <span class="math">\(f(x)\)</span> to conclude: <span class="math">\(\frac{x-1}{x} \leq \ln(x)\)</span></p>
+<p>Now define <span class="math">\(f(x)= \ln(x)-x+1\)</span> <span class="math">\(\implies\)</span> <span class="math">\(f'(x) = \frac{1}{x}-1 =\frac{1-x}{x}\)</span>
+Whole story of Case A and Case B again. But it should be simple to see that 
+for <span class="math">\(0 &lt; x \leq 1\)</span>, <span class="math">\(g'(x)\geq 0\)</span> and hence <span class="math">\(g(x) \leq g(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-x+1 \leq 0\)</span> 
+And for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\(g'(x)&lt;0\)</span> and hence <span class="math">\(g(x)&lt;g(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-x+1 &lt; 0\)</span> </p>
+<h2>TODO</h2>
+<ul>
+<li>KL-divergence </li>
+<li>Entropy</li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../convolution-demysitifed.html" rel="bookmark"
+                           title="Permalink to Convolution Demysitifed">Convolution Demysitifed</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-09T00:00:00+02:00">
+                Published: Sat 09 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="../category/misc.html">misc</a>. </p>
+<p>tags: <a href="../tag/stats.html">stats</a> <a href="../tag/pdf.html">pdf</a> <a href="../tag/math.html">math</a> </p>
+</footer><!-- /.post-info -->                <h2>Problem</h2>
+<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
+for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
+<h2>Wrong solution</h2>
+<div class="math">$$ 
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
+$$</div>
+<p>Thus, blindly,</p>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x ...</span></p>
+                <a class="readmore" href="../convolution-demysitifed.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
+                            <li><a href="https://github.com/saketkc">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55540107-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>

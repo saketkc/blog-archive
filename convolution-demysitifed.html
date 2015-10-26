@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Convolution Demysitifed</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/saketkc">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="./">Piddling Pertinent </a></h1>
+                <nav><ul>
+                    <li><a href="http://saket-choudhary.me">Home</a></li>
+                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./convolution-demysitifed.html" rel="bookmark"
+           title="Permalink to Convolution Demysitifed">Convolution Demysitifed</a></h1>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-09T00:00:00+02:00">
+                Published: Sat 09 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>. </p>
+<p>tags: <a href="./tag/stats.html">stats</a> <a href="./tag/pdf.html">pdf</a> <a href="./tag/math.html">math</a> </p>
+</footer><!-- /.post-info -->      <h2>Problem</h2>
+<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
+for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
+<h2>Wrong solution</h2>
+<div class="math">$$ 
+f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
+$$</div>
+<p>Thus, blindly,</p>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}\)</span> and <span class="math">\(0 \leq s \leq 4\)</span></p>
+<p>But is <span class="math">\(f_S(s)\)</span> a PDF? </p>
+<p>No.</p>
+<p><span class="math">\(\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1\)</span></p>
+<h2>Respecting the bounds.</h2>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx\)</span> for :</p>
+<div class="math">$$
+0 \leq x \leq 2
+$$</div>
+<p>
+and</p>
+<div class="math">$$
+0 \leq s-x \leq 2
+$$</div>
+<p>Which gives us, these bounds:</p>
+<p><span class="math">\(s-2 \leq x \leq s\)</span> and <span class="math">\(0 \leq x \leq 2\)</span></p>
+<p>In order to respect the above bounds,</p>
+<p><span class="math">\(f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx\)</span></p>
+<p>But, <span class="math">\(f(x) \neq 0\)</span> for <span class="math">\(0 \leq x \leq 2\)</span></p>
+<p>and <span class="math">\(f(s-x) \neq 0\)</span> for <span class="math">\(s-2 \leq x \leq s\)</span></p>
+<p>thus, <span class="math">\(f(x)f(s-x) \neq 0\)</span> for <span class="math">\(max(0,s-2) \leq x \leq min(s,2)\)</span></p>
+<p>Range of s: <span class="math">\([0,4]\)</span></p>
+<p><span class="math">\(f*g(s) = \int_{max(0,s-2)}^{min(s,2)}f(x)f(s-x)dx\)</span></p>
+<p>For <span class="math">\(0 \leq s \leq 2\)</span> :  <span class="math">\(min(s,2)=s\)</span> and <span class="math">\(max(0,s-2)=0\)</span></p>
+<p>For <span class="math">\(2 \leq s \leq 4\)</span> : <span class="math">\(min(s,2)=2\)</span> and <span class="math">\(max(0,s-2)=s-2\)</span></p>
+<p>Now,</p>
+<div class="math">$$
+f_S(s) = \begin{cases}
+\int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  &amp; 0 \leq s \leq 2\\
+\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  &amp; 2 \leq s \leq 4\\
+\end{cases}
+$$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+    
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
+                            <li><a href="https://github.com/saketkc">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55540107-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>
