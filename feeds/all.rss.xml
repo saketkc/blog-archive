@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Piddling Pertinent</title><link>http://saket-choudhary.me/pertinent-blog/</link><description></description><atom:link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 18 Oct 2015 00:00:00 +0200</lastBuildDate><item><title>Entropy and Unoform Distribution</title><link>http://saket-choudhary.me/pertinent-blog/entropy-and-unoform-distribution.html</link><description>&lt;p&gt;To show &lt;span class="math"&gt;\(\sum p_i\log(p_i) = p\)&lt;/span&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Piddling Pertinent</title><link>http://saket-choudhary.me/pertinent-blog/</link><description></description><atom:link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 18 Oct 2015 00:00:00 +0200</lastBuildDate><item><title>Entropy and Uniform Distribution</title><link>http://saket-choudhary.me/pertinent-blog/entropy-and-uniform-distribution.html</link><description>&lt;p&gt;To show &lt;span class="math"&gt;\(\sum p_i\log(p_i) = p\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Consider &lt;span class="math"&gt;\(H = -\sum p_i log(p_i) = log(n)\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Consider weighted AM-GM for &lt;span class="math"&gt;\(p_i\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$
@@ -51,7 +51,7 @@ $$&lt;/div&gt;
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Sun, 18 Oct 2015 00:00:00 +0200</pubDate><guid>tag:saket-choudhary.me,2015-10-18:pertinent-blog/entropy-and-unoform-distribution.html</guid><category>textbook problem</category><category>entropy</category><category>uniform</category></item><item><title>A frequent inequality</title><link>http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html</link><description>&lt;div class="math"&gt;$$
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Sun, 18 Oct 2015 00:00:00 +0200</pubDate><guid>tag:saket-choudhary.me,2015-10-18:pertinent-blog/entropy-and-uniform-distribution.html</guid><category>textbook problem</category><category>entropy</category><category>uniform</category></item><item><title>A frequent inequality</title><link>http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html</link><description>&lt;div class="math"&gt;$$
 \frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&amp;gt;0
 $$&lt;/div&gt;
 &lt;p&gt;Consider &lt;span class="math"&gt;\(f(x)=\ln(x)-\frac{x-1}{x}\)&lt;/span&gt;&lt;/p&gt;

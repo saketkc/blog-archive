@@ -5,34 +5,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/</loc>
-<lastmod>2015-10-19T02:29:46-00:00</lastmod>
+<lastmod>2015-10-25T20:19:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/archives.html</loc>
-<lastmod>2015-10-19T02:29:46-00:00</lastmod>
+<lastmod>2015-10-25T20:19:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/tags.html</loc>
-<lastmod>2015-10-19T02:29:46-00:00</lastmod>
+<lastmod>2015-10-25T20:19:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/categories.html</loc>
-<lastmod>2015-10-19T02:29:46-00:00</lastmod>
+<lastmod>2015-10-25T20:19:43-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://saket-choudhary.me/pertinent-blog/entropy-and-unoform-distribution.html</loc>
+<loc>http://saket-choudhary.me/pertinent-blog/entropy-and-uniform-distribution.html</loc>
 <lastmod>2015-10-18T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -270,8 +270,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://saket-choudhary.me/pertinent-blog/tag/math.html</loc>
-<lastmod>2015-09-09T00:00:00+00:09</lastmod>
+<loc>http://saket-choudhary.me/pertinent-blog/tag/independence.html</loc>
+<lastmod>2015-06-01T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -354,8 +354,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://saket-choudhary.me/pertinent-blog/tag/independence.html</loc>
-<lastmod>2015-06-01T00:00:00+00:09</lastmod>
+<loc>http://saket-choudhary.me/pertinent-blog/tag/math.html</loc>
+<lastmod>2015-09-09T00:00:00+00:09</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

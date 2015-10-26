@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Piddling Pertinent - indicator variables</title>
-        <link rel="stylesheet" href="../theme/css/main.css" />
+        <title>Entropy and Uniform Distribution</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
 
@@ -17,42 +17,49 @@
 <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
 </a>
         <header id="banner" class="body">
-                <h1><a href="../">Piddling Pertinent </a></h1>
+                <h1><a href="./">Piddling Pertinent </a></h1>
                 <nav><ul>
                     <li><a href="http://saket-choudhary.me">Home</a></li>
                     <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
                     <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li><a href="../category/misc.html">misc</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./entropy-and-uniform-distribution.html" rel="bookmark"
+           title="Permalink to Entropy and Uniform Distribution">Entropy and Uniform Distribution</a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="../expected-number-of-pairings-jones-and-smith-family.html">Expected number of pairings | Jones and Smith Family</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-05-17T00:00:00+02:00">
-                Published: Sun 17 May 2015
+        <abbr class="published" title="2015-10-18T00:00:00+02:00">
+                Published: Sun 18 October 2015
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
-<p>In <a href="../category/misc.html">misc</a>.</p>
-<p>tags: <a href="../tag/expectation.html">expectation</a> <a href="../tag/probability.html">probability</a> <a href="../tag/indicator-variables.html">indicator variables</a> </p>
-</footer><!-- /.post-info --><h2>Problem</h2>
-<p>4 members of Smith family and 4 of Jones family are pooled
-to form all possible pairs, all equally likely. Find <span class="math">\(N\)</span>, the 
-number of smiths which have a smith partner.</p>
-<h2>Solution</h2>
-<p><span class="math">\(X= \sum_{i=1}^4 I_i\)</span></p>
-<p>Where <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> meber of smith family has some smith member as it’s partner</p>
-<p>Number of ways <span class="math">\(i^{th}\)</span> smith member can have a smith partner (Choose 1 from remaining 3 Smiths, form group of the remaining 6 )  $ = \binom{3}{1} \times \frac{6!}{(2!)^3} $</p>
-<p>Hence, <span class="math">\(P(I_i=1)= \frac{\binom{3}{1}\frac{6!}{(2!)^3}}{\frac{8!}{(2!)^4}} = \frac{3}{14}\)</span> </p>
-<p>The trickery happens because at the next step I am going to over count,
-since the wording in the question is a bit ambiguous and we are concerned with
-the number of smiths have a partner. I should have multiplied <span class="math">\(P(I_i=1)\)</span> by <span class="math">\(4\)</span> and then divided by 2, 
-but I am going to overcount with ambiguity.</p>
-<p><span class="math">\(N = 4 \times \frac{3}{14} = \frac{6}[7]\)</span> which ofcourse is not an integer, but did we expect it to?</p>
+<p>In <a href="./category/misc.html">misc</a>.</p>
+<p>tags: <a href="./tag/textbook-problem.html">textbook problem</a> <a href="./tag/entropy.html">entropy</a> <a href="./tag/uniform.html">uniform</a> </p>
+</footer><!-- /.post-info -->      <p>To show <span class="math">\(\sum p_i\log(p_i) = p\)</span></p>
+<p>Consider <span class="math">\(H = -\sum p_i log(p_i) = log(n)\)</span></p>
+<p>Consider weighted AM-GM for <span class="math">\(p_i\)</span>:</p>
+<div class="math">$$
+(\prod \frac{1}{p_i}^p_i)^\frac{1}{\sum p_i} \leq \sum \frac{1}{p_i} \times p_i = n
+$$</div>
+<p>Take log both sides:</p>
+<div class="math">$$
+\sum p_i \log(\frac{1}{p_i}) \leq \log(n)
+$$</div>
+<p>And hence euqality holds only if <span class="math">\(p_i=p_j=1/n\)</span> 
+</p>
+<div class="math">$$
+p_i = 1/n
+$$</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -90,8 +97,11 @@ but I am going to overcount with ambiguity.</p>
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>                </article>
-            </aside><!-- /#featured -->
+</script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
