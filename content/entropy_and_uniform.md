@@ -1,4 +1,4 @@
-title: Entropy and Unoform Distribution
+title: Entropy and Uniform Distribution
 tags: textbook problem, entropy, uniform
 date: 2015-10-18
 
