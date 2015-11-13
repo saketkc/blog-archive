@@ -1,51 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Piddling Pertinent - expectation</title>
-        <link rel="stylesheet" href="../theme/css/main.css" />
-        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
-        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
-
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
-
-<body id="index" class="home">
-<a href="https://github.com/saketkc">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="../">Piddling Pertinent </a></h1>
-                <nav><ul>
-                    <li><a href="http://saket-choudhary.me">Home</a></li>
-                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
-                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li><a href="../category/misc.html">misc</a></li>
-                    <li><a href="../category/misc-tutorial.html">misc, tutorial</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="../expectation-maximisation-in-python-coin-toss-example.html">Expectation Maximisation in Python: Coin Toss Example</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2015-11-13T00:00:00+01:00">
-                Published: Fri 13 November 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc-tutorial.html">misc, tutorial</a>.</p>
-<p>tags: <a href="../tag/python.html">python</a> <a href="../tag/em.html">em</a> <a href="../tag/expectation.html">expectation</a> </p>
-</footer><!-- /.post-info --><style type="text/css">/*!
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saket-choudhary.me/pertinent-blog/" rel="alternate"></link><link href="http://saket-choudhary.me/pertinent-blog//feeds/misc-tutorial.atom.xml" rel="self"></link><id>http://saket-choudhary.me/pertinent-blog/</id><updated>2015-11-13T00:00:00+01:00</updated><entry><title>Expectation Maximisation in Python: Coin Toss Example</title><link href="http://saket-choudhary.me/pertinent-blog/expectation-maximisation-in-python-coin-toss-example.html" rel="alternate"></link><updated>2015-11-13T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-11-13:pertinent-blog/expectation-maximisation-in-python-coin-toss-example.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
-*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}</style>
-<style type="text/css">.highlight .hll { background-color: #ffffcc }
+*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell&gt;div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area&gt;div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area&gt;div.highlight&gt;pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell&gt;div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -107,59 +66,59 @@
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><html><body><div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Expectation-Maximisation-with-Python-:-Coin-Toss">Expectation Maximisation with Python : Coin Toss<a class="anchor-link" href="#Expectation-Maximisation-with-Python-:-Coin-Toss">¶</a></h2><p>This notebook implements the example, I consider a classic for understanding Expectation Maximisation.</p>
-<p>See: <a href="http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html">http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html</a></p>
-<p>Notations:</p>
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;html&gt;&lt;body&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Expectation-Maximisation-with-Python-:-Coin-Toss"&gt;Expectation Maximisation with Python : Coin Toss&lt;a class="anchor-link" href="#Expectation-Maximisation-with-Python-:-Coin-Toss"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This notebook implements the example, I consider a classic for understanding Expectation Maximisation.&lt;/p&gt;
+&lt;p&gt;See: &lt;a href="http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html"&gt;http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Notations:&lt;/p&gt;
 \begin{align*}
-\theta_A  &amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\
-\theta_B  &amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\
+\theta_A  &amp;amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\
+\theta_B  &amp;amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\
 \end{align*}
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">matplotlib</span> notebook
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span> <span class="k">as</span> <span class="n">binomial</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
-<span class="c">#from ipywidgets import StaticInteract, RangeWidget</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">euclidean</span>
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">init_printing</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span>
-<span class="n">init_printing</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">Image</span><span class="p">(</span><span class="s">'images/nbt1406-F1.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
-<div class="output_png output_subarea output_execute_result">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMbCAMAAACYCraTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; notebook
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;division&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;OrderedDict&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.stats&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;binom&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;binomial&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
+&lt;span class="c"&gt;#from ipywidgets import StaticInteract, RangeWidget&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.spatial.distance&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;euclidean&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;init_printing&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Eq&lt;/span&gt;
+&lt;span class="n"&gt;init_printing&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'images/nbt1406-F1.png'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
+&lt;div class="output_png output_subarea output_execute_result"&gt;
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMbCAMAAACYCraTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAtxQTFRF
 ////+/v7xcXFk5KShoaGjo+OtLKy9fX109DPWVhYMjAwISAhJiYoeXl56+vnQ0RGZmVlYltcqqam
 mZiYT01NvLy85+fnw7++4+Pjq6qqcG5u3d3durq2/Pb1g3x9FhUVr66uLiws29vXoKCg7e3tOjg4
@@ -1204,1247 +1163,1247 @@ bFmzIFZlm0uf4jINEU4Z0CXSM9LLHMSyYUC1+1mfUoQIY8Mv0uB5/iD3iLkR5gz7dSYiRIgQIUKE
 CBEiRIgQIUKESfH/AbDfDJ+THSOpAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTExLTEyVDIzOjQ1
 OjQ0LTA4OjAw6s8MjwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAwOC0wOC0xOFQwODoyNzoxMy0wNzow
 MIJ/0lwAAAAASUVORK5CYII=
-" />
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">coin_toss</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H T T T H H T H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H H H H T H H H H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H T H H H H H T H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H T H T T T H H T T'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'T H H H T H H H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [7]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">columns</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">coin_toss</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s">'Toss'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>Int64Index([0, 1, 2, 3, 4], dtype='int64', name=u'Toss')</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Our configuration looks like this:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [8]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">df</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>H</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-</tr>
-<tr>
-<th>1</th>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-</tr>
-<tr>
-<th>2</th>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-</tr>
-<tr>
-<th>3</th>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>T</td>
-</tr>
-<tr>
-<th>4</th>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Case-1:-Identity-of-coin-being-tossed-known">Case 1: Identity of coin being tossed known<a class="anchor-link" href="#Case-1:-Identity-of-coin-being-tossed-known">¶</a></h2><p>If the identity of the coin being tossed is known and is <code>observed = ['B', 'A', 'A', 'B', 'A']</code> it is not so difficult to calculate the corresponding values of $\theta_A$ and $\theta_B$:</p>
+" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;coin_toss&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'H T T T H H T H T H'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'H H H H T H H H H H'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'H T H H H H H T H H'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'H T H T T T H H T T'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'T H H H T H H H T H'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Toss'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;Int64Index([0, 1, 2, 3, 4], dtype='int64', name=u'Toss')&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Our configuration looks like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;df&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;6&lt;/th&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;8&lt;/th&gt;
+&lt;th&gt;9&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Case-1:-Identity-of-coin-being-tossed-known"&gt;Case 1: Identity of coin being tossed known&lt;a class="anchor-link" href="#Case-1:-Identity-of-coin-being-tossed-known"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If the identity of the coin being tossed is known and is &lt;code&gt;observed = ['B', 'A', 'A', 'B', 'A']&lt;/code&gt; it is not so difficult to calculate the corresponding values of $\theta_A$ and $\theta_B$:&lt;/p&gt;
 $$
 \theta_A = \frac{\text{Total Heads when coin tossed is A}}{\text{Total tosses for coin A}}
 $$$$
 \theta_B = \frac{\text{Total Heads when coin tossed is B}}{\text{Total tosses for coin B}}
 $$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [9]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s">'theta_A theta_B'</span><span class="p">)</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="c"># Hack to display</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [10]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c">## Observed Case</span>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;thetaA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;thetaB&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'theta_A theta_B'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;thetaA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;thetaB&lt;/span&gt; &lt;span class="c"&gt;# Hack to display&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="c"&gt;## Observed Case&lt;/span&gt;
 
-<span class="n">observed</span> <span class="o">=</span> <span class="p">[</span><span class="s">'B'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">]</span>
-<span class="n">index_A</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s">'A'</span><span class="p">]</span>
-<span class="n">index_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s">'B'</span><span class="p">]</span>
+&lt;span class="n"&gt;observed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;index_A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;observed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;index_B&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;observed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
-<span class="n">total_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">size</span>
+&lt;span class="n"&gt;total_tosses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;
 
-<span class="n">A_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_A</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
-<span class="n">B_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_B</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+&lt;span class="n"&gt;A_tosses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index_A&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unstack&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;B_tosses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index_B&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unstack&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-<span class="n">A_heads</span> <span class="o">=</span> <span class="n">A_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s">'H'</span><span class="p">]</span>
-<span class="n">B_heads</span> <span class="o">=</span> <span class="n">B_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s">'H'</span><span class="p">]</span>
+&lt;span class="n"&gt;A_heads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;A_tosses&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value_counts&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="s"&gt;'H'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;B_heads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;B_tosses&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value_counts&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="s"&gt;'H'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
-<span class="n">theta_A</span> <span class="o">=</span> <span class="n">A_heads</span><span class="o">/</span><span class="n">A_tosses</span><span class="o">.</span><span class="n">size</span>
-<span class="n">theta_B</span> <span class="o">=</span> <span class="n">B_heads</span><span class="o">/</span><span class="n">B_tosses</span><span class="o">.</span><span class="n">size</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [11]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">theta_A</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
-<div class="output_latex output_subarea output_execute_result">
+&lt;span class="n"&gt;theta_A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;A_heads&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;A_tosses&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;
+&lt;span class="n"&gt;theta_B&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;B_heads&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;B_tosses&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;theta_A&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[11]:&lt;/div&gt;
+&lt;div class="output_latex output_subarea output_execute_result"&gt;
 $$\left ( \theta_{A}, \quad 0.8\right )$$
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [12]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">theta_B</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
-<div class="output_latex output_subarea output_execute_result">
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;theta_B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[12]:&lt;/div&gt;
+&lt;div class="output_latex output_subarea output_execute_result"&gt;
 $$\left ( \theta_{B}, \quad 0.45\right )$$
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Case-2-Identity-of-coin-being-tossed-is-unknown">Case 2 Identity of coin being tossed is unknown<a class="anchor-link" href="#Case-2-Identity-of-coin-being-tossed-is-unknown">¶</a></h2><p>When the identity of coin being tossed is unknwon we rely on Expectation Maximisation to give us the estimates of $\theta_A$ and $\theta_B$. We start with an initial value of $\theta_A, \theta_B$ and then given the observed data (the 50 coin tosses) run the 'E-step' calculating the probability of coin $A$ or $B$ being used for a series of tosses(Remember each set of 10 coin tosses is done using</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [14]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">thetaA</span> <span class="o">=</span> <span class="mf">0.6</span>
-<span class="n">thetaB</span> <span class="o">=</span> <span class="mf">0.5</span>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Case-2-Identity-of-coin-being-tossed-is-unknown"&gt;Case 2 Identity of coin being tossed is unknown&lt;a class="anchor-link" href="#Case-2-Identity-of-coin-being-tossed-is-unknown"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When the identity of coin being tossed is unknwon we rely on Expectation Maximisation to give us the estimates of $\theta_A$ and $\theta_B$. We start with an initial value of $\theta_A, \theta_B$ and then given the observed data (the 50 coin tosses) run the 'E-step' calculating the probability of coin $A$ or $B$ being used for a series of tosses(Remember each set of 10 coin tosses is done using&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;thetaA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.6&lt;/span&gt;
+&lt;span class="n"&gt;thetaB&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;
 
-<span class="k">def</span> <span class="nf">em</span><span class="p">(</span><span class="n">theta_old</span><span class="p">):</span>
-    <span class="n">row_prob</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c">## Expectation</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coin_toss</span><span class="p">:</span>
-        <span class="n">count_heads</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'H'</span><span class="p">)</span>
-        <span class="n">p_a</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s">'A'</span><span class="p">])</span>
-        <span class="n">p_b</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
-        <span class="n">p_t</span> <span class="o">=</span> <span class="n">p_a</span><span class="o">+</span><span class="n">p_b</span>
-        <span class="n">p_a</span> <span class="o">=</span> <span class="n">p_a</span><span class="o">/</span><span class="n">p_t</span>
-        <span class="n">p_b</span> <span class="o">=</span> <span class="n">p_b</span><span class="o">/</span><span class="n">p_t</span>
-        <span class="n">row_prob</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s">'A'</span><span class="p">:</span> <span class="n">p_a</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="n">p_b</span><span class="p">,</span> <span class="s">'count_heads'</span><span class="p">:</span> <span class="n">count_heads</span><span class="p">,</span> <span class="s">'total_tosses'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)})</span>
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;em&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_old&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;row_prob&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="c"&gt;## Expectation&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;coin_toss&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;count_heads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'H'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;p_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;binomial&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pmf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count_heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;theta_old&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;p_b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;binomial&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pmf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;count_heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;theta_old&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;p_t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p_a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;p_b&lt;/span&gt;
+        &lt;span class="n"&gt;p_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p_a&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;p_t&lt;/span&gt;
+        &lt;span class="n"&gt;p_b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;p_b&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;p_t&lt;/span&gt;
+        &lt;span class="n"&gt;row_prob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;p_a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;p_b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'count_heads'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;count_heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'total_tosses'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)})&lt;/span&gt;
         
-    <span class="c">## Maximisation</span>
-    <span class="n">new_coin_toss</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">row_prob</span><span class="p">:</span>
-        <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'total_tosses'</span><span class="p">]</span>
-        <span class="n">total_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'count_heads'</span><span class="p">]</span>
-        <span class="n">A_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
-        <span class="n">A_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
-        <span class="n">B_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
-        <span class="n">B_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
-        <span class="n">new_coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">A_heads</span><span class="p">,</span> <span class="n">A_tails</span><span class="p">,</span> <span class="n">B_heads</span><span class="p">,</span> <span class="n">B_tails</span><span class="p">])</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">new_coin_toss</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'A Heads'</span><span class="p">,</span> <span class="s">'A Tails'</span><span class="p">,</span> <span class="s">'B Heads'</span><span class="p">,</span> <span class="s">'B Tails'</span><span class="p">])</span>
-    <span class="n">new_pa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s">'A Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="n">new_pb</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s">'B Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="n">new_theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s">'A'</span><span class="p">:</span> <span class="n">new_pa</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="n">new_pb</span><span class="p">})</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">new_theta</span>
+    &lt;span class="c"&gt;## Maximisation&lt;/span&gt;
+    &lt;span class="n"&gt;new_coin_toss&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;row_prob&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;total_tosses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'total_tosses'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;total_heads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'count_heads'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;A_heads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;total_heads&lt;/span&gt;
+        &lt;span class="n"&gt;A_tails&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;total_tosses&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;total_heads&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;B_heads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;total_heads&lt;/span&gt;
+        &lt;span class="n"&gt;B_tails&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;total_tosses&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;total_heads&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;new_coin_toss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;A_heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;A_tails&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;B_heads&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;B_tails&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new_coin_toss&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A Heads'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'A Tails'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'B Heads'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'B Tails'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;new_pa&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A Heads'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A Heads'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A Tails'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;new_pb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B Heads'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B Heads'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B Tails'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;new_theta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OrderedDict&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;new_pa&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;new_pb&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new_theta&lt;/span&gt;
 
-<span class="n">theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s">'A'</span><span class="p">:</span> <span class="n">thetaA</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="n">thetaB</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [15]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">theta_new</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">max_iterations</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">diff</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-6</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">iterations</span> <span class="o">&lt;</span> <span class="n">max_iterations</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">diff</span><span class="o">&gt;</span><span class="n">tolerance</span><span class="p">):</span>
-    <span class="n">new_theta</span> <span class="o">=</span> <span class="n">em</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-    <span class="n">diff</span> <span class="o">=</span> <span class="n">euclidean</span><span class="p">(</span><span class="n">new_theta</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">theta</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-    <span class="n">theta</span> <span class="o">=</span> <span class="n">new_theta</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>2.245745</td>
-<td>2.245745</td>
-<td>2.754255</td>
-<td>2.754255</td>
-</tr>
-<tr>
-<th>1</th>
-<td>7.244870</td>
-<td>0.804986</td>
-<td>1.755130</td>
-<td>0.195014</td>
-</tr>
-<tr>
-<th>2</th>
-<td>5.867737</td>
-<td>1.466934</td>
-<td>2.132263</td>
-<td>0.533066</td>
-</tr>
-<tr>
-<th>3</th>
-<td>1.408625</td>
-<td>2.112937</td>
-<td>2.591375</td>
-<td>3.887063</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.530506</td>
-<td>1.941645</td>
-<td>2.469494</td>
-<td>1.058355</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>1.479097</td>
-<td>1.479097</td>
-<td>3.520903</td>
-<td>3.520903</td>
-</tr>
-<tr>
-<th>1</th>
-<td>7.303594</td>
-<td>0.811510</td>
-<td>1.696406</td>
-<td>0.188490</td>
-</tr>
-<tr>
-<th>2</th>
-<td>5.651376</td>
-<td>1.412844</td>
-<td>2.348624</td>
-<td>0.587156</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.760578</td>
-<td>1.140867</td>
-<td>3.239422</td>
-<td>4.859133</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.014738</td>
-<td>1.720602</td>
-<td>2.985262</td>
-<td>1.279398</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>1.087962</td>
-<td>1.087962</td>
-<td>3.912038</td>
-<td>3.912038</td>
-</tr>
-<tr>
-<th>1</th>
-<td>7.828637</td>
-<td>0.869849</td>
-<td>1.171363</td>
-<td>0.130151</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.009233</td>
-<td>1.502308</td>
-<td>1.990767</td>
-<td>0.497692</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.446362</td>
-<td>0.669544</td>
-<td>3.553638</td>
-<td>5.330456</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.038084</td>
-<td>1.730607</td>
-<td>2.961916</td>
-<td>1.269393</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.808513</td>
-<td>0.808513</td>
-<td>4.191487</td>
-<td>4.191487</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.216144</td>
-<td>0.912905</td>
-<td>0.783856</td>
-<td>0.087095</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.354109</td>
-<td>1.588527</td>
-<td>1.645891</td>
-<td>0.411473</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.265334</td>
-<td>0.398001</td>
-<td>3.734666</td>
-<td>5.601999</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.109732</td>
-<td>1.761314</td>
-<td>2.890268</td>
-<td>1.238686</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.645102</td>
-<td>0.645102</td>
-<td>4.354898</td>
-<td>4.354898</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.418405</td>
-<td>0.935378</td>
-<td>0.581595</td>
-<td>0.064622</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.572406</td>
-<td>1.643101</td>
-<td>1.427594</td>
-<td>0.356899</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.179981</td>
-<td>0.269971</td>
-<td>3.820019</td>
-<td>5.730029</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.159435</td>
-<td>1.782615</td>
-<td>2.840565</td>
-<td>1.217385</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.567711</td>
-<td>0.567711</td>
-<td>4.432289</td>
-<td>4.432289</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.507517</td>
-<td>0.945280</td>
-<td>0.492483</td>
-<td>0.054720</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.681854</td>
-<td>1.670464</td>
-<td>1.318146</td>
-<td>0.329536</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.144896</td>
-<td>0.217344</td>
-<td>3.855104</td>
-<td>5.782656</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.185923</td>
-<td>1.793967</td>
-<td>2.814077</td>
-<td>1.206033</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.535440</td>
-<td>0.535440</td>
-<td>4.464560</td>
-<td>4.464560</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.544022</td>
-<td>0.949336</td>
-<td>0.455978</td>
-<td>0.050664</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.730149</td>
-<td>1.682537</td>
-<td>1.269851</td>
-<td>0.317463</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.131238</td>
-<td>0.196856</td>
-<td>3.868762</td>
-<td>5.803144</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.198972</td>
-<td>1.799559</td>
-<td>2.801028</td>
-<td>1.200441</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.522786</td>
-<td>0.522786</td>
-<td>4.477214</td>
-<td>4.477214</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.558587</td>
-<td>0.950954</td>
-<td>0.441413</td>
-<td>0.049046</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.750249</td>
-<td>1.687562</td>
-<td>1.249751</td>
-<td>0.312438</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.126013</td>
-<td>0.189019</td>
-<td>3.873987</td>
-<td>5.810981</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.205202</td>
-<td>1.802230</td>
-<td>2.794798</td>
-<td>1.197770</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.517957</td>
-<td>0.517957</td>
-<td>4.482043</td>
-<td>4.482043</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.564351</td>
-<td>0.951595</td>
-<td>0.435649</td>
-<td>0.048405</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.758425</td>
-<td>1.689606</td>
-<td>1.241575</td>
-<td>0.310394</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.124026</td>
-<td>0.186039</td>
-<td>3.875974</td>
-<td>5.813961</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.208106</td>
-<td>1.803474</td>
-<td>2.791894</td>
-<td>1.196526</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.516135</td>
-<td>0.516135</td>
-<td>4.483865</td>
-<td>4.483865</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.566629</td>
-<td>0.951848</td>
-<td>0.433371</td>
-<td>0.048152</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.761725</td>
-<td>1.690431</td>
-<td>1.238275</td>
-<td>0.309569</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.123272</td>
-<td>0.184909</td>
-<td>3.876728</td>
-<td>5.815091</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.209430</td>
-<td>1.804042</td>
-<td>2.790570</td>
-<td>1.195958</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515451</td>
-<td>0.515451</td>
-<td>4.484549</td>
-<td>4.484549</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.567530</td>
-<td>0.951948</td>
-<td>0.432470</td>
-<td>0.048052</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763053</td>
-<td>1.690763</td>
-<td>1.236947</td>
-<td>0.309237</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122987</td>
-<td>0.184480</td>
-<td>3.877013</td>
-<td>5.815520</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210025</td>
-<td>1.804296</td>
-<td>2.789975</td>
-<td>1.195704</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515196</td>
-<td>0.515196</td>
-<td>4.484804</td>
-<td>4.484804</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.567887</td>
-<td>0.951987</td>
-<td>0.432113</td>
-<td>0.048013</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763588</td>
-<td>1.690897</td>
-<td>1.236412</td>
-<td>0.309103</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122879</td>
-<td>0.184318</td>
-<td>3.877121</td>
-<td>5.815682</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210288</td>
-<td>1.804409</td>
-<td>2.789712</td>
-<td>1.195591</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515100</td>
-<td>0.515100</td>
-<td>4.484900</td>
-<td>4.484900</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568028</td>
-<td>0.952003</td>
-<td>0.431972</td>
-<td>0.047997</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763804</td>
-<td>1.690951</td>
-<td>1.236196</td>
-<td>0.309049</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122838</td>
-<td>0.184256</td>
-<td>3.877162</td>
-<td>5.815744</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210403</td>
-<td>1.804458</td>
-<td>2.789597</td>
-<td>1.195542</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515065</td>
-<td>0.515065</td>
-<td>4.484935</td>
-<td>4.484935</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568084</td>
-<td>0.952009</td>
-<td>0.431916</td>
-<td>0.047991</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763891</td>
-<td>1.690973</td>
-<td>1.236109</td>
-<td>0.309027</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122822</td>
-<td>0.184233</td>
-<td>3.877178</td>
-<td>5.815767</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210453</td>
-<td>1.804480</td>
-<td>2.789547</td>
-<td>1.195520</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515051</td>
-<td>0.515051</td>
-<td>4.484949</td>
-<td>4.484949</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568106</td>
-<td>0.952012</td>
-<td>0.431894</td>
-<td>0.047988</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763926</td>
-<td>1.690982</td>
-<td>1.236074</td>
-<td>0.309018</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122816</td>
-<td>0.184224</td>
-<td>3.877184</td>
-<td>5.815776</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210474</td>
-<td>1.804489</td>
-<td>2.789526</td>
-<td>1.195511</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="output_area"><div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515046</td>
-<td>0.515046</td>
-<td>4.484954</td>
-<td>4.484954</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568115</td>
-<td>0.952013</td>
-<td>0.431885</td>
-<td>0.047987</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763940</td>
-<td>1.690985</td>
-<td>1.236060</td>
-<td>0.309015</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122814</td>
-<td>0.184221</td>
-<td>3.877186</td>
-<td>5.815779</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210483</td>
-<td>1.804493</td>
-<td>2.789517</td>
-<td>1.195507</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [59]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s">'A'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
-<div class="output_latex output_subarea output_execute_result">
+&lt;span class="n"&gt;theta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OrderedDict&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;thetaA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;thetaB&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="n"&gt;theta_new&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OrderedDict&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;max_iterations&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10000&lt;/span&gt;
+&lt;span class="n"&gt;iterations&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;tolerance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1e-6&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;iterations&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;max_iterations&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;tolerance&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;new_theta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;em&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;euclidean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new_theta&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;theta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new_theta&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;2.245745&lt;/td&gt;
+&lt;td&gt;2.245745&lt;/td&gt;
+&lt;td&gt;2.754255&lt;/td&gt;
+&lt;td&gt;2.754255&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;7.244870&lt;/td&gt;
+&lt;td&gt;0.804986&lt;/td&gt;
+&lt;td&gt;1.755130&lt;/td&gt;
+&lt;td&gt;0.195014&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;5.867737&lt;/td&gt;
+&lt;td&gt;1.466934&lt;/td&gt;
+&lt;td&gt;2.132263&lt;/td&gt;
+&lt;td&gt;0.533066&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;1.408625&lt;/td&gt;
+&lt;td&gt;2.112937&lt;/td&gt;
+&lt;td&gt;2.591375&lt;/td&gt;
+&lt;td&gt;3.887063&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.530506&lt;/td&gt;
+&lt;td&gt;1.941645&lt;/td&gt;
+&lt;td&gt;2.469494&lt;/td&gt;
+&lt;td&gt;1.058355&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;1.479097&lt;/td&gt;
+&lt;td&gt;1.479097&lt;/td&gt;
+&lt;td&gt;3.520903&lt;/td&gt;
+&lt;td&gt;3.520903&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;7.303594&lt;/td&gt;
+&lt;td&gt;0.811510&lt;/td&gt;
+&lt;td&gt;1.696406&lt;/td&gt;
+&lt;td&gt;0.188490&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;5.651376&lt;/td&gt;
+&lt;td&gt;1.412844&lt;/td&gt;
+&lt;td&gt;2.348624&lt;/td&gt;
+&lt;td&gt;0.587156&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.760578&lt;/td&gt;
+&lt;td&gt;1.140867&lt;/td&gt;
+&lt;td&gt;3.239422&lt;/td&gt;
+&lt;td&gt;4.859133&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.014738&lt;/td&gt;
+&lt;td&gt;1.720602&lt;/td&gt;
+&lt;td&gt;2.985262&lt;/td&gt;
+&lt;td&gt;1.279398&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;1.087962&lt;/td&gt;
+&lt;td&gt;1.087962&lt;/td&gt;
+&lt;td&gt;3.912038&lt;/td&gt;
+&lt;td&gt;3.912038&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;7.828637&lt;/td&gt;
+&lt;td&gt;0.869849&lt;/td&gt;
+&lt;td&gt;1.171363&lt;/td&gt;
+&lt;td&gt;0.130151&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.009233&lt;/td&gt;
+&lt;td&gt;1.502308&lt;/td&gt;
+&lt;td&gt;1.990767&lt;/td&gt;
+&lt;td&gt;0.497692&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.446362&lt;/td&gt;
+&lt;td&gt;0.669544&lt;/td&gt;
+&lt;td&gt;3.553638&lt;/td&gt;
+&lt;td&gt;5.330456&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.038084&lt;/td&gt;
+&lt;td&gt;1.730607&lt;/td&gt;
+&lt;td&gt;2.961916&lt;/td&gt;
+&lt;td&gt;1.269393&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.808513&lt;/td&gt;
+&lt;td&gt;0.808513&lt;/td&gt;
+&lt;td&gt;4.191487&lt;/td&gt;
+&lt;td&gt;4.191487&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.216144&lt;/td&gt;
+&lt;td&gt;0.912905&lt;/td&gt;
+&lt;td&gt;0.783856&lt;/td&gt;
+&lt;td&gt;0.087095&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.354109&lt;/td&gt;
+&lt;td&gt;1.588527&lt;/td&gt;
+&lt;td&gt;1.645891&lt;/td&gt;
+&lt;td&gt;0.411473&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.265334&lt;/td&gt;
+&lt;td&gt;0.398001&lt;/td&gt;
+&lt;td&gt;3.734666&lt;/td&gt;
+&lt;td&gt;5.601999&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.109732&lt;/td&gt;
+&lt;td&gt;1.761314&lt;/td&gt;
+&lt;td&gt;2.890268&lt;/td&gt;
+&lt;td&gt;1.238686&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.645102&lt;/td&gt;
+&lt;td&gt;0.645102&lt;/td&gt;
+&lt;td&gt;4.354898&lt;/td&gt;
+&lt;td&gt;4.354898&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.418405&lt;/td&gt;
+&lt;td&gt;0.935378&lt;/td&gt;
+&lt;td&gt;0.581595&lt;/td&gt;
+&lt;td&gt;0.064622&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.572406&lt;/td&gt;
+&lt;td&gt;1.643101&lt;/td&gt;
+&lt;td&gt;1.427594&lt;/td&gt;
+&lt;td&gt;0.356899&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.179981&lt;/td&gt;
+&lt;td&gt;0.269971&lt;/td&gt;
+&lt;td&gt;3.820019&lt;/td&gt;
+&lt;td&gt;5.730029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.159435&lt;/td&gt;
+&lt;td&gt;1.782615&lt;/td&gt;
+&lt;td&gt;2.840565&lt;/td&gt;
+&lt;td&gt;1.217385&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.567711&lt;/td&gt;
+&lt;td&gt;0.567711&lt;/td&gt;
+&lt;td&gt;4.432289&lt;/td&gt;
+&lt;td&gt;4.432289&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.507517&lt;/td&gt;
+&lt;td&gt;0.945280&lt;/td&gt;
+&lt;td&gt;0.492483&lt;/td&gt;
+&lt;td&gt;0.054720&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.681854&lt;/td&gt;
+&lt;td&gt;1.670464&lt;/td&gt;
+&lt;td&gt;1.318146&lt;/td&gt;
+&lt;td&gt;0.329536&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.144896&lt;/td&gt;
+&lt;td&gt;0.217344&lt;/td&gt;
+&lt;td&gt;3.855104&lt;/td&gt;
+&lt;td&gt;5.782656&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.185923&lt;/td&gt;
+&lt;td&gt;1.793967&lt;/td&gt;
+&lt;td&gt;2.814077&lt;/td&gt;
+&lt;td&gt;1.206033&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.535440&lt;/td&gt;
+&lt;td&gt;0.535440&lt;/td&gt;
+&lt;td&gt;4.464560&lt;/td&gt;
+&lt;td&gt;4.464560&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.544022&lt;/td&gt;
+&lt;td&gt;0.949336&lt;/td&gt;
+&lt;td&gt;0.455978&lt;/td&gt;
+&lt;td&gt;0.050664&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.730149&lt;/td&gt;
+&lt;td&gt;1.682537&lt;/td&gt;
+&lt;td&gt;1.269851&lt;/td&gt;
+&lt;td&gt;0.317463&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.131238&lt;/td&gt;
+&lt;td&gt;0.196856&lt;/td&gt;
+&lt;td&gt;3.868762&lt;/td&gt;
+&lt;td&gt;5.803144&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.198972&lt;/td&gt;
+&lt;td&gt;1.799559&lt;/td&gt;
+&lt;td&gt;2.801028&lt;/td&gt;
+&lt;td&gt;1.200441&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.522786&lt;/td&gt;
+&lt;td&gt;0.522786&lt;/td&gt;
+&lt;td&gt;4.477214&lt;/td&gt;
+&lt;td&gt;4.477214&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.558587&lt;/td&gt;
+&lt;td&gt;0.950954&lt;/td&gt;
+&lt;td&gt;0.441413&lt;/td&gt;
+&lt;td&gt;0.049046&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.750249&lt;/td&gt;
+&lt;td&gt;1.687562&lt;/td&gt;
+&lt;td&gt;1.249751&lt;/td&gt;
+&lt;td&gt;0.312438&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.126013&lt;/td&gt;
+&lt;td&gt;0.189019&lt;/td&gt;
+&lt;td&gt;3.873987&lt;/td&gt;
+&lt;td&gt;5.810981&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.205202&lt;/td&gt;
+&lt;td&gt;1.802230&lt;/td&gt;
+&lt;td&gt;2.794798&lt;/td&gt;
+&lt;td&gt;1.197770&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.517957&lt;/td&gt;
+&lt;td&gt;0.517957&lt;/td&gt;
+&lt;td&gt;4.482043&lt;/td&gt;
+&lt;td&gt;4.482043&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.564351&lt;/td&gt;
+&lt;td&gt;0.951595&lt;/td&gt;
+&lt;td&gt;0.435649&lt;/td&gt;
+&lt;td&gt;0.048405&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.758425&lt;/td&gt;
+&lt;td&gt;1.689606&lt;/td&gt;
+&lt;td&gt;1.241575&lt;/td&gt;
+&lt;td&gt;0.310394&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.124026&lt;/td&gt;
+&lt;td&gt;0.186039&lt;/td&gt;
+&lt;td&gt;3.875974&lt;/td&gt;
+&lt;td&gt;5.813961&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.208106&lt;/td&gt;
+&lt;td&gt;1.803474&lt;/td&gt;
+&lt;td&gt;2.791894&lt;/td&gt;
+&lt;td&gt;1.196526&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.516135&lt;/td&gt;
+&lt;td&gt;0.516135&lt;/td&gt;
+&lt;td&gt;4.483865&lt;/td&gt;
+&lt;td&gt;4.483865&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.566629&lt;/td&gt;
+&lt;td&gt;0.951848&lt;/td&gt;
+&lt;td&gt;0.433371&lt;/td&gt;
+&lt;td&gt;0.048152&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.761725&lt;/td&gt;
+&lt;td&gt;1.690431&lt;/td&gt;
+&lt;td&gt;1.238275&lt;/td&gt;
+&lt;td&gt;0.309569&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.123272&lt;/td&gt;
+&lt;td&gt;0.184909&lt;/td&gt;
+&lt;td&gt;3.876728&lt;/td&gt;
+&lt;td&gt;5.815091&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.209430&lt;/td&gt;
+&lt;td&gt;1.804042&lt;/td&gt;
+&lt;td&gt;2.790570&lt;/td&gt;
+&lt;td&gt;1.195958&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.515451&lt;/td&gt;
+&lt;td&gt;0.515451&lt;/td&gt;
+&lt;td&gt;4.484549&lt;/td&gt;
+&lt;td&gt;4.484549&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.567530&lt;/td&gt;
+&lt;td&gt;0.951948&lt;/td&gt;
+&lt;td&gt;0.432470&lt;/td&gt;
+&lt;td&gt;0.048052&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.763053&lt;/td&gt;
+&lt;td&gt;1.690763&lt;/td&gt;
+&lt;td&gt;1.236947&lt;/td&gt;
+&lt;td&gt;0.309237&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.122987&lt;/td&gt;
+&lt;td&gt;0.184480&lt;/td&gt;
+&lt;td&gt;3.877013&lt;/td&gt;
+&lt;td&gt;5.815520&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.210025&lt;/td&gt;
+&lt;td&gt;1.804296&lt;/td&gt;
+&lt;td&gt;2.789975&lt;/td&gt;
+&lt;td&gt;1.195704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.515196&lt;/td&gt;
+&lt;td&gt;0.515196&lt;/td&gt;
+&lt;td&gt;4.484804&lt;/td&gt;
+&lt;td&gt;4.484804&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.567887&lt;/td&gt;
+&lt;td&gt;0.951987&lt;/td&gt;
+&lt;td&gt;0.432113&lt;/td&gt;
+&lt;td&gt;0.048013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.763588&lt;/td&gt;
+&lt;td&gt;1.690897&lt;/td&gt;
+&lt;td&gt;1.236412&lt;/td&gt;
+&lt;td&gt;0.309103&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.122879&lt;/td&gt;
+&lt;td&gt;0.184318&lt;/td&gt;
+&lt;td&gt;3.877121&lt;/td&gt;
+&lt;td&gt;5.815682&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.210288&lt;/td&gt;
+&lt;td&gt;1.804409&lt;/td&gt;
+&lt;td&gt;2.789712&lt;/td&gt;
+&lt;td&gt;1.195591&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.515100&lt;/td&gt;
+&lt;td&gt;0.515100&lt;/td&gt;
+&lt;td&gt;4.484900&lt;/td&gt;
+&lt;td&gt;4.484900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.568028&lt;/td&gt;
+&lt;td&gt;0.952003&lt;/td&gt;
+&lt;td&gt;0.431972&lt;/td&gt;
+&lt;td&gt;0.047997&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.763804&lt;/td&gt;
+&lt;td&gt;1.690951&lt;/td&gt;
+&lt;td&gt;1.236196&lt;/td&gt;
+&lt;td&gt;0.309049&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.122838&lt;/td&gt;
+&lt;td&gt;0.184256&lt;/td&gt;
+&lt;td&gt;3.877162&lt;/td&gt;
+&lt;td&gt;5.815744&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.210403&lt;/td&gt;
+&lt;td&gt;1.804458&lt;/td&gt;
+&lt;td&gt;2.789597&lt;/td&gt;
+&lt;td&gt;1.195542&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.515065&lt;/td&gt;
+&lt;td&gt;0.515065&lt;/td&gt;
+&lt;td&gt;4.484935&lt;/td&gt;
+&lt;td&gt;4.484935&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.568084&lt;/td&gt;
+&lt;td&gt;0.952009&lt;/td&gt;
+&lt;td&gt;0.431916&lt;/td&gt;
+&lt;td&gt;0.047991&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.763891&lt;/td&gt;
+&lt;td&gt;1.690973&lt;/td&gt;
+&lt;td&gt;1.236109&lt;/td&gt;
+&lt;td&gt;0.309027&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.122822&lt;/td&gt;
+&lt;td&gt;0.184233&lt;/td&gt;
+&lt;td&gt;3.877178&lt;/td&gt;
+&lt;td&gt;5.815767&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.210453&lt;/td&gt;
+&lt;td&gt;1.804480&lt;/td&gt;
+&lt;td&gt;2.789547&lt;/td&gt;
+&lt;td&gt;1.195520&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.515051&lt;/td&gt;
+&lt;td&gt;0.515051&lt;/td&gt;
+&lt;td&gt;4.484949&lt;/td&gt;
+&lt;td&gt;4.484949&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.568106&lt;/td&gt;
+&lt;td&gt;0.952012&lt;/td&gt;
+&lt;td&gt;0.431894&lt;/td&gt;
+&lt;td&gt;0.047988&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.763926&lt;/td&gt;
+&lt;td&gt;1.690982&lt;/td&gt;
+&lt;td&gt;1.236074&lt;/td&gt;
+&lt;td&gt;0.309018&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.122816&lt;/td&gt;
+&lt;td&gt;0.184224&lt;/td&gt;
+&lt;td&gt;3.877184&lt;/td&gt;
+&lt;td&gt;5.815776&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.210474&lt;/td&gt;
+&lt;td&gt;1.804489&lt;/td&gt;
+&lt;td&gt;2.789526&lt;/td&gt;
+&lt;td&gt;1.195511&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_html rendered_html output_subarea "&gt;
+&lt;div&gt;
+&lt;table border="1" class="dataframe"&gt;
+&lt;thead&gt;
+&lt;tr style="text-align: right;"&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;A Heads&lt;/th&gt;
+&lt;th&gt;A Tails&lt;/th&gt;
+&lt;th&gt;B Heads&lt;/th&gt;
+&lt;th&gt;B Tails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;td&gt;0.515046&lt;/td&gt;
+&lt;td&gt;0.515046&lt;/td&gt;
+&lt;td&gt;4.484954&lt;/td&gt;
+&lt;td&gt;4.484954&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;td&gt;8.568115&lt;/td&gt;
+&lt;td&gt;0.952013&lt;/td&gt;
+&lt;td&gt;0.431885&lt;/td&gt;
+&lt;td&gt;0.047987&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;td&gt;6.763940&lt;/td&gt;
+&lt;td&gt;1.690985&lt;/td&gt;
+&lt;td&gt;1.236060&lt;/td&gt;
+&lt;td&gt;0.309015&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;td&gt;0.122814&lt;/td&gt;
+&lt;td&gt;0.184221&lt;/td&gt;
+&lt;td&gt;3.877186&lt;/td&gt;
+&lt;td&gt;5.815779&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;td&gt;4.210483&lt;/td&gt;
+&lt;td&gt;1.804493&lt;/td&gt;
+&lt;td&gt;2.789517&lt;/td&gt;
+&lt;td&gt;1.195507&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [59]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;new_theta&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'A'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[59]:&lt;/div&gt;
+&lt;div class="output_latex output_subarea output_execute_result"&gt;
 $$\left ( \theta_{A}, \quad 0.796788954444\right )$$
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [60]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
-<div class="output_latex output_subarea output_execute_result">
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [60]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;new_theta&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'B'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[60]:&lt;/div&gt;
+&lt;div class="output_latex output_subarea output_execute_result"&gt;
 $$\left ( \theta_{B}, \quad 0.51958345063\right )$$
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -2470,155 +2429,5 @@ $$\left ( \theta_{B}, \quad 0.51958345063\right )$$
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>
-                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../expected-number-of-pairings-jones-and-smith-family.html" rel="bookmark"
-                           title="Permalink to Expected number of pairings | Jones and Smith Family">Expected number of pairings | Jones and Smith Family</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-05-17T00:00:00+02:00">
-                Published: Sun 17 May 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>.</p>
-<p>tags: <a href="../tag/expectation.html">expectation</a> <a href="../tag/probability.html">probability</a> <a href="../tag/indicator-variables.html">indicator variables</a> </p>
-</footer><!-- /.post-info -->                <h2>Problem</h2>
-<p>4 members of Smith family and 4 of Jones family are pooled
-to form all possible pairs, all equally likely. Find <span class="math">\(N\)</span>, the 
-number of smiths which have a smith partner.</p>
-<h2>Solution</h2>
-<p><span class="math">\(X= \sum_{i=1}^4 I_i\)</span></p>
-<p>Where <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> meber of smith family has ...</p><script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-                <a class="readmore" href="../expected-number-of-pairings-jones-and-smith-family.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../runs-in-flips-of-a-coin.html" rel="bookmark"
-                           title="Permalink to Runs in flips of a coin">Runs in flips of a coin</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-04-21T00:00:00+02:00">
-                Published: Tue 21 April 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>.</p>
-<p>tags: <a href="../tag/probability.html">probability</a> <a href="../tag/expectation.html">expectation</a> </p>
-</footer><!-- /.post-info -->                <p>This problem happened to be in one of the screening examinations
-and is my favorite because it demonstrates an application of indicator variables</p>
-<h2>Problem</h2>
-<p>A run is defined as <em>maximal</em> subsequence of consecutive tosses all having the same outcome.
-So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let ...</p>
-                <a class="readmore" href="../runs-in-flips-of-a-coin.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-
-                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
-                            <li><a href="https://github.com/saketkc">github</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-55540107-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-</body>
-</html>
+&lt;/script&gt;
+</summary><category term="python"></category><category term="em"></category><category term="expectation"></category></entry></feed>
