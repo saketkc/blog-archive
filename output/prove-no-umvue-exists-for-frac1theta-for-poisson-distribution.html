@@ -47,10 +47,10 @@
 <p>In <a href="./category/misc.html">misc</a>.</p>
 <p>tags: <a href="./tag/umvue.html">umvue</a> <a href="./tag/poisson.html">poisson</a> <a href="./tag/estimator.html">estimator</a> </p>
 </footer><!-- /.post-info -->      <h2>Problem</h2>
-<p>Prove: No UMVUE exists for <span class="math">\(\frac{1}{\theta}\)</span> for Poisson Distribution.</p>
+<p>Proof: No UMVUE exists for <span class="math">\(\frac{1}{\theta}\)</span> for Poisson Distribution.</p>
 <h2>Solution</h2>
 <p>http://stats.stackexchange.com/a/152660/11668</p>
-<p>bservation 1: <span class="math">\(\sum X_i\)</span> is complete and sufficient statistic for <span class="math">\(\theta\)</span></p>
+<p>Observation 1: <span class="math">\(\sum X_i\)</span> is complete and sufficient statistic for <span class="math">\(\theta\)</span></p>
 <p>Observation 2: <span class="math">\(\sum X_i \sim Poisson(n\theta)\)</span> </p>
 <p>We need to look for an unbiased estimator of <span class="math">\(\frac{1}{\theta}\)</span> in order to utilise <a href="http://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem">Rao-Blackwell theorem</a></p>
 <p>Let <span class="math">\(\delta(x)\)</span> be such an estimator:</p>
@@ -59,7 +59,7 @@
 <p>By Taylor expansion:
 <span class="math">\(e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}\)</span></p>
 <p>Thus,
-<span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies\)</span> $\delta(k) = \frac{1}{\theta} $ which is a useless estimator</p>
+<span class="math">\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} \implies \delta(k) = \frac{1}{\theta}\)</span> which is a useless estimator</p>
 <p>Since, there is no unbiased estimator, there exists no UMVUE as well.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

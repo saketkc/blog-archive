@@ -2996,10 +2996,10 @@ and the buses wre coming at a rate of &lt;span class="math"&gt;\(\lambda\)&lt;/s
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</summary><category term="poisson"></category></entry><entry><title>Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</title><link href="http://saket-choudhary.me/pertinent-blog/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" rel="alternate"></link><updated>2015-05-16T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-16:pertinent-blog/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Prove: No UMVUE exists for &lt;span class="math"&gt;\(\frac{1}{\theta}\)&lt;/span&gt; for Poisson Distribution.&lt;/p&gt;
+&lt;p&gt;Proof: No UMVUE exists for &lt;span class="math"&gt;\(\frac{1}{\theta}\)&lt;/span&gt; for Poisson Distribution.&lt;/p&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;http://stats.stackexchange.com/a/152660/11668&lt;/p&gt;
-&lt;p&gt;bservation 1: &lt;span class="math"&gt;\(\sum X_i\)&lt;/span&gt; is complete and sufficient statistic for &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Observation 1: &lt;span class="math"&gt;\(\sum X_i\)&lt;/span&gt; is complete and sufficient statistic for &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Observation 2: &lt;span class="math"&gt;\(\sum X_i \sim Poisson(n\theta)\)&lt;/span&gt; &lt;/p&gt;
 &lt;p&gt;We need to look for an unbiased estimator of &lt;span class="math"&gt;\(\frac{1}{\theta}\)&lt;/span&gt; in order to utilise &lt;a href="http://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem"&gt;Rao-Blackwell theorem&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Let &lt;span class="math"&gt;\(\delta(x)\)&lt;/span&gt; be such an estimator:&lt;/p&gt;
@@ -3008,7 +3008,7 @@ and the buses wre coming at a rate of &lt;span class="math"&gt;\(\lambda\)&lt;/s
 &lt;p&gt;By Taylor expansion:
 &lt;span class="math"&gt;\(e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Thus,
-&lt;span class="math"&gt;\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies\)&lt;/span&gt; $\delta(k) = \frac{1}{\theta} $ which is a useless estimator&lt;/p&gt;
+&lt;span class="math"&gt;\(\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} \implies \delta(k) = \frac{1}{\theta}\)&lt;/span&gt; which is a useless estimator&lt;/p&gt;
 &lt;p&gt;Since, there is no unbiased estimator, there exists no UMVUE as well.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",

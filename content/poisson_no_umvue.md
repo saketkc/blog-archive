@@ -4,14 +4,14 @@ tags: umvue, poisson, estimator
 
 ## Problem
 
-Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.
+Proof: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.
 
 
 ## Solution
 
 http://stats.stackexchange.com/a/152660/11668
 
-bservation 1: $\sum X_i$ is complete and sufficient statistic for $\theta$
+Observation 1: $\sum X_i$ is complete and sufficient statistic for $\theta$
 
 Observation 2: $\sum X_i \sim Poisson(n\theta)$ 
 
@@ -27,7 +27,7 @@ By Taylor expansion:
 $e^\theta = \sum_{k=0}^{\infty}\frac{\theta^k}{k!}$ $\implies$ $\frac{e^\theta}{\theta} = \sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!}$
 
 Thus,
-$\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} $ $\implies$ $\delta(k) = \frac{1}{\theta} $ which is a useless estimator
+$\sum_{k=0}^{\infty}\frac{\delta(k)\theta^k}{k!}  =\sum_{k=0}^{\infty}\frac{\theta^{k-1}}{k!} \implies \delta(k) = \frac{1}{\theta}$ which is a useless estimator
 
 
 Since, there is no unbiased estimator, there exists no UMVUE as well.
