@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/saketkc">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="./">Piddling Pertinent </a></h1>
+                <nav><ul>
+                    <li><a href="http://saket-choudhary.me">Home</a></li>
+                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
+                    <li class="active"><a href="./category/misc.html">misc</a></li>
+                    <li><a href="./category/misc-tutorial.html">misc, tutorial</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./.html" rel="bookmark"
+           title="Permalink to "></a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-25T20:19:04.806709+01:00">
+                Published: Sun 25 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
+        </address>
+<p>In <a href="./category/misc.html">misc</a>.</p>
+
+</footer><!-- /.post-info -->      
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+<div class="container-fluid main-container">
+
+
+
+
+<p>title: A frequent inequality date: 2015-09-09 tags: stats, pdf, math</p>
+<p><span class="math">\[
+\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&gt;0
+\]</span></p>
+<p>Consider <span class="math">\(f(x)=\ln(x)-\frac{x-1}{x}\)</span></p>
+<p><span class="math">\(f'(x) = \frac{1}{x} - \frac{1}{x^2} = \frac{x-1}{x^2}\)</span></p>
+<p>Now consider the following two cases:</p>
+<p>Case A: <span class="math">\(0 &lt; x \leq 1\)</span> and Case B: <span class="math">\(1 &lt; x &lt; \infty\)</span></p>
+<p>Then for Case A: <span class="math">\(x-1 \leq 0\)</span> and hence <span class="math">\(f'(x)\leq 0\)</span> <span class="math">\(\implies\)</span> <span class="math">\(f(x)\)</span> is a non-increasing function in <span class="math">\((0,1]\)</span> and hence <span class="math">\(f(x)\geq f(1) \forall x \in (0,1]\)</span></p>
+<p>So for <span class="math">\(x \in (0,1]\)</span>, <span class="math">\(f(x) \geq f(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-\frac{x-1}{x} \geq 0\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\frac{x-1}{x} \leq \ln(x)\)</span></p>
+<p>Now for Case B:</p>
+<p><span class="math">\(1 &lt; x &lt; \infty\)</span> <span class="math">\(\implies\)</span> <span class="math">\(x-1&gt;0\)</span></p>
+<p>Thus, in this region <span class="math">\(f'(x)&gt;0\)</span> and hence <span class="math">\(f(x)\)</span> is a strictly increasing function in <span class="math">\((1,\infty)\)</span></p>
+<p>Thus, for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\(f(x)&gt;f(1)\)</span> and hence <span class="math">\(\ln(x)-\frac{x-1}{x} &gt; 0\)</span></p>
+<p>Combine results with that in case A for <span class="math">\(f(x)\)</span> to conclude: <span class="math">\(\frac{x-1}{x} \leq \ln(x)\)</span></p>
+<p>Now define <span class="math">\(f(x)= \ln(x)-x+1\)</span> <span class="math">\(\implies\)</span> <span class="math">\(f'(x) = \frac{1}{x}-1 =\frac{1-x}{x}\)</span> Whole story of Case A and Case B again. But it should be simple to see that for <span class="math">\(0 &lt; x \leq 1\)</span>, <span class="math">\(g'(x)\geq 0\)</span> and hence <span class="math">\(g(x) \leq g(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-x+1 \leq 0\)</span> And for <span class="math">\(1 &lt; x &lt; \infty\)</span>, <span class="math">\(g'(x)&lt;0\)</span> and hence <span class="math">\(g(x)&lt;g(1)\)</span> <span class="math">\(\implies\)</span> <span class="math">\(\ln(x)-x+1 &lt; 0\)</span></p>
+<div id="todo" class="section level2">
+<h2>TODO</h2>
+<ul>
+<li>KL-divergence</li>
+<li>Entropy</li>
+</ul>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
+                            <li><a href="https://github.com/saketkc">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55540107-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>
