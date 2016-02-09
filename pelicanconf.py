@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Saket Choudhary'
 SITENAME = u'Piddling Pertinent'
-SITEURL = 'http://saket-choudhary.me/pertinent-blog/'
+SITEURL = 'http://saket-choudhary.me/pertinent-blog'
 
 PATH = 'content'
 
@@ -34,10 +34,11 @@ SOCIAL = (('twitter', 'https://twitter.com/saketkc'),
                     ('github', 'https://github.com/saketkc'),)
 DEFAULT_PAGINATION = False
 
+
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 MARKUP = ('md', 'ipynb')
-
+DEFAULT_DATE = 'fs'
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 PLUGIN_PATHS = ['../pelican-plugins']

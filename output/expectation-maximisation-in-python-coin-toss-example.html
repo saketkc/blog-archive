@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <title>Expectation Maximisation in Python: Coin Toss Example</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
-        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
-        <link href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -57,8 +57,10 @@
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
 .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
@@ -140,7 +142,7 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
-<span class="c">#from ipywidgets import StaticInteract, RangeWidget</span>
+<span class="c1">#from ipywidgets import StaticInteract, RangeWidget</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
 <span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">euclidean</span>
@@ -156,7 +158,7 @@
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">Image</span><span class="p">(</span><span class="s">'images/nbt1406-F1.png'</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">Image</span><span class="p">(</span><span class="s1">'images/nbt1406-F1.png'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1222,11 +1224,11 @@ MIJ/0lwAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">coin_toss</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H T T T H H T H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H H H H T H H H H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H T H H H H H T H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'H T H T T T H H T T'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'T H H H T H H H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H T T T H H T H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H H H H T H H H H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H T H H H H H T H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H T H T T T H H T T'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'T H H H T H H H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -1239,7 +1241,7 @@ MIJ/0lwAAAAASUVORK5CYII=
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">columns</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">coin_toss</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s">'Toss'</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'Toss'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1387,8 +1389,8 @@ $$
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s">'theta_A theta_B'</span><span class="p">)</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="c"># Hack to display</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'theta_A theta_B'</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="c1"># Hack to display</span>
 </pre></div>
 </div>
 </div>
@@ -1399,19 +1401,19 @@ $$
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c">## Observed Case</span>
+<div class=" highlight hl-ipython2"><pre><span class="c1">## Observed Case</span>
 
-<span class="n">observed</span> <span class="o">=</span> <span class="p">[</span><span class="s">'B'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">]</span>
-<span class="n">index_A</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s">'A'</span><span class="p">]</span>
-<span class="n">index_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s">'B'</span><span class="p">]</span>
+<span class="n">observed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">]</span>
+<span class="n">index_A</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">'A'</span><span class="p">]</span>
+<span class="n">index_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">'B'</span><span class="p">]</span>
 
 <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">size</span>
 
 <span class="n">A_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_A</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
 <span class="n">B_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_B</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
 
-<span class="n">A_heads</span> <span class="o">=</span> <span class="n">A_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s">'H'</span><span class="p">]</span>
-<span class="n">B_heads</span> <span class="o">=</span> <span class="n">B_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s">'H'</span><span class="p">]</span>
+<span class="n">A_heads</span> <span class="o">=</span> <span class="n">A_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">'H'</span><span class="p">]</span>
+<span class="n">B_heads</span> <span class="o">=</span> <span class="n">B_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">'H'</span><span class="p">]</span>
 
 <span class="n">theta_A</span> <span class="o">=</span> <span class="n">A_heads</span><span class="o">/</span><span class="n">A_tosses</span><span class="o">.</span><span class="n">size</span>
 <span class="n">theta_B</span> <span class="o">=</span> <span class="n">B_heads</span><span class="o">/</span><span class="n">B_tosses</span><span class="o">.</span><span class="n">size</span>
@@ -1479,34 +1481,34 @@ $$\left ( \theta_{B}, \quad 0.45\right )$$
 
 <span class="k">def</span> <span class="nf">em</span><span class="p">(</span><span class="n">theta_old</span><span class="p">):</span>
     <span class="n">row_prob</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c">## Expectation</span>
+    <span class="c1">## Expectation</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coin_toss</span><span class="p">:</span>
-        <span class="n">count_heads</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'H'</span><span class="p">)</span>
-        <span class="n">p_a</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s">'A'</span><span class="p">])</span>
-        <span class="n">p_b</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
+        <span class="n">count_heads</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'H'</span><span class="p">)</span>
+        <span class="n">p_a</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s1">'A'</span><span class="p">])</span>
+        <span class="n">p_b</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s1">'B'</span><span class="p">])</span>
         <span class="n">p_t</span> <span class="o">=</span> <span class="n">p_a</span><span class="o">+</span><span class="n">p_b</span>
         <span class="n">p_a</span> <span class="o">=</span> <span class="n">p_a</span><span class="o">/</span><span class="n">p_t</span>
         <span class="n">p_b</span> <span class="o">=</span> <span class="n">p_b</span><span class="o">/</span><span class="n">p_t</span>
-        <span class="n">row_prob</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s">'A'</span><span class="p">:</span> <span class="n">p_a</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="n">p_b</span><span class="p">,</span> <span class="s">'count_heads'</span><span class="p">:</span> <span class="n">count_heads</span><span class="p">,</span> <span class="s">'total_tosses'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)})</span>
+        <span class="n">row_prob</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span> <span class="n">p_a</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="n">p_b</span><span class="p">,</span> <span class="s1">'count_heads'</span><span class="p">:</span> <span class="n">count_heads</span><span class="p">,</span> <span class="s1">'total_tosses'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)})</span>
         
-    <span class="c">## Maximisation</span>
+    <span class="c1">## Maximisation</span>
     <span class="n">new_coin_toss</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">row_prob</span><span class="p">:</span>
-        <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'total_tosses'</span><span class="p">]</span>
-        <span class="n">total_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'count_heads'</span><span class="p">]</span>
-        <span class="n">A_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
-        <span class="n">A_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
-        <span class="n">B_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
-        <span class="n">B_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
+        <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'total_tosses'</span><span class="p">]</span>
+        <span class="n">total_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'count_heads'</span><span class="p">]</span>
+        <span class="n">A_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
+        <span class="n">A_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
+        <span class="n">B_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
+        <span class="n">B_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
         <span class="n">new_coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">A_heads</span><span class="p">,</span> <span class="n">A_tails</span><span class="p">,</span> <span class="n">B_heads</span><span class="p">,</span> <span class="n">B_tails</span><span class="p">])</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">new_coin_toss</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'A Heads'</span><span class="p">,</span> <span class="s">'A Tails'</span><span class="p">,</span> <span class="s">'B Heads'</span><span class="p">,</span> <span class="s">'B Tails'</span><span class="p">])</span>
-    <span class="n">new_pa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s">'A Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="n">new_pb</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s">'B Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="n">new_theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s">'A'</span><span class="p">:</span> <span class="n">new_pa</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="n">new_pb</span><span class="p">})</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">new_coin_toss</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'A Heads'</span><span class="p">,</span> <span class="s1">'A Tails'</span><span class="p">,</span> <span class="s1">'B Heads'</span><span class="p">,</span> <span class="s1">'B Tails'</span><span class="p">])</span>
+    <span class="n">new_pa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">'A Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">new_pb</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">'B Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">new_theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span> <span class="n">new_pa</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="n">new_pb</span><span class="p">})</span>
     <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">new_theta</span>
 
-<span class="n">theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s">'A'</span><span class="p">:</span> <span class="n">thetaA</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="n">thetaB</span><span class="p">})</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span> <span class="n">thetaA</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="n">thetaB</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -2404,7 +2406,7 @@ $$\left ( \theta_{B}, \quad 0.45\right )$$
 <div class="prompt input_prompt">In [59]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s">'A'</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s1">'A'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2424,7 +2426,7 @@ $$\left ( \theta_{A}, \quad 0.796788954444\right )$$
 <div class="prompt input_prompt">In [60]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s1">'B'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2486,8 +2488,8 @@ $$\left ( \theta_{B}, \quad 0.51958345063\right )$$
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog//feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
 
                             <li><a href="https://twitter.com/saketkc">twitter</a></li>
                             <li><a href="https://github.com/saketkc">github</a></li>
