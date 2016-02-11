@@ -25,6 +25,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: left;
+    min-width: 600px;
 }
 
 /* Headings */
