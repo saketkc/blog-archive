@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saket-choudhary.me/pertinent-blog/" rel="alternate"></link><link href="http://saket-choudhary.me/pertinent-blog/feeds/misc.atom.xml" rel="self"></link><id>http://saket-choudhary.me/pertinent-blog/</id><updated>2015-10-18T00:00:00+02:00</updated><entry><title>Entropy and Uniform Distribution</title><link href="http://saket-choudhary.me/pertinent-blog/entropy-and-uniform-distribution.html" rel="alternate"></link><updated>2015-10-18T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-10-18:pertinent-blog/entropy-and-uniform-distribution.html</id><summary type="html">&lt;p&gt;To show &lt;span class="math"&gt;\(\sum p_i\log(p_i) = p\)&lt;/span&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent</title><link href="http://saket-choudhary.me/pertinent-blog/" rel="alternate"></link><link href="http://saket-choudhary.me/pertinent-blog/feeds/misc.atom.xml" rel="self"></link><id>http://saket-choudhary.me/pertinent-blog/</id><updated>2015-10-18T00:00:00-07:00</updated><entry><title>Entropy and Uniform Distribution</title><link href="http://saket-choudhary.me/pertinent-blog/entropy-and-uniform-distribution.html" rel="alternate"></link><updated>2015-10-18T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-10-18:pertinent-blog/entropy-and-uniform-distribution.html</id><summary type="html">&lt;p&gt;To show &lt;span class="math"&gt;\(\sum p_i\log(p_i) = p\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Consider &lt;span class="math"&gt;\(H = -\sum p_i log(p_i) = log(n)\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Consider weighted AM-GM for &lt;span class="math"&gt;\(p_i\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="math"&gt;$$
@@ -70,7 +70,7 @@ $$&lt;/div&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="textbook problem"></category><category term="entropy"></category><category term="uniform"></category></entry><entry><title>A frequent inequality</title><link href="http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html" rel="alternate"></link><updated>2015-09-09T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-09-09:pertinent-blog/a-frequent-inequality.html</id><summary type="html">&lt;div class="math"&gt;$$
+&lt;/script&gt;</summary><category term="textbook problem"></category><category term="entropy"></category><category term="uniform"></category></entry><entry><title>A frequent inequality</title><link href="http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html" rel="alternate"></link><updated>2015-09-09T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-09-09:pertinent-blog/a-frequent-inequality.html</id><summary type="html">&lt;div class="math"&gt;$$
 \frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&amp;gt;0
 $$&lt;/div&gt;
 &lt;p&gt;Consider &lt;span class="math"&gt;\(f(x)=\ln(x)-\frac{x-1}{x}\)&lt;/span&gt;&lt;/p&gt;
@@ -149,7 +149,7 @@ And for &lt;span class="math"&gt;\(1 &amp;lt; x &amp;lt; \infty\)&lt;/span&gt;, 
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="stats"></category><category term="pdf"></category><category term="math"></category></entry><entry><title>Functions of independent random variables are independent</title><link href="http://saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html" rel="alternate"></link><updated>2015-06-01T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-06-01:pertinent-blog/functions-of-independent-random-variables-are-independent.html</id><summary type="html">&lt;h2&gt;A textbook problem&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="stats"></category><category term="pdf"></category><category term="math"></category></entry><entry><title>Functions of independent random variables are independent</title><link href="http://saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html" rel="alternate"></link><updated>2015-06-01T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-06-01:pertinent-blog/functions-of-independent-random-variables-are-independent.html</id><summary type="html">&lt;h2&gt;A textbook problem&lt;/h2&gt;
 &lt;p&gt;Given &lt;span class="math"&gt;\(X\)&lt;/span&gt;, &lt;span class="math"&gt;\(Y\)&lt;/span&gt; are two independent random variables,
 show that functions &lt;span class="math"&gt;\(g(X)\)&lt;/span&gt; and &lt;span class="math"&gt;\(h(Y)\)&lt;/span&gt; are independent too&lt;/p&gt;
 &lt;h2&gt;Short Proof&lt;/h2&gt;
@@ -228,7 +228,7 @@ $$&lt;/div&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="independence"></category><category term="random variables"></category></entry><entry><title>Bernoulli random varlable and UMVUE</title><link href="http://saket-choudhary.me/pertinent-blog/bernoulli-random-varlable-and-umvue.html" rel="alternate"></link><updated>2015-05-21T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-21:pertinent-blog/bernoulli-random-varlable-and-umvue.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="independence"></category><category term="random variables"></category></entry><entry><title>Bernoulli random varlable and UMVUE</title><link href="http://saket-choudhary.me/pertinent-blog/bernoulli-random-varlable-and-umvue.html" rel="alternate"></link><updated>2015-05-21T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-21:pertinent-blog/bernoulli-random-varlable-and-umvue.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;Let &lt;span class="math"&gt;\(X_1,...,X_n\)&lt;/span&gt; random sample &lt;span class="math"&gt;\(X\)&lt;/span&gt;~&lt;span class="math"&gt;\(Bernoulli(p)\)&lt;/span&gt;.
 For &lt;span class="math"&gt;\(n\geq 4\)&lt;/span&gt; show that the product &lt;span class="math"&gt;\(X_1X_2X_3X_4\)&lt;/span&gt; is a unbiased estimator for &lt;span class="math"&gt;\(p^4\)&lt;/span&gt;, 
 and use this fact for find the best unbiased estimator of &lt;span class="math"&gt;\(p^4\)&lt;/span&gt;&lt;/p&gt;
@@ -300,7 +300,7 @@ and use this fact for find the best unbiased estimator of &lt;span class="math"&
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="bernoulli"></category><category term="umvue"></category></entry><entry><title>Distribution of one random variable less than other</title><link href="http://saket-choudhary.me/pertinent-blog/distribution-of-one-random-variable-less-than-other.html" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-18:pertinent-blog/distribution-of-one-random-variable-less-than-other.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="bernoulli"></category><category term="umvue"></category></entry><entry><title>Distribution of one random variable less than other</title><link href="http://saket-choudhary.me/pertinent-blog/distribution-of-one-random-variable-less-than-other.html" rel="alternate"></link><updated>2015-05-18T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-18:pertinent-blog/distribution-of-one-random-variable-less-than-other.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;&lt;span class="math"&gt;\(P(Y&amp;lt;X)\)&lt;/span&gt; for any two independent random variables &lt;span class="math"&gt;\(X,Y\)&lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;We just follow the definition:&lt;/p&gt;
@@ -362,7 +362,7 @@ and use this fact for find the best unbiased estimator of &lt;span class="math"&
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary></entry><entry><title>[Proof]Weighted AM-GM</title><link href="http://saket-choudhary.me/pertinent-blog/proofweighted-am-gm.html" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-18:pertinent-blog/proofweighted-am-gm.html</id><summary type="html">&lt;p&gt;We make use of &lt;a href="http://en.wikipedia.org/wiki/Jensen%27s_inequality"&gt;Jensen’s Inequality&lt;/a&gt;
+&lt;/script&gt;</summary></entry><entry><title>[Proof]Weighted AM-GM</title><link href="http://saket-choudhary.me/pertinent-blog/proofweighted-am-gm.html" rel="alternate"></link><updated>2015-05-18T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-18:pertinent-blog/proofweighted-am-gm.html</id><summary type="html">&lt;p&gt;We make use of &lt;a href="http://en.wikipedia.org/wiki/Jensen%27s_inequality"&gt;Jensen’s Inequality&lt;/a&gt;
 and the fact that &lt;span class="math"&gt;\(log(x)\)&lt;/span&gt; is a concave function:&lt;/p&gt;
 &lt;p&gt;For concave f:
 &lt;span class="math"&gt;\(f(\frac{\sum a_ix_i}{\sum a_i}) \geq \frac{\sum a_i f(x_i)}{\sum a_i}\)&lt;/span&gt;&lt;/p&gt;
@@ -428,7 +428,7 @@ and the fact that &lt;span class="math"&gt;\(log(x)\)&lt;/span&gt; is a concave 
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="inequalities"></category></entry><entry><title>Expected number of pairings | Jones and Smith Family</title><link href="http://saket-choudhary.me/pertinent-blog/expected-number-of-pairings-jones-and-smith-family.html" rel="alternate"></link><updated>2015-05-17T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-17:pertinent-blog/expected-number-of-pairings-jones-and-smith-family.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="inequalities"></category></entry><entry><title>Expected number of pairings | Jones and Smith Family</title><link href="http://saket-choudhary.me/pertinent-blog/expected-number-of-pairings-jones-and-smith-family.html" rel="alternate"></link><updated>2015-05-17T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-17:pertinent-blog/expected-number-of-pairings-jones-and-smith-family.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;4 members of Smith family and 4 of Jones family are pooled
 to form all possible pairs, all equally likely. Find &lt;span class="math"&gt;\(N\)&lt;/span&gt;, the 
 number of smiths which have a smith partner.&lt;/p&gt;
@@ -498,7 +498,7 @@ but I am going to overcount with ambiguity.&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="expectation"></category><category term="probability"></category><category term="indicator variables"></category></entry><entry><title>Poisson Demysitified</title><link href="http://saket-choudhary.me/pertinent-blog/poisson-demysitified.html" rel="alternate"></link><updated>2015-05-17T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-17:pertinent-blog/poisson-demysitified.html</id><summary type="html">&lt;p&gt;Learnt it the hard way. 
+&lt;/script&gt;</summary><category term="expectation"></category><category term="probability"></category><category term="indicator variables"></category></entry><entry><title>Poisson Demysitified</title><link href="http://saket-choudhary.me/pertinent-blog/poisson-demysitified.html" rel="alternate"></link><updated>2015-05-17T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-17:pertinent-blog/poisson-demysitified.html</id><summary type="html">&lt;p&gt;Learnt it the hard way. 
 This one is more of a scratch pad, inspired from 
 the previously discussed problme on estimating the size of 
 restriction fragments.&lt;/p&gt;
@@ -564,7 +564,7 @@ and the buses wre coming at a rate of &lt;span class="math"&gt;\(\lambda\)&lt;/s
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="poisson"></category></entry><entry><title>Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</title><link href="http://saket-choudhary.me/pertinent-blog/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" rel="alternate"></link><updated>2015-05-16T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-16:pertinent-blog/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="poisson"></category></entry><entry><title>Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</title><link href="http://saket-choudhary.me/pertinent-blog/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" rel="alternate"></link><updated>2015-05-16T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-16:pertinent-blog/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;Proof: No UMVUE exists for &lt;span class="math"&gt;\(\frac{1}{\theta}\)&lt;/span&gt; for Poisson Distribution.&lt;/p&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;http://stats.stackexchange.com/a/152660/11668&lt;/p&gt;
@@ -635,7 +635,7 @@ and the buses wre coming at a rate of &lt;span class="math"&gt;\(\lambda\)&lt;/s
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="umvue"></category><category term="poisson"></category><category term="estimator"></category></entry><entry><title>Restriction Fragments, MLE, and Mixed Random Variables</title><link href="http://saket-choudhary.me/pertinent-blog/restriction-fragments-mle-and-mixed-random-variables.html" rel="alternate"></link><updated>2015-05-13T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-13:pertinent-blog/restriction-fragments-mle-and-mixed-random-variables.html</id><summary type="html">&lt;p&gt;Let &lt;span class="math"&gt;\(X_1, X_2, \dots , X_n\)&lt;/span&gt; be the lengths of &lt;span class="math"&gt;\(n\)&lt;/span&gt; restriction fragments. Suppose that a
+&lt;/script&gt;</summary><category term="umvue"></category><category term="poisson"></category><category term="estimator"></category></entry><entry><title>Restriction Fragments, MLE, and Mixed Random Variables</title><link href="http://saket-choudhary.me/pertinent-blog/restriction-fragments-mle-and-mixed-random-variables.html" rel="alternate"></link><updated>2015-05-13T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-13:pertinent-blog/restriction-fragments-mle-and-mixed-random-variables.html</id><summary type="html">&lt;p&gt;Let &lt;span class="math"&gt;\(X_1, X_2, \dots , X_n\)&lt;/span&gt; be the lengths of &lt;span class="math"&gt;\(n\)&lt;/span&gt; restriction fragments. Suppose that a
 biotechnique can measure fragment lengths accurately up to a given length c.
 That is, if &lt;span class="math"&gt;\(X_i &amp;lt; c\)&lt;/span&gt;, then the technique gives correct value &lt;span class="math"&gt;\(X_i\)&lt;/span&gt;
 Show that MLE of &lt;span class="math"&gt;\(\lambda = \frac{n-T_n}{S_n+cT_n}\)&lt;/span&gt; where &lt;span class="math"&gt;\(S_n= \sum_{j=1}^n X_jI(X_j &amp;lt; c)\)&lt;/span&gt; and &lt;span class="math"&gt;\(T_n = \sum_{j=1}^n I(X_j \geq c)\)&lt;/span&gt;&lt;/p&gt;
@@ -706,7 +706,7 @@ I also answered a similar  question on &lt;a href="http://math.stackexchange.com
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="indicator variable"></category><category term="computational biology"></category><category term="exponential"></category><category term="mle"></category><category term="likelihood"></category></entry><entry><title>Restriction Fragments Size Distribution</title><link href="http://saket-choudhary.me/pertinent-blog/restriction-fragments-size-distribution.html" rel="alternate"></link><updated>2015-05-13T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-13:pertinent-blog/restriction-fragments-size-distribution.html</id><summary type="html">&lt;h2&gt;Given&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="indicator variable"></category><category term="computational biology"></category><category term="exponential"></category><category term="mle"></category><category term="likelihood"></category></entry><entry><title>Restriction Fragments Size Distribution</title><link href="http://saket-choudhary.me/pertinent-blog/restriction-fragments-size-distribution.html" rel="alternate"></link><updated>2015-05-13T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-13:pertinent-blog/restriction-fragments-size-distribution.html</id><summary type="html">&lt;h2&gt;Given&lt;/h2&gt;
 &lt;p&gt;The number of restriction sites in a fragment of length &lt;span class="math"&gt;\(t\)&lt;/span&gt; are distributed as:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
@@ -784,7 +784,7 @@ $$&lt;/div&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="poisson"></category><category term="computational biology"></category><category term="exponential"></category></entry><entry><title>Convolution Demysitifed</title><link href="http://saket-choudhary.me/pertinent-blog/convolution-demysitifed.html" rel="alternate"></link><updated>2015-05-09T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-09:pertinent-blog/convolution-demysitifed.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;/script&gt;</summary><category term="poisson"></category><category term="computational biology"></category><category term="exponential"></category></entry><entry><title>Convolution Demysitifed</title><link href="http://saket-choudhary.me/pertinent-blog/convolution-demysitifed.html" rel="alternate"></link><updated>2015-05-09T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-09:pertinent-blog/convolution-demysitifed.html</id><summary type="html">&lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;Given &lt;span class="math"&gt;\(f(x) = \frac{x}{2}\)&lt;/span&gt; for &lt;span class="math"&gt;\(0 \leq x \leq 2\)&lt;/span&gt;. Find the pdf of &lt;span class="math"&gt;\(x_1+x_2\)&lt;/span&gt;
 for &lt;span class="math"&gt;\(x_1,x_2\)&lt;/span&gt; which are i.i.d.&lt;/p&gt;
 &lt;h2&gt;Wrong solution&lt;/h2&gt;
@@ -880,7 +880,7 @@ $$&lt;/div&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="stats"></category><category term="pdf"></category><category term="math"></category></entry><entry><title>MATH 501 Project</title><link href="http://saket-choudhary.me/pertinent-blog/math-501-project.html" rel="alternate"></link><updated>2015-05-05T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-05:pertinent-blog/math-501-project.html</id><summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;/script&gt;</summary><category term="stats"></category><category term="pdf"></category><category term="math"></category></entry><entry><title>MATH 501 Project</title><link href="http://saket-choudhary.me/pertinent-blog/math-501-project.html" rel="alternate"></link><updated>2015-05-05T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-05-05:pertinent-blog/math-501-project.html</id><summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Model of a two state reparable system:
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
@@ -8001,7 +8001,7 @@ fig.select("#fig-513a44c54ef244079cf52ea51c3ae086-element-17")
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="linear algebra"></category><category term="numerical analysis"></category></entry><entry><title>Runs in flips of a coin</title><link href="http://saket-choudhary.me/pertinent-blog/runs-in-flips-of-a-coin.html" rel="alternate"></link><updated>2015-04-21T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-04-21:pertinent-blog/runs-in-flips-of-a-coin.html</id><summary type="html">&lt;p&gt;This problem happened to be in one of the screening examinations
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="numerical analysis"></category></entry><entry><title>Runs in flips of a coin</title><link href="http://saket-choudhary.me/pertinent-blog/runs-in-flips-of-a-coin.html" rel="alternate"></link><updated>2015-04-21T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-04-21:pertinent-blog/runs-in-flips-of-a-coin.html</id><summary type="html">&lt;p&gt;This problem happened to be in one of the screening examinations
 and is my favorite because it demonstrates an application of indicator variables&lt;/p&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;A run is defined as &lt;em&gt;maximal&lt;/em&gt; subsequence of consecutive tosses all having the same outcome.
@@ -8095,7 +8095,7 @@ Corrected &lt;span class="math"&gt;\(R_n = \sum_{i=1}^{n-1}I_i + 1\)&lt;/span&gt
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="probability"></category><category term="expectation"></category></entry><entry><title>SVD v/s MDS v/s PCA</title><link href="http://saket-choudhary.me/pertinent-blog/svd-vs-mds-vs-pca.html" rel="alternate"></link><updated>2015-04-15T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-04-15:pertinent-blog/svd-vs-mds-vs-pca.html</id><summary type="html">&lt;p&gt;Principle Component Analysis(PCA) is a relatively more famous
+&lt;/script&gt;</summary><category term="probability"></category><category term="expectation"></category></entry><entry><title>SVD v/s MDS v/s PCA</title><link href="http://saket-choudhary.me/pertinent-blog/svd-vs-mds-vs-pca.html" rel="alternate"></link><updated>2015-04-15T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-04-15:pertinent-blog/svd-vs-mds-vs-pca.html</id><summary type="html">&lt;p&gt;Principle Component Analysis(PCA) is a relatively more famous
 than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
 When I was introduced to the latter two, I was utterly confused
 trying to figure out what goes in where.&lt;/p&gt;
@@ -8219,7 +8219,7 @@ which can be cleverly rewritten as:
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="math"></category><category term="statistics"></category><category term="ml"></category></entry><entry><title>Multidimensional Scaling</title><link href="http://saket-choudhary.me/pertinent-blog/multidimensional-scaling.html" rel="alternate"></link><updated>2015-04-14T00:00:00+02:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-04-14:pertinent-blog/multidimensional-scaling.html</id><summary type="html">&lt;p&gt;MDS is a statistical technique to visualize dissimilarity
+&lt;/script&gt;</summary><category term="math"></category><category term="statistics"></category><category term="ml"></category></entry><entry><title>Multidimensional Scaling</title><link href="http://saket-choudhary.me/pertinent-blog/multidimensional-scaling.html" rel="alternate"></link><updated>2015-04-14T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-04-14:pertinent-blog/multidimensional-scaling.html</id><summary type="html">&lt;p&gt;MDS is a statistical technique to visualize dissimilarity
 between points. The distances between two pointsin n-dimensions 
 are visualized in 2 dimensions such that it represents
 the distance in n-dimensions as far as possible.&lt;/p&gt;
@@ -8308,7 +8308,7 @@ then you should get a straight line representing &lt;span class="math"&gt;\(Y=X\
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary></entry><entry><title>Gumbel distribution expectation</title><link href="http://saket-choudhary.me/pertinent-blog/gumbel-distribution-expectation.html" rel="alternate"></link><updated>2015-03-03T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-03-03:pertinent-blog/gumbel-distribution-expectation.html</id><summary type="html">&lt;h2&gt;What&lt;/h2&gt;
+&lt;/script&gt;</summary></entry><entry><title>Gumbel distribution expectation</title><link href="http://saket-choudhary.me/pertinent-blog/gumbel-distribution-expectation.html" rel="alternate"></link><updated>2015-03-03T00:00:00-08:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-03-03:pertinent-blog/gumbel-distribution-expectation.html</id><summary type="html">&lt;h2&gt;What&lt;/h2&gt;
 &lt;p&gt;If &lt;span class="math"&gt;\(X_1,..,X_n\)&lt;/span&gt; is a random sample with density &lt;span class="math"&gt;\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)&lt;/span&gt; (&lt;span class="math"&gt;\(x \in\mathbb{R}\)&lt;/span&gt;) and &lt;span class="math"&gt;\(-\infty&amp;lt;\theta&amp;lt;\infty\)&lt;/span&gt;,
 &lt;span class="math"&gt;\(\quad\)&lt;/span&gt;i) Find the estimator of &lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
@@ -8381,7 +8381,7 @@ then you should get a straight line representing &lt;span class="math"&gt;\(Y=X\
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary></entry><entry><title>BA = AB = I</title><link href="http://saket-choudhary.me/pertinent-blog/ba-ab-i.html" rel="alternate"></link><updated>2015-02-28T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-28:pertinent-blog/ba-ab-i.html</id><summary type="html">&lt;p&gt;To Prove: If &lt;/p&gt;
+&lt;/script&gt;</summary></entry><entry><title>BA = AB = I</title><link href="http://saket-choudhary.me/pertinent-blog/ba-ab-i.html" rel="alternate"></link><updated>2015-02-28T00:00:00-08:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-28:pertinent-blog/ba-ab-i.html</id><summary type="html">&lt;p&gt;To Prove: If &lt;/p&gt;
 &lt;div class="math"&gt;$$A_{nxn}$$&lt;/div&gt;
 &lt;p&gt; and &lt;/p&gt;
 &lt;div class="math"&gt;$$B_{nxn}$$&lt;/div&gt;
@@ -8455,7 +8455,7 @@ Now consider B=BI &lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>L2 norm and spectral radius of symmetric matrix</title><link href="http://saket-choudhary.me/pertinent-blog/l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="alternate"></link><updated>2015-02-28T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-28:pertinent-blog/l2-norm-and-spectral-radius-of-symmetric-matrix.html</id><summary type="html">&lt;p&gt;L2 norm and spectral radius for &lt;/p&gt;
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>L2 norm and spectral radius of symmetric matrix</title><link href="http://saket-choudhary.me/pertinent-blog/l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="alternate"></link><updated>2015-02-28T00:00:00-08:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-28:pertinent-blog/l2-norm-and-spectral-radius-of-symmetric-matrix.html</id><summary type="html">&lt;p&gt;L2 norm and spectral radius for &lt;/p&gt;
 &lt;div class="math"&gt;$$A=A^T$$&lt;/div&gt;
 &lt;p&gt;L2 inducded norm:&lt;/p&gt;
 &lt;h3&gt;NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.&lt;/h3&gt;
@@ -8521,7 +8521,7 @@ Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>Positive definite second derivative</title><link href="http://saket-choudhary.me/pertinent-blog/positive-definite-second-derivative.html" rel="alternate"></link><updated>2015-02-28T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-28:pertinent-blog/positive-definite-second-derivative.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>Positive definite second derivative</title><link href="http://saket-choudhary.me/pertinent-blog/positive-definite-second-derivative.html" rel="alternate"></link><updated>2015-02-28T00:00:00-08:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-28:pertinent-blog/positive-definite-second-derivative.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Let &lt;span class="math"&gt;\(f:\mathbb{R}\to\mathbb{R}\)&lt;/span&gt; be a twice-differentiable function,
 and let &lt;span class="math"&gt;\(f\)&lt;/span&gt;’s second derivative be continuous. Let &lt;span class="math"&gt;\(f\)&lt;/span&gt; be convex with
 the following definition of convexity: for any &lt;span class="math"&gt;\(a&amp;lt;b \in \mathbb{R}\)&lt;/span&gt;:
@@ -8596,7 +8596,7 @@ or &lt;span class="math"&gt;\(f(x+h)+f(x-h)-2f(x) \geq 0\)&lt;/span&gt;. &lt;/p&
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>Proof for triangle inequality for case $x+y&lt;0$</title><link href="http://saket-choudhary.me/pertinent-blog/proof-for-triangle-inequality-for-case-xy0.html" rel="alternate"></link><updated>2015-02-02T00:00:00+01:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-02:pertinent-blog/proof-for-triangle-inequality-for-case-xy0.html</id><summary type="html">&lt;p&gt;&lt;span class="math"&gt;\(-|x| \leq x \leq |x|\)&lt;/span&gt;
+&lt;/script&gt;</summary><category term="linear algebra"></category><category term="matrix"></category><category term="norm"></category></entry><entry><title>Proof for triangle inequality for case $x+y&lt;0$</title><link href="http://saket-choudhary.me/pertinent-blog/proof-for-triangle-inequality-for-case-xy0.html" rel="alternate"></link><updated>2015-02-02T00:00:00-08:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2015-02-02:pertinent-blog/proof-for-triangle-inequality-for-case-xy0.html</id><summary type="html">&lt;p&gt;&lt;span class="math"&gt;\(-|x| \leq x \leq |x|\)&lt;/span&gt;
 and &lt;span class="math"&gt;\(-|y| \leq y \leq |y|\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(-|x|-|y| \leq x+y \leq |x|+|y|\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\)&lt;/span&gt; &lt;span class="math"&gt;\(|x+y| \leq |x| +|y|\)&lt;/span&gt; for any real &lt;span class="math"&gt;\(x,y\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The last implication comes from the fact:
 &lt;span class="math"&gt;\(|x| \leq a \leftrightarrow -a \leq x \leq a\)&lt;/span&gt; for some &lt;span class="math"&gt;\(a \geq 0\)&lt;/span&gt;&lt;/p&gt;
