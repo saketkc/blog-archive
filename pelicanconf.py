@@ -8,7 +8,7 @@ SITEURL = 'http://saket-choudhary.me/pertinent-blog'
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = u'en'
 
@@ -38,13 +38,12 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 MARKUP = ('md', 'ipynb')
-DEFAULT_DATE = 'fs'
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [ 'ipynb',  'assets', 'sitemap', 'gravatar', 'render_math', 'ipynb']
-GOOGLE_ANALYTICS = 'UA-55540107-1'
-GOSQUARED_SITENAME = 'GSN-123456-A'
+#GOOGLE_ANALYTICS = 'UA-55540107-1'
+#GOSQUARED_SITENAME = 'GSN-123456-A'
 MENUITEMS = [('Home', 'http://saket-choudhary.me/pertinent-blog'), ('Github', 'https://github.com/saketkc/pertinent-blog/tree/master/content'), ('Screening Solutions', 'http://www.saket-choudhary.me/math-screening-solutions')]
 GITHUB_URL = 'https://github.com/saketkc'
 TWITTER_USERNAME = 'saketkc'
