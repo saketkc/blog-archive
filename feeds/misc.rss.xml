@@ -1178,7 +1178,7 @@ multiple entries going to &lt;/p&gt;
 &lt;div class="math"&gt;$$\texttt{NaN}$$&lt;/div&gt;
 &lt;p&gt;. We resolve this issue by computing the
 Moore-Penrose pseudoinverse &lt;span class="math"&gt;\(B^+\)&lt;/span&gt; of &lt;span class="math"&gt;\(B\)&lt;/span&gt;. For an invertible matrix &lt;span class="math"&gt;\(B\)&lt;/span&gt;, &lt;span class="math"&gt;\(B^- = B^+\)&lt;/span&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;m = 21          # The number of &amp;#39;space&amp;#39; nodes
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;m = 21          # The number of &amp;#39;space&amp;#39; nodes
 n = 401         # The number of &amp;#39;time&amp;#39; nodes
 τ = 10/(n-1)    # Time step size
 h = 1/(m-1)     # Space step size
@@ -1292,7 +1292,7 @@ plot(x=t, y=estv, Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot
      stroke-width="0.3"
      font-size="3.88"
 
-&lt;div class="highlight"&gt;&lt;pre&gt; id=&amp;quot;fig-c22dfd48538b4aa0ba3f8e349406edc7&amp;quot;&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; id=&amp;quot;fig-c22dfd48538b4aa0ba3f8e349406edc7&amp;quot;&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2182,7 +2182,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Element.prototype.svgroot = function () {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &amp;quot;svg&amp;quot; &amp;amp;&amp;amp; element.parent() != null) {
         element = element.parent();
@@ -2280,7 +2280,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
     &lt;span class="nt"&gt;ygridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.ygridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
@@ -2311,7 +2311,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;stroke-dasharray&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
           &lt;span class="nc"&gt;.selectAll&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -2332,7 +2332,7 @@ Gadfly.plot_mouseout = function(event) {
 &lt;p&gt;var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -2442,7 +2442,7 @@ root.selectAll(unscaled_selection)
 &lt;p&gt;// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="nc"&gt;.0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale_dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;Infinity&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;tickscale&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -2477,7 +2477,7 @@ var update_tickscale = function(root, scale, axis) {
 &lt;p&gt;var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -2513,7 +2513,7 @@ root.data(&amp;quot;ty&amp;quot;, ty);
 &lt;p&gt;};&lt;/p&gt;
 &lt;p&gt;var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&amp;quot;tx&amp;quot;),
@@ -2546,7 +2546,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
 &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;stroke-width&lt;/span&gt; &lt;span class="nt"&gt;when&lt;/span&gt; &lt;span class="nt"&gt;zooming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;we&lt;/span&gt; &lt;span class="nt"&gt;force&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;fixed&lt;/span&gt; &lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;px_per_mm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.node.getCTM&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="nc"&gt;.a&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -2705,7 +2705,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
     ty0 = root.data(&amp;quot;ty&amp;quot;);
 
 var dx0 = root.data(&amp;quot;dx&amp;quot;),
@@ -2772,7 +2772,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&amp;quot;scale&amp;quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Snap.animate(
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -2804,7 +2804,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 &lt;p&gt;var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&amp;quot;min_pos&amp;quot;),
             max_pos = element.data(&amp;quot;max_pos&amp;quot;),
@@ -2827,7 +2827,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -2854,7 +2854,7 @@ update_plot_scale(root, new_scale);
 &lt;p&gt;Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;// keep track of what the scale was when we started dragging
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// keep track of what the scale was when we started dragging
 root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -2876,7 +2876,7 @@ root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;p&gt;Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (event.shiftKey) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (event.shiftKey) {
     root.selectAll(&amp;quot;.colorkey text&amp;quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&amp;quot;color_class&amp;quot;);
@@ -2978,7 +2978,7 @@ fig.select("#fig-c22dfd48538b4aa0ba3f8e349406edc7-element-17")
     });
 ]]&amp;gt; &lt;/script&gt;
 &lt;/svg&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;plot(x=t, y=abs(estv-optv), Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot;Absolute Error&amp;quot;),Guide.XTicks(ticks=[0:1:10]))
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot(x=t, y=abs(estv-optv), Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot;Absolute Error&amp;quot;),Guide.XTicks(ticks=[0:1:10]))
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2993,7 +2993,7 @@ fig.select("#fig-c22dfd48538b4aa0ba3f8e349406edc7-element-17")
      stroke-width="0.3"
      font-size="3.88"
 
-&lt;div class="highlight"&gt;&lt;pre&gt; id=&amp;quot;fig-a9ec3c81e95b4f6b839742ba6960be33&amp;quot;&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; id=&amp;quot;fig-a9ec3c81e95b4f6b839742ba6960be33&amp;quot;&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -3881,7 +3881,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Element.prototype.svgroot = function () {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &amp;quot;svg&amp;quot; &amp;amp;&amp;amp; element.parent() != null) {
         element = element.parent();
@@ -3979,7 +3979,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
     &lt;span class="nt"&gt;ygridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.ygridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
@@ -4010,7 +4010,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;stroke-dasharray&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
           &lt;span class="nc"&gt;.selectAll&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -4031,7 +4031,7 @@ Gadfly.plot_mouseout = function(event) {
 &lt;p&gt;var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -4141,7 +4141,7 @@ root.selectAll(unscaled_selection)
 &lt;p&gt;// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="nc"&gt;.0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale_dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;Infinity&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;tickscale&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -4176,7 +4176,7 @@ var update_tickscale = function(root, scale, axis) {
 &lt;p&gt;var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -4212,7 +4212,7 @@ root.data(&amp;quot;ty&amp;quot;, ty);
 &lt;p&gt;};&lt;/p&gt;
 &lt;p&gt;var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&amp;quot;tx&amp;quot;),
@@ -4245,7 +4245,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
 &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;stroke-width&lt;/span&gt; &lt;span class="nt"&gt;when&lt;/span&gt; &lt;span class="nt"&gt;zooming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;we&lt;/span&gt; &lt;span class="nt"&gt;force&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;fixed&lt;/span&gt; &lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;px_per_mm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.node.getCTM&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="nc"&gt;.a&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -4404,7 +4404,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
     ty0 = root.data(&amp;quot;ty&amp;quot;);
 
 var dx0 = root.data(&amp;quot;dx&amp;quot;),
@@ -4471,7 +4471,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&amp;quot;scale&amp;quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Snap.animate(
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -4503,7 +4503,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 &lt;p&gt;var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&amp;quot;min_pos&amp;quot;),
             max_pos = element.data(&amp;quot;max_pos&amp;quot;),
@@ -4526,7 +4526,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -4553,7 +4553,7 @@ update_plot_scale(root, new_scale);
 &lt;p&gt;Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;// keep track of what the scale was when we started dragging
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// keep track of what the scale was when we started dragging
 root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -4575,7 +4575,7 @@ root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;p&gt;Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (event.shiftKey) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (event.shiftKey) {
     root.selectAll(&amp;quot;.colorkey text&amp;quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&amp;quot;color_class&amp;quot;);
@@ -4677,7 +4677,7 @@ fig.select("#fig-a9ec3c81e95b4f6b839742ba6960be33-element-17")
     });
 ]]&amp;gt; &lt;/script&gt;
 &lt;/svg&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;plot(x=t,y=estb, Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot;b(t)&amp;quot;),Guide.XTicks(ticks=[0:1:10]))
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot(x=t,y=estb, Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot;b(t)&amp;quot;),Guide.XTicks(ticks=[0:1:10]))
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -4692,7 +4692,7 @@ fig.select("#fig-a9ec3c81e95b4f6b839742ba6960be33-element-17")
      stroke-width="0.3"
      font-size="3.88"
 
-&lt;div class="highlight"&gt;&lt;pre&gt; id=&amp;quot;fig-4f8776f47c1745e3b1527a931867061a&amp;quot;&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; id=&amp;quot;fig-4f8776f47c1745e3b1527a931867061a&amp;quot;&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -5658,7 +5658,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Element.prototype.svgroot = function () {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &amp;quot;svg&amp;quot; &amp;amp;&amp;amp; element.parent() != null) {
         element = element.parent();
@@ -5756,7 +5756,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
     &lt;span class="nt"&gt;ygridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.ygridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
@@ -5787,7 +5787,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;stroke-dasharray&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
           &lt;span class="nc"&gt;.selectAll&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -5808,7 +5808,7 @@ Gadfly.plot_mouseout = function(event) {
 &lt;p&gt;var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -5918,7 +5918,7 @@ root.selectAll(unscaled_selection)
 &lt;p&gt;// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="nc"&gt;.0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale_dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;Infinity&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;tickscale&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -5953,7 +5953,7 @@ var update_tickscale = function(root, scale, axis) {
 &lt;p&gt;var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -5989,7 +5989,7 @@ root.data(&amp;quot;ty&amp;quot;, ty);
 &lt;p&gt;};&lt;/p&gt;
 &lt;p&gt;var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&amp;quot;tx&amp;quot;),
@@ -6022,7 +6022,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
 &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;stroke-width&lt;/span&gt; &lt;span class="nt"&gt;when&lt;/span&gt; &lt;span class="nt"&gt;zooming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;we&lt;/span&gt; &lt;span class="nt"&gt;force&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;fixed&lt;/span&gt; &lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;px_per_mm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.node.getCTM&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="nc"&gt;.a&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -6181,7 +6181,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
     ty0 = root.data(&amp;quot;ty&amp;quot;);
 
 var dx0 = root.data(&amp;quot;dx&amp;quot;),
@@ -6248,7 +6248,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&amp;quot;scale&amp;quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Snap.animate(
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -6280,7 +6280,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 &lt;p&gt;var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&amp;quot;min_pos&amp;quot;),
             max_pos = element.data(&amp;quot;max_pos&amp;quot;),
@@ -6303,7 +6303,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -6330,7 +6330,7 @@ update_plot_scale(root, new_scale);
 &lt;p&gt;Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;// keep track of what the scale was when we started dragging
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// keep track of what the scale was when we started dragging
 root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -6352,7 +6352,7 @@ root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;p&gt;Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (event.shiftKey) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (event.shiftKey) {
     root.selectAll(&amp;quot;.colorkey text&amp;quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&amp;quot;color_class&amp;quot;);
@@ -6454,7 +6454,7 @@ fig.select("#fig-4f8776f47c1745e3b1527a931867061a-element-17")
     });
 ]]&amp;gt; &lt;/script&gt;
 &lt;/svg&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;plot(x=t,y=p1hat, Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot;p1hat(t)&amp;quot;), Guide.YTicks(ticks=[0:0.0025:0.0225]), Guide.XTicks(ticks=[0:1:10]))
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;plot(x=t,y=p1hat, Guide.XLabel(&amp;quot;Time&amp;quot;), Guide.YLabel(&amp;quot;p1hat(t)&amp;quot;), Guide.YTicks(ticks=[0:0.0025:0.0225]), Guide.XTicks(ticks=[0:1:10]))
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -6469,7 +6469,7 @@ fig.select("#fig-4f8776f47c1745e3b1527a931867061a-element-17")
      stroke-width="0.3"
      font-size="3.88"
 
-&lt;div class="highlight"&gt;&lt;pre&gt; id=&amp;quot;fig-513a44c54ef244079cf52ea51c3ae086&amp;quot;&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; id=&amp;quot;fig-513a44c54ef244079cf52ea51c3ae086&amp;quot;&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -7149,7 +7149,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Element.prototype.svgroot = function () {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &amp;quot;svg&amp;quot; &amp;amp;&amp;amp; element.parent() != null) {
         element = element.parent();
@@ -7247,7 +7247,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.xgridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
     &lt;span class="nt"&gt;ygridlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.ygridlines&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
@@ -7278,7 +7278,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;destcolor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_xgrid_color&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;stroke-dasharray&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;xgridlines&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unfocused_strokedash&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
           &lt;span class="nc"&gt;.selectAll&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -7299,7 +7299,7 @@ Gadfly.plot_mouseout = function(event) {
 &lt;p&gt;var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var old_scale = root.data(&amp;quot;scale&amp;quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -7409,7 +7409,7 @@ root.selectAll(unscaled_selection)
 &lt;p&gt;// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.data&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;axis&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;tickscales&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;1&lt;/span&gt;&lt;span class="nc"&gt;.0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;best_tickscale_dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;Infinity&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;tickscale&lt;/span&gt; &lt;span class="nt"&gt;in&lt;/span&gt; &lt;span class="nt"&gt;tickscales&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -7444,7 +7444,7 @@ var update_tickscale = function(root, scale, axis) {
 &lt;p&gt;var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -7480,7 +7480,7 @@ root.data(&amp;quot;ty&amp;quot;, ty);
 &lt;p&gt;};&lt;/p&gt;
 &lt;p&gt;var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var width = bounds.x1 - bounds.x0,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&amp;quot;tx&amp;quot;),
@@ -7513,7 +7513,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;The&lt;/span&gt; &lt;span class="nt"&gt;non-scaling-stroke&lt;/span&gt; &lt;span class="nt"&gt;trick&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nt"&gt;Rather&lt;/span&gt; &lt;span class="nt"&gt;than&lt;/span&gt; &lt;span class="nt"&gt;try&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;correct&lt;/span&gt; &lt;span class="nt"&gt;for&lt;/span&gt; &lt;span class="nt"&gt;the&lt;/span&gt;
 &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;stroke-width&lt;/span&gt; &lt;span class="nt"&gt;when&lt;/span&gt; &lt;span class="nt"&gt;zooming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;we&lt;/span&gt; &lt;span class="nt"&gt;force&lt;/span&gt; &lt;span class="nt"&gt;it&lt;/span&gt; &lt;span class="nt"&gt;to&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="nt"&gt;fixed&lt;/span&gt; &lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;px_per_mm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;root&lt;/span&gt;&lt;span class="nc"&gt;.node.getCTM&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="nc"&gt;.a&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -7672,7 +7672,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var tx0 = root.data(&amp;quot;tx&amp;quot;),
     ty0 = root.data(&amp;quot;ty&amp;quot;);
 
 var dx0 = root.data(&amp;quot;dx&amp;quot;),
@@ -7739,7 +7739,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&amp;quot;scale&amp;quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Snap.animate(
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -7771,7 +7771,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 &lt;p&gt;var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;root.selectAll(&amp;quot;.zoomslider_thumb&amp;quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&amp;quot;min_pos&amp;quot;),
             max_pos = element.data(&amp;quot;max_pos&amp;quot;),
@@ -7794,7 +7794,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var px_per_mm = root.data(&amp;quot;px_per_mm&amp;quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -7821,7 +7821,7 @@ update_plot_scale(root, new_scale);
 &lt;p&gt;Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;// keep track of what the scale was when we started dragging
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// keep track of what the scale was when we started dragging
 root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -7843,7 +7843,7 @@ root.data(&amp;quot;old_scale&amp;quot;, root.data(&amp;quot;scale&amp;quot;));
 &lt;p&gt;Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;if (event.shiftKey) {
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (event.shiftKey) {
     root.selectAll(&amp;quot;.colorkey text&amp;quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&amp;quot;color_class&amp;quot;);
