@@ -22,7 +22,7 @@
                     <li><a href="http://saket-choudhary.me/pertinent-blog">Home</a></li>
                     <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
                     <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society GD Solutions</a></li>
+                    <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society Diploma Solutions</a></li>
                     <li><a href="../category/misc.html">misc</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
@@ -1011,7 +1011,8 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-</style><html><body><div class="cell border-box-sizing text_cell rendered">
+</style>
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -1020,8 +1021,8 @@ h6:hover .anchor-link {
 <p>See: <a href="http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html">http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html</a></p>
 <p>Notations:</p>
 \begin{align*}
-\theta_A  &amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\
-\theta_B  &amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\
+\theta_A  &= \text{Probability of a Heads showing up given the coin tossed is A}\\
+\theta_B  &= \text{Probability of a Heads showing up given the coin tossed is B}\\
 \end{align*}
 </div>
 </div>
@@ -2108,8 +2109,8 @@ bFmzIFZlm0uf4jINEU4Z0CXSM9LLHMSyYUC1+1mfUoQIY8Mv0uB5/iD3iLkR5gz7dSYiRIgQIUKE
 CBEiRIgQIUKESfH/AbDfDJ+THSOpAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTExLTEyVDIzOjQ1
 OjQ0LTA4OjAw6s8MjwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAwOC0wOC0xOFQwODoyNzoxMy0wNzow
 MIJ/0lwAAAAASUVORK5CYII=
-" />
-</div>
+">
+</img></div>
 </div>
 </div>
 </div>
@@ -2420,7 +2421,7 @@ $$\left ( \theta_{B}, \quad 0.45\right )$$
 <span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">diff</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-6</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">iterations</span> <span class="o">&lt;</span> <span class="n">max_iterations</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">diff</span><span class="o">&gt;</span><span class="n">tolerance</span><span class="p">):</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">iterations</span> <span class="o"><</span> <span class="n">max_iterations</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">diff</span><span class="o">></span><span class="n">tolerance</span><span class="p">):</span>
     <span class="n">new_theta</span> <span class="o">=</span> <span class="n">em</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
     <span class="n">diff</span> <span class="o">=</span> <span class="n">euclidean</span><span class="p">(</span><span class="n">new_theta</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">theta</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">new_theta</span>
