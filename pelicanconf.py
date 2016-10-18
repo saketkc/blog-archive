@@ -42,12 +42,12 @@ LOAD_CONTENT_CACHE = False
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 PLUGIN_PATHS = ['../pelican-plugins']
-PLUGINS = [ 'ipynb',  'assets', 'sitemap', 'gravatar', 'render_math', 'ipynb']
+PLUGINS = ['assets', 'sitemap', 'gravatar', 'render_math']#, 'ipynb.markup']
 GOOGLE_ANALYTICS = 'UA-55540107-1'
 #GOSQUARED_SITENAME = 'GSN-123456-A'
 MENUITEMS = [('Home', 'http://saket-choudhary.me/pertinent-blog'), ('Github', 'https://github.com/saketkc/pertinent-blog/tree/master/content'),
              ('Screening Solutions', 'http://www.saket-choudhary.me/math-screening-solutions'),
-             ('Royal Statistical Society GD Solutions', 'http://www.saket-choudhary.me/rss-graduate-diploma-solutions')]
+             ('Royal Statistical Society Diploma Solutions', 'http://www.saket-choudhary.me/rss-graduate-diploma-solutions')]
 GITHUB_URL = 'https://github.com/saketkc'
 TWITTER_USERNAME = 'saketkc'
 
