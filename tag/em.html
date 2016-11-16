@@ -1017,7 +1017,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Expectation-Maximisation-with-Python-:-Coin-Toss">Expectation Maximisation with Python : Coin Toss<a class="anchor-link" href="#Expectation-Maximisation-with-Python-:-Coin-Toss">¶</a></h2><p>This notebook implements the example, I consider a classic for understanding Expectation Maximisation.</p>
+<h2 id="Expectation-Maximisation-with-Python-:-Coin-Toss">Expectation Maximisation with Python : Coin Toss<a class="anchor-link" href="#Expectation-Maximisation-with-Python-:-Coin-Toss">&#182;</a></h2><p>This notebook implements the example, I consider a classic for understanding Expectation Maximisation.</p>
 <p>See: <a href="http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html">http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html</a></p>
 <p>Notations:</p>
 \begin{align*}
@@ -1029,9 +1029,9 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> notebook
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
@@ -1046,23 +1046,31 @@ h6:hover .anchor-link {
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">init_printing</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span>
 <span class="n">init_printing</span><span class="p">()</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">'images/nbt1406-F1.png'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/nbt1406-F1.png&#39;</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+
 <div class="output_png output_subarea output_execute_result">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMbCAMAAACYCraTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAtxQTFRF
@@ -2110,48 +2118,62 @@ CBEiRIgQIUKESfH/AbDfDJ+THSOpAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTExLTEyVDIzOjQ1
 OjQ0LTA4OjAw6s8MjwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAwOC0wOC0xOFQwODoyNzoxMy0wNzow
 MIJ/0lwAAAAASUVORK5CYII=
 ">
-</img></div>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">coin_toss</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H T T T H H T H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H H H H T H H H H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H T H H H H H T H H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'H T H T T T H H T T'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'T H H H T H H H T H'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;H T T T H H T H T H&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;H H H H T H H H H H&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;H T H H H H H T H H&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;H T H T T T H H T T&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;T H H H T H H H T H&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">coin_toss</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'Toss'</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Toss&#39;</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
 <div class="output_text output_subarea output_execute_result">
-<pre>Int64Index([0, 1, 2, 3, 4], dtype='int64', name=u'Toss')</pre>
+<pre>Int64Index([0, 1, 2, 3, 4], dtype=&#39;int64&#39;, name=u&#39;Toss&#39;)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2159,120 +2181,129 @@ MIJ/0lwAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Our configuration looks like this:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>H</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-</tr>
-<tr>
-<th>1</th>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-</tr>
-<tr>
-<th>2</th>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-</tr>
-<tr>
-<th>3</th>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>T</td>
-</tr>
-<tr>
-<th>4</th>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-<td>H</td>
-<td>H</td>
-<td>T</td>
-<td>H</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>H</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+      <td>H</td>
+      <td>H</td>
+      <td>T</td>
+      <td>H</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Case-1:-Identity-of-coin-being-tossed-known">Case 1: Identity of coin being tossed known<a class="anchor-link" href="#Case-1:-Identity-of-coin-being-tossed-known">¶</a></h2><p>If the identity of the coin being tossed is known and is <code>observed = ['B', 'A', 'A', 'B', 'A']</code> it is not so difficult to calculate the corresponding values of $\theta_A$ and $\theta_B$:</p>
+<h2 id="Case-1:-Identity-of-coin-being-tossed-known">Case 1: Identity of coin being tossed known<a class="anchor-link" href="#Case-1:-Identity-of-coin-being-tossed-known">&#182;</a></h2><p>If the identity of the coin being tossed is known and is <code>observed = ['B', 'A', 'A', 'B', 'A']</code> it is not so difficult to calculate the corresponding values of $\theta_A$ and $\theta_B$:</p>
 $$
 \theta_A = \frac{\text{Total Heads when coin tossed is A}}{\text{Total tosses for coin A}}
 $$$$
@@ -2283,96 +2314,119 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'theta_A theta_B'</span><span class="p">)</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;theta_A theta_B&#39;</span><span class="p">)</span>
 <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">thetaA</span><span class="p">,</span> <span class="n">thetaB</span> <span class="c1"># Hack to display</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Observed Case</span>
 
-<span class="n">observed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">]</span>
-<span class="n">index_A</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">'A'</span><span class="p">]</span>
-<span class="n">index_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">'B'</span><span class="p">]</span>
+<span class="n">observed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="n">index_A</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="n">index_B</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">&#39;B&#39;</span><span class="p">]</span>
 
 <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">size</span>
 
 <span class="n">A_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_A</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
 <span class="n">B_tosses</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_B</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
 
-<span class="n">A_heads</span> <span class="o">=</span> <span class="n">A_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">'H'</span><span class="p">]</span>
-<span class="n">B_heads</span> <span class="o">=</span> <span class="n">B_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">'H'</span><span class="p">]</span>
+<span class="n">A_heads</span> <span class="o">=</span> <span class="n">A_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">&#39;H&#39;</span><span class="p">]</span>
+<span class="n">B_heads</span> <span class="o">=</span> <span class="n">B_tosses</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">&#39;H&#39;</span><span class="p">]</span>
 
 <span class="n">theta_A</span> <span class="o">=</span> <span class="n">A_heads</span><span class="o">/</span><span class="n">A_tosses</span><span class="o">.</span><span class="n">size</span>
 <span class="n">theta_B</span> <span class="o">=</span> <span class="n">B_heads</span><span class="o">/</span><span class="n">B_tosses</span><span class="o">.</span><span class="n">size</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">theta_A</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+
 <div class="output_latex output_subarea output_execute_result">
 $$\left ( \theta_{A}, \quad 0.8\right )$$
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">theta_B</span><span class="p">)</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
 <div class="output_latex output_subarea output_execute_result">
 $$\left ( \theta_{B}, \quad 0.45\right )$$
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Case-2-Identity-of-coin-being-tossed-is-unknown">Case 2 Identity of coin being tossed is unknown<a class="anchor-link" href="#Case-2-Identity-of-coin-being-tossed-is-unknown">¶</a></h2><p>When the identity of coin being tossed is unknwon we rely on Expectation Maximisation to give us the estimates of $\theta_A$ and $\theta_B$. We start with an initial value of $\theta_A, \theta_B$ and then given the observed data (the 50 coin tosses) run the 'E-step' calculating the probability of coin $A$ or $B$ being used for a series of tosses(Remember each set of 10 coin tosses is done using</p>
+<h2 id="Case-2-Identity-of-coin-being-tossed-is-unknown">Case 2 Identity of coin being tossed is unknown<a class="anchor-link" href="#Case-2-Identity-of-coin-being-tossed-is-unknown">&#182;</a></h2><p>When the identity of coin being tossed is unknwon we rely on Expectation Maximisation to give us the estimates of $\theta_A$ and $\theta_B$. We start with an initial value of $\theta_A, \theta_B$ and then given the observed data (the 50 coin tosses) run the 'E-step' calculating the probability of coin $A$ or $B$ being used for a series of tosses(Remember each set of 10 coin tosses is done using</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">thetaA</span> <span class="o">=</span> <span class="mf">0.6</span>
 <span class="n">thetaB</span> <span class="o">=</span> <span class="mf">0.5</span>
 
@@ -2380,974 +2434,1049 @@ $$\left ( \theta_{B}, \quad 0.45\right )$$
     <span class="n">row_prob</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="c1">## Expectation</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">coin_toss</span><span class="p">:</span>
-        <span class="n">count_heads</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'H'</span><span class="p">)</span>
-        <span class="n">p_a</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s1">'A'</span><span class="p">])</span>
-        <span class="n">p_b</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s1">'B'</span><span class="p">])</span>
+        <span class="n">count_heads</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+        <span class="n">p_a</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
+        <span class="n">p_b</span> <span class="o">=</span> <span class="n">binomial</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">count_heads</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">theta_old</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">])</span>
         <span class="n">p_t</span> <span class="o">=</span> <span class="n">p_a</span><span class="o">+</span><span class="n">p_b</span>
         <span class="n">p_a</span> <span class="o">=</span> <span class="n">p_a</span><span class="o">/</span><span class="n">p_t</span>
         <span class="n">p_b</span> <span class="o">=</span> <span class="n">p_b</span><span class="o">/</span><span class="n">p_t</span>
-        <span class="n">row_prob</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span> <span class="n">p_a</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="n">p_b</span><span class="p">,</span> <span class="s1">'count_heads'</span><span class="p">:</span> <span class="n">count_heads</span><span class="p">,</span> <span class="s1">'total_tosses'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)})</span>
+        <span class="n">row_prob</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">p_a</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">p_b</span><span class="p">,</span> <span class="s1">&#39;count_heads&#39;</span><span class="p">:</span> <span class="n">count_heads</span><span class="p">,</span> <span class="s1">&#39;total_tosses&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)})</span>
         
     <span class="c1">## Maximisation</span>
     <span class="n">new_coin_toss</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">row_prob</span><span class="p">:</span>
-        <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'total_tosses'</span><span class="p">]</span>
-        <span class="n">total_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'count_heads'</span><span class="p">]</span>
-        <span class="n">A_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
-        <span class="n">A_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
-        <span class="n">B_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
-        <span class="n">B_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
+        <span class="n">total_tosses</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;total_tosses&#39;</span><span class="p">]</span>
+        <span class="n">total_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;count_heads&#39;</span><span class="p">]</span>
+        <span class="n">A_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
+        <span class="n">A_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
+        <span class="n">B_heads</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">total_heads</span>
+        <span class="n">B_tails</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">total_tosses</span><span class="o">-</span><span class="n">total_heads</span><span class="p">)</span>
         <span class="n">new_coin_toss</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">A_heads</span><span class="p">,</span> <span class="n">A_tails</span><span class="p">,</span> <span class="n">B_heads</span><span class="p">,</span> <span class="n">B_tails</span><span class="p">])</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">new_coin_toss</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'A Heads'</span><span class="p">,</span> <span class="s1">'A Tails'</span><span class="p">,</span> <span class="s1">'B Heads'</span><span class="p">,</span> <span class="s1">'B Tails'</span><span class="p">])</span>
-    <span class="n">new_pa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'A Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">'A Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="n">new_pb</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'B Heads'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">'B Tails'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="n">new_theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span> <span class="n">new_pa</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="n">new_pb</span><span class="p">})</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">new_coin_toss</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A Heads&#39;</span><span class="p">,</span> <span class="s1">&#39;A Tails&#39;</span><span class="p">,</span> <span class="s1">&#39;B Heads&#39;</span><span class="p">,</span> <span class="s1">&#39;B Tails&#39;</span><span class="p">])</span>
+    <span class="n">new_pa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;A Heads&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A Heads&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A Tails&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">new_pb</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;B Heads&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;B Heads&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;B Tails&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">new_theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">new_pa</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">new_pb</span><span class="p">})</span>
     <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">new_theta</span>
 
-<span class="n">theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span> <span class="n">thetaA</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span> <span class="n">thetaB</span><span class="p">})</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">thetaA</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">thetaB</span><span class="p">})</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">theta_new</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 <span class="n">max_iterations</span> <span class="o">=</span> <span class="mi">10000</span>
 <span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">diff</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-6</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">iterations</span> <span class="o"><</span> <span class="n">max_iterations</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">diff</span><span class="o">></span><span class="n">tolerance</span><span class="p">):</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">iterations</span> <span class="o">&lt;</span> <span class="n">max_iterations</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">diff</span><span class="o">&gt;</span><span class="n">tolerance</span><span class="p">):</span>
     <span class="n">new_theta</span> <span class="o">=</span> <span class="n">em</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
     <span class="n">diff</span> <span class="o">=</span> <span class="n">euclidean</span><span class="p">(</span><span class="n">new_theta</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">theta</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">new_theta</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>2.245745</td>
-<td>2.245745</td>
-<td>2.754255</td>
-<td>2.754255</td>
-</tr>
-<tr>
-<th>1</th>
-<td>7.244870</td>
-<td>0.804986</td>
-<td>1.755130</td>
-<td>0.195014</td>
-</tr>
-<tr>
-<th>2</th>
-<td>5.867737</td>
-<td>1.466934</td>
-<td>2.132263</td>
-<td>0.533066</td>
-</tr>
-<tr>
-<th>3</th>
-<td>1.408625</td>
-<td>2.112937</td>
-<td>2.591375</td>
-<td>3.887063</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.530506</td>
-<td>1.941645</td>
-<td>2.469494</td>
-<td>1.058355</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.245745</td>
+      <td>2.245745</td>
+      <td>2.754255</td>
+      <td>2.754255</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.244870</td>
+      <td>0.804986</td>
+      <td>1.755130</td>
+      <td>0.195014</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.867737</td>
+      <td>1.466934</td>
+      <td>2.132263</td>
+      <td>0.533066</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.408625</td>
+      <td>2.112937</td>
+      <td>2.591375</td>
+      <td>3.887063</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.530506</td>
+      <td>1.941645</td>
+      <td>2.469494</td>
+      <td>1.058355</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>1.479097</td>
-<td>1.479097</td>
-<td>3.520903</td>
-<td>3.520903</td>
-</tr>
-<tr>
-<th>1</th>
-<td>7.303594</td>
-<td>0.811510</td>
-<td>1.696406</td>
-<td>0.188490</td>
-</tr>
-<tr>
-<th>2</th>
-<td>5.651376</td>
-<td>1.412844</td>
-<td>2.348624</td>
-<td>0.587156</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.760578</td>
-<td>1.140867</td>
-<td>3.239422</td>
-<td>4.859133</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.014738</td>
-<td>1.720602</td>
-<td>2.985262</td>
-<td>1.279398</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.479097</td>
+      <td>1.479097</td>
+      <td>3.520903</td>
+      <td>3.520903</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.303594</td>
+      <td>0.811510</td>
+      <td>1.696406</td>
+      <td>0.188490</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.651376</td>
+      <td>1.412844</td>
+      <td>2.348624</td>
+      <td>0.587156</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.760578</td>
+      <td>1.140867</td>
+      <td>3.239422</td>
+      <td>4.859133</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.014738</td>
+      <td>1.720602</td>
+      <td>2.985262</td>
+      <td>1.279398</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>1.087962</td>
-<td>1.087962</td>
-<td>3.912038</td>
-<td>3.912038</td>
-</tr>
-<tr>
-<th>1</th>
-<td>7.828637</td>
-<td>0.869849</td>
-<td>1.171363</td>
-<td>0.130151</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.009233</td>
-<td>1.502308</td>
-<td>1.990767</td>
-<td>0.497692</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.446362</td>
-<td>0.669544</td>
-<td>3.553638</td>
-<td>5.330456</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.038084</td>
-<td>1.730607</td>
-<td>2.961916</td>
-<td>1.269393</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.087962</td>
+      <td>1.087962</td>
+      <td>3.912038</td>
+      <td>3.912038</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7.828637</td>
+      <td>0.869849</td>
+      <td>1.171363</td>
+      <td>0.130151</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.009233</td>
+      <td>1.502308</td>
+      <td>1.990767</td>
+      <td>0.497692</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.446362</td>
+      <td>0.669544</td>
+      <td>3.553638</td>
+      <td>5.330456</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.038084</td>
+      <td>1.730607</td>
+      <td>2.961916</td>
+      <td>1.269393</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.808513</td>
-<td>0.808513</td>
-<td>4.191487</td>
-<td>4.191487</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.216144</td>
-<td>0.912905</td>
-<td>0.783856</td>
-<td>0.087095</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.354109</td>
-<td>1.588527</td>
-<td>1.645891</td>
-<td>0.411473</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.265334</td>
-<td>0.398001</td>
-<td>3.734666</td>
-<td>5.601999</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.109732</td>
-<td>1.761314</td>
-<td>2.890268</td>
-<td>1.238686</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.808513</td>
+      <td>0.808513</td>
+      <td>4.191487</td>
+      <td>4.191487</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.216144</td>
+      <td>0.912905</td>
+      <td>0.783856</td>
+      <td>0.087095</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.354109</td>
+      <td>1.588527</td>
+      <td>1.645891</td>
+      <td>0.411473</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.265334</td>
+      <td>0.398001</td>
+      <td>3.734666</td>
+      <td>5.601999</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.109732</td>
+      <td>1.761314</td>
+      <td>2.890268</td>
+      <td>1.238686</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.645102</td>
-<td>0.645102</td>
-<td>4.354898</td>
-<td>4.354898</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.418405</td>
-<td>0.935378</td>
-<td>0.581595</td>
-<td>0.064622</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.572406</td>
-<td>1.643101</td>
-<td>1.427594</td>
-<td>0.356899</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.179981</td>
-<td>0.269971</td>
-<td>3.820019</td>
-<td>5.730029</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.159435</td>
-<td>1.782615</td>
-<td>2.840565</td>
-<td>1.217385</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.645102</td>
+      <td>0.645102</td>
+      <td>4.354898</td>
+      <td>4.354898</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.418405</td>
+      <td>0.935378</td>
+      <td>0.581595</td>
+      <td>0.064622</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.572406</td>
+      <td>1.643101</td>
+      <td>1.427594</td>
+      <td>0.356899</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.179981</td>
+      <td>0.269971</td>
+      <td>3.820019</td>
+      <td>5.730029</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.159435</td>
+      <td>1.782615</td>
+      <td>2.840565</td>
+      <td>1.217385</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.567711</td>
-<td>0.567711</td>
-<td>4.432289</td>
-<td>4.432289</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.507517</td>
-<td>0.945280</td>
-<td>0.492483</td>
-<td>0.054720</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.681854</td>
-<td>1.670464</td>
-<td>1.318146</td>
-<td>0.329536</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.144896</td>
-<td>0.217344</td>
-<td>3.855104</td>
-<td>5.782656</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.185923</td>
-<td>1.793967</td>
-<td>2.814077</td>
-<td>1.206033</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.567711</td>
+      <td>0.567711</td>
+      <td>4.432289</td>
+      <td>4.432289</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.507517</td>
+      <td>0.945280</td>
+      <td>0.492483</td>
+      <td>0.054720</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.681854</td>
+      <td>1.670464</td>
+      <td>1.318146</td>
+      <td>0.329536</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.144896</td>
+      <td>0.217344</td>
+      <td>3.855104</td>
+      <td>5.782656</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.185923</td>
+      <td>1.793967</td>
+      <td>2.814077</td>
+      <td>1.206033</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.535440</td>
-<td>0.535440</td>
-<td>4.464560</td>
-<td>4.464560</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.544022</td>
-<td>0.949336</td>
-<td>0.455978</td>
-<td>0.050664</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.730149</td>
-<td>1.682537</td>
-<td>1.269851</td>
-<td>0.317463</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.131238</td>
-<td>0.196856</td>
-<td>3.868762</td>
-<td>5.803144</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.198972</td>
-<td>1.799559</td>
-<td>2.801028</td>
-<td>1.200441</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.535440</td>
+      <td>0.535440</td>
+      <td>4.464560</td>
+      <td>4.464560</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.544022</td>
+      <td>0.949336</td>
+      <td>0.455978</td>
+      <td>0.050664</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.730149</td>
+      <td>1.682537</td>
+      <td>1.269851</td>
+      <td>0.317463</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.131238</td>
+      <td>0.196856</td>
+      <td>3.868762</td>
+      <td>5.803144</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.198972</td>
+      <td>1.799559</td>
+      <td>2.801028</td>
+      <td>1.200441</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.522786</td>
-<td>0.522786</td>
-<td>4.477214</td>
-<td>4.477214</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.558587</td>
-<td>0.950954</td>
-<td>0.441413</td>
-<td>0.049046</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.750249</td>
-<td>1.687562</td>
-<td>1.249751</td>
-<td>0.312438</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.126013</td>
-<td>0.189019</td>
-<td>3.873987</td>
-<td>5.810981</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.205202</td>
-<td>1.802230</td>
-<td>2.794798</td>
-<td>1.197770</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.522786</td>
+      <td>0.522786</td>
+      <td>4.477214</td>
+      <td>4.477214</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.558587</td>
+      <td>0.950954</td>
+      <td>0.441413</td>
+      <td>0.049046</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.750249</td>
+      <td>1.687562</td>
+      <td>1.249751</td>
+      <td>0.312438</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.126013</td>
+      <td>0.189019</td>
+      <td>3.873987</td>
+      <td>5.810981</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.205202</td>
+      <td>1.802230</td>
+      <td>2.794798</td>
+      <td>1.197770</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.517957</td>
-<td>0.517957</td>
-<td>4.482043</td>
-<td>4.482043</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.564351</td>
-<td>0.951595</td>
-<td>0.435649</td>
-<td>0.048405</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.758425</td>
-<td>1.689606</td>
-<td>1.241575</td>
-<td>0.310394</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.124026</td>
-<td>0.186039</td>
-<td>3.875974</td>
-<td>5.813961</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.208106</td>
-<td>1.803474</td>
-<td>2.791894</td>
-<td>1.196526</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.517957</td>
+      <td>0.517957</td>
+      <td>4.482043</td>
+      <td>4.482043</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.564351</td>
+      <td>0.951595</td>
+      <td>0.435649</td>
+      <td>0.048405</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.758425</td>
+      <td>1.689606</td>
+      <td>1.241575</td>
+      <td>0.310394</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.124026</td>
+      <td>0.186039</td>
+      <td>3.875974</td>
+      <td>5.813961</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.208106</td>
+      <td>1.803474</td>
+      <td>2.791894</td>
+      <td>1.196526</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.516135</td>
-<td>0.516135</td>
-<td>4.483865</td>
-<td>4.483865</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.566629</td>
-<td>0.951848</td>
-<td>0.433371</td>
-<td>0.048152</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.761725</td>
-<td>1.690431</td>
-<td>1.238275</td>
-<td>0.309569</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.123272</td>
-<td>0.184909</td>
-<td>3.876728</td>
-<td>5.815091</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.209430</td>
-<td>1.804042</td>
-<td>2.790570</td>
-<td>1.195958</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.516135</td>
+      <td>0.516135</td>
+      <td>4.483865</td>
+      <td>4.483865</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.566629</td>
+      <td>0.951848</td>
+      <td>0.433371</td>
+      <td>0.048152</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.761725</td>
+      <td>1.690431</td>
+      <td>1.238275</td>
+      <td>0.309569</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.123272</td>
+      <td>0.184909</td>
+      <td>3.876728</td>
+      <td>5.815091</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.209430</td>
+      <td>1.804042</td>
+      <td>2.790570</td>
+      <td>1.195958</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515451</td>
-<td>0.515451</td>
-<td>4.484549</td>
-<td>4.484549</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.567530</td>
-<td>0.951948</td>
-<td>0.432470</td>
-<td>0.048052</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763053</td>
-<td>1.690763</td>
-<td>1.236947</td>
-<td>0.309237</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122987</td>
-<td>0.184480</td>
-<td>3.877013</td>
-<td>5.815520</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210025</td>
-<td>1.804296</td>
-<td>2.789975</td>
-<td>1.195704</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.515451</td>
+      <td>0.515451</td>
+      <td>4.484549</td>
+      <td>4.484549</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.567530</td>
+      <td>0.951948</td>
+      <td>0.432470</td>
+      <td>0.048052</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.763053</td>
+      <td>1.690763</td>
+      <td>1.236947</td>
+      <td>0.309237</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.122987</td>
+      <td>0.184480</td>
+      <td>3.877013</td>
+      <td>5.815520</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.210025</td>
+      <td>1.804296</td>
+      <td>2.789975</td>
+      <td>1.195704</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515196</td>
-<td>0.515196</td>
-<td>4.484804</td>
-<td>4.484804</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.567887</td>
-<td>0.951987</td>
-<td>0.432113</td>
-<td>0.048013</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763588</td>
-<td>1.690897</td>
-<td>1.236412</td>
-<td>0.309103</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122879</td>
-<td>0.184318</td>
-<td>3.877121</td>
-<td>5.815682</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210288</td>
-<td>1.804409</td>
-<td>2.789712</td>
-<td>1.195591</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.515196</td>
+      <td>0.515196</td>
+      <td>4.484804</td>
+      <td>4.484804</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.567887</td>
+      <td>0.951987</td>
+      <td>0.432113</td>
+      <td>0.048013</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.763588</td>
+      <td>1.690897</td>
+      <td>1.236412</td>
+      <td>0.309103</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.122879</td>
+      <td>0.184318</td>
+      <td>3.877121</td>
+      <td>5.815682</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.210288</td>
+      <td>1.804409</td>
+      <td>2.789712</td>
+      <td>1.195591</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515100</td>
-<td>0.515100</td>
-<td>4.484900</td>
-<td>4.484900</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568028</td>
-<td>0.952003</td>
-<td>0.431972</td>
-<td>0.047997</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763804</td>
-<td>1.690951</td>
-<td>1.236196</td>
-<td>0.309049</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122838</td>
-<td>0.184256</td>
-<td>3.877162</td>
-<td>5.815744</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210403</td>
-<td>1.804458</td>
-<td>2.789597</td>
-<td>1.195542</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.515100</td>
+      <td>0.515100</td>
+      <td>4.484900</td>
+      <td>4.484900</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.568028</td>
+      <td>0.952003</td>
+      <td>0.431972</td>
+      <td>0.047997</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.763804</td>
+      <td>1.690951</td>
+      <td>1.236196</td>
+      <td>0.309049</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.122838</td>
+      <td>0.184256</td>
+      <td>3.877162</td>
+      <td>5.815744</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.210403</td>
+      <td>1.804458</td>
+      <td>2.789597</td>
+      <td>1.195542</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515065</td>
-<td>0.515065</td>
-<td>4.484935</td>
-<td>4.484935</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568084</td>
-<td>0.952009</td>
-<td>0.431916</td>
-<td>0.047991</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763891</td>
-<td>1.690973</td>
-<td>1.236109</td>
-<td>0.309027</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122822</td>
-<td>0.184233</td>
-<td>3.877178</td>
-<td>5.815767</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210453</td>
-<td>1.804480</td>
-<td>2.789547</td>
-<td>1.195520</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.515065</td>
+      <td>0.515065</td>
+      <td>4.484935</td>
+      <td>4.484935</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.568084</td>
+      <td>0.952009</td>
+      <td>0.431916</td>
+      <td>0.047991</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.763891</td>
+      <td>1.690973</td>
+      <td>1.236109</td>
+      <td>0.309027</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.122822</td>
+      <td>0.184233</td>
+      <td>3.877178</td>
+      <td>5.815767</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.210453</td>
+      <td>1.804480</td>
+      <td>2.789547</td>
+      <td>1.195520</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515051</td>
-<td>0.515051</td>
-<td>4.484949</td>
-<td>4.484949</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568106</td>
-<td>0.952012</td>
-<td>0.431894</td>
-<td>0.047988</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763926</td>
-<td>1.690982</td>
-<td>1.236074</td>
-<td>0.309018</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122816</td>
-<td>0.184224</td>
-<td>3.877184</td>
-<td>5.815776</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210474</td>
-<td>1.804489</td>
-<td>2.789526</td>
-<td>1.195511</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.515051</td>
+      <td>0.515051</td>
+      <td>4.484949</td>
+      <td>4.484949</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.568106</td>
+      <td>0.952012</td>
+      <td>0.431894</td>
+      <td>0.047988</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.763926</td>
+      <td>1.690982</td>
+      <td>1.236074</td>
+      <td>0.309018</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.122816</td>
+      <td>0.184224</td>
+      <td>3.877184</td>
+      <td>5.815776</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.210474</td>
+      <td>1.804489</td>
+      <td>2.789526</td>
+      <td>1.195511</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
 </div>
+
 <div class="output_area"><div class="prompt"></div>
+
 <div class="output_html rendered_html output_subarea ">
 <div>
 <table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>A Heads</th>
-<th>A Tails</th>
-<th>B Heads</th>
-<th>B Tails</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>0.515046</td>
-<td>0.515046</td>
-<td>4.484954</td>
-<td>4.484954</td>
-</tr>
-<tr>
-<th>1</th>
-<td>8.568115</td>
-<td>0.952013</td>
-<td>0.431885</td>
-<td>0.047987</td>
-</tr>
-<tr>
-<th>2</th>
-<td>6.763940</td>
-<td>1.690985</td>
-<td>1.236060</td>
-<td>0.309015</td>
-</tr>
-<tr>
-<th>3</th>
-<td>0.122814</td>
-<td>0.184221</td>
-<td>3.877186</td>
-<td>5.815779</td>
-</tr>
-<tr>
-<th>4</th>
-<td>4.210483</td>
-<td>1.804493</td>
-<td>2.789517</td>
-<td>1.195507</td>
-</tr>
-</tbody>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A Heads</th>
+      <th>A Tails</th>
+      <th>B Heads</th>
+      <th>B Tails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.515046</td>
+      <td>0.515046</td>
+      <td>4.484954</td>
+      <td>4.484954</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.568115</td>
+      <td>0.952013</td>
+      <td>0.431885</td>
+      <td>0.047987</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.763940</td>
+      <td>1.690985</td>
+      <td>1.236060</td>
+      <td>0.309015</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.122814</td>
+      <td>0.184221</td>
+      <td>3.877186</td>
+      <td>5.815779</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.210483</td>
+      <td>1.804493</td>
+      <td>2.789517</td>
+      <td>1.195507</td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [59]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s1">'A'</span><span class="p">])</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
+
+
 <div class="output_latex output_subarea output_execute_result">
 $$\left ( \theta_{A}, \quad 0.796788954444\right )$$
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [60]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s1">'B'</span><span class="p">])</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">new_theta</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">])</span>
 </pre></div>
+
 </div>
 </div>
 </div>
+
 <div class="output_wrapper">
 <div class="output">
+
+
 <div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
+
+
 <div class="output_latex output_subarea output_execute_result">
 $$\left ( \theta_{B}, \quad 0.51958345063\right )$$
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="input_area">
+    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span> 
 </pre></div>
+
 </div>
 </div>
 </div>
+
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
