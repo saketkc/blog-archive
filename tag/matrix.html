@@ -1,319 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
 <head>
-        <meta charset="utf-8" />
+                <meta charset="utf-8">
+        <!-- Site Meta Data -->
         <title>Piddling Pertinent - matrix</title>
-        <link rel="stylesheet" href="../theme/css/main.css" />
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Saket Choudhary">
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <link rel="shortcut icon" href="url-to-favicon">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Piddling Pertinent">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Piddling Pertinent ATOM Feed"/>
+            <link href="../" type="application/atom+xml" rel="alternate"
+                  title="Piddling Pertinent RSS Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="saketkc">
+        <meta name="twitter:image" content="">
+
+    <meta name="twitter:creator" content="saketkc">
+    <meta name="twitter:url" content="..">
+    <meta name="twitter:title" content="Piddling Pertinent">
+    <meta name="twitter:description" content="">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Piddling Pertinent"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+
+    <meta name="twitter:creator" content="saketkc">
+    <meta name="twitter:url" content="../tag/matrix.html">
+    <meta name="twitter:title" content="Piddling Pertinent ~ matrix">
+    <meta name="twitter:description" content="Articles de matrix">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Piddling Pertinent ~ matrix"/>
+    <meta property="og:description" content="Articles de matrix"/>
+    <meta property="og:image" content=""/>
 </head>
 
-<body id="index" class="home">
-<a href="https://github.com/saketkc">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="../">Piddling Pertinent </a></h1>
-                <nav><ul>
-                    <li><a href="http://saket-choudhary.me/pertinent-blog">Home</a></li>
-                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
-                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society Diploma Solutions</a></li>
-                    <li><a href="../category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<body>
+<!-- Sidebar -->
+<aside>
+    <!--<center><a href=".."><img id="avatar" src=""></a></center>-->
+    <h1>Piddling Pertinent</h1>
+    <br>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="../ba-ab-i.html">BA = AB = I</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00-08:00">
-                Published: Sat 28 February 2015
-        </abbr>
+        <a class="twitter-follow-button"
+           href="https://twitter.com/saketkc"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>.</p>
-<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info --><p>To Prove: If </p>
-<div class="math">$$A_{nxn}$$</div>
-<p> and </p>
-<div class="math">$$B_{nxn}$$</div>
-<p> such that AB=I, then BA=I</p>
-<div class="math">$$AB=I \implies Rank(A), Rank(B)=n$$</div>
-<p>Reason: Rank(AB) </p>
-<div class="math">$$\leq$$</div>
-<p> min(Rank A, Rank B)</p>
-<p>so B is a full rank matrix.
-Now consider B=BI </p>
-<div class="math">$$\implies$$</div>
-<p> B-B(AB)=0 </p>
-<div class="math">$$\implies$$</div>
-<p> B-(BA)B=0 </p>
-<div class="math">$$\implies$$</div>
-<p> (I-BA)B=0</p>
-<p>Since B is full rank so I-BA=0. Q.E.D</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+    <nav class="nav">
+        <ul class="list-bare">
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
+                <li><a class="nav__link" href="http://saket-choudhary.me/pertinent-blog">Home</a></li>
+                <li><a class="nav__link" href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/">Probability Screening Solutions</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/">Stats A Screening Solutions</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/">Stats B Screening Solutions</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society Diploma Solutions</a></li>
 
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
-                           title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></h1>
-                </header>
+        </ul>
+    </nav>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00-08:00">
-                Published: Sat 28 February 2015
-        </abbr>
+    <p class="social">
+                <a href="https://twitter.com/saketkc" target="_blank"><img
+                        src="../theme/images/icons/twitter.png"></a>
+                <a href="https://github.com/saketkc" target="_blank"><img
+                        src="../theme/images/icons/github.png"></a>
+            <a href="../feeds/all.atom.xml" rel="alternate">
+                <img src="../theme/images/icons/rss.png"></a>
+            <a href="../feeds/all.rss.xml" rel="alternate">
+                <img src="../theme/images/icons/rss.png"></a>
+    </p>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>.</p>
-<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->                <p>L2 norm and spectral radius for </p>
-<div class="math">$$A=A^T$$</div>
-<p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: </p>
-<div class="math">$$$|| . ||$$</div>
-<p> defined as ||A|| = </p>
-<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
-<p> 
-Note how ||Ax|| is a vector norm …</p><script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li><a
+                        href="../category/misc.html">misc</a></li>
+        </ul>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
 
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-                <a class="readmore" href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+</aside>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="../positive-definite-second-derivative.html" rel="bookmark"
-                           title="Permalink to Positive definite second derivative">Positive definite second derivative</a></h1>
-                </header>
+<!-- Content -->
+<article>
+    <h1 class="title">Piddling Pertinent -- trivially relevant</h1>
+        <ol>
+    <h2 class="latest">Tag: matrix</h2>
+                <li class="post_list"><p class="post_entry">
+                    <h2 class="post_title"><a href="../ba-ab-i.html" rel="bookmark"
+                                              title="Permalink to BA = AB = I">BA = AB = I</a>
+                    </h2>
+                    <a href="../author/saket-choudhary.html">@Saket Choudhary</a>
+                    <span> in </span>
+                    <span class="post_category"><a href="../category/misc.html" rel="bookmark"
+                                                   title="Permalink to misc">[ misc ]</a></span>
+                    <span class="post_date">Sat 28 February 2015</span>
+                </li>
+                <li class="post_list"><p class="post_entry">
+                    <h2 class="post_title"><a href="../l2-norm-and-spectral-radius-of-symmetric-matrix.html" rel="bookmark"
+                                              title="Permalink to L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a>
+                    </h2>
+                    <a href="../author/saket-choudhary.html">@Saket Choudhary</a>
+                    <span> in </span>
+                    <span class="post_category"><a href="../category/misc.html" rel="bookmark"
+                                                   title="Permalink to misc">[ misc ]</a></span>
+                    <span class="post_date">Sat 28 February 2015</span>
+                </li>
+                <li class="post_list"><p class="post_entry">
+                    <h2 class="post_title"><a href="../positive-definite-second-derivative.html" rel="bookmark"
+                                              title="Permalink to Positive definite second derivative">Positive definite second derivative</a>
+                    </h2>
+                    <a href="../author/saket-choudhary.html">@Saket Choudhary</a>
+                    <span> in </span>
+                    <span class="post_category"><a href="../category/misc.html" rel="bookmark"
+                                                   title="Permalink to misc">[ misc ]</a></span>
+                    <span class="post_date">Sat 28 February 2015</span>
+                </li>
+        </ol>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-02-28T00:00:00-08:00">
-                Published: Sat 28 February 2015
-        </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="../author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="../category/misc.html">misc</a>.</p>
-<p>tags: <a href="../tag/linear-algebra.html">linear algebra</a> <a href="../tag/matrix.html">matrix</a> <a href="../tag/norm.html">norm</a> </p>
-</footer><!-- /.post-info -->                <blockquote>
-<p>Let <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> be a twice-differentiable function,
-and let <span class="math">\(f\)</span>’s second derivative be continuous. Let <span class="math">\(f\)</span> be convex with
-the following definition of convexity: for any <span class="math">\(a&lt;b \in \mathbb{R}\)</span>:
-<div class="math">$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 …</div></p></blockquote><script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+</article>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
+<!-- Footer -->
+    <footer>
+        <p>
+            Blog powered by <a href="http://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a href="http://python.org">Python</a>.
+            Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a
+                href="https://parbhatpuri.com/">@parbhat</a>.
+        </p>
+    </footer>
 
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-                <a class="readmore" href="../positive-definite-second-derivative.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-
-                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
-                            <li><a href="https://github.com/saketkc">github</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+    <!-- Analytics -->
     <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-55540107-1', 'auto');
-    ga('send', 'pageview');
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-55540107-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
     </script>
+
 </body>
 </html>
