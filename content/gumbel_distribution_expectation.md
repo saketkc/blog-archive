@@ -1,6 +1,6 @@
 Title: Gumbel distribution expectation
 Date: 2015-03-03
-tag: stats, distribution, gumbel
+tags: stats, distribution, gumbel
 
 
 ## What
