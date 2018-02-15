@@ -66,11 +66,9 @@ but I am going to overcount with ambiguity.</p>
     }
 
     var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -138,7 +136,7 @@ but I am going to overcount with ambiguity.</p>
 and is my favorite because it demonstrates an application of indicator variables</p>
 <h2>Problem</h2>
 <p>A run is defined as <em>maximal</em> subsequence of consecutive tosses all having the same outcome.
-So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let ...</p>
+So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let …</p>
                 <a class="readmore" href="../runs-in-flips-of-a-coin.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -166,14 +164,13 @@ So HHHTHHTTH has 5 runs.(HHH,T,HH,TT,H). Let ...</p>
         </footer><!-- /#contentinfo -->
 
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-55540107-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55540107-1', 'auto');
+    ga('send', 'pageview');
     </script>
 </body>
 </html>

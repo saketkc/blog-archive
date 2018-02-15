@@ -45,7 +45,7 @@
                 By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
         </address>
 <p>In <a href="./category/misc.html">misc</a>.</p>
-
+<p>tags: <a href="./tag/stats.html">stats</a> <a href="./tag/distribution.html">distribution</a> <a href="./tag/gumbel.html">gumbel</a> </p>
 </footer><!-- /.post-info -->      <h2>What</h2>
 <p>If <span class="math">\(X_1,..,X_n\)</span> is a random sample with density <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> (<span class="math">\(x \in\mathbb{R}\)</span>) and <span class="math">\(-\infty&lt;\theta&lt;\infty\)</span>,
 <span class="math">\(\quad\)</span>i) Find the estimator of <span class="math">\(\theta\)</span></p>
@@ -75,11 +75,9 @@
     }
 
     var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -146,14 +144,13 @@
         </footer><!-- /#contentinfo -->
 
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-55540107-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55540107-1', 'auto');
+    ga('send', 'pageview');
     </script>
 </body>
 </html>
