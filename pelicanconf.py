@@ -27,7 +27,7 @@ AUTHOR_FEED_RSS = None
 #         ('Jinja2', 'http://jinja.pocoo.org/'),
 #         ('You can modify those links in your config file', '#'),)
 LINKS = ()
-THEME = '../pelican-blue'
+THEME = 'pelican-themes/pelican-blue'
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
 #         ('Another social link', '#'),)
