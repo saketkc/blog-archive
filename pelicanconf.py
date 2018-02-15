@@ -27,6 +27,7 @@ AUTHOR_FEED_RSS = None
 #         ('Jinja2', 'http://jinja.pocoo.org/'),
 #         ('You can modify those links in your config file', '#'),)
 LINKS = ()
+THEME = '../pelican-blue'
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
 #         ('Another social link', '#'),)
@@ -46,7 +47,9 @@ PLUGINS = ['assets', 'sitemap', 'gravatar', 'render_math', 'ipynb.markup']
 GOOGLE_ANALYTICS = 'UA-55540107-1'
 #GOSQUARED_SITENAME = 'GSN-123456-A'
 MENUITEMS = [('Home', 'http://saket-choudhary.me/pertinent-blog'), ('Github', 'https://github.com/saketkc/pertinent-blog/tree/master/content'),
-             ('Screening Solutions', 'http://www.saket-choudhary.me/math-screening-solutions'),
+             ('Probability Screening Solutions', 'http://www.saket-choudhary.me/usc-math-505A-screening-solutions/'),
+             ('Stats A Screening Solutions', 'http://www.saket-choudhary.me/usc-math-541A-screening-solutions/'),
+             ('Stats B Screening Solutions', 'http://www.saket-choudhary.me/usc-math-541B-screening-solutions/'),
              ('Royal Statistical Society Diploma Solutions', 'http://www.saket-choudhary.me/rss-graduate-diploma-solutions')]
 GITHUB_URL = 'https://github.com/saketkc'
 TWITTER_USERNAME = 'saketkc'
@@ -64,3 +67,12 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+## pelican-blue
+
+SIDEBAR_DIGEST = ''
+
+FAVICON = 'url-to-favicon'
+
+DISPLAY_PAGES_ON_MENU = True
+

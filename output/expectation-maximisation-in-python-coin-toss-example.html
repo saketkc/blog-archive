@@ -1,52 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
 <head>
-        <meta charset="utf-8" />
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
         <title>Expectation Maximisation in Python: Coin Toss Example</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom Feed" />
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS Feed" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Saket Choudhary">
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <link rel="shortcut icon" href="url-to-favicon">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Piddling Pertinent">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Piddling Pertinent ATOM Feed"/>
+            <link href="./" type="application/atom+xml" rel="alternate"
+                  title="Piddling Pertinent RSS Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="saketkc">
+        <meta name="twitter:image" content="">
+
+    <meta name="twitter:creator" content="saketkc">
+    <meta name="twitter:url" content="./expectation-maximisation-in-python-coin-toss-example.html">
+    <meta name="twitter:title" content="Piddling Pertinent ~ Expectation Maximisation in Python: Coin Toss Example">
+    <meta name="twitter:description" content="Expectation Maximisation with Python : Coin Toss¶This notebook implements the example, I consider a classic for understanding Expectation Maximisation. See: http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html Notations: \begin{align*} \theta_A &amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\ \theta_B &amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\ \end{align*}">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Piddling Pertinent ~ Expectation Maximisation in Python: Coin Toss Example"/>
+    <meta property="og:description" content="Expectation Maximisation with Python : Coin Toss¶This notebook implements the example, I consider a classic for understanding Expectation Maximisation. See: http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html Notations: \begin{align*} \theta_A &amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\ \theta_B &amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\ \end{align*}"/>
+    <meta property="og:image" content=""/>
 </head>
 
-<body id="index" class="home">
-<a href="https://github.com/saketkc">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="./">Piddling Pertinent </a></h1>
-                <nav><ul>
-                    <li><a href="http://saket-choudhary.me/pertinent-blog">Home</a></li>
-                    <li><a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
-                    <li><a href="http://www.saket-choudhary.me/math-screening-solutions">Screening Solutions</a></li>
-                    <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society Diploma Solutions</a></li>
-                    <li class="active"><a href="./category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./expectation-maximisation-in-python-coin-toss-example.html" rel="bookmark"
-           title="Permalink to Expectation Maximisation in Python: Coin Toss Example">Expectation Maximisation in Python: Coin Toss Example</a></h1>
-<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="saketkc">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-    </header>
+<body>
+<!-- Sidebar -->
+<aside>
+    <!--<center><a href="."><img id="avatar" src=""></a></center>-->
+    <h1>Piddling Pertinent</h1>
+    <br>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-11-13T00:00:00-08:00">
-                Published: Fri 13 November 2015
-        </abbr>
+        <a class="twitter-follow-button"
+           href="https://twitter.com/saketkc"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/saket-choudhary.html">Saket Choudhary</a>
-        </address>
-<p>In <a href="./category/misc.html">misc</a>.</p>
-<p>tags: <a href="./tag/python.html">python</a> <a href="./tag/em.html">em</a> <a href="./tag/expectation.html">expectation</a> </p>
-</footer><!-- /.post-info -->      <style type="text/css">/*!
+    <nav class="nav">
+        <ul class="list-bare">
+
+                <li><a class="nav__link" href="http://saket-choudhary.me/pertinent-blog">Home</a></li>
+                <li><a class="nav__link" href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/">Probability Screening Solutions</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/">Stats A Screening Solutions</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/">Stats B Screening Solutions</a></li>
+                <li><a class="nav__link" href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society Diploma Solutions</a></li>
+
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/saketkc" target="_blank"><img
+                        src="./theme/images/icons/twitter.png"></a>
+                <a href="https://github.com/saketkc" target="_blank"><img
+                        src="./theme/images/icons/github.png"></a>
+            <a href="./feeds/all.atom.xml" rel="alternate">
+                <img src="./theme/images/icons/rss.png"></a>
+            <a href="./feeds/all.rss.xml" rel="alternate">
+                <img src="./theme/images/icons/rss.png"></a>
+    </p>
+
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li class="active"><a
+                        href="./category/misc.html">misc</a></li>
+        </ul>
+
+
+</aside>
+
+<!-- Content -->
+<article>
+    <section id="content">
+        <article>
+            <h2 class="post_title post_detail"><a href="./expectation-maximisation-in-python-coin-toss-example.html" rel="bookmark"
+                                                  title="Permalink to Expectation Maximisation in Python: Coin Toss Example">Expectation Maximisation in Python: Coin Toss Example</a></h2>
+            <div class="entry-content blog-post">
+                <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -3393,39 +3459,78 @@ $$\left ( \theta_{B}, \quad 0.51958345063\right )$$
 }
 </script>
 
-    </div><!-- /.entry-content -->
+            </div>
+            <div class="post_list">
+                <span>By </span>
+                <a href="./author/saket-choudhary.html">@Saket Choudhary</a>
+                <span> in </span>
+                <span class="post_category"><a href="./category/misc.html" rel="bookmark"
+                                               title="Permalink to misc">[ misc ]</a></span>
+                <span class="post_date">Fri 13 November 2015</span>
+                <div><span>Tags : </span>
+                            <span><a href="./tag/python.html">#python, </a></span>
+                            <span><a href="./tag/em.html">#em, </a></span>
+                            <span><a href="./tag/expectation.html">#expectation, </a></span>
+                </div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+                <div class="entry-social">
+                    <span class="twitter"><a target="_blank" rel="nofollow"
+                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
+                                             title="Twitter"
+                                             href="https://twitter.com/share?url=./expectation-maximisation-in-python-coin-toss-example.html&text=Expectation Maximisation in Python: Coin Toss Example&via=saketkc"><img
+                            src="./theme/images/icons/twitter-s.png"></a></span>
 
-                            <li><a href="https://twitter.com/saketkc">twitter</a></li>
-                            <li><a href="https://github.com/saketkc">github</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+                    <span class="gplus"><a target="_blank" title="Google +"
+                                           href="https://plus.google.com/share?url=./expectation-maximisation-in-python-coin-toss-example.html&hl=fr"
+                                           rel="nofollow"
+                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
+                            src="./theme/images/icons/google-s.png"></a></span>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
+                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
+                                              href="https://www.facebook.com/sharer.php?u=./expectation-maximisation-in-python-coin-toss-example.html&t=Expectation Maximisation in Python: Coin Toss Example"><img
+                            src="./theme/images/icons/facebook-s.png"></a></span>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+                    <a target="_blank" title="Linkedin"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=./expectation-maximisation-in-python-coin-toss-example.html&title=Expectation Maximisation in Python: Coin Toss Example"
+                       rel="nofollow"
+                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
+                            src="./theme/images/icons/linkedin-s.png"></a>
 
+                    <span class="mail"><a
+                            href="mailto:?subject=Expectation Maximisation in Python: Coin Toss Example&amp;body=Viens découvrir un article à propos de [Expectation Maximisation in Python: Coin Toss Example] sur le site de Saket Choudhary. ./expectation-maximisation-in-python-coin-toss-example.html"
+                            title="Share by Email" target="_blank"><img
+                            src="./theme/images/icons/mail-s.png"></a></span>
+                </div>
+            </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+            Blog powered by <a href="http://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a href="http://python.org">Python</a>.
+            Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a
+                href="https://parbhatpuri.com/">@parbhat</a>.
+        </p>
+    </footer>
+
+    <!-- Analytics -->
     <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-55540107-1', 'auto');
-    ga('send', 'pageview');
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-55540107-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
     </script>
+
 </body>
 </html>
