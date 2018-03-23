@@ -1,118 +1,128 @@
-<!doctype html>
-<html lang="en" itemscope itemtype="http://schema.org/Person">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-            <meta charset="utf-8">
-        <!-- Site Meta Data -->
-        <title>MATH 501 Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="Saket Choudhary">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
 
-        <link rel="shortcut icon" href="url-to-favicon">
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-        <!-- schema.org -->
-        <meta itemprop="name" content="Piddling Pertinent">
-        <meta itemprop="image" content="">
-        <meta itemprop="description" content="">
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
 
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-        <!-- Style Meta Data -->
-        <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
 
-        <!-- Feed Meta Data -->
-            <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="Piddling Pertinent ATOM Feed"/>
-            <link href="./" type="application/atom+xml" rel="alternate"
-                  title="Piddling Pertinent RSS Feed"/>
 
-        <!-- Twitter Feed -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="saketkc">
-        <meta name="twitter:image" content="">
+    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom">
 
-    <meta name="twitter:creator" content="saketkc">
-    <meta name="twitter:url" content="./math-501-project.html">
-    <meta name="twitter:title" content="Piddling Pertinent ~ MATH 501 Project">
-    <meta name="twitter:description" content="Introduction Model of a two state reparable system: $$ \begin{equation} \frac{dp_0}{dt} = -\lambda_0 p_0(t) + \int_0^1 \mu_1(x)p_1(x,t)dx + \int_0^1u^{*}(x,t)dx \end{equation} $$ $$ \begin{equation} \frac{\partial p_1(x,t)}{\partial t} + \frac{\partial p_1(x,t)}{\partial x} = -\mu_1(x)p_1 …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS">
 
-    <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Piddling Pertinent ~ MATH 501 Project"/>
-    <meta property="og:description" content="Introduction Model of a two state reparable system: $$ \begin{equation} \frac{dp_0}{dt} = -\lambda_0 p_0(t) + \int_0^1 \mu_1(x)p_1(x,t)dx + \int_0^1u^{*}(x,t)dx \end{equation} $$ $$ \begin{equation} \frac{\partial p_1(x,t)}{\partial t} + \frac{\partial p_1(x,t)}{\partial x} = -\mu_1(x)p_1 …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width"/>
-    <meta property="og:image" content=""/>
+    <link rel="shortcut icon" href="url-to-favicon" type="image/x-icon">
+    <link rel="icon" href="url-to-favicon" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55540107-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333333">
+
+<meta name="author" content="Saket Choudhary" />
+<meta name="description" content="Introduction Model of a two state reparable system: $$ \begin{equation} \frac{dp_0}{dt} = -\lambda_0 p_0(t) + \int_0^1 \mu_1(x)p_1(x,t)dx + \int_0^1u^{*}(x,t)dx \end{equation} $$ $$ \begin{equation} \frac{\partial p_1(x,t)}{\partial t} + \frac{\partial p_1(x,t)}{\partial x} = -\mu_1(x)p_1 …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width" />
+<meta name="keywords" content="linear algebra, numerical analysis">
+
+<meta property="og:site_name" content="Piddling Pertinent"/>
+<meta property="og:title" content="MATH 501 Project"/>
+<meta property="og:description" content="Introduction Model of a two state reparable system: $$ \begin{equation} \frac{dp_0}{dt} = -\lambda_0 p_0(t) + \int_0^1 \mu_1(x)p_1(x,t)dx + \int_0^1u^{*}(x,t)dx \end{equation} $$ $$ \begin{equation} \frac{\partial p_1(x,t)}{\partial t} + \frac{\partial p_1(x,t)}{\partial x} = -\mu_1(x)p_1 …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./math-501-project.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-05-05 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/saket-choudhary.html">
+<meta property="article:section" content="misc"/>
+<meta property="article:tag" content="linear algebra"/>
+<meta property="article:tag" content="numerical analysis"/>
+<meta property="og:image" content="">
+
+  <title>Piddling Pertinent &ndash; MATH 501 Project</title>
+
 </head>
-
 <body>
-<!-- Sidebar -->
-<aside>
-    <!--<center><a href="."><img id="avatar" src=""></a></center>-->
-    <h1>Piddling Pertinent</h1>
-    <br>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="."></a></h1>
 
-        <a class="twitter-follow-button"
-           href="https://twitter.com/saketkc"
-           data-show-count="false"
-           data-lang="en">
-            Follow @twitterdev
-        </a>
-        <script type="text/javascript">
-            window.twttr = (function (d, s, id) {
-                var t, js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-                return window.twttr || (t = {
-                        _e: [], ready: function (f) {
-                            t._e.push(f)
-                        }
-                    });
-            }(document, "script", "twitter-wjs"));
-        </script>
+<p>trivially relevant</p>
+      <nav>
+        <ul class="list">
 
-    <nav class="nav">
-        <ul class="list-bare">
-
-                <li><a class="nav__link" href="http://saket-choudhary.me/pertinent-blog">Home</a></li>
-                <li><a class="nav__link" href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a></li>
-                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/">Probability Screening Solutions</a></li>
-                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/">Stats A Screening Solutions</a></li>
-                <li><a class="nav__link" href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/">Stats B Screening Solutions</a></li>
-                <li><a class="nav__link" href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions">Royal Statistical Society Diploma Solutions</a></li>
-
-
+          <li><a href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/" target="_blank">Probability Screening Solutions</a></li>
+          <li><a href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/" target="_blank">Stats A Screening Solutions</a></li>
+          <li><a href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/" target="_blank">Stats B Screening Solutions</a></li>
+          <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions" target="_blank">Royal Statistical Society Diploma Solutions</a></li>
         </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/saketkc" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/saketkc" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">    Home
+</a>
+
+      <a href="http://saket-choudhary.me/pertinent-blog">Home</a>
+      <a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a>
+
+      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml">    Atom
+</a>
+
+      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml">    RSS
+</a>
     </nav>
 
-    <p class="social">
-                <a href="https://twitter.com/saketkc" target="_blank"><img
-                        src="./theme/images/icons/twitter.png"></a>
-                <a href="https://github.com/saketkc" target="_blank"><img
-                        src="./theme/images/icons/github.png"></a>
-            <a href="./feeds/all.atom.xml" rel="alternate">
-                <img src="./theme/images/icons/rss.png"></a>
-            <a href="./feeds/all.rss.xml" rel="alternate">
-                <img src="./theme/images/icons/rss.png"></a>
+<article class="single">
+  <header>
+      
+    <h1 id="math-501-project">MATH 501 Project</h1>
+    <p>
+          Posted on Tue 05 May 2015 in <a href="./category/misc.html">misc</a>
+
+
+        &#8226; 75 min read
     </p>
-
-        <h2>Categories</h2>
-        <ul class="navbar">
-                <li class="active"><a
-                        href="./category/misc.html">misc</a></li>
-        </ul>
+  </header>
 
 
-</aside>
-
-<!-- Content -->
-<article>
-    <section id="content">
-        <article>
-            <h2 class="post_title post_detail"><a href="./math-501-project.html" rel="bookmark"
-                                                  title="Permalink to MATH 501 Project">MATH 501 Project</a></h2>
-            <div class="entry-content blog-post">
-                <h1>Introduction</h1>
+  <div>
+    <h1>Introduction</h1>
 <p>Model of a two state reparable system:
 </p>
 <div class="math">$$
@@ -410,7 +420,7 @@ multiple entries going to </p>
 <div class="math">$$\texttt{NaN}$$</div>
 <p>. We resolve this issue by computing the
 Moore-Penrose pseudoinverse <span class="math">\(B^+\)</span> of <span class="math">\(B\)</span>. For an invertible matrix <span class="math">\(B\)</span>, <span class="math">\(B^- = B^+\)</span></p>
-<div class="highlight"><pre><span></span><span class="nx">m</span> <span class="o">=</span> <span class="mi">21</span>          <span class="err">#</span> <span class="nx">The</span> <span class="kt">number</span> <span class="nx">of</span> <span class="s1">&#39;space&#39;</span> <span class="nx">nodes</span>
+<div class="codehilite"><pre><span></span><span class="nx">m</span> <span class="o">=</span> <span class="mi">21</span>          <span class="err">#</span> <span class="nx">The</span> <span class="kt">number</span> <span class="nx">of</span> <span class="s1">&#39;space&#39;</span> <span class="nx">nodes</span>
 <span class="nx">n</span> <span class="o">=</span> <span class="mi">401</span>         <span class="err">#</span> <span class="nx">The</span> <span class="kt">number</span> <span class="nx">of</span> <span class="s1">&#39;time&#39;</span> <span class="nx">nodes</span>
 <span class="err">τ</span> <span class="o">=</span> <span class="mi">10</span><span class="o">/</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>    <span class="err">#</span> <span class="nx">Time</span> <span class="nx">step</span> <span class="nx">size</span>
 <span class="nx">h</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="nx">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>     <span class="err">#</span> <span class="nx">Space</span> <span class="nx">step</span> <span class="nx">size</span>
@@ -524,7 +534,7 @@ Moore-Penrose pseudoinverse <span class="math">\(B^+\)</span> of <span class="ma
      stroke-width="0.3"
      font-size="3.88"
 
-<div class="highlight"><pre><span></span> id=&quot;fig-c22dfd48538b4aa0ba3f8e349406edc7&quot;&gt;
+<div class="codehilite"><pre><span></span> id=&quot;fig-c22dfd48538b4aa0ba3f8e349406edc7&quot;&gt;
 </pre></div>
 
 
@@ -1414,7 +1424,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };</p>
-<div class="highlight"><pre><span></span>Element.prototype.svgroot = function () {
+<div class="codehilite"><pre><span></span>Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &quot;svg&quot; &amp;&amp; element.parent() != null) {
         element = element.parent();
@@ -1512,7 +1522,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
     <span class="nt">ygridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.ygridlines&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">,</span>
@@ -1543,7 +1553,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">attr</span><span class="o">(</span><span class="s2">&quot;stroke-dasharray&quot;</span><span class="o">,</span> <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">))</span>
           <span class="p">.</span><span class="nc">selectAll</span><span class="o">(</span><span class="s2">&quot;path&quot;</span><span class="o">)</span>
@@ -1564,7 +1574,7 @@ Gadfly.plot_mouseout = function(event) {
 <p>var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");</p>
-<div class="highlight"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
+<div class="codehilite"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -1674,7 +1684,7 @@ root.selectAll(unscaled_selection)
 <p>// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
 <span class="nt">var</span> <span class="nt">best_tickscale</span> <span class="o">=</span> <span class="nt">1</span><span class="p">.</span><span class="nc">0</span><span class="o">;</span>
 <span class="nt">var</span> <span class="nt">best_tickscale_dist</span> <span class="o">=</span> <span class="nt">Infinity</span><span class="o">;</span>
 <span class="nt">for</span> <span class="o">(</span><span class="nt">tickscale</span> <span class="nt">in</span> <span class="nt">tickscales</span><span class="o">)</span> <span class="p">{</span>
@@ -1709,7 +1719,7 @@ var update_tickscale = function(root, scale, axis) {
 <p>var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -1745,7 +1755,7 @@ root.data(&quot;ty&quot;, ty);
 <p>};</p>
 <p>var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&quot;tx&quot;),
@@ -1778,7 +1788,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }</p>
-<div class="highlight"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
+<div class="codehilite"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
 <span class="o">//</span> <span class="nt">stroke-width</span> <span class="nt">when</span> <span class="nt">zooming</span><span class="o">,</span> <span class="nt">we</span> <span class="nt">force</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">a</span> <span class="nt">fixed</span> <span class="nt">value</span><span class="o">.</span>
 <span class="nt">var</span> <span class="nt">px_per_mm</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">node</span><span class="p">.</span><span class="nc">getCTM</span><span class="o">()</span><span class="p">.</span><span class="nc">a</span><span class="o">;</span>
 
@@ -1937,7 +1947,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;</p>
-<div class="highlight"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
+<div class="codehilite"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
     ty0 = root.data(&quot;ty&quot;);
 
 var dx0 = root.data(&quot;dx&quot;),
@@ -2004,7 +2014,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&quot;scale&quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");</p>
-<div class="highlight"><pre><span></span>Snap.animate(
+<div class="codehilite"><pre><span></span>Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -2036,7 +2046,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 <p>var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);</p>
-<div class="highlight"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
+<div class="codehilite"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&quot;min_pos&quot;),
             max_pos = element.data(&quot;max_pos&quot;),
@@ -2059,7 +2069,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");</p>
-<div class="highlight"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
+<div class="codehilite"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -2086,7 +2096,7 @@ update_plot_scale(root, new_scale);
 <p>Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span>// keep track of what the scale was when we started dragging
+<div class="codehilite"><pre><span></span>// keep track of what the scale was when we started dragging
 root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 </pre></div>
 
@@ -2108,7 +2118,7 @@ root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 <p>Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");</p>
-<div class="highlight"><pre><span></span>if (event.shiftKey) {
+<div class="codehilite"><pre><span></span>if (event.shiftKey) {
     root.selectAll(&quot;.colorkey text&quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&quot;color_class&quot;);
@@ -2210,7 +2220,7 @@ fig.select("#fig-c22dfd48538b4aa0ba3f8e349406edc7-element-17")
     });
 ]]&gt; </script>
 </svg></p>
-<div class="highlight"><pre><span></span>plot(x=t, y=abs(estv-optv), Guide.XLabel(&quot;Time&quot;), Guide.YLabel(&quot;Absolute Error&quot;),Guide.XTicks(ticks=[0:1:10]))
+<div class="codehilite"><pre><span></span>plot(x=t, y=abs(estv-optv), Guide.XLabel(&quot;Time&quot;), Guide.YLabel(&quot;Absolute Error&quot;),Guide.XTicks(ticks=[0:1:10]))
 </pre></div>
 
 
@@ -2225,7 +2235,7 @@ fig.select("#fig-c22dfd48538b4aa0ba3f8e349406edc7-element-17")
      stroke-width="0.3"
      font-size="3.88"
 
-<div class="highlight"><pre><span></span> id=&quot;fig-a9ec3c81e95b4f6b839742ba6960be33&quot;&gt;
+<div class="codehilite"><pre><span></span> id=&quot;fig-a9ec3c81e95b4f6b839742ba6960be33&quot;&gt;
 </pre></div>
 
 
@@ -3113,7 +3123,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };</p>
-<div class="highlight"><pre><span></span>Element.prototype.svgroot = function () {
+<div class="codehilite"><pre><span></span>Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &quot;svg&quot; &amp;&amp; element.parent() != null) {
         element = element.parent();
@@ -3211,7 +3221,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
     <span class="nt">ygridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.ygridlines&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">,</span>
@@ -3242,7 +3252,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">attr</span><span class="o">(</span><span class="s2">&quot;stroke-dasharray&quot;</span><span class="o">,</span> <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">))</span>
           <span class="p">.</span><span class="nc">selectAll</span><span class="o">(</span><span class="s2">&quot;path&quot;</span><span class="o">)</span>
@@ -3263,7 +3273,7 @@ Gadfly.plot_mouseout = function(event) {
 <p>var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");</p>
-<div class="highlight"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
+<div class="codehilite"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -3373,7 +3383,7 @@ root.selectAll(unscaled_selection)
 <p>// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
 <span class="nt">var</span> <span class="nt">best_tickscale</span> <span class="o">=</span> <span class="nt">1</span><span class="p">.</span><span class="nc">0</span><span class="o">;</span>
 <span class="nt">var</span> <span class="nt">best_tickscale_dist</span> <span class="o">=</span> <span class="nt">Infinity</span><span class="o">;</span>
 <span class="nt">for</span> <span class="o">(</span><span class="nt">tickscale</span> <span class="nt">in</span> <span class="nt">tickscales</span><span class="o">)</span> <span class="p">{</span>
@@ -3408,7 +3418,7 @@ var update_tickscale = function(root, scale, axis) {
 <p>var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -3444,7 +3454,7 @@ root.data(&quot;ty&quot;, ty);
 <p>};</p>
 <p>var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&quot;tx&quot;),
@@ -3477,7 +3487,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }</p>
-<div class="highlight"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
+<div class="codehilite"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
 <span class="o">//</span> <span class="nt">stroke-width</span> <span class="nt">when</span> <span class="nt">zooming</span><span class="o">,</span> <span class="nt">we</span> <span class="nt">force</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">a</span> <span class="nt">fixed</span> <span class="nt">value</span><span class="o">.</span>
 <span class="nt">var</span> <span class="nt">px_per_mm</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">node</span><span class="p">.</span><span class="nc">getCTM</span><span class="o">()</span><span class="p">.</span><span class="nc">a</span><span class="o">;</span>
 
@@ -3636,7 +3646,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;</p>
-<div class="highlight"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
+<div class="codehilite"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
     ty0 = root.data(&quot;ty&quot;);
 
 var dx0 = root.data(&quot;dx&quot;),
@@ -3703,7 +3713,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&quot;scale&quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");</p>
-<div class="highlight"><pre><span></span>Snap.animate(
+<div class="codehilite"><pre><span></span>Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -3735,7 +3745,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 <p>var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);</p>
-<div class="highlight"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
+<div class="codehilite"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&quot;min_pos&quot;),
             max_pos = element.data(&quot;max_pos&quot;),
@@ -3758,7 +3768,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");</p>
-<div class="highlight"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
+<div class="codehilite"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -3785,7 +3795,7 @@ update_plot_scale(root, new_scale);
 <p>Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span>// keep track of what the scale was when we started dragging
+<div class="codehilite"><pre><span></span>// keep track of what the scale was when we started dragging
 root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 </pre></div>
 
@@ -3807,7 +3817,7 @@ root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 <p>Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");</p>
-<div class="highlight"><pre><span></span>if (event.shiftKey) {
+<div class="codehilite"><pre><span></span>if (event.shiftKey) {
     root.selectAll(&quot;.colorkey text&quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&quot;color_class&quot;);
@@ -3909,7 +3919,7 @@ fig.select("#fig-a9ec3c81e95b4f6b839742ba6960be33-element-17")
     });
 ]]&gt; </script>
 </svg></p>
-<div class="highlight"><pre><span></span>plot(x=t,y=estb, Guide.XLabel(&quot;Time&quot;), Guide.YLabel(&quot;b(t)&quot;),Guide.XTicks(ticks=[0:1:10]))
+<div class="codehilite"><pre><span></span>plot(x=t,y=estb, Guide.XLabel(&quot;Time&quot;), Guide.YLabel(&quot;b(t)&quot;),Guide.XTicks(ticks=[0:1:10]))
 </pre></div>
 
 
@@ -3924,7 +3934,7 @@ fig.select("#fig-a9ec3c81e95b4f6b839742ba6960be33-element-17")
      stroke-width="0.3"
      font-size="3.88"
 
-<div class="highlight"><pre><span></span> id=&quot;fig-4f8776f47c1745e3b1527a931867061a&quot;&gt;
+<div class="codehilite"><pre><span></span> id=&quot;fig-4f8776f47c1745e3b1527a931867061a&quot;&gt;
 </pre></div>
 
 
@@ -4890,7 +4900,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };</p>
-<div class="highlight"><pre><span></span>Element.prototype.svgroot = function () {
+<div class="codehilite"><pre><span></span>Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &quot;svg&quot; &amp;&amp; element.parent() != null) {
         element = element.parent();
@@ -4988,7 +4998,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
     <span class="nt">ygridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.ygridlines&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">,</span>
@@ -5019,7 +5029,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">attr</span><span class="o">(</span><span class="s2">&quot;stroke-dasharray&quot;</span><span class="o">,</span> <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">))</span>
           <span class="p">.</span><span class="nc">selectAll</span><span class="o">(</span><span class="s2">&quot;path&quot;</span><span class="o">)</span>
@@ -5040,7 +5050,7 @@ Gadfly.plot_mouseout = function(event) {
 <p>var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");</p>
-<div class="highlight"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
+<div class="codehilite"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -5150,7 +5160,7 @@ root.selectAll(unscaled_selection)
 <p>// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
 <span class="nt">var</span> <span class="nt">best_tickscale</span> <span class="o">=</span> <span class="nt">1</span><span class="p">.</span><span class="nc">0</span><span class="o">;</span>
 <span class="nt">var</span> <span class="nt">best_tickscale_dist</span> <span class="o">=</span> <span class="nt">Infinity</span><span class="o">;</span>
 <span class="nt">for</span> <span class="o">(</span><span class="nt">tickscale</span> <span class="nt">in</span> <span class="nt">tickscales</span><span class="o">)</span> <span class="p">{</span>
@@ -5185,7 +5195,7 @@ var update_tickscale = function(root, scale, axis) {
 <p>var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -5221,7 +5231,7 @@ root.data(&quot;ty&quot;, ty);
 <p>};</p>
 <p>var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&quot;tx&quot;),
@@ -5254,7 +5264,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }</p>
-<div class="highlight"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
+<div class="codehilite"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
 <span class="o">//</span> <span class="nt">stroke-width</span> <span class="nt">when</span> <span class="nt">zooming</span><span class="o">,</span> <span class="nt">we</span> <span class="nt">force</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">a</span> <span class="nt">fixed</span> <span class="nt">value</span><span class="o">.</span>
 <span class="nt">var</span> <span class="nt">px_per_mm</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">node</span><span class="p">.</span><span class="nc">getCTM</span><span class="o">()</span><span class="p">.</span><span class="nc">a</span><span class="o">;</span>
 
@@ -5413,7 +5423,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;</p>
-<div class="highlight"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
+<div class="codehilite"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
     ty0 = root.data(&quot;ty&quot;);
 
 var dx0 = root.data(&quot;dx&quot;),
@@ -5480,7 +5490,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&quot;scale&quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");</p>
-<div class="highlight"><pre><span></span>Snap.animate(
+<div class="codehilite"><pre><span></span>Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -5512,7 +5522,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 <p>var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);</p>
-<div class="highlight"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
+<div class="codehilite"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&quot;min_pos&quot;),
             max_pos = element.data(&quot;max_pos&quot;),
@@ -5535,7 +5545,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");</p>
-<div class="highlight"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
+<div class="codehilite"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -5562,7 +5572,7 @@ update_plot_scale(root, new_scale);
 <p>Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span>// keep track of what the scale was when we started dragging
+<div class="codehilite"><pre><span></span>// keep track of what the scale was when we started dragging
 root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 </pre></div>
 
@@ -5584,7 +5594,7 @@ root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 <p>Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");</p>
-<div class="highlight"><pre><span></span>if (event.shiftKey) {
+<div class="codehilite"><pre><span></span>if (event.shiftKey) {
     root.selectAll(&quot;.colorkey text&quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&quot;color_class&quot;);
@@ -5686,7 +5696,7 @@ fig.select("#fig-4f8776f47c1745e3b1527a931867061a-element-17")
     });
 ]]&gt; </script>
 </svg></p>
-<div class="highlight"><pre><span></span>plot(x=t,y=p1hat, Guide.XLabel(&quot;Time&quot;), Guide.YLabel(&quot;p1hat(t)&quot;), Guide.YTicks(ticks=[0:0.0025:0.0225]), Guide.XTicks(ticks=[0:1:10]))
+<div class="codehilite"><pre><span></span>plot(x=t,y=p1hat, Guide.XLabel(&quot;Time&quot;), Guide.YLabel(&quot;p1hat(t)&quot;), Guide.YTicks(ticks=[0:0.0025:0.0225]), Guide.XTicks(ticks=[0:1:10]))
 </pre></div>
 
 
@@ -5701,7 +5711,7 @@ fig.select("#fig-4f8776f47c1745e3b1527a931867061a-element-17")
      stroke-width="0.3"
      font-size="3.88"
 
-<div class="highlight"><pre><span></span> id=&quot;fig-513a44c54ef244079cf52ea51c3ae086&quot;&gt;
+<div class="codehilite"><pre><span></span> id=&quot;fig-513a44c54ef244079cf52ea51c3ae086&quot;&gt;
 </pre></div>
 
 
@@ -6381,7 +6391,7 @@ var xPX = function(fig, x) {
         }
         return element;
     };</p>
-<div class="highlight"><pre><span></span>Element.prototype.svgroot = function () {
+<div class="codehilite"><pre><span></span>Element.prototype.svgroot = function () {
     var element = this;
     while (element.node.nodeName != &quot;svg&quot; &amp;&amp; element.parent() != null) {
         element = element.parent();
@@ -6479,7 +6489,7 @@ Element.prototype.attribute = function(key, val) {
 Gadfly.plot_mouseover = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">xgridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.xgridlines&quot;</span><span class="o">),</span>
     <span class="nt">ygridlines</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">select</span><span class="o">(</span><span class="s2">&quot;.ygridlines&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">,</span>
@@ -6510,7 +6520,7 @@ Gadfly.plot_mouseout = function(event) {
     var root = this.plotroot();
     var xgridlines = root.select(".xgridlines"),
         ygridlines = root.select(".ygridlines");</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">destcolor</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_xgrid_color&quot;</span><span class="o">);</span>
 
 <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">attr</span><span class="o">(</span><span class="s2">&quot;stroke-dasharray&quot;</span><span class="o">,</span> <span class="nt">xgridlines</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="s2">&quot;unfocused_strokedash&quot;</span><span class="o">))</span>
           <span class="p">.</span><span class="nc">selectAll</span><span class="o">(</span><span class="s2">&quot;path&quot;</span><span class="o">)</span>
@@ -6531,7 +6541,7 @@ Gadfly.plot_mouseout = function(event) {
 <p>var set_geometry_transform = function(root, tx, ty, scale) {
     var xscalable = root.hasClass("xscalable"),
         yscalable = root.hasClass("yscalable");</p>
-<div class="highlight"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
+<div class="codehilite"><pre><span></span>var old_scale = root.data(&quot;scale&quot;);
 
 var xscale = xscalable ? scale : 1.0,
     yscale = yscalable ? scale : 1.0;
@@ -6641,7 +6651,7 @@ root.selectAll(unscaled_selection)
 <p>// Find the most appropriate tick scale and update label visibility.
 var update_tickscale = function(root, scale, axis) {
     if (!root.hasClass(axis + "scalable")) return;</p>
-<div class="highlight"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
+<div class="codehilite"><pre><span></span><span class="nt">var</span> <span class="nt">tickscales</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">data</span><span class="o">(</span><span class="nt">axis</span> <span class="o">+</span> <span class="s2">&quot;tickscales&quot;</span><span class="o">);</span>
 <span class="nt">var</span> <span class="nt">best_tickscale</span> <span class="o">=</span> <span class="nt">1</span><span class="p">.</span><span class="nc">0</span><span class="o">;</span>
 <span class="nt">var</span> <span class="nt">best_tickscale_dist</span> <span class="o">=</span> <span class="nt">Infinity</span><span class="o">;</span>
 <span class="nt">for</span> <span class="o">(</span><span class="nt">tickscale</span> <span class="nt">in</span> <span class="nt">tickscales</span><span class="o">)</span> <span class="p">{</span>
@@ -6676,7 +6686,7 @@ var update_tickscale = function(root, scale, axis) {
 <p>var set_plot_pan_zoom = function(root, tx, ty, scale) {
     var old_scale = root.data("scale");
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 // compute the viewport derived from tx, ty, and scale
@@ -6712,7 +6722,7 @@ root.data(&quot;ty&quot;, ty);
 <p>};</p>
 <p>var scale_centered_translation = function(root, scale) {
     var bounds = root.plotbounds();</p>
-<div class="highlight"><pre><span></span>var width = bounds.x1 - bounds.x0,
+<div class="codehilite"><pre><span></span>var width = bounds.x1 - bounds.x0,
     height = bounds.y1 - bounds.y0;
 
 var tx0 = root.data(&quot;tx&quot;),
@@ -6745,7 +6755,7 @@ var init_pan_zoom = function(root) {
     if (root.data("zoompan-ready")) {
         return;
     }</p>
-<div class="highlight"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
+<div class="codehilite"><pre><span></span><span class="o">//</span> <span class="nt">The</span> <span class="nt">non-scaling-stroke</span> <span class="nt">trick</span><span class="o">.</span> <span class="nt">Rather</span> <span class="nt">than</span> <span class="nt">try</span> <span class="nt">to</span> <span class="nt">correct</span> <span class="nt">for</span> <span class="nt">the</span>
 <span class="o">//</span> <span class="nt">stroke-width</span> <span class="nt">when</span> <span class="nt">zooming</span><span class="o">,</span> <span class="nt">we</span> <span class="nt">force</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">a</span> <span class="nt">fixed</span> <span class="nt">value</span><span class="o">.</span>
 <span class="nt">var</span> <span class="nt">px_per_mm</span> <span class="o">=</span> <span class="nt">root</span><span class="p">.</span><span class="nc">node</span><span class="p">.</span><span class="nc">getCTM</span><span class="o">()</span><span class="p">.</span><span class="nc">a</span><span class="o">;</span>
 
@@ -6904,7 +6914,7 @@ Gadfly.guide_background_drag_onmove = function(dx, dy, x, y, event) {
     var px_per_mm = root.data("px_per_mm");
     dx /= px_per_mm;
     dy /= px_per_mm;</p>
-<div class="highlight"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
+<div class="codehilite"><pre><span></span>var tx0 = root.data(&quot;tx&quot;),
     ty0 = root.data(&quot;ty&quot;);
 
 var dx0 = root.data(&quot;dx&quot;),
@@ -6971,7 +6981,7 @@ set_plot_pan_zoom(root, tx, ty, root.data(&quot;scale&quot;));
     init_pan_zoom(root);
     var max_scale = root.data("max_scale"),
         scale = root.data("scale");</p>
-<div class="highlight"><pre><span></span>Snap.animate(
+<div class="codehilite"><pre><span></span>Snap.animate(
     scale,
     Math.min(max_scale, scale * 1.5),
     function (new_scale) {
@@ -7003,7 +7013,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
 <p>var update_plot_scale = function(root, new_scale) {
     var trans = scale_centered_translation(root, new_scale);
     set_plot_pan_zoom(root, trans.x, trans.y, new_scale);</p>
-<div class="highlight"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
+<div class="codehilite"><pre><span></span>root.selectAll(&quot;.zoomslider_thumb&quot;)
     .forEach(function (element, i) {
         var min_pos = element.data(&quot;min_pos&quot;),
             max_pos = element.data(&quot;max_pos&quot;),
@@ -7026,7 +7036,7 @@ var slider_position_from_scale = function(scale, min_scale, max_scale) {
         min_scale = root.data("min_scale"),
         max_scale = root.data("max_scale"),
         old_scale = root.data("old_scale");</p>
-<div class="highlight"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
+<div class="codehilite"><pre><span></span>var px_per_mm = root.data(&quot;px_per_mm&quot;);
 dx /= px_per_mm;
 dy /= px_per_mm;
 
@@ -7053,7 +7063,7 @@ update_plot_scale(root, new_scale);
 <p>Gadfly.zoomslider_thumb_dragstart = function(event) {
     var root = this.plotroot();
     init_pan_zoom(root);</p>
-<div class="highlight"><pre><span></span>// keep track of what the scale was when we started dragging
+<div class="codehilite"><pre><span></span>// keep track of what the scale was when we started dragging
 root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 </pre></div>
 
@@ -7075,7 +7085,7 @@ root.data(&quot;old_scale&quot;, root.data(&quot;scale&quot;));
 <p>Gadfly.colorkey_swatch_click = function(event) {
     var root = this.plotroot();
     var color_class = this.data("color_class");</p>
-<div class="highlight"><pre><span></span>if (event.shiftKey) {
+<div class="codehilite"><pre><span></span>if (event.shiftKey) {
     root.selectAll(&quot;.colorkey text&quot;)
         .forEach(function (element) {
             var other_color_class = element.data(&quot;color_class&quot;);
@@ -7232,77 +7242,39 @@ fig.select("#fig-513a44c54ef244079cf52ea51c3ae086-element-17")
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-            </div>
-            <div class="post_list">
-                <span>By </span>
-                <a href="./author/saket-choudhary.html">@Saket Choudhary</a>
-                <span> in </span>
-                <span class="post_category"><a href="./category/misc.html" rel="bookmark"
-                                               title="Permalink to misc">[ misc ]</a></span>
-                <span class="post_date">Tue 05 May 2015</span>
-                <div><span>Tags : </span>
-                            <span><a href="./tag/linear-algebra.html">#linear algebra, </a></span>
-                            <span><a href="./tag/numerical-analysis.html">#numerical analysis, </a></span>
-                </div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/linear-algebra.html">linear algebra</a>
+      <a href="./tag/numerical-analysis.html">numerical analysis</a>
+    </p>
+  </div>
 
-                <div class="entry-social">
-                    <span class="twitter"><a target="_blank" rel="nofollow"
-                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
-                                             title="Twitter"
-                                             href="https://twitter.com/share?url=./math-501-project.html&text=MATH 501 Project&via=saketkc"><img
-                            src="./theme/images/icons/twitter-s.png"></a></span>
 
-                    <span class="gplus"><a target="_blank" title="Google +"
-                                           href="https://plus.google.com/share?url=./math-501-project.html&hl=fr"
-                                           rel="nofollow"
-                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="./theme/images/icons/google-s.png"></a></span>
 
-                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
-                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
-                                              href="https://www.facebook.com/sharer.php?u=./math-501-project.html&t=MATH 501 Project"><img
-                            src="./theme/images/icons/facebook-s.png"></a></span>
 
-                    <a target="_blank" title="Linkedin"
-                       href="https://www.linkedin.com/shareArticle?mini=true&url=./math-501-project.html&title=MATH 501 Project"
-                       rel="nofollow"
-                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="./theme/images/icons/linkedin-s.png"></a>
 
-                    <span class="mail"><a
-                            href="mailto:?subject=MATH 501 Project&amp;body=Viens découvrir un article à propos de [MATH 501 Project] sur le site de Saket Choudhary. ./math-501-project.html"
-                            title="Share by Email" target="_blank"><img
-                            src="./theme/images/icons/mail-s.png"></a></span>
-                </div>
-            </div>
-        </article>
-    </section>
 </article>
 
-<!-- Footer -->
     <footer>
-        <p>
-            Blog powered by <a href="http://getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="http://python.org">Python</a>.
-            Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a
-                href="https://parbhatpuri.com/">@parbhat</a>.
-        </p>
-    </footer>
+<p>&copy;  2018</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
 
-    <!-- Analytics -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-55540107-1']);
-        _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Piddling Pertinent ",
+  "url" : ".",
+  "image": "",
+  "description": "Musings"
+}
+</script>
 
 </body>
 </html>
