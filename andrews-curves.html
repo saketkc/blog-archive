@@ -212,28 +212,28 @@ f_{\bar{\mathbf{x}}}(t) &= \frac{\bar{\mathbf{x_1}}}{\sqrt{2}} +  \bar{\mathbf{x
 \end{align*}</p>
 <p>In the even case the variance is boundded between $[\sigma^2(\frac{k-1}{2}), \sigma^2(\frac{k+1}{2})]$
 Since the variance is indepedent of $t$, the plotted functions will be smooth!</p>
-<h1 id="Interpretation">Interpretation<a class="anchor-link" href="#Interpretation">¶</a></h1><ol>
-<li><p>Clustering: Functions close together, forming a band imply the corresponding points are also close in the euclidean space</p>
-</li>
-<li><p>Test of significance at particular values of $t$: To test $f_{\mathbf{x}}(t) = f_{\mathbf{y}}(t)$ for some hypothesize $\mathbf{y}$ and assuming the $\text{Var}[f_{\mathbf{x}}(t)]$ is known  then testing can be done using the usual $z$ score:
+<h1 id="Interpretation">Interpretation<a class="anchor-link" href="#Interpretation">¶</a></h1><h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">¶</a></h2><p>Functions close together, forming a band imply the corresponding points are also close in the euclidean space</p>
+<h2 id="Test-of-significance-at-particular-values-of-$t$">Test of significance at particular values of $t$<a class="anchor-link" href="#Test-of-significance-at-particular-values-of-$t$">¶</a></h2><p>To test $f_{\mathbf{x}}(t) = f_{\mathbf{y}}(t)$ for some hypothesize $\mathbf{y}$ and assuming the $\text{Var}[f_{\mathbf{x}}(t)]$ is known  then testing can be done using the usual $z$ score:
 $$
 z = \frac{f_{\mathbf{x}}(t)-f_{\mathbf{y}}(t)}{(\text{Var}[{f_{\mathbf{x}}(t)}])^{\frac{1}{2}}}
 $$</p>
-</li>
-</ol>
 <p>assuming that the comoponets $x_i$ are independent normal random variables.</p>
-<ol>
-<li>Detecting outliers: If comonents $x_i$ are independent normal $ x_i \sim \mathcal{N}(\mu_i, \sigma^2)$, then $\frac{|\mathbf{x}-\mathbf{\mu}}{\sigma^2}$ follows a $\chi^2_d$ distirbution.
-Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then for two vectors $\mathbf{x}$ and $\mathbf{y}$: </li>
-</ol>
+<h2 id="Detecting-outliers">Detecting outliers<a class="anchor-link" href="#Detecting-outliers">¶</a></h2><p>If comonents $x_i$ are independent normal $ x_i \sim \mathcal{N}(\mu_i, \sigma^2)$, then $\frac{|\mathbf{x}-\mathbf{\mu}}{\sigma^2}$ follows a $\chi^2_d$ distirbution.
+Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 <p>\begin{align*}
-|(\mathbf{x}-\mathbf{y})'v| &= \frac{1}{\pi} \frac{||f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t)|| }{||f_\mathbf{1}(t)||}
+|(\mathbf{x}-\mathbf{\mu})'v|^2 &=  \frac{||f_{\mathbf{x}}(t) - f_{\mathbf{\mu}}(t)||^2 }{||f_\mathbf{1}(t)||^2}
+ \frac{||f_{\mathbf{x}}(t) - f_{\mathbf{\mu}}(t)||^2 }{||f_\mathbf{1}(t)||^2} &\leq \chi_d^2(\alpha)
 \end{align*}</p>
-<p>NOTE: I think the above equation is mistakenly wrirten with a factor of $\frac{1}{\pi}$ missing in the original paper.
-TODO: Need to check this</p>
-<ol>
-<li>Linear relationships: The "Sandwich" theorem: If $\mathbf{y}$ lies on a line joining $\mathbf{x}$ and $\mathbf{z}$, then $\forall t$ : $f_\mathbf{y}(t)$ lies between $f_\mathbf{x}(t)$ and $f_\mathbf{z}(t)$. This is straightforward.</li>
-</ol>
+<p>Now, 
+\begin{align*}
+||f_\mathbf{1}(t)||^2 &= \frac{1}{2} + \sin^2 + \cos^2 t + \dots + \\
+&\leq \frac{d+1}{2}
+\end{align*}</p>
+<p>Thus,</p>
+<p>\begin{align*}
+||f_{\mathbf{x}}(t) - f_{\mathbf{\mu}}(t)||^2 \leq \sigma^2 ||f_\mathbf{1}(t)||^2 \chi^2_d(\alpha) &\leq \sigma^2 \frac{d+1}{2} \chi^2_d(\alpha)\\
+\end{align*}</p>
+<h2 id="Linear-relationships">Linear relationships<a class="anchor-link" href="#Linear-relationships">¶</a></h2><p>The "Sandwich" theorem: If $\mathbf{y}$ lies on a line joining $\mathbf{x}$ and $\mathbf{z}$, then $\forall t$ : $f_\mathbf{y}(t)$ lies between $f_\mathbf{x}(t)$ and $f_\mathbf{z}(t)$. This is straightforward.</p>
 </div>
 </div>
 </div>
@@ -286,7 +286,7 @@ TODO: Need to check this</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Check-with-iris-dataset">Check with iris dataset<a class="anchor-link" href="#Check-with-iris-dataset">¶</a></h1>
+<h1 id="Andrews-Curves-for-iris-dataset">Andrews Curves for iris dataset<a class="anchor-link" href="#Andrews-Curves-for-iris-dataset">¶</a></h1>
 </div>
 </div>
 </div>
