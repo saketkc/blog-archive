@@ -104,32 +104,6 @@
 
 <article>
   <header>
-    <h2><a href="../expected-number-of-flips-in-a-memoryless-concentration-game.html#expected-number-of-flips-in-a-memoryless-concentration-game">Expected number of flips in a memoryless concentration game</a></h2>
-    <p>
-          Posted on Sun 17 June 2018 in <a href="../category/misc.html">misc</a>
-
-
-
-        &#8226; 2 min read
-    </p>
-  </header>
-  <div>
-      
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Riddler-Classic">Riddler Classic<a class="anchor-link" href="#Riddler-Classic">¶</a></h1><p><a href="https://fivethirtyeight.com/features/how-many-phones-do-you-need-to-win-hq-trivia/">https://fivethirtyeight.com/features/how-many-phones-do-you-need-to-win-hq-trivia/</a></p>
-<blockquote><p>From Kate Seely, a gaming problem to which she would very much like to know the answer:
-I have a matching game app for my 4-year-old daughter. There are 10 different pairs of cards, each pair depicting the same animal. That makes 20 cards total, all arrayed face down. The goal is to match all the pairs. When you flip two cards up, if they match, they stay up, decreasing the number of unmatched cards and rewarding you with the corresponding animal sound. If they don’t match, they both flip back down. (Essentially like <a href="https://en.wikipedia.org/wiki/Concentration_(game">Concentration.</a>
-      <br>
-      <a class="btn" href="../expected-number-of-flips-in-a-memoryless-concentration-game.html#expected-number-of-flips-in-a-memoryless-concentration-game">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="../andrews-curves.html#andrews-curves">Andrews Curves</a></h2>
     <p>
           Posted on Thu 22 March 2018 in <a href="../category/misc.html">misc</a>
@@ -624,6 +598,84 @@ and use this fact for find the best unbiased estimator of <span class="math">\(p
 </script>
       <br>
       <a class="btn" href="../distribution-of-one-random-variable-less-than-other.html#distribution-of-one-random-variable-less-than-other">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../proofweighted-am-gm.html#proofweighted-am-gm">[Proof]Weighted AM-GM</a></h2>
+    <p>
+          Posted on Mon 18 May 2015 in <a href="../category/misc.html">misc</a>
+
+
+
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>We make use of <a href="http://en.wikipedia.org/wiki/Jensen%27s_inequality">Jensen’s Inequality</a>
+and the fact that <span class="math">\(log(x)\)</span> is a concave function:</p>
+<p>For concave f:
+<span class="math">\(f(\frac{\sum a_ix_i}{\sum a_i}) \geq \frac{\sum a_i f(x_i)}{\sum a_i}\)</span></p>
+<p><span class="math">\(f=log(X)\)</span></p>
+<p><span class="math">\(log(\frac{\sum a_ix_i}{\sum a_i}) \geq \frac{\sum a_i log(x_i)}{\sum …</span></p><script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+      <br>
+      <a class="btn" href="../proofweighted-am-gm.html#proofweighted-am-gm">    Continue reading
 </a>
   </div>
 </article>
