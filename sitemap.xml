@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/</loc>
-<lastmod>2018-10-18T17:25:25-00:00</lastmod>
+<lastmod>2018-10-18T17:29:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/archives.html</loc>
-<lastmod>2018-10-18T17:25:25-00:00</lastmod>
+<lastmod>2018-10-18T17:29:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/tags.html</loc>
-<lastmod>2018-10-18T17:25:25-00:00</lastmod>
+<lastmod>2018-10-18T17:29:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/categories.html</loc>
-<lastmod>2018-10-18T17:25:25-00:00</lastmod>
+<lastmod>2018-10-18T17:29:02-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://saket-choudhary.me/pertinent-blog/fourier-transform-and-choice-of-window-function.html</loc>
+<lastmod>2018-10-18T00:00:00-07:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -215,7 +222,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/category/misc.html</loc>
-<lastmod>2018-03-22T00:00:00-07:53</lastmod>
+<lastmod>2018-10-18T00:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -229,7 +236,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/tag/python.html</loc>
-<lastmod>2018-06-17T00:00:00-07:53</lastmod>
+<lastmod>2018-10-18T00:00:00-07:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://saket-choudhary.me/pertinent-blog/tag/fft.html</loc>
+<lastmod>2018-10-18T00:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -481,7 +495,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://saket-choudhary.me/pertinent-blog/author/saket-choudhary.html</loc>
-<lastmod>2018-06-17T00:00:00-07:53</lastmod>
+<lastmod>2018-10-18T00:00:00-07:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

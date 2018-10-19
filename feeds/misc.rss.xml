@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Piddling Pertinent - misc</title><link>http://saket-choudhary.me/pertinent-blog/</link><description>trivially relevant</description><lastBuildDate>Thu, 22 Mar 2018 00:00:00 -0700</lastBuildDate><item><title>Andrews Curves</title><link>http://saket-choudhary.me/pertinent-blog/andrews-curves.html</link><description>
+<rss version="2.0"><channel><title>Piddling Pertinent - misc</title><link>http://saket-choudhary.me/pertinent-blog/</link><description>trivially relevant</description><lastBuildDate>Thu, 18 Oct 2018 00:00:00 -0700</lastBuildDate><item><title>Fourier transform and choice of window function</title><link>http://saket-choudhary.me/pertinent-blog/fourier-transform-and-choice-of-window-function.html</link><description>
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Thu, 18 Oct 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2018-10-18:/pertinent-blog/fourier-transform-and-choice-of-window-function.html</guid><category>python</category><category>fft</category></item><item><title>Andrews Curves</title><link>http://saket-choudhary.me/pertinent-blog/andrews-curves.html</link><description>
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Thu, 22 Mar 2018 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2018-03-22:/pertinent-blog/andrews-curves.html</guid><category>python</category><category>andrewscurve</category><category>pca</category></item><item><title>#AcademicValentines</title><link>http://saket-choudhary.me/pertinent-blog/academicvalentines.html</link><description>
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
@@ -10,13 +12,14 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Expectation-Maximisation-with-Python-:-Coin-Toss"&gt;Expectation Maximisation with Python : Coin Toss&lt;a class="anchor-link" href="#Expectation-Maximisation-with-Python-:-Coin-Toss"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This notebook implements the example, I consider a classic for understanding Expectation Maximisation.&lt;/p&gt;
+&lt;h2 id="Expectation-Maximisation-with-Python-:-Coin-Toss"&gt;Expectation Maximisation with Python : Coin Toss&lt;a class="anchor-link" href="#Expectation-Maximisation-with-Python-:-Coin-Toss"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This notebook implements the example, I consider a classic for understanding Expectation Maximisation.&lt;/p&gt;
 &lt;p&gt;See: &lt;a href="http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html"&gt;http://www.nature.com/nbt/journal/v26/n8/full/nbt1406.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Notations:&lt;/p&gt;
 &lt;p&gt;\begin{align*}
-\theta_A  &amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\
-\theta_B  &amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\
+\theta_A  &amp;amp;= \text{Probability of a Heads showing up given the coin tossed is A}\\
+\theta_B  &amp;amp;= \text{Probability of a Heads showing up given the coin tossed is B}\\
 \end{align*}&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
