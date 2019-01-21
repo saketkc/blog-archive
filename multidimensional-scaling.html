@@ -1,244 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Saket Choudhary" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+        <meta name="twitter:creator" content="@saketkc">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+<meta name="keywords" content=", misc, " />
 
-  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+<meta property="og:title" content="Multidimensional Scaling "/>
+<meta property="og:url" content="./multidimensional-scaling.html" />
+<meta property="og:description" content="MDS is a statistical technique to visualize dissimilarity between points. The distances between two pointsin n-dimensions are visualized in 2 dimensions such that it represents the distance in n-dimensions as far as possible. It is important to note that, for MDS, we start of with a ‘distance’ matrix and not …" />
+<meta property="og:site_name" content="Piddling Pertinent" />
+<meta property="og:article:author" content="Saket Choudhary" />
+<meta property="og:article:published_time" content="2015-04-14T00:00:00-07:00" />
+<meta name="twitter:title" content="Multidimensional Scaling ">
+<meta name="twitter:description" content="MDS is a statistical technique to visualize dissimilarity between points. The distances between two pointsin n-dimensions are visualized in 2 dimensions such that it represents the distance in n-dimensions as far as possible. It is important to note that, for MDS, we start of with a ‘distance’ matrix and not …">
 
-
-    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom">
-
-    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS">
-
-    <link rel="shortcut icon" href="url-to-favicon" type="image/x-icon">
-    <link rel="icon" href="url-to-favicon" type="image/x-icon">
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55540107-1', 'auto');
-  ga('send', 'pageview');
+        <title>Multidimensional Scaling  · Piddling Pertinent
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="./theme/css/style.min.css?8bdcf96a">
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55540107-1', 'auto');
+    ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#333333">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#333333">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Microsoft EDGE -->
-    <meta name="msapplication-TileColor" content="#333333">
-
-<meta name="author" content="Saket Choudhary" />
-<meta name="description" content="MDS is a statistical technique to visualize dissimilarity between points. The distances between two pointsin n-dimensions are visualized in 2 dimensions such that it represents the distance in n-dimensions as far as possible. It is important to note that, for MDS, we start of with a ‘distance’ matrix and not …" />
-<meta name="keywords" content="">
-
-<meta property="og:site_name" content="Piddling Pertinent"/>
-<meta property="og:title" content="Multidimensional Scaling"/>
-<meta property="og:description" content="MDS is a statistical technique to visualize dissimilarity between points. The distances between two pointsin n-dimensions are visualized in 2 dimensions such that it represents the distance in n-dimensions as far as possible. It is important to note that, for MDS, we start of with a ‘distance’ matrix and not …"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="./multidimensional-scaling.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2015-04-14 00:00:00-07:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="./author/saket-choudhary.html">
-<meta property="article:section" content="misc"/>
-<meta property="og:image" content="">
-
-  <title>Piddling Pertinent &ndash; Multidimensional Scaling</title>
-
-</head>
-<body>
-  <aside>
-    <div>
-      <a href=".">
-        <img src="./theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="."></a></h1>
-
-<p>trivially relevant</p>
-      <nav>
-        <ul class="list">
-
-          <li><a href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/" target="_blank">Probability Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/" target="_blank">Stats A Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/" target="_blank">Stats B Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions" target="_blank">Royal Statistical Society Diploma Solutions</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/saketkc" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/saketkc" target="_blank"><i class="fa fa-github"></i></a></li>
-      </ul>
-    </div>
 
 
-  </aside>
-  <main>
 
-    <nav>
-      <a href=".">    Home
-</a>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Piddling Pertinent</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./categories">Categories</a></li>
+                            <li ><a href="./tags">Tags</a></li>
+                            <li ><a href="./archives">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./multidimensional-scaling.html"> Multidimensional Scaling  </a></h1>
+    </header>
+</div>
 
-      <a href="http://saket-choudhary.me/pertinent-blog">Home</a>
-      <a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml">    Atom
-</a>
-
-      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml">    RSS
-</a>
-    </nav>
-
-<article class="single">
-  <header>
-      
-    <h1 id="multidimensional-scaling">Multidimensional Scaling</h1>
-    <p>
-          Posted on Tue 14 April 2015 in <a href="./category/misc.html">misc</a>
-
-
-        &#8226; 2 min read
-    </p>
-  </header>
-
-
-  <div>
-    <p>MDS is a statistical technique to visualize dissimilarity
+            
+            <p>MDS is a statistical technique to visualize dissimilarity
 between points. The distances between two pointsin n-dimensions 
 are visualized in 2 dimensions such that it represents
 the distance in n-dimensions as far as possible.</p>
 <p>It is important to note that, for MDS, we start of with a ‘distance’ matrix
 and not the coordinate of points. Dissimilarity is ‘similar’ to distances in most cases(ignoring the scale).
-Let <span class="math">\(\delta_{i,j}\)</span> represent the distance between <span class="math">\(i\ and\ j\)</span></p>
-<p>Given <span class="math">\(n\)</span> points, the idea is to come up with a set of <span class="math">\(n * p\)</span> matrix <span class="math">\(X\)</span>
-such that the distance between two vectors <span class="math">\(x_i\)</span> and <span class="math">\(x_j\)</span> is given by:</p>
-<div class="math">$$
+Let $\delta_{i,j}$ represent the distance between $i\ and\ j$</p>
+<p>Given $n$ points, the idea is to come up with a set of $n * p$ matrix $X$
+such that the distance between two vectors $x_i$ and $x_j$ is given by:</p>
+<p>$$
 d_{i,j}^2(X) = \sum_{k=1}^{p}(x_{ik}-x_{jk})^2
-$$</div>
-<p>So if we choose <span class="math">\(p=1\)</span>, we wish to visualize everything in single dimension.
-Let’s restrict to the case <span class="math">\(p=2\)</span></p>
+$$</p>
+<p>So if we choose $p=1$, we wish to visualize everything in single dimension.
+Let’s restrict to the case $p=2$</p>
 <h2>How do you obtain X?</h2>
-<p>The idea again goes back to the definition of keeping the ‘new’ distance <span class="math">\(d_{i,j}(X)\)</span>
-as the original dissimilarity <span class="math">\(\delta_{i,j}\)</span> , this leads to the least square fit kind of regression
-where the goal is to minimize the ‘residual’ error. Note, <span class="math">\(d_{i,j}\)</span> is an approximation to <span class="math">\(\delta_{i,j}\)</span>
- The distance matrix could have come from <span class="math">\(n\)</span> points having high-dimensions(say <span class="math">\(p’&gt;p\)</span>), and even though
- these points cannot be visualized (since we cannot draw <span class="math">\(p’\)</span> dimensional map) we draw a <span class="math">\(p=2\)</span> dimensional map.
-The coordinates of original <span class="math">\(n\)</span> points in <span class="math">\(p’\)</span> need not be known. We can still obtain an ‘equaivalent’
-set of <span class="math">\(n\)</span> points in <span class="math">\(p=2\)</span> dimensions such that the <span class="math">\(2D\)</span> distance between two points <span class="math">\(i,j\)</span> is 
+<p>The idea again goes back to the definition of keeping the ‘new’ distance $d_{i,j}(X)$
+as the original dissimilarity $\delta_{i,j}$ , this leads to the least square fit kind of regression
+where the goal is to minimize the ‘residual’ error. Note, $d_{i,j}$ is an approximation to $\delta_{i,j}$
+ The distance matrix could have come from $n$ points having high-dimensions(say $p’&gt;p$), and even though
+ these points cannot be visualized (since we cannot draw $p’$ dimensional map) we draw a $p=2$ dimensional map.
+The coordinates of original $n$ points in $p’$ need not be known. We can still obtain an ‘equaivalent’
+set of $n$ points in $p=2$ dimensions such that the $2D$ distance between two points $i,j$ is 
 as close as it can be to the original distance.</p>
-<p><span class="math">\(\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2\)</span></p>
-<p>This is just one way to define ‘closeness’ of <span class="math">\(\delta_{ij}\)</span> with <span class="math">\(\d_{ij}\)</span>.
-<span class="math">\(X\)</span> is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).</p>
+<p>$\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2$</p>
+<p>This is just one way to define ‘closeness’ of $\delta_{ij}$ with $\d_{ij}$.
+$X$ is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).</p>
 <h2>Checking if MDS makes sense</h2>
 <p>A quick checkt to see if MDS is good enough
-is to go back to its definition. The final set of vectors <span class="math">\(X_{n*p}\)</span>
+is to go back to its definition. The final set of vectors $X_{n*p}$
 should be able to communiate the original distance matrix
-and hence a plot of the <span class="math">\(\frac{n{n+1}}{2}\)</span> points if <span class="math">\(d_{ij}\)</span> is
-plotted against <span class="math">\(X\)</span> acis and <span class="math">\(\delta_{ij}\)</span> is plotted along <span class="math">\(Y\)</span> axis
-then you should get a straight line representing <span class="math">\(Y=X\)</span>.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+and hence a plot of the $\frac{n{n+1}}{2}$ points if $d_{ij}$ is
+plotted against $X$ acis and $\delta_{ij}$ is plotted along $Y$ axis
+then you should get a straight line representing $Y=X$.</p>
+            <div>
+</div>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-  </div>
-  <div class="tag-cloud">
-    <p>
+            <section>
+    <p id="post-share-links">
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=Multidimensional%20Scaling&url=http%3A//saket-choudhary.me/pertinent-blog/multidimensional-scaling.html" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//saket-choudhary.me/pertinent-blog/multidimensional-scaling.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//saket-choudhary.me/pertinent-blog/multidimensional-scaling.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=Multidimensional%20Scaling&amp;body=http%3A//saket-choudhary.me/pertinent-blog/multidimensional-scaling.html" target="_blank" title="Share via Email">Email</a>
     </p>
-  </div>
+</section>
 
-
-
-
-
+            
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="./gumbel-distribution-expectation.html" title="Previous: Gumbel distribution expectation">Gumbel distribution expectation</a></li>
+                <li class="next-article"><a href="./svd-vs-mds-vs-pca.html" title="Next: SVD v/s MDS v/s PCA">SVD v/s MDS v/s PCA</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2015-04-14T00:00:00-07:00">Apr 14, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#misc-ref">misc</a>
+<h4>Contact</h4>
+    <a href="https://twitter.com/saketkc" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://github.com/saketkc" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
 </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-subtitle"><span class="site-name">Piddling Pertinent</span> - trivially relevant</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="https://github.com/Pelican-Elegant/elegant/" title="Theme Elegant Home Page">Elegant</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-    <footer>
-<p>&copy;  2018</p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Piddling Pertinent ",
-  "url" : ".",
-  "image": "",
-  "description": "Musings"
-}
-</script>
-
-</body>
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : MIT -->
 </html>
