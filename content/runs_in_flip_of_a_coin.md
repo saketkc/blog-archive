@@ -1,6 +1,6 @@
 Title: Runs in flips of a coin
 Date: 2015-04-21
-tags: probability, expectation
+Tags: probability, expectation
 
 
 This problem happened to be in one of the screening examinations

@@ -1,6 +1,6 @@
-title: Bernoulli random varlable and UMVUE
-tags: bernoulli, umvue
-date: 2015-05-21
+Title: Bernoulli random varlable and UMVUE
+Tags: bernoulli, umvue
+Date: 2015-05-21
 
 ## Problem
 

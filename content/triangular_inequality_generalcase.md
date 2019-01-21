@@ -1,6 +1,6 @@
 Title: Proof for triangle inequality for case $x+y<0$
-date: 2015-02-02
-tags: math, inequality
+Date: 2015-02-02
+Tags: math, inequality
 
 
 $-|x| \leq x \leq |x|$

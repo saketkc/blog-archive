@@ -14,18 +14,18 @@
 
 <meta property="og:title" content="Gumbel distribution expectation "/>
 <meta property="og:url" content="./gumbel-distribution-expectation.html" />
-<meta property="og:description" content="What If $X_1,..,X_n$ is a random sample with density $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}$ ($x \in\mathbb{R}$) and $-\infty&lt;\theta&lt;\infty$, $\quad$i) Find the estimator of $\theta$ Solution First let’s confirm if $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- …" />
+<meta property="og:description" content="What¶ If \(X_1,..,X_n\) is a random sample with density \(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\) (\(x \in\mathbb{R}\)) and \(-\infty&lt;\theta&lt;\infty\), \(\quad\)i) Find the estimator of \(\theta\) Solution¶ First let’s confirm if \(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-03-03T00:00:00-08:00" />
 <meta name="twitter:title" content="Gumbel distribution expectation ">
-<meta name="twitter:description" content="What If $X_1,..,X_n$ is a random sample with density $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}$ ($x \in\mathbb{R}$) and $-\infty&lt;\theta&lt;\infty$, $\quad$i) Find the estimator of $\theta$ Solution First let’s confirm if $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- …">
+<meta name="twitter:description" content="What¶ If \(X_1,..,X_n\) is a random sample with density \(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\) (\(x \in\mathbb{R}\)) and \(-\infty&lt;\theta&lt;\infty\), \(\quad\)i) Find the estimator of \(\theta\) Solution¶ First let’s confirm if \(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- …">
 
         <title>Gumbel distribution expectation  · Piddling Pertinent
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="./theme/css/style.min.css?8bdcf96a">
+<link rel="stylesheet" href="./theme/css/style.min.css?6d4d08cc">
         <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
@@ -78,21 +78,78 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>What</h2>
-<p>If $X_1,..,X_n$ is a random sample with density $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}$ ($x \in\mathbb{R}$) and $-\infty&lt;\theta&lt;\infty$,
-$\quad$i) Find the estimator of $\theta$</p>
-<h2>Solution</h2>
-<p>First let’s confirm if  $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}$ represents a PDF.</p>
-<p>Transforming $t=e^{-({x-\theta})}$:</p>
-<p>$$\int_{-\infty}^{\infty} e^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx  = \int_{0}^{\infty} e^{-t} dt = 1$$</p>
+            <h2 id="what">What<a class="headerlink" href="#what" title="Permanent link">&para;</a></h2>
+<p>If <span class="math">\(X_1,..,X_n\)</span> is a random sample with density <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> (<span class="math">\(x \in\mathbb{R}\)</span>) and <span class="math">\(-\infty&lt;\theta&lt;\infty\)</span>,
+<span class="math">\(\quad\)</span>i) Find the estimator of <span class="math">\(\theta\)</span></p>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
+<p>First let’s confirm if  <span class="math">\(f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}\)</span> represents a PDF.</p>
+<p>Transforming <span class="math">\(t=e^{-({x-\theta})}\)</span>:</p>
+<div class="math">$$\int_{-\infty}^{\infty} e^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx  = \int_{0}^{\infty} e^{-t} dt = 1$$</div>
 <p>This is indeed a <a href="http://en.wikipedia.org/wiki/Gumbel_distribution">known distribution</a></p>
-<p>Now, using similar transformation($t=e^{-(x-\theta)}$) for $$E[X]=\int_{-\infty}^\infty xe^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx$$</p>
+<p>Now, using similar transformation(<span class="math">\(t=e^{-(x-\theta)}\)</span>) for </p>
+<div class="math">$$E[X]=\int_{-\infty}^\infty xe^{-(x-\theta)}e^{-e^{-(x-\theta)}}dx$$</div>
 <p>we get</p>
-<p>$$E[X]=\int_{0}^\infty (\theta-ln (t))e^{-t}dt$$</p>
-<p>$$E[X]=\theta - \int_{0}^\infty  ln (t)\ e^{-t}dt$$</p>
+<div class="math">$$E[X]=\int_{0}^\infty (\theta-ln (t))e^{-t}dt$$</div>
+<div class="math">$$E[X]=\theta - \int_{0}^\infty  ln (t)\ e^{-t}dt$$</div>
 <p>Thus, 
-$$ E[X] = \theta + \gamma$$</p>
-<p>where the second term is <a href="http://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant">Euler Mascheroni constant</a> $\gamma$ </p>
+</p>
+<div class="math">$$ E[X] = \theta + \gamma$$</div>
+<p>where the second term is <a href="http://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant">Euler Mascheroni constant</a> <span class="math">\(\gamma\)</span> </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 
@@ -111,6 +168,15 @@ $$ E[X] = \theta + \gamma$$</p>
 
             
             <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="./convolution-demysitifed.html" title="Convolution Demysitifed">Convolution Demysitifed</a></li>
+<li><a href="./distribution-of-one-random-variable-less-than-other.html" title="Distribution of one random variable less than other">Distribution of one random variable less than other</a></li>
+<li><a href="./a-frequent-inequality.html" title="A frequent inequality">A frequent inequality</a></li>
+</ul>
+<hr />
+</section>
             <aside>
             <nav>
             <ul class="articles-timeline">
@@ -135,14 +201,20 @@ $$ E[X] = \theta + \gamma$$</p>
                     <span>1</span>
 </a></li>
                 <li><a href="./tags#stats-ref">stats
-                    <span>3</span>
+                    <span>4</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
-    <a href="https://twitter.com/saketkc" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://twitter.com/saketkc" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-twitter sidebar-social-links"></i></a>
-    <a href="https://github.com/saketkc" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://github.com/saketkc" title="My Github Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://scholar.google.com/citations?user=BmC4P-oAAAAJ" title="My Google-Scholar Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-scholar sidebar-social-links"></i></a>
+    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="My Stack Exchange Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-stack exchange sidebar-social-links"></i></a>
+    <a href="http://www.saket-choudhary.me/resume/saket_cv.pdf" title="My CV Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-cv sidebar-social-links"></i></a>
         </div>
         </section>
 </div>

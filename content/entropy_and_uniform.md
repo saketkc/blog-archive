@@ -1,6 +1,6 @@
-title: Entropy and Uniform Distribution
-tags: textbook problem, entropy, uniform
-date: 2015-10-18
+Title: Entropy and Uniform Distribution
+Tags: textbook problem, entropy, uniform
+Date: 2015-10-18
 
 To show $\sum p_i\log(p_i) = p$
 

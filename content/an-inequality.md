@@ -1,11 +1,9 @@
-title: A frequent inequality
-date: 2015-09-09
-tags: stats, pdf, math
+Title: A frequent inequality
+Date: 2015-09-09
+Tags: stats, pdf, math
 
 
-$$
-\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x>0
-$$
+$$\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x>0$$
 
 Consider $f(x)=\ln(x)-\frac{x-1}{x}$
 
@@ -37,7 +35,3 @@ Whole story of Case A and Case B again. But it should be simple to see that
 for $0 < x \leq 1$, $g'(x)\geq 0$ and hence $g(x) \leq g(1)$ $\implies$ $\ln(x)-x+1 \leq 0$ 
 And for $1 < x < \infty$, $g'(x)<0$ and hence $g(x)<g(1)$ $\implies$ $\ln(x)-x+1 < 0$ 
 
-## TODO
-
-- KL-divergence 
-- Entropy

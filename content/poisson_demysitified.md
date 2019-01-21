@@ -1,6 +1,6 @@
-title: Poisson Demysitified
-date: 2015-05-17
-tags: poisson
+Title: Poisson Demysitified
+Date: 2015-05-17
+Tags: poisson
 
 Learnt it the hard way. 
 This one is more of a scratch pad, inspired from 

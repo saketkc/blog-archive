@@ -1,6 +1,6 @@
-title: Positive definite second derivative
-date: 2015-02-28
-tags: linear algebra, matrix, norm
+Title: Positive definite second derivative
+Date: 2015-02-28
+Tags: linear algebra, matrix, norm
 
 
 > Let $f:\mathbb{R}\to\mathbb{R}$ be a twice-differentiable function,

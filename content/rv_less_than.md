@@ -1,6 +1,6 @@
-title: Distribution of one random variable less than other
-date: 2015-05-18
-
+Title: Distribution of one random variable less than other
+Date: 2015-05-18
+Tags: stats
 
 ## Problem
 

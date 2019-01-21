@@ -1,6 +1,6 @@
 Title: L2 norm and spectral radius of symmetric matrix
-date: 2015-02-28
-tags: linear algebra, matrix, norm
+Date: 2015-02-28
+Tags: linear algebra, matrix, norm
 
 ## L2 norm and spectral radius for $$A=A^T$$
 

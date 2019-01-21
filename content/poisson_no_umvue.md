@@ -1,6 +1,6 @@
-title: Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.
-date: 2015-05-16
-tags: umvue, poisson, estimator
+Title: Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.
+Date: 2015-05-16
+Tags: umvue, poisson, estimator
 
 ## Problem
 

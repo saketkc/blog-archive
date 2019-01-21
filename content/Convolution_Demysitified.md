@@ -1,6 +1,6 @@
-title: Convolution Demysitifed
-date: 2015-05-09
-tags: stats, pdf, math
+Title: Convolution Demysitifed
+Date: 2015-05-09
+Tags: stats, pdf, math
 
 ## Problem
 

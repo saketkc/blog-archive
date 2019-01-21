@@ -1,6 +1,6 @@
-title: Restriction Fragments, MLE,  and Mixed Random Variables
-date: 2015-05-13
-tags: indicator variable, computational biology, exponential, mle, likelihood
+Title: Restriction Fragments, MLE,  and Mixed Random Variables
+Date: 2015-05-13
+Tags: indicator variable, computational biology, exponential, mle, likelihood
 
 
 Let $X_1, X_2, \dots , X_n$ be the lengths of $n$ restriction fragments. Suppose that a

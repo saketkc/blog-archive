@@ -1,8 +1,9 @@
-title: BA = AB = I
-date: 2015-02-28
-tags: linear algebra, matrix, norm
+Title: BA = AB = I
+Date: 2015-02-28
+Tags: linear algebra, matrix, norm
 
-## To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I
+
+# To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I
 
 $$AB=I \implies Rank(A), Rank(B)=n$$
 

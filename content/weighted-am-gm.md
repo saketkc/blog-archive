@@ -1,6 +1,6 @@
-title: [Proof]Weighted AM-GM
-date: 2015-05-18
-tags: inequalities
+Title: [Proof]Weighted AM-GM
+Date: 2015-05-18
+Tags: inequalities
 
 
 We make use of [Jensen’s Inequality](http://en.wikipedia.org/wiki/Jensen%27s_inequality)

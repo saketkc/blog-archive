@@ -14,18 +14,18 @@
 
 <meta property="og:title" content="Functions of independent random variables are independent "/>
 <meta property="og:url" content="./functions-of-independent-random-variables-are-independent.html" />
-<meta property="og:description" content="A textbook problem Given $X$, $Y$ are two independent random variables, show that functions $g(X)$ and $h(Y)$ are independent too Short Proof Never took a course on measure theory, so avoiding that route: Let. $R = g(X)$ $S = h(Y)$ Also define, $A_r = {x: g(X)\leq r …" />
+<meta property="og:description" content="A textbook problem¶ Given \(X\), \(Y\) are two independent random variables, show that functions \(g(X)\) and \(h(Y)\) are independent too Short Proof¶ Never took a course on measure theory, so avoiding that route: Let. \(R = g(X)\) \(S = h(Y)\) Also define, \(A_r = \{x: g(X)\leq r …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-06-01T00:00:00-07:00" />
 <meta name="twitter:title" content="Functions of independent random variables are independent ">
-<meta name="twitter:description" content="A textbook problem Given $X$, $Y$ are two independent random variables, show that functions $g(X)$ and $h(Y)$ are independent too Short Proof Never took a course on measure theory, so avoiding that route: Let. $R = g(X)$ $S = h(Y)$ Also define, $A_r = {x: g(X)\leq r …">
+<meta name="twitter:description" content="A textbook problem¶ Given \(X\), \(Y\) are two independent random variables, show that functions \(g(X)\) and \(h(Y)\) are independent too Short Proof¶ Never took a course on measure theory, so avoiding that route: Let. \(R = g(X)\) \(S = h(Y)\) Also define, \(A_r = \{x: g(X)\leq r …">
 
         <title>Functions of independent random variables are independent  · Piddling Pertinent
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="./theme/css/style.min.css?8bdcf96a">
+<link rel="stylesheet" href="./theme/css/style.min.css?6d4d08cc">
         <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
         <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
@@ -78,29 +78,84 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>A textbook problem</h2>
-<p>Given $X$, $Y$ are two independent random variables,
-show that functions $g(X)$ and $h(Y)$ are independent too</p>
-<h2>Short Proof</h2>
+            <h2 id="a-textbook-problem">A textbook problem<a class="headerlink" href="#a-textbook-problem" title="Permanent link">&para;</a></h2>
+<p>Given <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are two independent random variables,
+show that functions <span class="math">\(g(X)\)</span> and <span class="math">\(h(Y)\)</span> are independent too</p>
+<h2 id="short-proof">Short Proof<a class="headerlink" href="#short-proof" title="Permanent link">&para;</a></h2>
 <p>Never took a course on measure theory, so avoiding that route:</p>
 <p>Let.</p>
-<p>$R = g(X)$</p>
-<p>$S = h(Y)$</p>
+<p><span class="math">\(R = g(X)\)</span></p>
+<p><span class="math">\(S = h(Y)\)</span></p>
 <p>Also define,</p>
-<p>$A_r = {x: g(X)\leq r}$ and $B_s = {y:h(Y) \leq s}$</p>
-<p>$$
+<p><span class="math">\(A_r = \{x: g(X)\leq r\}\)</span> and <span class="math">\(B_s = \{y:h(Y) \leq s\}\)</span></p>
+<div class="math">$$
 F_{RS}(r,s) = P(R\leq r, S \leq s) = P(X \in A_r, Y \in B_s)
-$$</p>
-<p>Now, since $X$, $Y$ are independent:</p>
-<p>$$
+$$</div>
+<p>Now, since <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are independent:</p>
+<div class="math">$$
 P(X \in A_r, Y \in B_s) = P(X \in A_r)P(Y \in B_s) = F_R(r)F_S(s)
-$$</p>
+$$</div>
 <p>Which implies</p>
-<p>$$
+<div class="math">$$
 F_{RS}(r,s) = F_R(r)F_S(s)
-$$</p>
+$$</div>
 <p>and hence</p>
-<p>$g(X), h(Y)$ are independent.</p>
+<p><span class="math">\(g(X), h(Y)\)</span> are independent.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 
@@ -144,10 +199,16 @@ $$</p>
 </a></li>
             </ul>
 <h4>Contact</h4>
-    <a href="https://twitter.com/saketkc" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://twitter.com/saketkc" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-twitter sidebar-social-links"></i></a>
-    <a href="https://github.com/saketkc" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://github.com/saketkc" title="My Github Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://scholar.google.com/citations?user=BmC4P-oAAAAJ" title="My Google-Scholar Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-scholar sidebar-social-links"></i></a>
+    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="My Stack Exchange Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-stack exchange sidebar-social-links"></i></a>
+    <a href="http://www.saket-choudhary.me/resume/saket_cv.pdf" title="My CV Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-cv sidebar-social-links"></i></a>
         </div>
         </section>
 </div>

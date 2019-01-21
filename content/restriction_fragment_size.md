@@ -1,6 +1,6 @@
-title: Restriction Fragments Size Distribution
-date: 2015-05-13
-tags: poisson, computational biology, exponential
+Title: Restriction Fragments Size Distribution
+Date: 2015-05-13
+Tags: poisson, computational biology, exponential
 
 ## Given
 

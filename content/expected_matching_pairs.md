@@ -1,6 +1,6 @@
-title: Expected number of pairings | Jones and Smith Family
-date: 2015-05-17
-tags: expectation, probability, indicator variables
+Title: Expected number of pairings | Jones and Smith Family
+Date: 2015-05-17
+Tags: expectation, probability, indicator variables
 
 ## Problem
 

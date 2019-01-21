@@ -1,6 +1,6 @@
-title: MATH 501 Project
-date: 2015-05-05
-tags: linear algebra, numerical analysis
+Title: MATH 501 Project
+Date: 2015-05-05
+Tags: linear algebra, numerical analysis
 
 # Introduction
 Model of a two state reparable system:

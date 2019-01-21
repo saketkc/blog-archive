@@ -1,6 +1,6 @@
-title: Functions of independent random variables are independent
-date: 2015-06-01
-tags: independence, random variables
+Title: Functions of independent random variables are independent
+Date: 2015-06-01
+Tags: independence, random variables
 
 ## A textbook problem
 
