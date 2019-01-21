@@ -1,236 +1,179 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Saket Choudhary" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+        <meta name="twitter:creator" content="@saketkc">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+<meta name="keywords" content="linear algebra, matrix, norm, misc, " />
 
-  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+<meta property="og:title" content="Positive definite second derivative "/>
+<meta property="og:url" content="./positive-definite-second-derivative.html" />
+<meta property="og:description" content="Let $f:\mathbb{R}\to\mathbb{R}$ be a twice-differentiable function, and let $f$’s second derivative be continuous. Let $f$ be convex with the following definition of convexity: for any $a&lt;b \in \mathbb{R}$: $$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 …" />
+<meta property="og:site_name" content="Piddling Pertinent" />
+<meta property="og:article:author" content="Saket Choudhary" />
+<meta property="og:article:published_time" content="2015-02-28T00:00:00-08:00" />
+<meta name="twitter:title" content="Positive definite second derivative ">
+<meta name="twitter:description" content="Let $f:\mathbb{R}\to\mathbb{R}$ be a twice-differentiable function, and let $f$’s second derivative be continuous. Let $f$ be convex with the following definition of convexity: for any $a&lt;b \in \mathbb{R}$: $$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 …">
 
-
-    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom">
-
-    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS">
-
-    <link rel="shortcut icon" href="url-to-favicon" type="image/x-icon">
-    <link rel="icon" href="url-to-favicon" type="image/x-icon">
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55540107-1', 'auto');
-  ga('send', 'pageview');
+        <title>Positive definite second derivative  · Piddling Pertinent
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="./theme/css/style.min.css?8bdcf96a">
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55540107-1', 'auto');
+    ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#333333">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#333333">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Microsoft EDGE -->
-    <meta name="msapplication-TileColor" content="#333333">
-
-<meta name="author" content="Saket Choudhary" />
-<meta name="description" content="Let \(f:\mathbb{R}\to\mathbb{R}\) be a twice-differentiable function, and let \(f\)’s second derivative be continuous. Let \(f\) be convex with the following definition of convexity: for any \(a&lt;b \in \mathbb{R}\): $$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width" />
-<meta name="keywords" content="linear algebra, matrix, norm">
-
-<meta property="og:site_name" content="Piddling Pertinent"/>
-<meta property="og:title" content="Positive definite second derivative"/>
-<meta property="og:description" content="Let \(f:\mathbb{R}\to\mathbb{R}\) be a twice-differentiable function, and let \(f\)’s second derivative be continuous. Let \(f\) be convex with the following definition of convexity: for any \(a&lt;b \in \mathbb{R}\): $$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2 …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="./positive-definite-second-derivative.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2015-02-28 00:00:00-08:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="./author/saket-choudhary.html">
-<meta property="article:section" content="misc"/>
-<meta property="article:tag" content="linear algebra"/>
-<meta property="article:tag" content="matrix"/>
-<meta property="article:tag" content="norm"/>
-<meta property="og:image" content="">
-
-  <title>Piddling Pertinent &ndash; Positive definite second derivative</title>
-
-</head>
-<body>
-  <aside>
-    <div>
-      <a href=".">
-        <img src="./theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="."></a></h1>
-
-<p>trivially relevant</p>
-      <nav>
-        <ul class="list">
-
-          <li><a href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/" target="_blank">Probability Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/" target="_blank">Stats A Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/" target="_blank">Stats B Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions" target="_blank">Royal Statistical Society Diploma Solutions</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/saketkc" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/saketkc" target="_blank"><i class="fa fa-github"></i></a></li>
-      </ul>
-    </div>
 
 
-  </aside>
-  <main>
 
-    <nav>
-      <a href=".">    Home
-</a>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Piddling Pertinent</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./categories">Categories</a></li>
+                            <li ><a href="./tags">Tags</a></li>
+                            <li ><a href="./archives">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./positive-definite-second-derivative.html"> Positive definite second derivative  </a></h1>
+    </header>
+</div>
 
-      <a href="http://saket-choudhary.me/pertinent-blog">Home</a>
-      <a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml">    Atom
-</a>
-
-      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml">    RSS
-</a>
-    </nav>
-
-<article class="single">
-  <header>
-      
-    <h1 id="positive-definite-second-derivative">Positive definite second derivative</h1>
-    <p>
-          Posted on Sat 28 February 2015 in <a href="./category/misc.html">misc</a>
-
-
-        &#8226; 1 min read
-    </p>
-  </header>
-
-
-  <div>
-    <blockquote>
-<p>Let <span class="math">\(f:\mathbb{R}\to\mathbb{R}\)</span> be a twice-differentiable function,
-and let <span class="math">\(f\)</span>’s second derivative be continuous. Let <span class="math">\(f\)</span> be convex with
-the following definition of convexity: for any <span class="math">\(a&lt;b \in \mathbb{R}\)</span>:
-<div class="math">$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2}$$</div> Prove that
-<span class="math">\(f’’ \geq 0\)</span> everywhere.</p>
+            
+            <blockquote>
+<p>Let $f:\mathbb{R}\to\mathbb{R}$ be a twice-differentiable function,
+and let $f$’s second derivative be continuous. Let $f$ be convex with
+the following definition of convexity: for any $a&lt;b \in \mathbb{R}$:
+$$f\left(\frac{a+b}{2}\right) \leq \frac{f(a)+f(b)}{2}$$ Prove that
+$f’’ \geq 0$ everywhere.</p>
 </blockquote>
 <h2>Solution</h2>
 <p>http://math.stackexchange.com/a/1224986/171836</p>
-<p>Given <span class="math">\(f\)</span> is a continuous and using the results from <a href="http://math.stackexchange.com/a/83398/171836">this answer</a>, <span class="math">\(f\)</span> can be proven to satisfy:
-<span class="math">\(f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) +  (1-\lambda)f(x_2)\ \forall \  \lambda \in [0,1]\)</span> </p>
-<p>Now, by using Taylor’s expansion, <span class="math">\(f’’(x)\)</span> can be written as: 
-</p>
-<div class="math">$$
+<p>Given $f$ is a continuous and using the results from <a href="http://math.stackexchange.com/a/83398/171836">this answer</a>, $f$ can be proven to satisfy:
+$f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) +  (1-\lambda)f(x_2)\ \forall \  \lambda \in [0,1]$ </p>
+<p>Now, by using Taylor’s expansion, $f’’(x)$ can be written as: 
+$$
 f’’(x) = \lim_{h \rightarrow 0} \frac{f(x+h)+f(x-h)-2f(x)}{h^2}
-$$</div>
-<p><span class="math">\(f(\frac{1}{2}(x+h) + \frac{1}{2}(x-h)) \leq \frac{1}{2}f(x+h) + \frac{1}{2}f(x-h) \implies 2f(x) \leq f(x+h)+f(x-h)\)</span> 
-or <span class="math">\(f(x+h)+f(x-h)-2f(x) \geq 0\)</span>. </p>
-<p>Since <span class="math">\(h^2 \geq 0\)</span> and <span class="math">\(f\)</span> being twice differentiable,  <span class="math">\(f’’(x) \geq 0\)</span> follows.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+$$</p>
+<p>$f(\frac{1}{2}(x+h) + \frac{1}{2}(x-h)) \leq \frac{1}{2}f(x+h) + \frac{1}{2}f(x-h) \implies 2f(x) \leq f(x+h)+f(x-h)$ 
+or $f(x+h)+f(x-h)-2f(x) \geq 0$. </p>
+<p>Since $h^2 \geq 0$ and $f$ being twice differentiable,  $f’’(x) \geq 0$ follows.</p>
+            <div>
+</div>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="./tag/linear-algebra.html">linear algebra</a>
-      <a href="./tag/matrix.html">matrix</a>
-      <a href="./tag/norm.html">norm</a>
+            <section>
+    <p id="post-share-links">
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=Positive%20definite%20second%20derivative&url=http%3A//saket-choudhary.me/pertinent-blog/positive-definite-second-derivative.html" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//saket-choudhary.me/pertinent-blog/positive-definite-second-derivative.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//saket-choudhary.me/pertinent-blog/positive-definite-second-derivative.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=Positive%20definite%20second%20derivative&amp;body=http%3A//saket-choudhary.me/pertinent-blog/positive-definite-second-derivative.html" target="_blank" title="Share via Email">Email</a>
     </p>
-  </div>
+</section>
 
-
-
-
-
+            
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="./proof-for-triangle-inequality-for-case-xy0.html" title="Previous: Proof for triangle inequality for case $x+y&lt;0$">Proof for triangle inequality for case $x+y<0$</a></li>
+                <li class="next-article"><a href="./l2-norm-and-spectral-radius-of-symmetric-matrix.html" title="Next: L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2015-02-28T00:00:00-08:00">Feb 28, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#misc-ref">misc</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags#linear-algebra-ref">linear algebra
+                    <span>4</span>
+</a></li>
+                <li><a href="./tags#matrix-ref">matrix
+                    <span>3</span>
+</a></li>
+                <li><a href="./tags#norm-ref">norm
+                    <span>3</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://twitter.com/saketkc" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://github.com/saketkc" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
 </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-subtitle"><span class="site-name">Piddling Pertinent</span> - trivially relevant</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="https://github.com/Pelican-Elegant/elegant/" title="Theme Elegant Home Page">Elegant</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-    <footer>
-<p>&copy;  2018</p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Piddling Pertinent ",
-  "url" : ".",
-  "image": "",
-  "description": "Musings"
-}
-</script>
-
-</body>
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : MIT -->
 </html>

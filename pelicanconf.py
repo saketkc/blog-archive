@@ -50,7 +50,7 @@ LINKS = [('Probability Screening Solutions', 'http://www.saket-choudhary.me/usc-
          ('Stats B Screening Solutions', 'http://www.saket-choudhary.me/usc-math-541B-screening-solutions/'),
          ('Royal Statistical Society Diploma Solutions', 'http://www.saket-choudhary.me/rss-graduate-diploma-solutions')]
 
-THEME = 'pelican-themes/Flex'
+THEME = 'pelican-themes/elegant'
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
 #         ('Another social link', '#'),)
@@ -66,7 +66,6 @@ LOAD_CONTENT_CACHE = False
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 PLUGIN_PATHS = ['../pelican-plugins', './plugins/']
-PLUGINS = ['assets', 'sitemap', 'gravatar', 'render_math', 'ipynb.markup', 'post_stats', 'i18n_subsites']
 GOOGLE_ANALYTICS = 'UA-55540107-1'
 COPYRIGHT_YEAR = 2018
 
@@ -111,4 +110,17 @@ SIDEBAR_DIGEST = ''
 FAVICON = 'url-to-favicon'
 
 DISPLAY_PAGES_ON_MENU = True
-IPYNB_IGNORE_CSS = True
+IPYNB_SKIP_CSS = True
+
+
+## elegant
+TAG_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+STATIC_PATHS = ['theme/images', 'images']
+PLUGINS = ['render_math', 'ipynb.markup', 'post_stats', 'i18n_subsites']
+PLUGINS += ['sitemap', 'extract_toc', 'tipue_search',
+                   'neighbors', 'assets', 'share_post']
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra',
+                         'headerid', 'toc(permalink=true)']
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))

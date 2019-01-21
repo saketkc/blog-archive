@@ -1,238 +1,181 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Saket Choudhary" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+        <meta name="twitter:creator" content="@saketkc">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+<meta name="keywords" content="independence, random variables, misc, " />
 
-  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+<meta property="og:title" content="Functions of independent random variables are independent "/>
+<meta property="og:url" content="./functions-of-independent-random-variables-are-independent.html" />
+<meta property="og:description" content="A textbook problem Given $X$, $Y$ are two independent random variables, show that functions $g(X)$ and $h(Y)$ are independent too Short Proof Never took a course on measure theory, so avoiding that route: Let. $R = g(X)$ $S = h(Y)$ Also define, $A_r = {x: g(X)\leq r …" />
+<meta property="og:site_name" content="Piddling Pertinent" />
+<meta property="og:article:author" content="Saket Choudhary" />
+<meta property="og:article:published_time" content="2015-06-01T00:00:00-07:00" />
+<meta name="twitter:title" content="Functions of independent random variables are independent ">
+<meta name="twitter:description" content="A textbook problem Given $X$, $Y$ are two independent random variables, show that functions $g(X)$ and $h(Y)$ are independent too Short Proof Never took a course on measure theory, so avoiding that route: Let. $R = g(X)$ $S = h(Y)$ Also define, $A_r = {x: g(X)\leq r …">
 
-
-    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent Atom">
-
-    <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent RSS">
-
-    <link rel="shortcut icon" href="url-to-favicon" type="image/x-icon">
-    <link rel="icon" href="url-to-favicon" type="image/x-icon">
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55540107-1', 'auto');
-  ga('send', 'pageview');
+        <title>Functions of independent random variables are independent  · Piddling Pertinent
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="./theme/css/style.min.css?8bdcf96a">
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55540107-1', 'auto');
+    ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#333333">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#333333">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Microsoft EDGE -->
-    <meta name="msapplication-TileColor" content="#333333">
-
-<meta name="author" content="Saket Choudhary" />
-<meta name="description" content="A textbook problem Given \(X\), \(Y\) are two independent random variables, show that functions \(g(X)\) and \(h(Y)\) are independent too Short Proof Never took a course on measure theory, so avoiding that route: Let. \(R = g(X)\) \(S = h(Y)\) Also define, \(A_r = \{x: g(X)\leq r …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width" />
-<meta name="keywords" content="independence, random variables">
-
-<meta property="og:site_name" content="Piddling Pertinent"/>
-<meta property="og:title" content="Functions of independent random variables are independent"/>
-<meta property="og:description" content="A textbook problem Given \(X\), \(Y\) are two independent random variables, show that functions \(g(X)\) and \(h(Y)\) are independent too Short Proof Never took a course on measure theory, so avoiding that route: Let. \(R = g(X)\) \(S = h(Y)\) Also define, \(A_r = \{x: g(X)\leq r …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="./functions-of-independent-random-variables-are-independent.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2015-06-01 00:00:00-07:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="./author/saket-choudhary.html">
-<meta property="article:section" content="misc"/>
-<meta property="article:tag" content="independence"/>
-<meta property="article:tag" content="random variables"/>
-<meta property="og:image" content="">
-
-  <title>Piddling Pertinent &ndash; Functions of independent random variables are independent</title>
-
-</head>
-<body>
-  <aside>
-    <div>
-      <a href=".">
-        <img src="./theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="."></a></h1>
-
-<p>trivially relevant</p>
-      <nav>
-        <ul class="list">
-
-          <li><a href="http://www.saket-choudhary.me/usc-math-505A-screening-solutions/" target="_blank">Probability Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/usc-math-541A-screening-solutions/" target="_blank">Stats A Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/usc-math-541B-screening-solutions/" target="_blank">Stats B Screening Solutions</a></li>
-          <li><a href="http://www.saket-choudhary.me/rss-graduate-diploma-solutions" target="_blank">Royal Statistical Society Diploma Solutions</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/saketkc" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/saketkc" target="_blank"><i class="fa fa-github"></i></a></li>
-      </ul>
-    </div>
 
 
-  </aside>
-  <main>
 
-    <nav>
-      <a href=".">    Home
-</a>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Piddling Pertinent</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./categories">Categories</a></li>
+                            <li ><a href="./tags">Tags</a></li>
+                            <li ><a href="./archives">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./functions-of-independent-random-variables-are-independent.html"> Functions of independent random variables are independent  </a></h1>
+    </header>
+</div>
 
-      <a href="http://saket-choudhary.me/pertinent-blog">Home</a>
-      <a href="https://github.com/saketkc/pertinent-blog/tree/master/content">Github</a>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml">    Atom
-</a>
-
-      <a href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml">    RSS
-</a>
-    </nav>
-
-<article class="single">
-  <header>
-      
-    <h1 id="functions-of-independent-random-variables-are-independent">Functions of independent random variables are independent</h1>
-    <p>
-          Posted on Mon 01 June 2015 in <a href="./category/misc.html">misc</a>
-
-
-        &#8226; 1 min read
-    </p>
-  </header>
-
-
-  <div>
-    <h2>A textbook problem</h2>
-<p>Given <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are two independent random variables,
-show that functions <span class="math">\(g(X)\)</span> and <span class="math">\(h(Y)\)</span> are independent too</p>
+            
+            <h2>A textbook problem</h2>
+<p>Given $X$, $Y$ are two independent random variables,
+show that functions $g(X)$ and $h(Y)$ are independent too</p>
 <h2>Short Proof</h2>
 <p>Never took a course on measure theory, so avoiding that route:</p>
 <p>Let.</p>
-<p><span class="math">\(R = g(X)\)</span></p>
-<p><span class="math">\(S = h(Y)\)</span></p>
+<p>$R = g(X)$</p>
+<p>$S = h(Y)$</p>
 <p>Also define,</p>
-<p><span class="math">\(A_r = \{x: g(X)\leq r\}\)</span> and <span class="math">\(B_s = \{y:h(Y) \leq s\}\)</span></p>
-<div class="math">$$
+<p>$A_r = {x: g(X)\leq r}$ and $B_s = {y:h(Y) \leq s}$</p>
+<p>$$
 F_{RS}(r,s) = P(R\leq r, S \leq s) = P(X \in A_r, Y \in B_s)
-$$</div>
-<p>Now, since <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are independent:</p>
-<div class="math">$$
+$$</p>
+<p>Now, since $X$, $Y$ are independent:</p>
+<p>$$
 P(X \in A_r, Y \in B_s) = P(X \in A_r)P(Y \in B_s) = F_R(r)F_S(s)
-$$</div>
+$$</p>
 <p>Which implies</p>
-<div class="math">$$
+<p>$$
 F_{RS}(r,s) = F_R(r)F_S(s)
-$$</div>
+$$</p>
 <p>and hence</p>
-<p><span class="math">\(g(X), h(Y)\)</span> are independent.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+<p>$g(X), h(Y)$ are independent.</p>
+            <div>
+</div>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="./tag/independence.html">independence</a>
-      <a href="./tag/random-variables.html">random variables</a>
+            <section>
+    <p id="post-share-links">
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=Functions%20of%20independent%20random%20variables%20are%20independent&url=http%3A//saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=Functions%20of%20independent%20random%20variables%20are%20independent&amp;body=http%3A//saket-choudhary.me/pertinent-blog/functions-of-independent-random-variables-are-independent.html" target="_blank" title="Share via Email">Email</a>
     </p>
-  </div>
+</section>
 
-
-
-
-
+            
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="./bernoulli-random-varlable-and-umvue.html" title="Previous: Bernoulli random varlable and UMVUE">Bernoulli random varlable and UMVUE</a></li>
+                <li class="next-article"><a href="./a-frequent-inequality.html" title="Next: A frequent inequality">A frequent inequality</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2015-06-01T00:00:00-07:00">Jun 1, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#misc-ref">misc</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags#independence-ref">independence
+                    <span>1</span>
+</a></li>
+                <li><a href="./tags#random-variables-ref">random variables
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://twitter.com/saketkc" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://github.com/saketkc" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
 </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-subtitle"><span class="site-name">Piddling Pertinent</span> - trivially relevant</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="https://github.com/Pelican-Elegant/elegant/" title="Theme Elegant Home Page">Elegant</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-    <footer>
-<p>&copy;  2018</p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Piddling Pertinent ",
-  "url" : ".",
-  "image": "",
-  "description": "Musings"
-}
-</script>
-
-</body>
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : MIT -->
 </html>
