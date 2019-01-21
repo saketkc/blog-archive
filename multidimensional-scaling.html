@@ -84,33 +84,88 @@ are visualized in 2 dimensions such that it represents
 the distance in n-dimensions as far as possible.</p>
 <p>It is important to note that, for MDS, we start of with a ‘distance’ matrix
 and not the coordinate of points. Dissimilarity is ‘similar’ to distances in most cases(ignoring the scale).
-Let $\delta_{i,j}$ represent the distance between $i\ and\ j$</p>
-<p>Given $n$ points, the idea is to come up with a set of $n * p$ matrix $X$
-such that the distance between two vectors $x_i$ and $x_j$ is given by:</p>
-<p>$$
+Let <span class="math">\(\delta_{i,j}\)</span> represent the distance between <span class="math">\(i\ and\ j\)</span></p>
+<p>Given <span class="math">\(n\)</span> points, the idea is to come up with a set of <span class="math">\(n * p\)</span> matrix <span class="math">\(X\)</span>
+such that the distance between two vectors <span class="math">\(x_i\)</span> and <span class="math">\(x_j\)</span> is given by:</p>
+<div class="math">$$
 d_{i,j}^2(X) = \sum_{k=1}^{p}(x_{ik}-x_{jk})^2
-$$</p>
-<p>So if we choose $p=1$, we wish to visualize everything in single dimension.
-Let’s restrict to the case $p=2$</p>
-<h2>How do you obtain X?</h2>
-<p>The idea again goes back to the definition of keeping the ‘new’ distance $d_{i,j}(X)$
-as the original dissimilarity $\delta_{i,j}$ , this leads to the least square fit kind of regression
-where the goal is to minimize the ‘residual’ error. Note, $d_{i,j}$ is an approximation to $\delta_{i,j}$
- The distance matrix could have come from $n$ points having high-dimensions(say $p’&gt;p$), and even though
- these points cannot be visualized (since we cannot draw $p’$ dimensional map) we draw a $p=2$ dimensional map.
-The coordinates of original $n$ points in $p’$ need not be known. We can still obtain an ‘equaivalent’
-set of $n$ points in $p=2$ dimensions such that the $2D$ distance between two points $i,j$ is 
+$$</div>
+<p>So if we choose <span class="math">\(p=1\)</span>, we wish to visualize everything in single dimension.
+Let’s restrict to the case <span class="math">\(p=2\)</span></p>
+<h2 id="how-do-you-obtain-x">How do you obtain X?<a class="headerlink" href="#how-do-you-obtain-x" title="Permanent link">&para;</a></h2>
+<p>The idea again goes back to the definition of keeping the ‘new’ distance <span class="math">\(d_{i,j}(X)\)</span>
+as the original dissimilarity <span class="math">\(\delta_{i,j}\)</span> , this leads to the least square fit kind of regression
+where the goal is to minimize the ‘residual’ error. Note, <span class="math">\(d_{i,j}\)</span> is an approximation to <span class="math">\(\delta_{i,j}\)</span>
+ The distance matrix could have come from <span class="math">\(n\)</span> points having high-dimensions(say <span class="math">\(p’&gt;p\)</span>), and even though
+ these points cannot be visualized (since we cannot draw <span class="math">\(p’\)</span> dimensional map) we draw a <span class="math">\(p=2\)</span> dimensional map.
+The coordinates of original <span class="math">\(n\)</span> points in <span class="math">\(p’\)</span> need not be known. We can still obtain an ‘equaivalent’
+set of <span class="math">\(n\)</span> points in <span class="math">\(p=2\)</span> dimensions such that the <span class="math">\(2D\)</span> distance between two points <span class="math">\(i,j\)</span> is 
 as close as it can be to the original distance.</p>
-<p>$\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2$</p>
-<p>This is just one way to define ‘closeness’ of $\delta_{ij}$ with $\d_{ij}$.
-$X$ is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).</p>
-<h2>Checking if MDS makes sense</h2>
+<p><span class="math">\(\sigma^2 = \sum_{i=1}^{n}\sum_{j=1}^{i-1}(\delta_{ij}-d_{ij}(X))^2\)</span></p>
+<p>This is just one way to define ‘closeness’ of <span class="math">\(\delta_{ij}\)</span> with <span class="math">\(\d_{ij}\)</span>.
+<span class="math">\(X\)</span> is obtained by minimizing such functions. Imagine doing ordinary least square fit(multidimensional).</p>
+<h2 id="checking-if-mds-makes-sense">Checking if MDS makes sense<a class="headerlink" href="#checking-if-mds-makes-sense" title="Permanent link">&para;</a></h2>
 <p>A quick checkt to see if MDS is good enough
-is to go back to its definition. The final set of vectors $X_{n*p}$
+is to go back to its definition. The final set of vectors <span class="math">\(X_{n*p}\)</span>
 should be able to communiate the original distance matrix
-and hence a plot of the $\frac{n{n+1}}{2}$ points if $d_{ij}$ is
-plotted against $X$ acis and $\delta_{ij}$ is plotted along $Y$ axis
-then you should get a straight line representing $Y=X$.</p>
+and hence a plot of the <span class="math">\(\frac{n{n+1}}{2}\)</span> points if <span class="math">\(d_{ij}\)</span> is
+plotted against <span class="math">\(X\)</span> acis and <span class="math">\(\delta_{ij}\)</span> is plotted along <span class="math">\(Y\)</span> axis
+then you should get a straight line representing <span class="math">\(Y=X\)</span>.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 

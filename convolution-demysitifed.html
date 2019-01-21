@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="Convolution Demysitifed "/>
 <meta property="og:url" content="./convolution-demysitifed.html" />
-<meta property="og:description" content="Problem Given $f(x) = \frac{x}{2}$ for $0 \leq x \leq 2$. Find the pdf of $x_1+x_2$ for $x_1,x_2$ which are i.i.d. Wrong solution $$ f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw $$ Thus, blindly, $f_S(s) = \int_{0}^s \frac{x(s-x …" />
+<meta property="og:description" content="Problem¶ Given \(f(x) = \frac{x}{2}\) for \(0 \leq x \leq 2\). Find the pdf of \(x_1+x_2\) for \(x_1,x_2\) which are i.i.d. Wrong solution¶ $$ f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw $$ Thus, blindly, \(f_S(s) = \int_{0}^s \frac{x(s-x …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-05-09T00:00:00-07:00" />
 <meta name="twitter:title" content="Convolution Demysitifed ">
-<meta name="twitter:description" content="Problem Given $f(x) = \frac{x}{2}$ for $0 \leq x \leq 2$. Find the pdf of $x_1+x_2$ for $x_1,x_2$ which are i.i.d. Wrong solution $$ f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw $$ Thus, blindly, $f_S(s) = \int_{0}^s \frac{x(s-x …">
+<meta name="twitter:description" content="Problem¶ Given \(f(x) = \frac{x}{2}\) for \(0 \leq x \leq 2\). Find the pdf of \(x_1+x_2\) for \(x_1,x_2\) which are i.i.d. Wrong solution¶ $$ f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw $$ Thus, blindly, \(f_S(s) = \int_{0}^s \frac{x(s-x …">
 
         <title>Convolution Demysitifed  · Piddling Pertinent
 </title>
@@ -78,45 +78,101 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>Problem</h2>
-<p>Given $f(x) = \frac{x}{2}$ for $0 \leq x \leq 2$. Find the pdf of $x_1+x_2$
-for $x_1,x_2$ which are i.i.d.</p>
-<h2>Wrong solution</h2>
-<p>$$ 
+            <h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
+<p>Given <span class="math">\(f(x) = \frac{x}{2}\)</span> for <span class="math">\(0 \leq x \leq 2\)</span>. Find the pdf of <span class="math">\(x_1+x_2\)</span>
+for <span class="math">\(x_1,x_2\)</span> which are i.i.d.</p>
+<h2 id="wrong-solution">Wrong solution<a class="headerlink" href="#wrong-solution" title="Permanent link">&para;</a></h2>
+<div class="math">$$ 
 f*g(t) = \int_{-\infty}^{\infty} f(w)g(t-w)dw
-$$</p>
+$$</div>
 <p>Thus, blindly,</p>
-<p>$f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}$ and $0 \leq s \leq 4$</p>
-<p>But is $f_S(s)$ a PDF? </p>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x(s-x)}{4}dx = \frac{s^3}{24}\)</span> and <span class="math">\(0 \leq s \leq 4\)</span></p>
+<p>But is <span class="math">\(f_S(s)\)</span> a PDF? </p>
 <p>No.</p>
-<p>$\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1$</p>
-<h2>Respecting the bounds.</h2>
-<p>$f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx$ for :</p>
-<p>$$
+<p><span class="math">\(\int_0^4 f_S(s)ds = \frac{4^4}{96} \neq 1\)</span></p>
+<h2 id="respecting-the-bounds">Respecting the bounds.<a class="headerlink" href="#respecting-the-bounds" title="Permanent link">&para;</a></h2>
+<p><span class="math">\(f_S(s) = \int_{0}^s \frac{x}{2} \frac{s-x}{2}dx\)</span> for :</p>
+<div class="math">$$
 0 \leq x \leq 2
-$$
+$$</div>
+<p>
 and</p>
-<p>$$
+<div class="math">$$
 0 \leq s-x \leq 2
-$$</p>
+$$</div>
 <p>Which gives us, these bounds:</p>
-<p>$s-2 \leq x \leq s$ and $0 \leq x \leq 2$</p>
+<p><span class="math">\(s-2 \leq x \leq s\)</span> and <span class="math">\(0 \leq x \leq 2\)</span></p>
 <p>In order to respect the above bounds,</p>
-<p>$f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx$</p>
-<p>But, $f(x) \neq 0$ for $0 \leq x \leq 2$</p>
-<p>and $f(s-x) \neq 0$ for $s-2 \leq x \leq s$</p>
-<p>thus, $f(x)f(s-x) \neq 0$ for $max(0,s-2) \leq x \leq min(s,2)$</p>
-<p>Range of s: $[0,4]$</p>
-<p>$f*g(s) = \int_{max(0,s-2)}^{min(s,2)}f(x)f(s-x)dx$</p>
-<p>For $0 \leq s \leq 2$ :  $min(s,2)=s$ and $max(0,s-2)=0$</p>
-<p>For $2 \leq s \leq 4$ : $min(s,2)=2$ and $max(0,s-2)=s-2$</p>
+<p><span class="math">\(f*g(s) = \int_{-\infty}^{\infty}f(x)f(s-x)dx\)</span></p>
+<p>But, <span class="math">\(f(x) \neq 0\)</span> for <span class="math">\(0 \leq x \leq 2\)</span></p>
+<p>and <span class="math">\(f(s-x) \neq 0\)</span> for <span class="math">\(s-2 \leq x \leq s\)</span></p>
+<p>thus, <span class="math">\(f(x)f(s-x) \neq 0\)</span> for <span class="math">\(max(0,s-2) \leq x \leq min(s,2)\)</span></p>
+<p>Range of s: <span class="math">\([0,4]\)</span></p>
+<p><span class="math">\(f*g(s) = \int_{max(0,s-2)}^{min(s,2)}f(x)f(s-x)dx\)</span></p>
+<p>For <span class="math">\(0 \leq s \leq 2\)</span> :  <span class="math">\(min(s,2)=s\)</span> and <span class="math">\(max(0,s-2)=0\)</span></p>
+<p>For <span class="math">\(2 \leq s \leq 4\)</span> : <span class="math">\(min(s,2)=2\)</span> and <span class="math">\(max(0,s-2)=s-2\)</span></p>
 <p>Now,</p>
-<p>$$
+<div class="math">$$
 f_S(s) = \begin{cases}
-\int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  &amp; 0 \leq s \leq 2\
-\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  &amp; 2 \leq s \leq 4\
+\int_{0}^{s}\frac{x}{2}\frac{s-x}{2}dx = \frac{s^3}{24}  &amp; 0 \leq s \leq 2\\
+\int_{s-2}^{2}\frac{x}{2}\frac{s-x}{2}dx = \frac{1}{4}(\frac{s(2^2-(s-2)^2)}{2}-\frac{2^3-(s-2)^3}{3})  &amp; 2 \leq s \leq 4\\
 \end{cases}
-$$</p>
+$$</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 

@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="SVD v/s MDS v/s PCA "/>
 <meta property="og:url" content="./svd-vs-mds-vs-pca.html" />
-<meta property="og:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD Let $X_{mxn}$ data matrix. For an easy to relate example …" />
+<meta property="og:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-04-15T00:00:00-07:00" />
 <meta name="twitter:title" content="SVD v/s MDS v/s PCA ">
-<meta name="twitter:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD Let $X_{mxn}$ data matrix. For an easy to relate example …">
+<meta name="twitter:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …">
 
         <title>SVD v/s MDS v/s PCA  · Piddling Pertinent
 </title>
@@ -82,56 +82,58 @@
 than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
 When I was introduced to the latter two, I was utterly confused
 trying to figure out what goes in where.</p>
-<h2>SVD</h2>
-<p>Let $X_{mxn}$ data matrix. For an easy to relate example, from bioinformatics,
+<h2 id="svd">SVD<a class="headerlink" href="#svd" title="Permanent link">&para;</a></h2>
+<p>Let <span class="math">\(X_{mxn}\)</span> data matrix. For an easy to relate example, from bioinformatics,
 let each row represent a gene, and each column represent single patient.</p>
 <p>The rows thus give expression profile of gene across patients while the columns
 represent the expression levels of different genes in each person.</p>
-<p>Without loss of generality we assume $m&gt;n$ and $rank(X)=r &lt;n$</p>
-<p>The singular value decomposition of $X_{mxn}$ is then given by:</p>
-<p>$$
+<p>Without loss of generality we assume <span class="math">\(m&gt;n\)</span> and <span class="math">\(rank(X)=r &lt;n\)</span></p>
+<p>The singular value decomposition of <span class="math">\(X_{mxn}\)</span> is then given by:</p>
+<div class="math">$$
 X_{mxn} = U_{mxr}\sum_{rxr}V_{nxr}^T
-$$</p>
-<p>$U_{nxr}$ consists of orthornormal eigen vectors of $X^TX$(nxn)</p>
-<p>$V_{mxr}$ consists of orthornormal eigen vectors of $XX^T$(mxm)</p>
-<p>$\sum_{rxr}$ denotes a diagonal matrix composed of eigen vectors of $X^TX$ arranged with the largest being located
-at top left, least at bottom right.$\sum_{ii} = \lambda_i$ and $\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r$</p>
+$$</div>
+<p><span class="math">\(U_{nxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(X^TX\)</span>(nxn)</p>
+<p><span class="math">\(V_{mxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(XX^T\)</span>(mxm)</p>
+<p><span class="math">\(\sum_{rxr}\)</span> denotes a diagonal matrix composed of eigen vectors of <span class="math">\(X^TX\)</span> arranged with the largest being located
+at top left, least at bottom right.<span class="math">\(\sum_{ii} = \lambda_i\)</span> and <span class="math">\(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r\)</span></p>
 <p>Facts:</p>
 <ul>
-<li>$\lambda_i \geq 0$ because $X^TX$ is a positive definite matrix: $yX^TXy = (Xy)(Xy)^T &gt; 0$ always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
+<li><span class="math">\(\lambda_i \geq 0\)</span> because <span class="math">\(X^TX\)</span> is a positive definite matrix: <span class="math">\(yX^TXy = (Xy)(Xy)^T &gt; 0\)</span> always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
 </ul>
-<h2>PCA</h2>
-<p>Let $X_c$ denote the mean centered $X$, i.e. $X_c = I’<em mxn>{mxm}X</em>$
- where $I’ = I-\frac{1}{m}$ thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.</p>
-<p>Def: Gram matrix : $X_cX_c^T$</p>
-<p>Def: Covariance Matrix: $X_c^TX_c$</p>
+<h2 id="pca">PCA<a class="headerlink" href="#pca" title="Permanent link">&para;</a></h2>
+<p>Let <span class="math">\(X_c\)</span> denote the mean centered <span class="math">\(X\)</span>, i.e. <span class="math">\(X_c = I’_{mxm}X_{mxn}\)</span>
+ where <span class="math">\(I’ = I-\frac{1}{m}\)</span> thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.</p>
+<p>Def: Gram matrix : <span class="math">\(X_cX_c^T\)</span></p>
+<p>Def: Covariance Matrix: <span class="math">\(X_c^TX_c\)</span></p>
 <p>Let’s say you are given the original uncente</p>
-<p>The most ‘common’ definition of PCA says : For a given set of $n$ dimensional vectors
-$x_1, x_2, x_3,x_4, \ldots x_m$ the $p&lt;n$ principal components are those orthogonal
+<p>The most ‘common’ definition of PCA says : For a given set of <span class="math">\(n\)</span> dimensional vectors
+<span class="math">\(x_1, x_2, x_3,x_4, \ldots x_m\)</span> the <span class="math">\(p&lt;n\)</span> principal components are those orthogonal
 axes onto which the variance retained is maximized</p>
 <p>and hence </p>
 <p>Plotting/Running PCA
-- Calculate $X_cX_c^T$ and calculate $U$ as the eigen vectors of this matrix. Retain the vectors corresponding
-to top $p=2$ eigenvalues
--  Calculate project $Y=U^TX$</p>
-<p>Given gram matrix of original data $K$, to obtain gram matrix of mean centered data, cholesky decomposition is not required:</p>
-<p>$K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}$</p>
+- Calculate <span class="math">\(X_cX_c^T\)</span> and calculate <span class="math">\(U\)</span> as the eigen vectors of this matrix. Retain the vectors corresponding
+to top <span class="math">\(p=2\)</span> eigenvalues
+-  Calculate project <span class="math">\(Y=U^TX\)</span></p>
+<p>Given gram matrix of original data <span class="math">\(K\)</span>, to obtain gram matrix of mean centered data, cholesky decomposition is not required:</p>
+<p><span class="math">\(K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}\)</span></p>
 <p>Also realize:</p>
-<p>$X_c = U \sum V^T$</p>
-<p>and $UU^T=I$ ; $VV^T=I$</p>
-<p>Thus, $K_c=X_cX_c^T = U\sum^2U^T$</p>
-<p>PCA is equivalent of doing a SVD: of $X_c = U\sumV^T$ and then using $U\sum$ as the principle components</p>
-<h2>MDS</h2>
-<p>Given distance matrix $D_{ij}$ of pairwise distances, what would PCA result into?
+<p><span class="math">\(X_c = U \sum V^T\)</span></p>
+<p>and <span class="math">\(UU^T=I\)</span> ; <span class="math">\(VV^T=I\)</span></p>
+<p>Thus, <span class="math">\(K_c=X_cX_c^T = U\sum^2U^T\)</span></p>
+<p>PCA is equivalent of doing a SVD: of <span class="math">\(X_c = U\sumV^T\)</span> and then using <span class="math">\(U\sum\)</span> as the principle components</p>
+<h2 id="mds">MDS<a class="headerlink" href="#mds" title="Permanent link">&para;</a></h2>
+<p>Given distance matrix <span class="math">\(D_{ij}\)</span> of pairwise distances, what would PCA result into?
 Assuming the distances were euclidean:</p>
-<p>$$
+<div class="math">$$
 D_{ij}^2 = ||x_i-x_j||^2 = ||x_i - \overline{x} + \overline{x} -x_j||^2 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 -2\langle x_i-\overline{x}, x_j-\overline{x}\rangle
 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 + 2[K_c]_{ij}
-$$
+$$</div>
+<p>
 which can be cleverly rewritten as:
-$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$</p>
-<p>$K_c$ can now undergo SVD to obtain principal components. which is what happens in <a href="MDS.md">MDS</a> too.</p>
-<h2>References</h2>
+</p>
+<div class="math">$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$</div>
+<p><span class="math">\(K_c\)</span> can now undergo SVD to obtain principal components. which is what happens in <a href="MDS.md">MDS</a> too.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <p>[1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731</p>
 <p>[2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf</p>
 <p>[3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition</p>
@@ -144,6 +146,61 @@ $$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$</p>
 <p>[10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional</p>
 <p>[11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/</p>
 <p>[12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 

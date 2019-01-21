@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="Restriction Fragments Size Distribution "/>
 <meta property="og:url" content="./restriction-fragments-size-distribution.html" />
-<meta property="og:description" content="Given The number of restriction sites in a fragment of length $t$ are distributed as: $$ P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!} $$ Find the distribution of length of restriction fragments Solution Intuition: If I have a restriction site at some location $z$ and want it to …" />
+<meta property="og:description" content="Given¶ The number of restriction sites in a fragment of length \(t\) are distributed as: $$ P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!} $$ Find the distribution of length of restriction fragments Solution¶ Intuition: If I have a restriction site at some location \(z\) and want it to …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-05-13T00:00:00-07:00" />
 <meta name="twitter:title" content="Restriction Fragments Size Distribution ">
-<meta name="twitter:description" content="Given The number of restriction sites in a fragment of length $t$ are distributed as: $$ P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!} $$ Find the distribution of length of restriction fragments Solution Intuition: If I have a restriction site at some location $z$ and want it to …">
+<meta name="twitter:description" content="Given¶ The number of restriction sites in a fragment of length \(t\) are distributed as: $$ P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!} $$ Find the distribution of length of restriction fragments Solution¶ Intuition: If I have a restriction site at some location \(z\) and want it to …">
 
         <title>Restriction Fragments Size Distribution  · Piddling Pertinent
 </title>
@@ -78,26 +78,83 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>Given</h2>
-<p>The number of restriction sites in a fragment of length $t$ are distributed as:
-$$
+            <h2 id="given">Given<a class="headerlink" href="#given" title="Permanent link">&para;</a></h2>
+<p>The number of restriction sites in a fragment of length <span class="math">\(t\)</span> are distributed as:
+</p>
+<div class="math">$$
 P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!}
-$$</p>
+$$</div>
 <p>Find the distribution of length of restriction fragments</p>
-<h2>Solution</h2>
-<p>Intuition: If I have a restriction site at some location $z$ and want it to be
-atleast $x$ base pairs long, i.e. I have a fragment starting at $z$ and going atleast 
-till $z+x$, I need to ensure I do not encounter any other restriction site in between,
-which is also equivalent to $P(N_x=0) = e^{-\lambda x}$</p>
-<p>Thus, the probability that the restriction site is atleast $x$ bp is given by:
-$$
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
+<p>Intuition: If I have a restriction site at some location <span class="math">\(z\)</span> and want it to be
+atleast <span class="math">\(x\)</span> base pairs long, i.e. I have a fragment starting at <span class="math">\(z\)</span> and going atleast 
+till <span class="math">\(z+x\)</span>, I need to ensure I do not encounter any other restriction site in between,
+which is also equivalent to <span class="math">\(P(N_x=0) = e^{-\lambda x}\)</span></p>
+<p>Thus, the probability that the restriction site is atleast <span class="math">\(x\)</span> bp is given by:
+</p>
+<div class="math">$$
 P(X &gt; x) = e^{-\lambda x}
-$$</p>
+$$</div>
 <p>and hence,</p>
-<p>$$
+<div class="math">$$
 P(X &lt; x) = 1-e^{-\lambda x} \implies P(X=x) = \lambda e^{-\lambda x}
-$$</p>
+$$</div>
 <p>Thus, the size of restriction fragments follows an exponential distribution.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 

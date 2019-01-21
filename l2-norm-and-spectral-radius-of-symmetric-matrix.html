@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="L2 norm and spectral radius of symmetric matrix "/>
 <meta property="og:url" content="./l2-norm-and-spectral-radius-of-symmetric-matrix.html" />
-<meta property="og:description" content="L2 norm and spectral radius for $$A=A^T$$ L2 inducded norm: NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm. Induced norm: $$$|| . ||$$ defined as ||A|| = $$sup_{||x=1||} ||Ax||$$ Note how ||Ax|| is a vector norm …" />
+<meta property="og:description" content="L2 norm and spectral radius for $$A=A^T$$ L2 inducded norm: NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.¶ Induced norm: $$$|| . ||$$ defined as ||A|| = $$sup_{||x=1||} ||Ax||$$ Note how ||Ax|| is a vector norm …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-02-28T00:00:00-08:00" />
 <meta name="twitter:title" content="L2 norm and spectral radius of symmetric matrix ">
-<meta name="twitter:description" content="L2 norm and spectral radius for $$A=A^T$$ L2 inducded norm: NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm. Induced norm: $$$|| . ||$$ defined as ||A|| = $$sup_{||x=1||} ||Ax||$$ Note how ||Ax|| is a vector norm …">
+<meta name="twitter:description" content="L2 norm and spectral radius for $$A=A^T$$ L2 inducded norm: NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.¶ Induced norm: $$$|| . ||$$ defined as ||A|| = $$sup_{||x=1||} ||Ax||$$ Note how ||Ax|| is a vector norm …">
 
         <title>L2 norm and spectral radius of symmetric matrix  · Piddling Pertinent
 </title>
@@ -78,11 +78,71 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>L2 norm and spectral radius for $$A=A^T$$</h2>
+            <p>L2 norm and spectral radius for </p>
+<div class="math">$$A=A^T$$</div>
 <p>L2 inducded norm:</p>
-<h3>NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.</h3>
-<p>Induced norm: $$$|| . ||$$ defined as ||A|| = $$sup_{||x=1||} ||Ax||$$ 
+<h3 id="note-l2-norm-is-not-the-same-as-frobenius-norm-l2-norm-is-an-induced-vector-norm-frobenius-is-a-matrix-norm">NOTE: L2 norm is not the same as Frobenius norm. L2 norm is an “induced vector” norm, Frobenius is a “matrix” norm.<a class="headerlink" href="#note-l2-norm-is-not-the-same-as-frobenius-norm-l2-norm-is-an-induced-vector-norm-frobenius-is-a-matrix-norm" title="Permanent link">&para;</a></h3>
+<p>Induced norm: </p>
+<div class="math">$$$|| . ||$$</div>
+<p> defined as ||A|| = </p>
+<div class="math">$$sup_{||x=1||} ||Ax||$$</div>
+<p> 
 Note how ||Ax|| is a vector norm too, while ||A|| is a matrix norm</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 

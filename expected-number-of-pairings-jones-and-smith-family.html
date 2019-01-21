@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="Expected number of pairings | Jones and Smith Family "/>
 <meta property="og:url" content="./expected-number-of-pairings-jones-and-smith-family.html" />
-<meta property="og:description" content="Problem 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find $N$, the number of smiths which have a smith partner. Solution $X= \sum_{i=1}^4 I_i$ Where $I_i=1$ iff $i^{th}$ meber of smith family has …" />
+<meta property="og:description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-05-17T00:00:00-07:00" />
 <meta name="twitter:title" content="Expected number of pairings | Jones and Smith Family ">
-<meta name="twitter:description" content="Problem 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find $N$, the number of smiths which have a smith partner. Solution $X= \sum_{i=1}^4 I_i$ Where $I_i=1$ iff $i^{th}$ meber of smith family has …">
+<meta name="twitter:description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …">
 
         <title>Expected number of pairings | Jones and Smith Family  · Piddling Pertinent
 </title>
@@ -78,20 +78,75 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>Problem</h2>
+            <h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
 <p>4 members of Smith family and 4 of Jones family are pooled
-to form all possible pairs, all equally likely. Find $N$, the 
+to form all possible pairs, all equally likely. Find <span class="math">\(N\)</span>, the 
 number of smiths which have a smith partner.</p>
-<h2>Solution</h2>
-<p>$X= \sum_{i=1}^4 I_i$</p>
-<p>Where $I_i=1$ iff $i^{th}$ meber of smith family has some smith member as it’s partner</p>
-<p>Number of ways $i^{th}$ smith member can have a smith partner (Choose 1 from remaining 3 Smiths, form group of the remaining 6 )  $ = \binom{3}{1} \times \frac{6!}{(2!)^3} $</p>
-<p>Hence, $P(I_i=1)= \frac{\binom{3}{1}\frac{6!}{(2!)^3}}{\frac{8!}{(2!)^4}} = \frac{3}{14}$ </p>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
+<p><span class="math">\(X= \sum_{i=1}^4 I_i\)</span></p>
+<p>Where <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> meber of smith family has some smith member as it’s partner</p>
+<p>Number of ways <span class="math">\(i^{th}\)</span> smith member can have a smith partner (Choose 1 from remaining 3 Smiths, form group of the remaining 6 )  $ = \binom{3}{1} \times \frac{6!}{(2!)^3} $</p>
+<p>Hence, <span class="math">\(P(I_i=1)= \frac{\binom{3}{1}\frac{6!}{(2!)^3}}{\frac{8!}{(2!)^4}} = \frac{3}{14}\)</span> </p>
 <p>The trickery happens because at the next step I am going to over count,
 since the wording in the question is a bit ambiguous and we are concerned with
-the number of smiths have a partner. I should have multiplied $P(I_i=1)$ by $4$ and then divided by 2, 
+the number of smiths have a partner. I should have multiplied <span class="math">\(P(I_i=1)\)</span> by <span class="math">\(4\)</span> and then divided by 2, 
 but I am going to overcount with ambiguity.</p>
-<p>$N = 4 \times \frac{3}{14} = \frac{6}[7]$ which ofcourse is not an integer, but did we expect it to?</p>
+<p><span class="math">\(N = 4 \times \frac{3}{14} = \frac{6}[7]\)</span> which ofcourse is not an integer, but did we expect it to?</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
             <div>
 </div>
 
