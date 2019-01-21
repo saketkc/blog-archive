@@ -32,9 +32,7 @@
 $$&lt;/p&gt;
 &lt;p&gt;Take log both sides:&lt;/p&gt;
 &lt;p&gt;$$
-\sum p_i \log(\frac{1}{p_i}) \leq \log(n …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Sun, 18 Oct 2015 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2015-10-18:/pertinent-blog/entropy-and-uniform-distribution.html</guid><category>textbook problem</category><category>entropy</category><category>uniform</category></item><item><title>A frequent inequality</title><link>http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html</link><description>&lt;p&gt;$$
-\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&amp;gt;0
-$$&lt;/p&gt;
+\sum p_i \log(\frac{1}{p_i}) \leq \log(n …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Sun, 18 Oct 2015 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2015-10-18:/pertinent-blog/entropy-and-uniform-distribution.html</guid><category>textbook problem</category><category>entropy</category><category>uniform</category></item><item><title>A frequent inequality</title><link>http://saket-choudhary.me/pertinent-blog/a-frequent-inequality.html</link><description>&lt;p&gt;$$\frac{x-1}{x} \leq \ln(x)  \leq x-1 \forall\ x&amp;gt;0$$&lt;/p&gt;
 &lt;p&gt;Consider $f(x)=\ln(x)-\frac{x-1}{x}$&lt;/p&gt;
 &lt;p&gt;$f'(x) = \frac{1}{x} - \frac{1}{x^2} = \frac{x-1}{x^2}$&lt;/p&gt;
 &lt;p&gt;Now consider the following two cases:&lt;/p&gt;
@@ -58,7 +56,7 @@ and use this fact for find the best unbiased estimator of $p^4$&lt;/p&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
 &lt;p&gt;We just follow the definition:&lt;/p&gt;
 &lt;p&gt;$P(Y&amp;lt;X) = \int_{-\infty}^{\infty}f_X(x)dx \int_{-\infty}^{x}f_Y(y)dy$&lt;/p&gt;
-&lt;p&gt;$P(Y &amp;lt;X) = \int F_X(y)f_X(x)dx$&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Mon, 18 May 2015 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2015-05-18:/pertinent-blog/distribution-of-one-random-variable-less-than-other.html</guid></item><item><title>[Proof]Weighted AM-GM</title><link>http://saket-choudhary.me/pertinent-blog/proofweighted-am-gm.html</link><description>&lt;p&gt;We make use of &lt;a href="http://en.wikipedia.org/wiki/Jensen%27s_inequality"&gt;Jensen’s Inequality&lt;/a&gt;
+&lt;p&gt;$P(Y &amp;lt;X) = \int F_X(y)f_X(x)dx$&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Mon, 18 May 2015 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2015-05-18:/pertinent-blog/distribution-of-one-random-variable-less-than-other.html</guid><category>stats</category></item><item><title>[Proof]Weighted AM-GM</title><link>http://saket-choudhary.me/pertinent-blog/proofweighted-am-gm.html</link><description>&lt;p&gt;We make use of &lt;a href="http://en.wikipedia.org/wiki/Jensen%27s_inequality"&gt;Jensen’s Inequality&lt;/a&gt;
 and the fact that $log(x)$ is a concave function:&lt;/p&gt;
 &lt;p&gt;For concave f:
 $f(\frac{\sum a_ix_i}{\sum a_i}) \geq \frac{\sum a_i f(x_i)}{\sum a_i}$&lt;/p&gt;
@@ -126,7 +124,7 @@ and not …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elem
 &lt;p&gt;If $X_1,..,X_n$ is a random sample with density $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x-\theta)}}$ ($x \in\mathbb{R}$) and $-\infty&amp;lt;\theta&amp;lt;\infty$,
 $\quad$i) Find the estimator of $\theta$&lt;/p&gt;
 &lt;h2&gt;Solution&lt;/h2&gt;
-&lt;p&gt;First let’s confirm if  $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Tue, 03 Mar 2015 00:00:00 -0800</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2015-03-03:/pertinent-blog/gumbel-distribution-expectation.html</guid><category>stats</category><category>distribution</category><category>gumbel</category></item><item><title>BA = AB = I</title><link>http://saket-choudhary.me/pertinent-blog/ba-ab-i.html</link><description>&lt;h2&gt;To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I&lt;/h2&gt;
+&lt;p&gt;First let’s confirm if  $f(x;\theta)=e^{-(x-\theta)}e^{-e^{-(x- …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Tue, 03 Mar 2015 00:00:00 -0800</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2015-03-03:/pertinent-blog/gumbel-distribution-expectation.html</guid><category>stats</category><category>distribution</category><category>gumbel</category></item><item><title>BA = AB = I</title><link>http://saket-choudhary.me/pertinent-blog/ba-ab-i.html</link><description>&lt;h1&gt;To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I&lt;/h1&gt;
 &lt;p&gt;$$AB=I \implies Rank(A), Rank(B)=n$$&lt;/p&gt;
 &lt;p&gt;Reason: Rank(AB) $$\leq$$ min(Rank A, Rank B)&lt;/p&gt;
 &lt;p&gt;so B is a full rank matrix.
