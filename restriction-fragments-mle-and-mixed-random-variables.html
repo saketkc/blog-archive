@@ -6,28 +6,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Saket Choudhary" />
 
-        <meta name="twitter:creator" content="@saketkc">
+        <meta name="description" content="Let \(X_1, X_2, \dots , X_n\) be the lengths of \(n\) restriction fragments. Suppose that a biotechnique can measure fragment lengths accurately up to a given length c. That is, if \(X_i &lt; c\), then the technique gives correct value \(X_i\) Show that MLE of \(\lambda = \frac{n-T_n}{S_n+cT_n}\) where \(S_n …
+" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="indicator variable, computational biology, exponential, mle, likelihood, misc, " />
+<meta name="keywords" content="indicator variable, computational biology, exponential, mle, likelihood, Miscellaneous, " />
 
-<meta property="og:title" content="Restriction Fragments, MLE, and Mixed Random Variables "/>
-<meta property="og:url" content="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" />
+<meta property="og:title" content="Restriction Fragments, MLE, and Mixed Random Variables "/>
+<meta property="og:url" content="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables" />
 <meta property="og:description" content="Let \(X_1, X_2, \dots , X_n\) be the lengths of \(n\) restriction fragments. Suppose that a biotechnique can measure fragment lengths accurately up to a given length c. That is, if \(X_i &lt; c\), then the technique gives correct value \(X_i\) Show that MLE of \(\lambda = \frac{n-T_n}{S_n+cT_n}\) where \(S_n …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-05-13T00:00:00-07:00" />
-<meta name="twitter:title" content="Restriction Fragments, MLE, and Mixed Random Variables ">
+<meta name="twitter:title" content="Restriction Fragments, MLE, and Mixed Random Variables ">
 <meta name="twitter:description" content="Let \(X_1, X_2, \dots , X_n\) be the lengths of \(n\) restriction fragments. Suppose that a biotechnique can measure fragment lengths accurately up to a given length c. That is, if \(X_i &lt; c\), then the technique gives correct value \(X_i\) Show that MLE of \(\lambda = \frac{n-T_n}{S_n+cT_n}\) where \(S_n …">
+<meta property="og:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" />
+<meta name="twitter:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Restriction Fragments, MLE, and Mixed Random Variables  · Piddling Pertinent
+        <title>Restriction Fragments, MLE, and Mixed Random Variables  · Piddling Pertinent
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?605d3017">
 
+        <link rel="shortcut icon" href="https://saket-choudhary.me/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://saket-choudhary.me/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://saket-choudhary.me/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://saket-choudhary.me/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://saket-choudhary.me/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://saket-choudhary.me/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://saket-choudhary.me/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://saket-choudhary.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
-        <link href="https://saket-choudhary.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -57,10 +70,10 @@
                                        https://saket-choudhary.me
                                     >Home</a>
                                 </li>
-                                <li ><a href="https://saket-choudhary.me/categories.html">Categories</a></li>
-                                <li ><a href="https://saket-choudhary.me/tags.html">Tags</a></li>
-                                <li ><a href="https://saket-choudhary.me/archives.html">Archives</a></li>
-                                <li><form class="navbar-search" action="https://saket-choudhary.me/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="https://saket-choudhary.me/categories">Categories</a></li>
+                                <li ><a href="https://saket-choudhary.me/tags">Tags</a></li>
+                                <li ><a href="https://saket-choudhary.me/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://saket-choudhary.me/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -74,8 +87,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html">
-                Restriction Fragments, MLE,  and Mixed Random Variables
+            <a href="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables">
+                Restriction Fragments, <span class="caps">MLE</span>,  and Mixed Random&nbsp;Variables
             </a>
         </h1>
     </header>
@@ -87,18 +100,18 @@
             <p>Let <span class="math">\(X_1, X_2, \dots , X_n\)</span> be the lengths of <span class="math">\(n\)</span> restriction fragments. Suppose that a
 biotechnique can measure fragment lengths accurately up to a given length c.
 That is, if <span class="math">\(X_i &lt; c\)</span>, then the technique gives correct value <span class="math">\(X_i\)</span>
-Show that MLE of <span class="math">\(\lambda = \frac{n-T_n}{S_n+cT_n}\)</span> where <span class="math">\(S_n= \sum_{j=1}^n X_jI(X_j &lt; c)\)</span> and <span class="math">\(T_n = \sum_{j=1}^n I(X_j \geq c)\)</span></p>
+Show that <span class="caps">MLE</span> of <span class="math">\(\lambda = \frac{n-T_n}{S_n+cT_n}\)</span> where <span class="math">\(S_n= \sum_{j=1}^n X_jI(X_j &lt; c)\)</span> and <span class="math">\(T_n = \sum_{j=1}^n I(X_j \geq&nbsp;c)\)</span></p>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
 <p>This is another of my favorite problems that requires clever use of exponential variables.
-I also answered a similar  question on <a href="http://math.stackexchange.com/a/1281204/171836">Mathematics stackexchange</a></p>
-<p>Few observations:</p>
-<p><span class="math">\(P(X_i &lt; x)  = 1 - \lambda e^{-x}\)</span> if <span class="math">\( 0 \leq x &lt; c\)</span></p>
-<p><span class="math">\(P(X_i = c) = P(X_i \geq c) = e^{-\lambda c}\)</span> (This one looks counter intuitive at first look, but that is what the <span class="math">\(X_i=c\)</span> if <span class="math">\(X_i \geq c\)</span> returns)</p>
+I also answered a similar  question on <a href="http://math.stackexchange.com/a/1281204/171836">Mathematics&nbsp;stackexchange</a></p>
+<p>Few&nbsp;observations:</p>
+<p><span class="math">\(P(X_i &lt; x)  = 1 - \lambda e^{-x}\)</span> if <span class="math">\( 0 \leq x &lt;&nbsp;c\)</span></p>
+<p><span class="math">\(P(X_i = c) = P(X_i \geq c) = e^{-\lambda c}\)</span> (This one looks counter intuitive at first look, but that is what the <span class="math">\(X_i=c\)</span> if <span class="math">\(X_i \geq c\)</span>&nbsp;returns)</p>
 <p>Now,</p>
 <p><span class="math">\(<div class="math">\begin{align}L( \lambda| x_i) &amp;= \prod_{i=1}^{n}  (\lambda e^{-\lambda x_i}) I(0 \leq x_i &lt; c) \times (e^{-\lambda c})I( x_i \geq c) \\&amp;= \lambda^{\sum_{i=1}^n I(0 \leq x_i &lt; c)}e^{-\lambda(\sum_{i=1}^n x_iI(0 \leq x_i &lt; c)} \times e^{-\lambda c \sum_{i=1}^n I(x_i \geq c)} \\&amp;= \lambda^{n-T_n}e^{-\lambda S_n} \times e^{-\lambda c T_n}\end{align}</div>\)</span> </p>
-<p><span class="math">\(\log L= (n-T_n) \log \lambda -\lambda(S_n+cT_n)\)</span></p>
-<p><span class="math">\(\frac{\partial \log L}{\partial \lambda} = \frac{n-T_n}{\lambda}-(S_n+cT_n)\)</span></p>
-<p>which gives <span class="math">\(\hat \lambda = \frac{n-T_n}{S_n+cT_n}\)</span></p>
+<p><span class="math">\(\log L= (n-T_n) \log \lambda&nbsp;-\lambda(S_n+cT_n)\)</span></p>
+<p><span class="math">\(\frac{\partial \log L}{\partial \lambda} =&nbsp;\frac{n-T_n}{\lambda}-(S_n+cT_n)\)</span></p>
+<p>which gives <span class="math">\(\hat \lambda =&nbsp;\frac{n-T_n}{S_n+cT_n}\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -164,85 +177,42 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
 
 
                 <p id="post-share-links">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%20Variables&url=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html&via=saketkc&hashtags=indicator-variable,computational-biology,exponential,mle,likelihood" target="_blank" title="Share on Twitter">Twitter</a>
+    Like this post? Share on:
+    <a href="https://twitter.com/intent/tweet?text=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%C2%A0Variables&url=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables&hashtags=indicator-variable,computational-biology,exponential,mle,likelihood" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="mailto:?subject=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%20Variables&amp;body=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%C2%A0Variables&amp;body=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables" target="_blank" title="Share via Email">Email</a>
     </p>
 
-            
-            
-
-
-
-
-
-
-<section>
-    <h6 style="display:none;">Comments</h6>
-    <p id="comment-message"> </p>
-
-    <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle disqus-comment-count comment-count"
-                   data-toggle="collapse"
-                   data-parent="#accordion2"
-                   data-disqus-identifier="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html"
-                   href="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html#comment_thread"
-                   id="comment-accordion-toggle">
-                    Comments
-                </a>
-            </div>
-            <div id="comment_thread" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <div class="comments">
-                        <div id="disqus_thread"></div>
-                        <script>
-    var disqus_shortname = 'https://piddlingpertinent.disqus.com';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-
-    var disqus_identifier = 'https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html';
-    var disqus_url = 'https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
+                <hr />
+    <div class="author_blurb">
+        <a href="https://saket-choudhary.me" target="_blank" rel="nofollow">
+            <span class="author_name">Saket Choudhary</span>
+        </a>
+        is a PhD candidate at the University of Southern California
     </div>
-</section>
+
+            
+
+
+
+
+
 
             <hr/>
 <section>
-    <h2>Related Posts</h2>
+    <h2>Keep Reading</h2>
 <ul class="related-posts-list">
-<li><a href="https://saket-choudhary.me/restriction-fragments-size-distribution.html" title="Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></li>
+<li><a href="https://saket-choudhary.me/restriction-fragments-size-distribution" title="Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></li>
 </ul>
 <hr />
 </section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://saket-choudhary.me/restriction-fragments-size-distribution.html" title="Previous: Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></li>
-                <li class="next-article"><a href="https://saket-choudhary.me/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" title="Next: Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a> »</li>
+                <li class="previous-article">« <a href="https://saket-choudhary.me/restriction-fragments-size-distribution" title="Previous: Restriction Fragments Size Distribution">Restriction Fragments Size Distribution</a></li>
+                <li class="next-article"><a href="https://saket-choudhary.me/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution" title="Next: Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -252,27 +222,30 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2015-05-13T00:00:00-07:00">May 13, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://saket-choudhary.me/categories.html#misc-ref">misc</a>
+            <a class="category-link" href="https://saket-choudhary.me/categories#miscellaneous-ref">Miscellaneous</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://saket-choudhary.me/tags.html#computational-biology-ref">computational biology
+                <li><a href="https://saket-choudhary.me/tags#computational-biology-ref">computational biology
                     <span>2</span>
 </a></li>
-                <li><a href="https://saket-choudhary.me/tags.html#exponential-ref">exponential
+                <li><a href="https://saket-choudhary.me/tags#exponential-ref">exponential
                     <span>2</span>
 </a></li>
-                <li><a href="https://saket-choudhary.me/tags.html#indicator-variable-ref">indicator variable
+                <li><a href="https://saket-choudhary.me/tags#indicator-variable-ref">indicator variable
                     <span>1</span>
 </a></li>
-                <li><a href="https://saket-choudhary.me/tags.html#likelihood-ref">likelihood
+                <li><a href="https://saket-choudhary.me/tags#likelihood-ref">likelihood
                     <span>1</span>
 </a></li>
-                <li><a href="https://saket-choudhary.me/tags.html#mle-ref">mle
+                <li><a href="https://saket-choudhary.me/tags#mle-ref">mle
                     <span>1</span>
 </a></li>
             </ul>
-<h4>Contact</h4>
+<h4>Stay in Touch</h4>
 <div id="sidebar-social-link">
+    <a href="https://saket-choudhary.me/feeds/all.atom.xml" title="" target="_blank" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
     <a href="https://twitter.com/saketkc" title="" target="_blank" rel="nofollow">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
     </a>
@@ -293,8 +266,6 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
 
 
 
-
-
         </div>
         </section>
 </div>
@@ -305,6 +276,11 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
             </div>
         </div>
 <footer>
+    <div>
+        Content licensed under <a rel="license"
+    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+    Creative Commons Attribution 4.0 International License</a>.
+    </div>
 
     <div>
         <span class="site-name">Piddling Pertinent</span> - trivially relevant
@@ -315,6 +291,10 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
     <div id="fpowered">
         Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow">Pelican</a>
         Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow">Elegant</a>
+        Hosted on:
+        <a href=https://github.com/ target="_blank" rel="nofollow">
+            Github
+        </a>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>

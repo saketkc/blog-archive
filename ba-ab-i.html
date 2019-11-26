@@ -6,28 +6,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Saket Choudhary" />
 
-        <meta name="twitter:creator" content="@saketkc">
+        <meta name="description" content="To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I $$AB=I \implies Rank(A), Rank(B)=n$$ Reason: Rank(AB) $$\leq$$ min(Rank A, Rank B) so B is a full rank matrix. Now consider B=BI $$\implies$$ B-B(AB)=0 $$\implies$$ B-(BA …
+" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="linear algebra, matrix, norm, misc, " />
+<meta name="keywords" content="linear algebra, matrix, norm, Miscellaneous, " />
 
-<meta property="og:title" content="BA = AB = I "/>
-<meta property="og:url" content="https://saket-choudhary.me/ba-ab-i.html" />
-<meta property="og:description" content="To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I $$AB=I \implies Rank(A), Rank(B)=n$$ Reason: Rank(AB) $$\leq$$ min(Rank A, Rank B) so B is a full rank matrix. Now consider B=BI $$\implies$$ B-B(AB)=0 $$\implies$$ B-(BA …" />
+<meta property="og:title" content="BA = AB = I "/>
+<meta property="og:url" content="https://saket-choudhary.me/ba-ab-i" />
+<meta property="og:description" content="To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I $$AB=I \implies Rank(A), Rank(B)=n$$ Reason: Rank(AB) $$\leq$$ min(Rank A, Rank B) so B is a full rank matrix. Now consider B=BI $$\implies$$ B-B(AB)=0 $$\implies$$ B-(BA …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-02-28T00:00:00-08:00" />
-<meta name="twitter:title" content="BA = AB = I ">
-<meta name="twitter:description" content="To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I $$AB=I \implies Rank(A), Rank(B)=n$$ Reason: Rank(AB) $$\leq$$ min(Rank A, Rank B) so B is a full rank matrix. Now consider B=BI $$\implies$$ B-B(AB)=0 $$\implies$$ B-(BA …">
+<meta name="twitter:title" content="BA = AB = I ">
+<meta name="twitter:description" content="To Prove: If $$A_{nxn}$$ and $$B_{nxn}$$ such that AB=I, then BA=I $$AB=I \implies Rank(A), Rank(B)=n$$ Reason: Rank(AB) $$\leq$$ min(Rank A, Rank B) so B is a full rank matrix. Now consider B=BI $$\implies$$ B-B(AB)=0 $$\implies$$ B-(BA …">
+<meta property="og:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" />
+<meta name="twitter:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>BA = AB = I  · Piddling Pertinent
+        <title>BA = AB = I  · Piddling Pertinent
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?605d3017">
 
+        <link rel="shortcut icon" href="https://saket-choudhary.me/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://saket-choudhary.me/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://saket-choudhary.me/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://saket-choudhary.me/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://saket-choudhary.me/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://saket-choudhary.me/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://saket-choudhary.me/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://saket-choudhary.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
-        <link href="https://saket-choudhary.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -57,10 +70,10 @@
                                        https://saket-choudhary.me
                                     >Home</a>
                                 </li>
-                                <li ><a href="https://saket-choudhary.me/categories.html">Categories</a></li>
-                                <li ><a href="https://saket-choudhary.me/tags.html">Tags</a></li>
-                                <li ><a href="https://saket-choudhary.me/archives.html">Archives</a></li>
-                                <li><form class="navbar-search" action="https://saket-choudhary.me/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="https://saket-choudhary.me/categories">Categories</a></li>
+                                <li ><a href="https://saket-choudhary.me/tags">Tags</a></li>
+                                <li ><a href="https://saket-choudhary.me/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://saket-choudhary.me/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -74,8 +87,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://saket-choudhary.me/ba-ab-i.html">
-                BA = AB = I
+            <a href="https://saket-choudhary.me/ba-ab-i">
+                <span class="caps">BA</span> = <span class="caps">AB</span> =&nbsp;I
             </a>
         </h1>
     </header>
@@ -84,24 +97,24 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>To Prove: If </p>
+            <p>To Prove:&nbsp;If </p>
 <div class="math">$$A_{nxn}$$</div>
 <p> and </p>
 <div class="math">$$B_{nxn}$$</div>
-<p> such that AB=I, then BA=I</p>
+<p> such that <span class="caps">AB</span>=I, then <span class="caps">BA</span>=I</p>
 <div class="math">$$AB=I \implies Rank(A), Rank(B)=n$$</div>
-<p>Reason: Rank(AB) </p>
+<p>Reason: Rank(<span class="caps">AB</span>) </p>
 <div class="math">$$\leq$$</div>
-<p> min(Rank A, Rank B)</p>
+<p> min(Rank A, Rank&nbsp;B)</p>
 <p>so B is a full rank matrix.
-Now consider B=BI </p>
+Now consider B=<span class="caps">BI</span> </p>
 <div class="math">$$\implies$$</div>
-<p> B-B(AB)=0 </p>
+<p> B-B(<span class="caps">AB</span>)=0 </p>
 <div class="math">$$\implies$$</div>
-<p> B-(BA)B=0 </p>
+<p> B-(<span class="caps">BA</span>)B=0 </p>
 <div class="math">$$\implies$$</div>
-<p> (I-BA)B=0</p>
-<p>Since B is full rank so I-BA=0. Q.E.D</p>
+<p> (I-<span class="caps">BA</span>)B=0</p>
+<p>Since B is full rank so I-<span class="caps">BA</span>=0. <span class="caps">Q.E.</span>D</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -167,87 +180,44 @@ Now consider B=BI </p>
 
 
                 <p id="post-share-links">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=BA%20%3D%20AB%20%3D%20I&url=https%3A//saket-choudhary.me/ba-ab-i.html&via=saketkc&hashtags=linear-algebra,matrix,norm" target="_blank" title="Share on Twitter">Twitter</a>
+    Like this post? Share on:
+    <a href="https://twitter.com/intent/tweet?text=BA%20%3D%20AB%20%3D%C2%A0I&url=https%3A//saket-choudhary.me/ba-ab-i&hashtags=linear-algebra,matrix,norm" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/ba-ab-i.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/ba-ab-i" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="mailto:?subject=BA%20%3D%20AB%20%3D%20I&amp;body=https%3A//saket-choudhary.me/ba-ab-i.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=BA%20%3D%20AB%20%3D%C2%A0I&amp;body=https%3A//saket-choudhary.me/ba-ab-i" target="_blank" title="Share via Email">Email</a>
     </p>
 
-            
-            
-
-
-
-
-
-
-<section>
-    <h6 style="display:none;">Comments</h6>
-    <p id="comment-message"> </p>
-
-    <div class="accordion" id="accordion2">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle disqus-comment-count comment-count"
-                   data-toggle="collapse"
-                   data-parent="#accordion2"
-                   data-disqus-identifier="https://saket-choudhary.me/ba-ab-i.html"
-                   href="https://saket-choudhary.me/ba-ab-i.html#comment_thread"
-                   id="comment-accordion-toggle">
-                    Comments
-                </a>
-            </div>
-            <div id="comment_thread" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <div class="comments">
-                        <div id="disqus_thread"></div>
-                        <script>
-    var disqus_shortname = 'https://piddlingpertinent.disqus.com';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-
-    var disqus_identifier = 'https://saket-choudhary.me/ba-ab-i.html';
-    var disqus_url = 'https://saket-choudhary.me/ba-ab-i.html';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
+                <hr />
+    <div class="author_blurb">
+        <a href="https://saket-choudhary.me" target="_blank" rel="nofollow">
+            <span class="author_name">Saket Choudhary</span>
+        </a>
+        is a PhD candidate at the University of Southern California
     </div>
-</section>
+
+            
+
+
+
+
+
 
             <hr/>
 <section>
-    <h2>Related Posts</h2>
+    <h2>Keep Reading</h2>
 <ul class="related-posts-list">
-<li><a href="https://saket-choudhary.me/l2-norm-and-spectral-radius-of-symmetric-matrix.html" title="L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></li>
-<li><a href="https://saket-choudhary.me/positive-definite-second-derivative.html" title="Positive definite second derivative">Positive definite second derivative</a></li>
-<li><a href="https://saket-choudhary.me/math-501-project.html" title="MATH 501 Project">MATH 501 Project</a></li>
+<li><a href="https://saket-choudhary.me/l2-norm-and-spectral-radius-of-symmetric-matrix" title="L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></li>
+<li><a href="https://saket-choudhary.me/positive-definite-second-derivative" title="Positive definite second derivative">Positive definite second derivative</a></li>
+<li><a href="https://saket-choudhary.me/math-501-project" title="MATH 501 Project">MATH 501 Project</a></li>
 </ul>
 <hr />
 </section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://saket-choudhary.me/l2-norm-and-spectral-radius-of-symmetric-matrix.html" title="Previous: L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></li>
-                <li class="next-article"><a href="https://saket-choudhary.me/gumbel-distribution-expectation.html" title="Next: Gumbel distribution expectation">Gumbel distribution expectation</a> »</li>
+                <li class="previous-article">« <a href="https://saket-choudhary.me/l2-norm-and-spectral-radius-of-symmetric-matrix" title="Previous: L2 norm and spectral radius of symmetric matrix">L2 norm and spectral radius of symmetric matrix</a></li>
+                <li class="next-article"><a href="https://saket-choudhary.me/gumbel-distribution-expectation" title="Next: Gumbel distribution expectation">Gumbel distribution expectation</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -257,21 +227,24 @@ Now consider B=BI </p>
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2015-02-28T00:00:00-08:00">Feb 28, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://saket-choudhary.me/categories.html#misc-ref">misc</a>
+            <a class="category-link" href="https://saket-choudhary.me/categories#miscellaneous-ref">Miscellaneous</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://saket-choudhary.me/tags.html#linear-algebra-ref">linear algebra
+                <li><a href="https://saket-choudhary.me/tags#linear-algebra-ref">linear algebra
                     <span>4</span>
 </a></li>
-                <li><a href="https://saket-choudhary.me/tags.html#matrix-ref">matrix
+                <li><a href="https://saket-choudhary.me/tags#matrix-ref">matrix
                     <span>3</span>
 </a></li>
-                <li><a href="https://saket-choudhary.me/tags.html#norm-ref">norm
+                <li><a href="https://saket-choudhary.me/tags#norm-ref">norm
                     <span>3</span>
 </a></li>
             </ul>
-<h4>Contact</h4>
+<h4>Stay in Touch</h4>
 <div id="sidebar-social-link">
+    <a href="https://saket-choudhary.me/feeds/all.atom.xml" title="" target="_blank" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
     <a href="https://twitter.com/saketkc" title="" target="_blank" rel="nofollow">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
     </a>
@@ -292,8 +265,6 @@ Now consider B=BI </p>
 
 
 
-
-
         </div>
         </section>
 </div>
@@ -304,6 +275,11 @@ Now consider B=BI </p>
             </div>
         </div>
 <footer>
+    <div>
+        Content licensed under <a rel="license"
+    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+    Creative Commons Attribution 4.0 International License</a>.
+    </div>
 
     <div>
         <span class="site-name">Piddling Pertinent</span> - trivially relevant
@@ -314,6 +290,10 @@ Now consider B=BI </p>
     <div id="fpowered">
         Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow">Pelican</a>
         Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow">Elegant</a>
+        Hosted on:
+        <a href=https://github.com/ target="_blank" rel="nofollow">
+            Github
+        </a>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
