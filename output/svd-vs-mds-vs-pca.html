@@ -13,7 +13,7 @@
 <meta name="keywords" content="math, statistics, ml, misc, " />
 
 <meta property="og:title" content="SVD v/s MDS v/s PCA "/>
-<meta property="og:url" content="./svd-vs-mds-vs-pca.html" />
+<meta property="og:url" content="https://saket-choudhary.me/svd-vs-mds-vs-pca.html" />
 <meta property="og:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
@@ -25,9 +25,9 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="./theme/css/style.min.css?6d4d08cc">
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
+<link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?b95682f5">
+        <link href="https://saket-choudhary.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="https://saket-choudhary.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,14 +50,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="./"><span class=site-name>Piddling Pertinent</span></a>
+                    <a class="brand" href="https://saket-choudhary.me/"><span class=site-name>Piddling Pertinent</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href=".">Home</a></li>
-                            <li ><a href="./categories">Categories</a></li>
-                            <li ><a href="./tags">Tags</a></li>
-                            <li ><a href="./archives">Archives</a></li>
-                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="https://saket-choudhary.me">Home</a></li>
+                            <li ><a href="https://saket-choudhary.me/categories">Categories</a></li>
+                            <li ><a href="https://saket-choudhary.me/tags">Tags</a></li>
+                            <li ><a href="https://saket-choudhary.me/archives">Archives</a></li>
+                            <li><form class="navbar-search" action="https://saket-choudhary.me/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
 <article itemscope>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./svd-vs-mds-vs-pca.html"> SVD v/s MDS v/s PCA  </a></h1>
+    <h1><a href="https://saket-choudhary.me/svd-vs-mds-vs-pca.html"> SVD v/s MDS v/s PCA  </a></h1>
     </header>
 </div>
 
@@ -161,10 +161,13 @@ which can be cleverly rewritten as:
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -178,6 +181,8 @@ which can be cleverly rewritten as:
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -198,6 +203,8 @@ which can be cleverly rewritten as:
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
@@ -207,32 +214,66 @@ which can be cleverly rewritten as:
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=SVD%20v/s%20MDS%20v/s%20PCA&url=http%3A//saket-choudhary.me/pertinent-blog/svd-vs-mds-vs-pca.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=SVD%20v/s%20MDS%20v/s%20PCA&url=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html&via=saketkc&hashtags=math,statistics,ml" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//saket-choudhary.me/pertinent-blog/svd-vs-mds-vs-pca.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//saket-choudhary.me/pertinent-blog/svd-vs-mds-vs-pca.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=SVD%20v/s%20MDS%20v/s%20PCA&amp;body=http%3A//saket-choudhary.me/pertinent-blog/svd-vs-mds-vs-pca.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=SVD%20v/s%20MDS%20v/s%20PCA&amp;body=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
-            
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="https://saket-choudhary.me/svd-vs-mds-vs-pca.html#disqus_thread",
+                id="disqus-accordion-toggle">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https://piddlingpertinent.disqus.com';
+        var disqus_identifier = 'https://saket-choudhary.me/svd-vs-mds-vs-pca.html';
+    var disqus_url = 'https://saket-choudhary.me/svd-vs-mds-vs-pca.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
 <section>
     <h2>Related Posts</h2>
 <ul class="related-posts-list">
-<li><a href="./proof-for-triangle-inequality-for-case-xy0.html" title="Proof for triangle inequality for case $x+y&lt;0$">Proof for triangle inequality for case $x+y<0$</a></li>
-<li><a href="./convolution-demysitifed.html" title="Convolution Demysitifed">Convolution Demysitifed</a></li>
-<li><a href="./a-frequent-inequality.html" title="A frequent inequality">A frequent inequality</a></li>
+<li><a href="https://saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" title="Proof for triangle inequality for case $x+y&lt;0$">Proof for triangle inequality for case $x+y<0$</a></li>
+<li><a href="https://saket-choudhary.me/convolution-demysitifed.html" title="Convolution Demysitifed">Convolution Demysitifed</a></li>
+<li><a href="https://saket-choudhary.me/a-frequent-inequality.html" title="A frequent inequality">A frequent inequality</a></li>
 </ul>
 <hr />
 </section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="./multidimensional-scaling.html" title="Previous: Multidimensional Scaling">Multidimensional Scaling</a></li>
-                <li class="next-article"><a href="./runs-in-flips-of-a-coin.html" title="Next: Runs in flips of a coin">Runs in flips of a coin</a> »</li>
+                <li class="previous-article">« <a href="https://saket-choudhary.me/multidimensional-scaling.html" title="Previous: Multidimensional Scaling">Multidimensional Scaling</a></li>
+                <li class="next-article"><a href="https://saket-choudhary.me/runs-in-flips-of-a-coin.html" title="Next: Runs in flips of a coin">Runs in flips of a coin</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -242,16 +283,16 @@ which can be cleverly rewritten as:
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2015-04-15T00:00:00-07:00">Apr 15, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#misc-ref">misc</a>
+            <a class="category-link" href="https://saket-choudhary.me/categories.html#misc-ref">misc</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags#math-ref">math
+                <li><a href="https://saket-choudhary.me/tags#math-ref">math
                     <span>4</span>
 </a></li>
-                <li><a href="./tags#ml-ref">ml
+                <li><a href="https://saket-choudhary.me/tags#ml-ref">ml
                     <span>1</span>
 </a></li>
-                <li><a href="./tags#statistics-ref">statistics
+                <li><a href="https://saket-choudhary.me/tags#statistics-ref">statistics
                     <span>1</span>
 </a></li>
             </ul>
@@ -262,9 +303,9 @@ which can be cleverly rewritten as:
     <i class="fa fa-github sidebar-social-links"></i></a>
     <a href="https://scholar.google.com/citations?user=BmC4P-oAAAAJ" title="My Google-Scholar Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-google-scholar sidebar-social-links"></i></a>
-    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="My Stack Exchange Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-stack exchange sidebar-social-links"></i></a>
-    <a href="http://www.saket-choudhary.me/resume/saket_cv.pdf" title="My CV Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="My Stackoverflow Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-mathoverflow sidebar-social-links"></i></a>
+    <a href="https://www.saket-choudhary.me/resume/saket_cv.pdf" title="My CV Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-cv sidebar-social-links"></i></a>
         </div>
         </section>
@@ -292,7 +333,45 @@ which can be cleverly rewritten as:
             }
         </script>
 
-    
+            <script type="text/javascript">
+var disqus_shortname = 'https://piddlingpertinent.disqus.com';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementById('disqus-accordion-toggle');
+    var old_innerHTML = link.innerHTML;
+    $(link).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
     </body>
     <!-- Theme: Elegant built for Pelican
     License : MIT -->

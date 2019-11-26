@@ -13,7 +13,7 @@
 <meta name="keywords" content="poisson, computational biology, exponential, misc, " />
 
 <meta property="og:title" content="Restriction Fragments Size Distribution "/>
-<meta property="og:url" content="./restriction-fragments-size-distribution.html" />
+<meta property="og:url" content="https://saket-choudhary.me/restriction-fragments-size-distribution.html" />
 <meta property="og:description" content="Given¶ The number of restriction sites in a fragment of length \(t\) are distributed as: $$ P(N_t=k)=e^{-\lambda t}\frac{(\lambda t)^k}{k!} $$ Find the distribution of length of restriction fragments Solution¶ Intuition: If I have a restriction site at some location \(z\) and want it to …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
@@ -25,9 +25,9 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="./theme/css/style.min.css?6d4d08cc">
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
-        <link href="http://saket-choudhary.me/pertinent-blog/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
+<link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?b95682f5">
+        <link href="https://saket-choudhary.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="https://saket-choudhary.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,14 +50,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="./"><span class=site-name>Piddling Pertinent</span></a>
+                    <a class="brand" href="https://saket-choudhary.me/"><span class=site-name>Piddling Pertinent</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href=".">Home</a></li>
-                            <li ><a href="./categories">Categories</a></li>
-                            <li ><a href="./tags">Tags</a></li>
-                            <li ><a href="./archives">Archives</a></li>
-                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="https://saket-choudhary.me">Home</a></li>
+                            <li ><a href="https://saket-choudhary.me/categories">Categories</a></li>
+                            <li ><a href="https://saket-choudhary.me/tags">Tags</a></li>
+                            <li ><a href="https://saket-choudhary.me/archives">Archives</a></li>
+                            <li><form class="navbar-search" action="https://saket-choudhary.me/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
 <article itemscope>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./restriction-fragments-size-distribution.html"> Restriction Fragments Size Distribution  </a></h1>
+    <h1><a href="https://saket-choudhary.me/restriction-fragments-size-distribution.html"> Restriction Fragments Size Distribution  </a></h1>
     </header>
 </div>
 
@@ -115,10 +115,13 @@ $$</div>
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -132,6 +135,8 @@ $$</div>
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -152,6 +157,8 @@ $$</div>
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
@@ -161,32 +168,66 @@ $$</div>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Restriction%20Fragments%20Size%20Distribution&url=http%3A//saket-choudhary.me/pertinent-blog/restriction-fragments-size-distribution.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Restriction%20Fragments%20Size%20Distribution&url=https%3A//saket-choudhary.me/restriction-fragments-size-distribution.html&via=saketkc&hashtags=poisson,computational-biology,exponential" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//saket-choudhary.me/pertinent-blog/restriction-fragments-size-distribution.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/restriction-fragments-size-distribution.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//saket-choudhary.me/pertinent-blog/restriction-fragments-size-distribution.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=Restriction%20Fragments%20Size%20Distribution&amp;body=http%3A//saket-choudhary.me/pertinent-blog/restriction-fragments-size-distribution.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Restriction%20Fragments%20Size%20Distribution&amp;body=https%3A//saket-choudhary.me/restriction-fragments-size-distribution.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
-            
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="https://saket-choudhary.me/restriction-fragments-size-distribution.html#disqus_thread",
+                id="disqus-accordion-toggle">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'https://piddlingpertinent.disqus.com';
+        var disqus_identifier = 'https://saket-choudhary.me/restriction-fragments-size-distribution.html';
+    var disqus_url = 'https://saket-choudhary.me/restriction-fragments-size-distribution.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
             <hr/>
 <section>
     <h2>Related Posts</h2>
 <ul class="related-posts-list">
-<li><a href="./restriction-fragments-mle-and-mixed-random-variables.html" title="Restriction Fragments, MLE, and Mixed Random Variables">Restriction Fragments, MLE, and Mixed Random Variables</a></li>
-<li><a href="./prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" title="Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a></li>
-<li><a href="./poisson-demysitified.html" title="Poisson Demysitified">Poisson Demysitified</a></li>
+<li><a href="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" title="Restriction Fragments, MLE, and Mixed Random Variables">Restriction Fragments, MLE, and Mixed Random Variables</a></li>
+<li><a href="https://saket-choudhary.me/prove-no-umvue-exists-for-frac1theta-for-poisson-distribution.html" title="Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.">Prove: No UMVUE exists for $\frac{1}{\theta}$ for Poisson Distribution.</a></li>
+<li><a href="https://saket-choudhary.me/poisson-demysitified.html" title="Poisson Demysitified">Poisson Demysitified</a></li>
 </ul>
 <hr />
 </section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="./convolution-demysitifed.html" title="Previous: Convolution Demysitifed">Convolution Demysitifed</a></li>
-                <li class="next-article"><a href="./restriction-fragments-mle-and-mixed-random-variables.html" title="Next: Restriction Fragments, MLE, and Mixed Random Variables">Restriction Fragments, MLE, and Mixed Random Variables</a> »</li>
+                <li class="previous-article">« <a href="https://saket-choudhary.me/convolution-demysitifed.html" title="Previous: Convolution Demysitifed">Convolution Demysitifed</a></li>
+                <li class="next-article"><a href="https://saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" title="Next: Restriction Fragments, MLE, and Mixed Random Variables">Restriction Fragments, MLE, and Mixed Random Variables</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -196,16 +237,16 @@ $$</div>
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2015-05-13T00:00:00-07:00">May 13, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#misc-ref">misc</a>
+            <a class="category-link" href="https://saket-choudhary.me/categories.html#misc-ref">misc</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags#computational-biology-ref">computational biology
+                <li><a href="https://saket-choudhary.me/tags#computational-biology-ref">computational biology
                     <span>2</span>
 </a></li>
-                <li><a href="./tags#exponential-ref">exponential
+                <li><a href="https://saket-choudhary.me/tags#exponential-ref">exponential
                     <span>2</span>
 </a></li>
-                <li><a href="./tags#poisson-ref">poisson
+                <li><a href="https://saket-choudhary.me/tags#poisson-ref">poisson
                     <span>3</span>
 </a></li>
             </ul>
@@ -216,9 +257,9 @@ $$</div>
     <i class="fa fa-github sidebar-social-links"></i></a>
     <a href="https://scholar.google.com/citations?user=BmC4P-oAAAAJ" title="My Google-Scholar Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-google-scholar sidebar-social-links"></i></a>
-    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="My Stack Exchange Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-stack exchange sidebar-social-links"></i></a>
-    <a href="http://www.saket-choudhary.me/resume/saket_cv.pdf" title="My CV Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="My Stackoverflow Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-mathoverflow sidebar-social-links"></i></a>
+    <a href="https://www.saket-choudhary.me/resume/saket_cv.pdf" title="My CV Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-cv sidebar-social-links"></i></a>
         </div>
         </section>
@@ -246,7 +287,45 @@ $$</div>
             }
         </script>
 
-    
+            <script type="text/javascript">
+var disqus_shortname = 'https://piddlingpertinent.disqus.com';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementById('disqus-accordion-toggle');
+    var old_innerHTML = link.innerHTML;
+    $(link).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
     </body>
     <!-- Theme: Elegant built for Pelican
     License : MIT -->

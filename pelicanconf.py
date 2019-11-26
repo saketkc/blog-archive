@@ -6,7 +6,7 @@ AUTHOR = "Saket Choudhary"
 SITENAME = "Piddling Pertinent"
 SITESUBTITLE = "trivially relevant"
 SITEDESCRIPTION = "Musings"
-SITEURL = "http://saket-choudhary.me/pertinent-blog"
+SITEURL = "https://saket-choudhary.me"
 
 PATH = "content"
 BROWSER_COLOR = "#333333"
@@ -39,26 +39,26 @@ MAIN_MENU = True
 HOME_HIDE_TAGS = True
 
 # Blogroll
-# LINKS = (('Pelican', 'http://getpelican.com/'),
-#         ('Python.org', 'http://python.org/'),
-#         ('Jinja2', 'http://jinja.pocoo.org/'),
+# LINKS = (('Pelican', 'https://getpelican.com/'),
+#         ('Python.org', 'https://python.org/'),
+#         ('Jinja2', 'https://jinja.pocoo.org/'),
 #         ('You can modify those links in your config file', '#'),)
 LINKS = [
     (
         "Probability Screening Solutions",
-        "http://www.saket-choudhary.me/usc-math-505A-screening-solutions/",
+        "https://www.saket-choudhary.me/usc-math-505A-screening-solutions/",
     ),
     (
         "Stats A Screening Solutions",
-        "http://www.saket-choudhary.me/usc-math-541A-screening-solutions/",
+        "https://www.saket-choudhary.me/usc-math-541A-screening-solutions/",
     ),
     (
         "Stats B Screening Solutions",
-        "http://www.saket-choudhary.me/usc-math-541B-screening-solutions/",
+        "https://www.saket-choudhary.me/usc-math-541B-screening-solutions/",
     ),
     (
         "Royal Statistical Society Diploma Solutions",
-        "http://www.saket-choudhary.me/rss-graduate-diploma-solutions",
+        "https://www.saket-choudhary.me/rss-graduate-diploma-solutions",
     ),
 ]
 
@@ -69,15 +69,15 @@ THEME = "pelican-themes/elegant"
 SOCIAL = (
     ("Twitter", "https://twitter.com/saketkc"),
     ("Github", "https://github.com/saketkc"),
-    ("Google-Scholar", "https://scholar.google.com/citations?user=BmC4P-oAAAAJ"),
-    ("Stack Exchange", "https://stats.stackexchange.com/users/11668/rightskewed"),
-    ("CV", "http://www.saket-choudhary.me/resume/saket_cv.pdf"),
+    ("Google-Scholar", "https://scholar.google.com/citations?user=BmC4P-oAAAAJ", "google-scholar"),
+    ("Stackoverflow", "https://stats.stackexchange.com/users/11668/rightskewed", "mathoverflow"),
+    ("CV", "https://www.saket-choudhary.me/resume/saket_cv.pdf", "CV"),
 )
 DEFAULT_PAGINATION = False
 
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 MARKUP = ("md", "ipynb")
 LOAD_CONTENT_CACHE = False
 STATIC_PATHS = ["images", "extra/CNAME"]
@@ -91,7 +91,6 @@ MARKDOWN = {
         "markdown.extensions.codehilite": {"css_class": "codehilite"},
         "markdown.extensions.extra": {},
         "markdown.extensions.meta": {},
-        "markdown.extensions.headerid": {},
         "markdown.extensions.toc": {"permalink": "true"},
     },
     "output_format": "html5",
@@ -103,7 +102,7 @@ DEFAULT_PAGINATION = 10
 jinja_environment = {"extensions": ["jinja2.ext.i18n"]}
 # GOSQUARED_SITENAME = 'GSN-123456-A'
 MENUITEMS = [
-    ("Home", "http://saket-choudhary.me/pertinent-blog"),
+    ("Home", "https://saket-choudhary.me/pertinent-blog"),
     ("Github", "https://github.com/saketkc/pertinent-blog/tree/master/content"),
 ]
 GITHUB_URL = "https://github.com/saketkc"
@@ -145,11 +144,11 @@ PLUGINS += [
     "i18n_subsites",
     "related_posts",
     "series",
+    "minchin.pelican.plugins.cname",
 ]
 DIRECT_TEMPLATES = ("index", "tags", "categories", "archives", "search", "404")
 LANDING_PAGE_ABOUT = {
-    "title": "About Me",
-    "details": """I am a PhD student at the University Of Southern California, Los Angeles where I develop methods to understand post transcriptional regulation.
+    "details": """I am Saket Choudhary. I am currently a PhD student at the University Of Southern California, Los Angeles, where I develop methods to understand post transcriptional regulation.
                I spent the most wonderful years of my life(ever!) at Indian Institute of Technology Bombay graduating with a Bachelors and Masters degree in Chemical Engineering. """,
 }
 SITE_SUBTITLE = "Trivially Important"
@@ -169,6 +168,7 @@ PROJECTS = [
     {
         "name": "sklearn-hogsvd",
         "url": "https://github.com/saketkc/sklearn-hogsvd/",
-        "description": "Scikit-learn compatible python implementation of HO-GSVD",
+        "description": "Scikit-learn compatible python implementation of higher order generalized SVD",
     },
 ]
+DISQUS_SITENAME = 'https://piddlingpertinent.disqus.com'
