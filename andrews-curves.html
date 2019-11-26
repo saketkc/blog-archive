@@ -1253,11 +1253,14 @@ h6:hover .anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Andrews-Curves">Andrews Curves<a class="anchor-link" href="#Andrews-Curves">&#182;</a></h1><p><span class="caps">D. F.</span> Andrews introduced &#8216;Andrews Curves&#8217; in his 1972 <a href="https://www.jstor.org/stable/2528964">paper</a> for plotthing high dimensional data in two dimeion. The underlying principle is simple: Embed the high dimensiona data in  high diemnsion only using a space of functions and then visualizing these&nbsp;functions.</p>
 <p>Consider A $d$ dimensional data point $\mathbf{x} = (x_1, x_2, \dots, x_d)$. Define the following&nbsp;function:</p>
-$$f_x(t) = \begin{cases}
-\frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin (2t) + x_5\cos(2t) + \dots + x_{2k} \sin(kt) + x_{2k+1} \cos(kt) + \dots + x_{d-2}\sin( (\frac{d}{2} -1)t) + x_{d-1}\cos( (\frac{d}{2} -1)t) + x_{d} \sin(\frac{d}{2}t)   <span class="amp">&amp;</span> d \text{ even}&#92;
-\frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin (2t) + x_5\cos(2t) + \dots + x_{2k} \sin(kt) + x_{2k+1} \cos(kt) + \dots + x_{d-3}\sin( \frac{d-3}{2} t) + x_{d-2}\cos( \frac{d-3}{2}t) + x_{d-1} \sin(\frac{d-1}{2}t) + x_{d} \cos(\frac{d-1}{2}t)) <span class="amp">&amp;</span> d \text{ odd}&#92;
+\begin{align*}
+f_x(t) &amp;= \begin{cases}
+\frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin (2t) + x_5\cos(2t) + \dots + x_{2k} \sin(kt) &#92;
++x_{2k+1} \cos(kt) + \dots + x_{d-2}\sin( (\frac{d}{2} -1)t) + x_{d-1}\cos( (\frac{d}{2} -1)t) + x_{d} \sin(\frac{d}{2}t) \quad d \text{ even}&#92;
+\frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin (2t) + x_5\cos(2t) + \dots + x_{2k} \sin(kt)&#92;
++ x_{2k+1} \cos(kt) + \dots + x_{d-3}\sin( \frac{d-3}{2} t) + x_{d-2}\cos( \frac{d-3}{2}t) + x_{d-1} \sin(\frac{d-1}{2}t) + x_{d} \cos(\frac{d-1}{2}t)) \quad d \text{ odd}&#92;
 \end{cases}
-$$<p>This representation yields one dimensional projections, which may reveal clustering, outliers or orther patterns that occur in this subspace. All such one dimensional projections can then be plotted on one&nbsp;graph.</p>
+\end{align*}<p>This representation yields one dimensional projections, which may reveal clustering, outliers or orther patterns that occur in this subspace. All such one dimensional projections can then be plotted on one&nbsp;graph.</p>
 <h1 id="Properties">Properties<a class="anchor-link" href="#Properties">&#182;</a></h1><p>Andrews Curves has some intersting properties that makes it useful as a 2D&nbsp;tool:</p>
 <h2 id="Mean">Mean<a class="anchor-link" href="#Mean">&#182;</a></h2><p>If $\bar{\mathbf{x}}$ represents the mean of $\bar{x}$ for $n$ observations: $\bar{\mathbf{x}}  = \frac{1}{n} \mathbf{x_i}$. then,
 $$ f_{\bar{\mathbf{x}}}(t) = \frac{1}{n} \sum_{i=1}{n}&nbsp;f_{\mathbf{x_i}}(t)$$</p>
@@ -1283,7 +1286,7 @@ $$||\mathbf{x} - \mathbf{y}||_2^2 = \sum_{j=1}^d |x_j-y_j|^2$$<p>Let&#8217;s con
 \begin{align*}
 \int_{-\pi}^{\pi} (f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t))^2 dt &amp;= \pi ||\mathbf{x} - \mathbf{y}||_2^2
 \end{align*}<h2 id="Variance">Variance<a class="anchor-link" href="#Variance">&#182;</a></h2><p>If the $d$ features/components are all indepdent and have a common variance&nbsp;$\sigma^2$</p>
-<p>Then
+<p>Then</p>
 \begin{align*}
 \text{Var}f_{\mathbf{x}(t)} &amp;= \text{Var} \left(\frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin (2t) + x_5\cos(2t) + \dots + x_{2k} \sin(kt) + x_{2k+1} \cos(kt) + \dots + x_{d-2}\sin( (\frac{d}{2} -1)t) + x_{d-1}\cos( (\frac{d}{2} -1)t) + x_{d} \sin(\frac{d}{2}t)  \right)&#92;
 &amp;= \sigma^2 \left( \frac{1}{2} + \sin^2 + \cos^2 t + \sin^2 2t + \cos^2 2t + \dots \right)&#92;
@@ -1294,8 +1297,8 @@ $$||\mathbf{x} - \mathbf{y}||_2^2 = \sum_{j=1}^d |x_j-y_j|^2$$<p>Let&#8217;s con
 &amp;= \begin{cases}
 \frac{k\sigma^2}{2} <span class="amp">&amp;</span> d \text{ odd }&#92;
 \sigma^2(\frac{k-1}{2} + \sin^2 {\frac{kt}{2}} ) <span class="amp">&amp;</span> d  \text{ even }&#92;
-\end{cases}&nbsp;\end{align*}</p>
-<p>In the even case the variance is boundded between $[\sigma^2(\frac{k-1}{2}), \sigma^2(\frac{k+1}{2})]$
+\end{cases}
+\end{align*}<p>In the even case the variance is boundded between $[\sigma^2(\frac{k-1}{2}), \sigma^2(\frac{k+1}{2})]$
 Since the variance is indepedent of $t$, the plotted functions will be&nbsp;smooth!</p>
 <h1 id="Interpretation">Interpretation<a class="anchor-link" href="#Interpretation">&#182;</a></h1><h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h2><p>Functions close together, forming a band imply the corresponding points are also close in the euclidean&nbsp;space</p>
 <h2 id="Test-of-significance-at-particular-values-of-$t$">Test of significance at particular values of $t$<a class="anchor-link" href="#Test-of-significance-at-particular-values-of-$t$">&#182;</a></h2><p>To test $f_{\mathbf{x}}(t) = f_{\mathbf{y}}(t)$ for some hypothesize $\mathbf{y}$ and assuming the $\text{Var}[f_{\mathbf{x}}(t)]$ is known  then testing can be done using the usual $z$ score:
