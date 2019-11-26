@@ -126,10 +126,13 @@ then you should get a straight line representing <span class="math">\(Y=X\)</spa
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -143,6 +146,7 @@ then you should get a straight line representing <span class="math">\(Y=X\)</spa
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        fonts: [['STIX', 'TeX']]," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -163,6 +167,8 @@ then you should get a straight line representing <span class="math">\(Y=X\)</spa
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
@@ -172,11 +178,11 @@ then you should get a straight line representing <span class="math">\(Y=X\)</spa
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Multidimensional%20Scaling&url=https%3A//saket-choudhary.me/multidimensional-scaling.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Multidimensional%20Scaling&url=https%3A//saket-choudhary.me/multidimensional-scaling.html&via=saketkc" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/multidimensional-scaling.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/multidimensional-scaling.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=https%3A//saket-choudhary.me/multidimensional-scaling.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
     <a href="mailto:?subject=Multidimensional%20Scaling&amp;body=https%3A//saket-choudhary.me/multidimensional-scaling.html" target="_blank" title="Share via Email">Email</a>
     </p>

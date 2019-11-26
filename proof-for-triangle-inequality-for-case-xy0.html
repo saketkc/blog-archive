@@ -97,10 +97,13 @@ and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\imp
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -114,6 +117,7 @@ and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\imp
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        fonts: [['STIX', 'TeX']]," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -134,6 +138,8 @@ and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\imp
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
@@ -143,11 +149,11 @@ and <span class="math">\(-|y| \leq y \leq |y|\)</span> <span class="math">\(\imp
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Proof%20for%20triangle%20inequality%20for%20case%20%24x%2By%3C0%24&url=https%3A//saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Proof%20for%20triangle%20inequality%20for%20case%20%24x%2By%3C0%24&url=https%3A//saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html&via=saketkc&hashtags=math,inequality" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=https%3A//saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
     <a href="mailto:?subject=Proof%20for%20triangle%20inequality%20for%20case%20%24x%2By%3C0%24&amp;body=https%3A//saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" target="_blank" title="Share via Email">Email</a>
     </p>

@@ -78,8 +78,7 @@
         <div class="span8 offset2 article-content">
 
             
-            <body>
-<div class="cell border-box-sizing code_cell rendered">
+            <body><div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
@@ -96,7 +95,7 @@
                   <span class="s1">&#39;#999999&#39;</span><span class="p">,</span> <span class="s1">&#39;#e41a1c&#39;</span><span class="p">,</span> <span class="s1">&#39;#dede00&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -106,7 +105,7 @@
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -120,8 +119,7 @@
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Andrews-Curves">Andrews Curves<a class="anchor-link" href="#Andrews-Curves">&#182;</a></h1><p>D. F. Andrews introduced 'Andrews Curves' in his 1972 <a href="https://www.jstor.org/stable/2528964">paper</a> for plotthing high dimensional data in two dimeion. The underlying principle is simple: Embed the high dimensiona data in  high diemnsion only using a space of functions and then visualizing these functions.</p>
 <p>Consider A $d$ dimensional data point $\mathbf{x} = (x_1, x_2, \dots, x_d)$. Define the following function:
@@ -142,12 +140,10 @@ f_{\bar{\mathbf{x}}}(t) &amp;= \frac{\bar{\mathbf{x_1}}}{\sqrt{2}} +  \bar{\math
 &amp;= \frac{1}{n} \sum_{i=1}^n f_{x_i} (t)
 \end{align*}</p>
 <h2 id="Distance">Distance<a class="anchor-link" href="#Distance">&#182;</a></h2><p>Euclidean distance is preserved. Consider two points $\mathbf{x}$ and $\mathbf{y}$</p>
-<p>$$||\mathbf{x} - \mathbf{y}||_2^2 = \sum_{j=1}^d |x_j-y_j|^2$$</p>
-<p>Let's consider $||f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t) ||_2^2 = \int_{-\pi}^{\pi} (f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t))^2 dt $</p>
-<p>\begin{align*}
+$$||\mathbf{x} - \mathbf{y}||_2^2 = \sum_{j=1}^d |x_j-y_j|^2$$<p>Let's consider $||f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t) ||_2^2 = \int_{-\pi}^{\pi} (f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t))^2 dt $</p>
+\begin{align*}
 \int_{-\pi}^{\pi} (f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t))^2 dt &amp;= \frac{(x_1-y_1)^2}{2}(2\pi) + \int_{-\pi}^{\pi} (x_1-y_1)^2 \sin^2{t}\ dt + \int_{-\pi}^{\pi} (x_2-y_2)^2 \cos^2{t}\ dt + \int_{-\pi}^{\pi} (x_3-y_3)^2 \sin^2{2t}\ dt + \int_{-\pi}^{\pi} (x_4-y_4)^2 \cos^2{2t}\ dt +  \dots
-\end{align*}</p>
-<p>\begin{align*} 
+\end{align*}\begin{align*} 
 \int^{\pi}_{-\pi} \sin^2 (kt) dt &amp;= \frac{1}{k}\int_{-k\pi}^{k\pi} \sin^2 (t') dt'\\
 &amp;= \frac{1}{k} \left( \frac{\int_{-k\pi}^{k\pi} (1-\cos{(2t'))}dt'}{2} \right)\\
 &amp;= \frac{1}{k} \frac{2k\pi}{2}\\
@@ -155,12 +151,10 @@ f_{\bar{\mathbf{x}}}(t) &amp;= \frac{\bar{\mathbf{x_1}}}{\sqrt{2}} +  \bar{\math
 \int^{\pi}_{-\pi} \cos^2 (kt) dt &amp;= \int^{\pi}_{-\pi} (1-\sin^2 (kt)) dt\\
 &amp;= 2\pi-\pi\\
 &amp;= \pi
-\end{align*}</p>
-<p>Thus,</p>
-<p>\begin{align*}
+\end{align*}<p>Thus,</p>
+\begin{align*}
 \int_{-\pi}^{\pi} (f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t))^2 dt &amp;= \pi ||\mathbf{x} - \mathbf{y}||_2^2
-\end{align*}</p>
-<h2 id="Variance">Variance<a class="anchor-link" href="#Variance">&#182;</a></h2><p>If the $d$ features/components are all indepdent and have a common variance $\sigma^2$</p>
+\end{align*}<h2 id="Variance">Variance<a class="anchor-link" href="#Variance">&#182;</a></h2><p>If the $d$ features/components are all indepdent and have a common variance $\sigma^2$</p>
 <p>Then
 \begin{align*}
 \text{Var}f_{\mathbf{x}(t)} &amp;= \text{Var} \left(\frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin (2t) + x_5\cos(2t) + \dots + x_{2k} \sin(kt) + x_{2k+1} \cos(kt) + \dots + x_{d-2}\sin( (\frac{d}{2} -1)t) + x_{d-1}\cos( (\frac{d}{2} -1)t) + x_{d} \sin(\frac{d}{2}t)  \right)\\
@@ -184,20 +178,18 @@ $$</p>
 <p>assuming that the comoponets $x_i$ are independent normal random variables.</p>
 <h2 id="Detecting-outliers">Detecting outliers<a class="anchor-link" href="#Detecting-outliers">&#182;</a></h2><p>If comonents $x_i$ are independent normal $ x_i \sim \mathcal{N}(\mu_i, \sigma^2)$, then $\frac{|\mathbf{x}-\mathbf{\mu}}{\sigma^2}$ follows a $\chi^2_d$ distirbution.
 Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
-<p>\begin{align*}
+\begin{align*}
 |(\mathbf{x}-\mathbf{\mu})'v|^2 &amp;=  \frac{||f_{\mathbf{x}}(t) - f_{\mathbf{\mu}}(t)||^2 }{||f_\mathbf{1}(t)||^2}
  \frac{||f_{\mathbf{x}}(t) - f_{\mathbf{\mu}}(t)||^2 }{||f_\mathbf{1}(t)||^2} &amp;\leq \chi_d^2(\alpha)
-\end{align*}</p>
-<p>Now, 
+\end{align*}<p>Now, 
 \begin{align*}
 ||f_\mathbf{1}(t)||^2 &amp;= \frac{1}{2} + \sin^2 + \cos^2 t + \dots + \\
 &amp;\leq \frac{d+1}{2}
 \end{align*}</p>
 <p>Thus,</p>
-<p>\begin{align*}
+\begin{align*}
 ||f_{\mathbf{x}}(t) - f_{\mathbf{\mu}}(t)||^2 \leq \sigma^2 ||f_\mathbf{1}(t)||^2 \chi^2_d(\alpha) &amp;\leq \sigma^2 \frac{d+1}{2} \chi^2_d(\alpha)\\
-\end{align*}</p>
-<h2 id="Linear-relationships">Linear relationships<a class="anchor-link" href="#Linear-relationships">&#182;</a></h2><p>The "Sandwich" theorem: If $\mathbf{y}$ lies on a line joining $\mathbf{x}$ and $\mathbf{z}$, then $\forall t$ : $f_\mathbf{y}(t)$ lies between $f_\mathbf{x}(t)$ and $f_\mathbf{z}(t)$. This is straightforward.</p>
+\end{align*}<h2 id="Linear-relationships">Linear relationships<a class="anchor-link" href="#Linear-relationships">&#182;</a></h2><p>The "Sandwich" theorem: If $\mathbf{y}$ lies on a line joining $\mathbf{x}$ and $\mathbf{z}$, then $\forall t$ : $f_\mathbf{y}(t)$ lies between $f_\mathbf{x}(t)$ and $f_\mathbf{z}(t)$. This is straightforward.</p>
 
 </div>
 </div>
@@ -244,14 +236,13 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
     <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">matrix</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Andrews-Curves-for-iris-dataset">Andrews Curves for iris dataset<a class="anchor-link" href="#Andrews-Curves-for-iris-dataset">&#182;</a></h1>
 </div>
@@ -266,7 +257,7 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -295,7 +286,7 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -305,7 +296,7 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -323,8 +314,7 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="PCA">PCA<a class="anchor-link" href="#PCA">&#182;</a></h1>
 </div>
@@ -356,7 +346,7 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -366,7 +356,7 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -384,13 +374,25 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Clearly setos and virginica lie close to each other and hence appear as merged clusters in PCA and merged bands in Andrews Curves</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
  
 
@@ -430,11 +432,11 @@ Consider a vector $v = \frac{f_\mathbf{1}(t)}{||f_\mathbf{1}(t)||}$ then :</p>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Andrews%20Curves&url=https%3A//saket-choudhary.me/andrews-curves.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Andrews%20Curves&url=https%3A//saket-choudhary.me/andrews-curves.html&via=saketkc&hashtags=python,andrewscurve,pca" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/andrews-curves.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/andrews-curves.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=https%3A//saket-choudhary.me/andrews-curves.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
     <a href="mailto:?subject=Andrews%20Curves&amp;body=https%3A//saket-choudhary.me/andrews-curves.html" target="_blank" title="Share via Email">Email</a>
     </p>

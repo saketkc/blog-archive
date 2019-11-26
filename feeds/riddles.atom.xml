@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent - riddles</title><link href="https://saket-choudhary.me/" rel="alternate"></link><link href="https://saket-choudhary.me/feeds/riddles.atom.xml" rel="self"></link><id>https://saket-choudhary.me/</id><updated>2018-06-17T00:00:00-07:00</updated><subtitle>trivially relevant</subtitle><entry><title>Expected number of flips in a memoryless concentration game</title><link href="https://saket-choudhary.me/expected-number-of-flips-in-a-memoryless-concentration-game.html" rel="alternate"></link><published>2018-06-17T00:00:00-07:00</published><updated>2018-06-17T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2018-06-17:/expected-number-of-flips-in-a-memoryless-concentration-game.html</id><summary type="html">
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Piddling Pertinent - riddles</title><link href="https://saket-choudhary.me/" rel="alternate"></link><link href="https://saket-choudhary.me/feeds/riddles.atom.xml" rel="self"></link><id>https://saket-choudhary.me/</id><updated>2018-06-17T00:00:00-07:00</updated><subtitle>trivially relevant</subtitle><entry><title>Expected number of flips in a memoryless concentration game</title><link href="https://saket-choudhary.me/expected-number-of-flips-in-a-memoryless-concentration-game.html" rel="alternate"></link><published>2018-06-17T00:00:00-07:00</published><updated>2018-06-17T00:00:00-07:00</updated><author><name>Saket Choudhary</name></author><id>tag:saket-choudhary.me,2018-06-17:/expected-number-of-flips-in-a-memoryless-concentration-game.html</id><summary type="html">&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Riddler-Classic"&gt;Riddler Classic&lt;a class="anchor-link" href="#Riddler-Classic"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href="https://fivethirtyeight.com/features/how-many-phones-do-you-need-to-win-hq-trivia/"&gt;https://fivethirtyeight.com/features/how-many-phones-do-you-need-to-win-hq-trivia/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;From Kate Seely, a gaming problem to which she would very much like to know the answer:
-I have a matching game app for my 4-year-old daughter. There are 10 different pairs of cards, each pair depicting the same animal. That makes 20 cards total, all arrayed face down. The goal is to match all the pairs. When you flip two cards up, if they match, they stay up, decreasing the number of unmatched cards and rewarding you with the corresponding animal sound. If they don’t match, they both flip back down. (Essentially like &lt;a href="https://en.wikipedia.org/wiki/Concentration_(game"&gt;Concentration.&lt;/a&gt;</summary><content type="html">&lt;body&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+I have a matching game app for my 4-year-old daughter. There are 10 different pairs of cards, each pair depicting the same animal. That makes 20 cards total, all arrayed face down. The goal is to match all the pairs. When you flip two cards up, if they match, they stay up, decreasing the number of unmatched cards and rewarding you with the corresponding animal sound. If they don’t match, they both flip back down. (Essentially like &lt;a href="https://en.wikipedia.org/wiki/Concentration_(game"&gt;Concentration.&lt;/a&gt;</summary><content type="html">&lt;body&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Riddler-Classic"&gt;Riddler Classic&lt;a class="anchor-link" href="#Riddler-Classic"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href="https://fivethirtyeight.com/features/how-many-phones-do-you-need-to-win-hq-trivia/"&gt;https://fivethirtyeight.com/features/how-many-phones-do-you-need-to-win-hq-trivia/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;From Kate Seely, a gaming problem to which she would very much like to know the answer:
@@ -21,15 +17,13 @@ If he flips a pair of cards every second and it takes another second for them to
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Solution"&gt;Solution&lt;a class="anchor-link" href="#Solution"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Consider a more general case of $n$ pairs (hence a total of $2n$ cards). The probability of getting a "hit", i.e. a flip with matching pairs starting with $n$ pairs is given by:&lt;/p&gt;
-&lt;p&gt;\begin{align*}
+\begin{align*}
 p_n &amp;amp;= \frac{{n \choose 1}}{2n \choose 2} \\
 &amp;amp;= \frac{1}{2n-1}
-\end{align*}&lt;/p&gt;
-&lt;p&gt;The number of tries till a first "hit" follows a geometric disribution. (Think of a coin toss experiment where the we are studying the distribution of number of heads till the first tail appears $P(X=k) = p^k(1-p)$. Then the mean is given by $EX = \frac{1}{p}$.&lt;/p&gt;
+\end{align*}&lt;p&gt;The number of tries till a first "hit" follows a geometric disribution. (Think of a coin toss experiment where the we are studying the distribution of number of heads till the first tail appears $P(X=k) = p^k(1-p)$. Then the mean is given by $EX = \frac{1}{p}$.&lt;/p&gt;
 &lt;p&gt;Thus, it will take $2n-1$ picks to get a "hit" on average starting with $2n$ cards. Similarly, it will take $2n-3$ picks starting with $2n-2$ cards and so on.&lt;/p&gt;
 &lt;p&gt;Hence number of picks when the player is playing randomly:
 $$
@@ -53,7 +47,7 @@ $$&lt;/p&gt;
 &lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_style&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;whitegrid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -63,7 +57,7 @@ $$&lt;/p&gt;
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -99,7 +93,7 @@ $$&lt;/p&gt;
         &lt;span class="n"&gt;n_tries_arr&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_tries&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -109,7 +103,7 @@ $$&lt;/p&gt;
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -138,7 +132,7 @@ $$&lt;/p&gt;
 &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tight_layout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -148,7 +142,7 @@ $$&lt;/p&gt;
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 

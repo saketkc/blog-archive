@@ -108,10 +108,13 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -125,6 +128,7 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        fonts: [['STIX', 'TeX']]," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -145,6 +149,8 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
@@ -154,11 +160,11 @@ I also answered a similar  question on <a href="http://math.stackexchange.com/a/
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%20Variables&url=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://twitter.com/intent/tweet?text=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%20Variables&url=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html&via=saketkc&hashtags=indicator-variable,computational-biology,exponential,mle,likelihood" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
     <a href="mailto:?subject=Restriction%20Fragments%2C%20MLE%2C%20%20and%20Mixed%20Random%20Variables&amp;body=https%3A//saket-choudhary.me/restriction-fragments-mle-and-mixed-random-variables.html" target="_blank" title="Share via Email">Email</a>
     </p>
