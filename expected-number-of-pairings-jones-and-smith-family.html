@@ -6,41 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Saket Choudhary" />
 
-        <meta name="description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …
-" />
+        <meta name="twitter:creator" content="@saketkc">
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="expectation, probability, indicator variables, Miscellaneous, " />
+<meta name="keywords" content="expectation, probability, indicator variables, misc, " />
 
-<meta property="og:title" content="Expected number of pairings | Jones and Smith Family "/>
+<meta property="og:title" content="Expected number of pairings | Jones and Smith Family "/>
 <meta property="og:url" content="https://saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html" />
-<meta property="og:description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …" />
+<meta property="og:description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-05-17T00:00:00-07:00" />
-<meta name="twitter:title" content="Expected number of pairings | Jones and Smith Family ">
-<meta name="twitter:description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …">
-<meta property="og:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" />
-<meta name="twitter:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" >
+<meta name="twitter:title" content="Expected number of pairings | Jones and Smith Family ">
+<meta name="twitter:description" content="Problem¶ 4 members of Smith family and 4 of Jones family are pooled to form all possible pairs, all equally likely. Find \(N\), the number of smiths which have a smith partner. Solution¶ \(X= \sum_{i=1}^4 I_i\) Where \(I_i=1\) iff \(i^{th}\) meber of smith family has …">
 
-        <title>Expected number of pairings | Jones and Smith Family  · Piddling Pertinent
+        <title>Expected number of pairings | Jones and Smith Family  · Piddling Pertinent
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?605d3017">
+<link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?bec7d543">
 
-        <link rel="shortcut icon" href="https://saket-choudhary.me/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="https://saket-choudhary.me/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="https://saket-choudhary.me/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="https://saket-choudhary.me/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="https://saket-choudhary.me/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="https://saket-choudhary.me/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="https://saket-choudhary.me/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://saket-choudhary.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="https://saket-choudhary.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -88,7 +75,7 @@
     <header class="page-header span10 offset2">
         <h1>
             <a href="https://saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html">
-                Expected number of pairings | Jones and Smith&nbsp;Family
+                Expected number of pairings | Jones and Smith Family
             </a>
         </h1>
     </header>
@@ -100,17 +87,17 @@
             <h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
 <p>4 members of Smith family and 4 of Jones family are pooled
 to form all possible pairs, all equally likely. Find <span class="math">\(N\)</span>, the 
-number of smiths which have a smith&nbsp;partner.</p>
+number of smiths which have a smith partner.</p>
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p><span class="math">\(X= \sum_{i=1}^4&nbsp;I_i\)</span></p>
-<p>Where <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> meber of smith family has some smith member as it’s&nbsp;partner</p>
-<p>Number of ways <span class="math">\(i^{th}\)</span> smith member can have a smith partner (Choose 1 from remaining 3 Smiths, form group of the remaining 6 )  $ = \binom{3}{1} \times \frac{6!}{(2!)^3}&nbsp;$</p>
-<p>Hence, <span class="math">\(P(I_i=1)= \frac{\binom{3}{1}\frac{6!}{(2!)^3}}{\frac{8!}{(2!)^4}} =&nbsp;\frac{3}{14}\)</span> </p>
+<p><span class="math">\(X= \sum_{i=1}^4 I_i\)</span></p>
+<p>Where <span class="math">\(I_i=1\)</span> iff <span class="math">\(i^{th}\)</span> meber of smith family has some smith member as it’s partner</p>
+<p>Number of ways <span class="math">\(i^{th}\)</span> smith member can have a smith partner (Choose 1 from remaining 3 Smiths, form group of the remaining 6 )  $ = \binom{3}{1} \times \frac{6!}{(2!)^3} $</p>
+<p>Hence, <span class="math">\(P(I_i=1)= \frac{\binom{3}{1}\frac{6!}{(2!)^3}}{\frac{8!}{(2!)^4}} = \frac{3}{14}\)</span> </p>
 <p>The trickery happens because at the next step I am going to over count,
 since the wording in the question is a bit ambiguous and we are concerned with
 the number of smiths have a partner. I should have multiplied <span class="math">\(P(I_i=1)\)</span> by <span class="math">\(4\)</span> and then divided by 2, 
-but I am going to overcount with&nbsp;ambiguity.</p>
-<p><span class="math">\(N = 4 \times \frac{3}{14} = \frac{6}[7]\)</span> which ofcourse is not an integer, but did we expect it&nbsp;to?</p>
+but I am going to overcount with ambiguity.</p>
+<p><span class="math">\(N = 4 \times \frac{3}{14} = \frac{6}[7]\)</span> which ofcourse is not an integer, but did we expect it to?</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -175,23 +162,18 @@ but I am going to overcount with&nbsp;ambiguity.</p>
 </script>
 
 
+             
+ 
                 <p id="post-share-links">
-    Like this post? Share on:
-    <a href="https://twitter.com/intent/tweet?text=Expected%20number%20of%20pairings%20%7C%20Jones%20and%20Smith%C2%A0Family&url=https%3A//saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html&hashtags=expectation,probability,indicator-variables" target="_blank" title="Share on Twitter">Twitter</a>
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=Expected%20number%20of%20pairings%20%7C%20Jones%20and%20Smith%20Family&url=https%3A//saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html&via=saketkc&hashtags=expectation,probability,indicator-variables" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="mailto:?subject=Expected%20number%20of%20pairings%20%7C%20Jones%20and%20Smith%C2%A0Family&amp;body=https%3A//saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Expected%20number%20of%20pairings%20%7C%20Jones%20and%20Smith%20Family&amp;body=https%3A//saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
     </p>
 
-                <hr />
-    <div class="author_blurb">
-        <a href="https://saket-choudhary.me" target="_blank" rel="nofollow">
-            <span class="author_name">Saket Choudhary</span>
-        </a>
-        is a PhD candidate at the University of Southern California
-    </div>
-
+            
             
 
 
@@ -199,30 +181,79 @@ but I am going to overcount with&nbsp;ambiguity.</p>
 
 
 
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html"
+                   href="https://saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'https://piddlingpertinent.disqus.com';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html';
+    var disqus_url = 'https://saket-choudhary.me/expected-number-of-pairings-jones-and-smith-family.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
             <hr/>
 <section>
-    <h2>Keep Reading</h2>
+    <h2>Related Posts</h2>
 <ul class="related-posts-list">
-<li><a href="https://saket-choudhary.me/runs-in-flips-of-a-coin.html" title="Runs in flips of a coin">Runs in flips of a coin</a></li>
-<li><a href="https://saket-choudhary.me/expectation-maximisation-in-python-coin-toss-example.html" title="Expectation Maximisation in Python: Coin Toss Example">Expectation Maximisation in Python: Coin Toss Example</a></li>
+<li><a href="https://saket-choudhary.me/runs-in-flips-of-a-coin.html" title="Runs in flips of a coin">Runs in flips of a coin</a></li>
+<li><a href="https://saket-choudhary.me/expectation-maximisation-in-python-coin-toss-example.html" title="Expectation Maximisation in Python: Coin Toss Example">Expectation Maximisation in Python: Coin Toss Example</a></li>
 </ul>
 <hr />
 </section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://saket-choudhary.me/poisson-demysitified.html" title="Previous: Poisson Demysitified">Poisson Demysitified</a></li>
+                <li class="previous-article">« <a href="https://saket-choudhary.me/poisson-demysitified.html" title="Previous: Poisson Demysitified">Poisson Demysitified</a></li>
                 <li class="next-article"><a href="https://saket-choudhary.me/proofweighted-am-gm.html" title="Next: [Proof]Weighted AM-GM">[Proof]Weighted AM-GM</a> »</li>
             </ul>
             </nav>
             </aside>
         </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
+        <section id="article-sidebar" class="span2">
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2015-05-17T00:00:00-07:00">May 17, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://saket-choudhary.me/categories.html#miscellaneous-ref">Miscellaneous</a>
+            <a class="category-link" href="https://saket-choudhary.me/categories.html#misc-ref">misc</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="https://saket-choudhary.me/tags.html#expectation-ref">expectation
@@ -235,18 +266,15 @@ but I am going to overcount with&nbsp;ambiguity.</p>
                     <span>2</span>
 </a></li>
             </ul>
-<h4>Stay in Touch</h4>
+<h4>Contact</h4>
 <div id="sidebar-social-link">
-    <a href="https://saket-choudhary.me/feeds/all.atom.xml" title="" target="_blank" rel="nofollow">
-        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
-    </a>
-    <a href="https://twitter.com/saketkc" title="" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/saketkc" title="" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
     </a>
-    <a href="https://github.com/saketkc" title="" target="_blank" rel="nofollow">
+    <a href="https://github.com/saketkc" title="" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
     </a>
-    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="mathoverflow" target="_blank" rel="nofollow">
+    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="mathoverflow" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Stack Overflow" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f58025"/><path stroke="#fff" stroke-width="30" fill="none" d="M293 89l90 120zm-53 50l115 97zm-41 65l136 64zm-23 69l148 31zm-6 68h150zm-45-44v105h241V297"/></svg>
     </a>
 </div>
@@ -260,7 +288,8 @@ but I am going to overcount with&nbsp;ambiguity.</p>
 
 
 
-        </div>
+
+
         </section>
 </div>
 </article>
@@ -270,11 +299,6 @@ but I am going to overcount with&nbsp;ambiguity.</p>
             </div>
         </div>
 <footer>
-    <div>
-        Content licensed under <a rel="license"
-    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
-    Creative Commons Attribution 4.0 International License</a>.
-    </div>
 
     <div>
         <span class="site-name">Piddling Pertinent</span> - trivially relevant
@@ -283,12 +307,8 @@ but I am going to overcount with&nbsp;ambiguity.</p>
 
 
     <div id="fpowered">
-        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow">Pelican</a>
-        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow">Elegant</a>
-        Hosted on:
-        <a href=https://github.com/ target="_blank" rel="nofollow">
-            Github
-        </a>
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>

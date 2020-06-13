@@ -6,41 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Saket Choudhary" />
 
-        <meta name="description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …
-" />
+        <meta name="twitter:creator" content="@saketkc">
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="math, statistics, ml, Miscellaneous, " />
+<meta name="keywords" content="math, statistics, ml, misc, " />
 
 <meta property="og:title" content="SVD v/s MDS v/s PCA "/>
 <meta property="og:url" content="https://saket-choudhary.me/svd-vs-mds-vs-pca.html" />
-<meta property="og:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …" />
+<meta property="og:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …" />
 <meta property="og:site_name" content="Piddling Pertinent" />
 <meta property="og:article:author" content="Saket Choudhary" />
 <meta property="og:article:published_time" content="2015-04-15T00:00:00-07:00" />
 <meta name="twitter:title" content="SVD v/s MDS v/s PCA ">
-<meta name="twitter:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …">
-<meta property="og:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" />
-<meta name="twitter:image" content="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" >
+<meta name="twitter:description" content="Principle Component Analysis(PCA) is a relatively more famous than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS). When I was introduced to the latter two, I was utterly confused trying to figure out what goes in where. SVD¶ Let \(X_{mxn}\) data matrix. For an easy to relate example …">
 
         <title>SVD v/s MDS v/s PCA  · Piddling Pertinent
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?605d3017">
+<link rel="stylesheet" href="https://saket-choudhary.me/theme/css/style.min.css?bec7d543">
 
-        <link rel="shortcut icon" href="https://saket-choudhary.me/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="https://saket-choudhary.me/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="https://saket-choudhary.me/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="https://saket-choudhary.me/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="https://saket-choudhary.me/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="https://saket-choudhary.me/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="https://saket-choudhary.me/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="https://saket-choudhary.me/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://saket-choudhary.me/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://saket-choudhary.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Piddling Pertinent - Full Atom Feed" />
+        <link href="https://saket-choudhary.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Piddling Pertinent - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -88,7 +75,7 @@
     <header class="page-header span10 offset2">
         <h1>
             <a href="https://saket-choudhary.me/svd-vs-mds-vs-pca.html">
-                <span class="caps">SVD</span> v/s <span class="caps">MDS</span> v/s <span class="caps">PCA</span>
+                SVD v/s MDS v/s PCA
             </a>
         </h1>
     </header>
@@ -97,74 +84,74 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Principle Component Analysis(<span class="caps">PCA</span>) is a relatively more famous
-than Singular Value Decomposition(<span class="caps">SVD</span>) or Multidimensional Scaling(<span class="caps">MDS</span>).
+            <p>Principle Component Analysis(PCA) is a relatively more famous
+than Singular Value Decomposition(SVD) or Multidimensional Scaling(MDS).
 When I was introduced to the latter two, I was utterly confused
-trying to figure out what goes in&nbsp;where.</p>
-<h2 id="svd"><span class="caps">SVD</span><a class="headerlink" href="#svd" title="Permanent link">&para;</a></h2>
+trying to figure out what goes in where.</p>
+<h2 id="svd">SVD<a class="headerlink" href="#svd" title="Permanent link">&para;</a></h2>
 <p>Let <span class="math">\(X_{mxn}\)</span> data matrix. For an easy to relate example, from bioinformatics,
-let each row represent a gene, and each column represent single&nbsp;patient.</p>
+let each row represent a gene, and each column represent single patient.</p>
 <p>The rows thus give expression profile of gene across patients while the columns
-represent the expression levels of different genes in each&nbsp;person.</p>
-<p>Without loss of generality we assume <span class="math">\(m&gt;n\)</span> and <span class="math">\(rank(X)=r&nbsp;&lt;n\)</span></p>
-<p>The singular value decomposition of <span class="math">\(X_{mxn}\)</span> is then given&nbsp;by:</p>
+represent the expression levels of different genes in each person.</p>
+<p>Without loss of generality we assume <span class="math">\(m&gt;n\)</span> and <span class="math">\(rank(X)=r &lt;n\)</span></p>
+<p>The singular value decomposition of <span class="math">\(X_{mxn}\)</span> is then given by:</p>
 <div class="math">$$
 X_{mxn} = U_{mxr}\sum_{rxr}V_{nxr}^T
 $$</div>
 <p><span class="math">\(U_{nxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(X^TX\)</span>(nxn)</p>
 <p><span class="math">\(V_{mxr}\)</span> consists of orthornormal eigen vectors of <span class="math">\(XX^T\)</span>(mxm)</p>
 <p><span class="math">\(\sum_{rxr}\)</span> denotes a diagonal matrix composed of eigen vectors of <span class="math">\(X^TX\)</span> arranged with the largest being located
-at top left, least at bottom right.<span class="math">\(\sum_{ii} = \lambda_i\)</span> and <span class="math">\(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq&nbsp;\lambda_r\)</span></p>
+at top left, least at bottom right.<span class="math">\(\sum_{ii} = \lambda_i\)</span> and <span class="math">\(\lambda_1 \geq \lambda_2 \geq \lambda_3 \geq \ldots \geq \lambda_r\)</span></p>
 <p>Facts:</p>
 <ul>
-<li><span class="math">\(\lambda_i \geq 0\)</span> because <span class="math">\(X^TX\)</span> is a positive definite matrix: <span class="math">\(yX^TXy = (Xy)(Xy)^T &gt; 0\)</span> always [See:&nbsp;http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
+<li><span class="math">\(\lambda_i \geq 0\)</span> because <span class="math">\(X^TX\)</span> is a positive definite matrix: <span class="math">\(yX^TXy = (Xy)(Xy)^T &gt; 0\)</span> always [See: http://en.wikipedia.org/wiki/Positive-definite_matrix#Characterizations]</li>
 </ul>
-<h2 id="pca"><span class="caps">PCA</span><a class="headerlink" href="#pca" title="Permanent link">&para;</a></h2>
+<h2 id="pca">PCA<a class="headerlink" href="#pca" title="Permanent link">&para;</a></h2>
 <p>Let <span class="math">\(X_c\)</span> denote the mean centered <span class="math">\(X\)</span>, i.e. <span class="math">\(X_c = I’_{mxm}X_{mxn}\)</span>
- where <span class="math">\(I’ = I-\frac{1}{m}\)</span> thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean&nbsp;centerered.</p>
+ where <span class="math">\(I’ = I-\frac{1}{m}\)</span> thus from each row we substract the ‘average row’ leading to $X_c4 being zer-mean centerered.</p>
 <p>Def: Gram matrix : <span class="math">\(X_cX_c^T\)</span></p>
 <p>Def: Covariance Matrix: <span class="math">\(X_c^TX_c\)</span></p>
-<p>Let’s say you are given the original&nbsp;uncente</p>
-<p>The most ‘common’ definition of <span class="caps">PCA</span> says : For a given set of <span class="math">\(n\)</span> dimensional vectors
+<p>Let’s say you are given the original uncente</p>
+<p>The most ‘common’ definition of PCA says : For a given set of <span class="math">\(n\)</span> dimensional vectors
 <span class="math">\(x_1, x_2, x_3,x_4, \ldots x_m\)</span> the <span class="math">\(p&lt;n\)</span> principal components are those orthogonal
-axes onto which the variance retained is&nbsp;maximized</p>
-<p>and&nbsp;hence </p>
-<p>Plotting/Running <span class="caps">PCA</span>
+axes onto which the variance retained is maximized</p>
+<p>and hence </p>
+<p>Plotting/Running PCA
 - Calculate <span class="math">\(X_cX_c^T\)</span> and calculate <span class="math">\(U\)</span> as the eigen vectors of this matrix. Retain the vectors corresponding
 to top <span class="math">\(p=2\)</span> eigenvalues
 -  Calculate project <span class="math">\(Y=U^TX\)</span></p>
-<p>Given gram matrix of original data <span class="math">\(K\)</span>, to obtain gram matrix of mean centered data, cholesky decomposition is not&nbsp;required:</p>
-<p><span class="math">\(K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n}&nbsp;\frac{I}{n}K\frac{I}{n}\)</span></p>
-<p>Also&nbsp;realize:</p>
-<p><span class="math">\(X_c = U \sum&nbsp;V^T\)</span></p>
+<p>Given gram matrix of original data <span class="math">\(K\)</span>, to obtain gram matrix of mean centered data, cholesky decomposition is not required:</p>
+<p><span class="math">\(K_c = (I-\frac{1}{n})K(I-\frac{1}{n}) = K-\frac{I}{n}K -K\frac{1}{n} \frac{I}{n}K\frac{I}{n}\)</span></p>
+<p>Also realize:</p>
+<p><span class="math">\(X_c = U \sum V^T\)</span></p>
 <p>and <span class="math">\(UU^T=I\)</span> ; <span class="math">\(VV^T=I\)</span></p>
-<p>Thus, <span class="math">\(K_c=X_cX_c^T =&nbsp;U\sum^2U^T\)</span></p>
-<p><span class="caps">PCA</span> is equivalent of doing a <span class="caps">SVD</span>: of <span class="math">\(X_c = U\sumV^T\)</span> and then using <span class="math">\(U\sum\)</span> as the principle&nbsp;components</p>
-<h2 id="mds"><span class="caps">MDS</span><a class="headerlink" href="#mds" title="Permanent link">&para;</a></h2>
-<p>Given distance matrix <span class="math">\(D_{ij}\)</span> of pairwise distances, what would <span class="caps">PCA</span> result into?
-Assuming the distances were&nbsp;euclidean:</p>
+<p>Thus, <span class="math">\(K_c=X_cX_c^T = U\sum^2U^T\)</span></p>
+<p>PCA is equivalent of doing a SVD: of <span class="math">\(X_c = U\sumV^T\)</span> and then using <span class="math">\(U\sum\)</span> as the principle components</p>
+<h2 id="mds">MDS<a class="headerlink" href="#mds" title="Permanent link">&para;</a></h2>
+<p>Given distance matrix <span class="math">\(D_{ij}\)</span> of pairwise distances, what would PCA result into?
+Assuming the distances were euclidean:</p>
 <div class="math">$$
 D_{ij}^2 = ||x_i-x_j||^2 = ||x_i - \overline{x} + \overline{x} -x_j||^2 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 -2\langle x_i-\overline{x}, x_j-\overline{x}\rangle
 = ||x_i-\overline{x}||^2 + ||x_j - \overline{x}|^2 + 2[K_c]_{ij}
 $$</div>
 <p>
-which can be cleverly rewritten&nbsp;as:
+which can be cleverly rewritten as:
 </p>
 <div class="math">$$K_c = (I-\frac{1}{n})\frac{-D^2}{2}(I-\frac{1}{n}$$</div>
-<p><span class="math">\(K_c\)</span> can now undergo <span class="caps">SVD</span> to obtain principal components. which is what happens in <a href="MDS.md"><span class="caps">MDS</span></a>&nbsp;too.</p>
+<p><span class="math">\(K_c\)</span> can now undergo SVD to obtain principal components. which is what happens in <a href="MDS.md">MDS</a> too.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>[1]&nbsp;http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731</p>
-<p>[2] <span class="caps">SVD</span>:&nbsp;http://infolab.stanford.edu/~ullman/mmds/ch11.pdf</p>
-<p>[3] <span class="caps">SVD</span> in R:&nbsp;http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition</p>
-<p>[4] Multidimensional Scaling, Patrick <span class="caps">J.F.</span> Groenen∗ Michel van de&nbsp;Velden</p>
-<p>[5] <span class="caps">SVD</span> and <span class="caps">PCA</span>:&nbsp;http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca</p>
-<p>[6] Intuitive Explaination of <span class="caps">PCA</span>:&nbsp;http://arxiv.org/pdf/1404.1100.pdf</p>
-<p>[7] <span class="caps">PCA</span>:&nbsp;http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf</p>
-<p>[8] <span class="caps">PCA</span>:&nbsp;http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf</p>
-<p>[9] <span class="caps">SVD</span>: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/<span class="caps">SVD</span>.pdf</p>
-<p>[10] <span class="caps">PCA</span> v/s <span class="caps">MDS</span>:&nbsp;http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional</p>
-<p>[11] Gaussian Lernels:&nbsp;https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/</p>
-<p>[12] Kernel <span class="caps">PCA</span>:&nbsp;http://sebastianraschka.com/Articles/2014_kernel_pca.html</p>
+<p>[1] http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional/132731#132731</p>
+<p>[2] SVD: http://infolab.stanford.edu/~ullman/mmds/ch11.pdf</p>
+<p>[3] SVD in R: http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Dimensionality_Reduction/Singular_Value_Decomposition</p>
+<p>[4] Multidimensional Scaling, Patrick J.F. Groenen∗ Michel van de Velden</p>
+<p>[5] SVD and PCA: http://math.stackexchange.com/questions/3869/what-is-the-intuitive-relationship-between-svd-and-pca</p>
+<p>[6] Intuitive Explaination of PCA: http://arxiv.org/pdf/1404.1100.pdf</p>
+<p>[7] PCA: http://www3.cs.stonybrook.edu/~sael/teaching/cse549/Slides/CSE549_16.pdf</p>
+<p>[8] PCA: http://www.math.ucsd.edu/~gptesler/283/slides/pca_f13-handout.pdf</p>
+<p>[9] SVD: http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf</p>
+<p>[10] PCA v/s MDS: http://stats.stackexchange.com/questions/14002/whats-the-difference-between-principal-components-analysis-and-multidimensional</p>
+<p>[11] Gaussian Lernels: https://shapeofdata.wordpress.com/2013/07/23/gaussian-kernels/</p>
+<p>[12] Kernel PCA: http://sebastianraschka.com/Articles/2014_kernel_pca.html</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -229,23 +216,18 @@ which can be cleverly rewritten&nbsp;as:
 </script>
 
 
+             
+ 
                 <p id="post-share-links">
-    Like this post? Share on:
-    <a href="https://twitter.com/intent/tweet?text=SVD%20v/s%20MDS%20v/s%20PCA&url=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html&hashtags=math,statistics,ml" target="_blank" title="Share on Twitter">Twitter</a>
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=SVD%20v/s%20MDS%20v/s%20PCA&url=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html&via=saketkc&hashtags=math,statistics,ml" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="mailto:?subject=SVD%20v/s%20MDS%20v/s%20PCA&amp;body=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=SVD%20v/s%20MDS%20v/s%20PCA&amp;body=https%3A//saket-choudhary.me/svd-vs-mds-vs-pca.html" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
     </p>
 
-                <hr />
-    <div class="author_blurb">
-        <a href="https://saket-choudhary.me" target="_blank" rel="nofollow">
-            <span class="author_name">Saket Choudhary</span>
-        </a>
-        is a PhD candidate at the University of Southern California
-    </div>
-
+            
             
 
 
@@ -253,31 +235,80 @@ which can be cleverly rewritten&nbsp;as:
 
 
 
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://saket-choudhary.me/svd-vs-mds-vs-pca.html"
+                   href="https://saket-choudhary.me/svd-vs-mds-vs-pca.html#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'https://piddlingpertinent.disqus.com';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://saket-choudhary.me/svd-vs-mds-vs-pca.html';
+    var disqus_url = 'https://saket-choudhary.me/svd-vs-mds-vs-pca.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
             <hr/>
 <section>
-    <h2>Keep Reading</h2>
+    <h2>Related Posts</h2>
 <ul class="related-posts-list">
 <li><a href="https://saket-choudhary.me/proof-for-triangle-inequality-for-case-xy0.html" title="Proof for triangle inequality for case $x+y&lt;0$">Proof for triangle inequality for case $x+y<0$</a></li>
-<li><a href="https://saket-choudhary.me/convolution-demysitifed.html" title="Convolution Demysitifed">Convolution Demysitifed</a></li>
-<li><a href="https://saket-choudhary.me/a-frequent-inequality.html" title="A frequent inequality">A frequent inequality</a></li>
+<li><a href="https://saket-choudhary.me/convolution-demysitifed.html" title="Convolution Demysitifed">Convolution Demysitifed</a></li>
+<li><a href="https://saket-choudhary.me/a-frequent-inequality.html" title="A frequent inequality">A frequent inequality</a></li>
 </ul>
 <hr />
 </section>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://saket-choudhary.me/multidimensional-scaling.html" title="Previous: Multidimensional Scaling">Multidimensional Scaling</a></li>
-                <li class="next-article"><a href="https://saket-choudhary.me/runs-in-flips-of-a-coin.html" title="Next: Runs in flips of a coin">Runs in flips of a coin</a> »</li>
+                <li class="previous-article">« <a href="https://saket-choudhary.me/multidimensional-scaling.html" title="Previous: Multidimensional Scaling">Multidimensional Scaling</a></li>
+                <li class="next-article"><a href="https://saket-choudhary.me/runs-in-flips-of-a-coin.html" title="Next: Runs in flips of a coin">Runs in flips of a coin</a> »</li>
             </ul>
             </nav>
             </aside>
         </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
+        <section id="article-sidebar" class="span2">
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2015-04-15T00:00:00-07:00">Apr 15, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://saket-choudhary.me/categories.html#miscellaneous-ref">Miscellaneous</a>
+            <a class="category-link" href="https://saket-choudhary.me/categories.html#misc-ref">misc</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="https://saket-choudhary.me/tags.html#math-ref">math
@@ -290,18 +321,15 @@ which can be cleverly rewritten&nbsp;as:
                     <span>1</span>
 </a></li>
             </ul>
-<h4>Stay in Touch</h4>
+<h4>Contact</h4>
 <div id="sidebar-social-link">
-    <a href="https://saket-choudhary.me/feeds/all.atom.xml" title="" target="_blank" rel="nofollow">
-        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
-    </a>
-    <a href="https://twitter.com/saketkc" title="" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/saketkc" title="" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
     </a>
-    <a href="https://github.com/saketkc" title="" target="_blank" rel="nofollow">
+    <a href="https://github.com/saketkc" title="" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
     </a>
-    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="mathoverflow" target="_blank" rel="nofollow">
+    <a href="https://stats.stackexchange.com/users/11668/rightskewed" title="mathoverflow" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Stack Overflow" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f58025"/><path stroke="#fff" stroke-width="30" fill="none" d="M293 89l90 120zm-53 50l115 97zm-41 65l136 64zm-23 69l148 31zm-6 68h150zm-45-44v105h241V297"/></svg>
     </a>
 </div>
@@ -315,7 +343,8 @@ which can be cleverly rewritten&nbsp;as:
 
 
 
-        </div>
+
+
         </section>
 </div>
 </article>
@@ -325,11 +354,6 @@ which can be cleverly rewritten&nbsp;as:
             </div>
         </div>
 <footer>
-    <div>
-        Content licensed under <a rel="license"
-    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
-    Creative Commons Attribution 4.0 International License</a>.
-    </div>
 
     <div>
         <span class="site-name">Piddling Pertinent</span> - trivially relevant
@@ -338,12 +362,8 @@ which can be cleverly rewritten&nbsp;as:
 
 
     <div id="fpowered">
-        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow">Pelican</a>
-        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow">Elegant</a>
-        Hosted on:
-        <a href=https://github.com/ target="_blank" rel="nofollow">
-            Github
-        </a>
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
