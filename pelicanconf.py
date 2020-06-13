@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+from pelican_jupyter import markup as nb_markup
 
 AUTHOR = "Saket Choudhary"
 SITENAME = "Piddling Pertinent"
@@ -82,9 +82,9 @@ MARKUP = ("md", "ipynb")
 LOAD_CONTENT_CACHE = False
 STATIC_PATHS = ["images", "extra/CNAME"]
 EXTRA_PATH_METADATA = {"extra/CNAME": {"path": "CNAME"}}
-PLUGIN_PATHS = ["../pelican-plugins", "./plugins/"]
+PLUGIN_PATHS = ["./pelican-plugins", "./plugins/"]
 GOOGLE_ANALYTICS = "UA-55540107-1"
-COPYRIGHT_YEAR = 2018
+COPYRIGHT_YEAR = 2020
 
 MARKDOWN = {
     "extension_configs": {
@@ -139,12 +139,12 @@ PLUGINS = [
 ]
 PLUGINS += [
     "render_math",
-    "ipynb.markup",
+    nb_markup,
     "post_stats",
     "i18n_subsites",
     "related_posts",
     "series",
-    "minchin.pelican.plugins.cname",
+    #"minchin.pelican.plugins.cname",
 ]
 DIRECT_TEMPLATES = ("index", "tags", "categories", "archives", "search", "404")
 LANDING_PAGE_ABOUT = {
