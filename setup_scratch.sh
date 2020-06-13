@@ -5,5 +5,5 @@ wget -c https://github.com/getpelican/pelican-plugins/archive/master.zip && unzi
 git clone --recursive https://github.com/getpelican/pelican-themes pelican-themes-git
 cp -r pelican-themes-git pelican-themes
 
-pip install webassets cssmin pelican[Markdown]
+pip install -U ipython notebook nbconvert webassets cssmin pelican[Markdown]
 
