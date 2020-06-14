@@ -147,10 +147,6 @@ PLUGINS += [
     #"minchin.pelican.plugins.cname",
 ]
 DIRECT_TEMPLATES = ("index", "tags", "categories", "archives", "search", "404")
-LANDING_PAGE_ABOUT = {
-    "details": """I am Saket Choudhary. I am currently a PhD student at the University Of Southern California, Los Angeles, where I develop methods to understand post transcriptional regulation.
-               I spent the most wonderful years of my life(ever!) at Indian Institute of Technology Bombay graduating with a Bachelors and Masters degree in Chemical Engineering. """,
-}
 SITE_SUBTITLE = "Trivially Important"
 RECENT_ARTICLES_COUNT = 100
 
@@ -172,3 +168,5 @@ PROJECTS = [
     },
 ]
 DISQUS_SITENAME = 'https://piddlingpertinent.disqus.com'
+
+LANDING_PAGE_TITLE = '~'
