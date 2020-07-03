@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Piddling Pertinent</title><link>https://saket-choudhary.me/</link><description>trivially relevant</description><lastBuildDate>Fri, 03 Jul 2020 00:00:00 -0700</lastBuildDate><item><title>Growth of NCBI's SRA</title><link>https://saket-choudhary.me/growth-of-ncbis-sra.html</link><description>&lt;p&gt;The plots here visualize the growth of NCBI's &lt;a href="https://www.ncbi.nlm.nih.gov/sra/docs/sragrowth/"&gt;Sequence Read Archive&lt;/a&gt; over the past 10+ years.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://raw.githubusercontent.com/saketkc/notebooks/master/python/plots/SraStats-growth.png"&gt;!img&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://raw.githubusercontent.com/saketkc/notebooks/master/python/plots/SraStats-movingavg.png"&gt;!img&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://raw.githubusercontent.com/saketkc/notebooks/master/python/plots/SraStats-doubling.png"&gt;!img&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img1" src="https://raw.githubusercontent.com/saketkc/notebooks/master/python/plots/SraStats-growth.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img2" src="https://raw.githubusercontent.com/saketkc/notebooks/master/python/plots/SraStats-movingavg.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img3" src="https://raw.githubusercontent.com/saketkc/notebooks/master/python/plots/SraStats-doubling.png"&gt;&lt;/p&gt;
 &lt;p&gt;See &lt;a href="https://github.com/saketkc/notebooks/blob/master/python/SraStats.ipynb"&gt;notebook&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saket Choudhary</dc:creator><pubDate>Fri, 03 Jul 2020 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:saket-choudhary.me,2020-07-03:/growth-of-ncbis-sra.html</guid><category>misc</category><category>misc</category></item><item><title>Fivethirtyeight Riddler - A curious case of colonies</title><link>https://saket-choudhary.me/fivethirtyeight-riddler-a-curious-case-of-colonies.html</link><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
